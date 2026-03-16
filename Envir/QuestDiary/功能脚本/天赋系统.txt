@@ -1,0 +1,735 @@
+[@dq天赋系统]
+{
+
+;------------------------------------------------------主天命
+
+#IF
+Equal T200
+#ACT
+Mov S$天赋显示40 50级觉醒
+Mov S$天赋备注40 50级觉醒
+Mov S$天赋颜色40 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T200)> 0~115 0 0 N$天赋临时变量40
+
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量40 0 S$天赋显示40
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量40 1 S$天赋备注40
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量40 2 S$天赋颜色40
+
+#IF
+Equal T201
+#ACT
+Mov S$天赋显示41 55级觉醒
+Mov S$天赋备注41 55级觉醒
+Mov S$天赋颜色41 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T201)> 0~115 0 0 N$天赋临时变量41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量41 0 S$天赋显示41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量41 1 S$天赋备注41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量41 2 S$天赋颜色41
+
+
+#IF
+Equal T202
+#ACT
+Mov S$天赋显示42 60级觉醒
+Mov S$天赋备注42 60级觉醒
+Mov S$天赋颜色42 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T202)> 0~115 0 0 N$天赋临时变量42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量42 0 S$天赋显示42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量42 1 S$天赋备注42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量42 2 S$天赋颜色42
+
+
+#IF
+Equal T203
+#ACT
+Mov S$天赋显示43 65级觉醒
+Mov S$天赋备注43 65级觉醒
+Mov S$天赋颜色43 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T203)> 0~115 0 0 N$天赋临时变量43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量43 0 S$天赋显示43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量43 1 S$天赋备注43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量43 2 S$天赋颜色43
+
+
+
+#IF
+Equal T204
+#ACT
+Mov S$天赋显示44 三转觉醒
+Mov S$天赋备注44 三转觉醒
+Mov S$天赋颜色44 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T204)> 0~115 0 0 N$天赋临时变量44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量44 0 S$天赋显示44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量44 1 S$天赋备注44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量44 2 S$天赋颜色44
+
+
+#IF
+Equal T205
+#ACT
+Mov S$天赋显示45 四转觉醒
+Mov S$天赋备注45 四转觉醒
+Mov S$天赋颜色45 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T205)> 0~115 0 0 N$天赋临时变量45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量45 0 S$天赋显示45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量45 1 S$天赋备注45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量45 2 S$天赋颜色45
+
+
+#IF
+Equal T206
+#ACT
+Mov S$天赋显示46 五转觉醒
+Mov S$天赋备注46 五转觉醒
+Mov S$天赋颜色46 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T206)> 0~115 0 0 N$天赋临时变量46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量46 0 S$天赋显示46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量46 1 S$天赋备注46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量46 2 S$天赋颜色46
+
+
+#IF
+Equal T207
+#ACT
+Mov S$天赋显示47 六转觉醒
+Mov S$天赋备注47 六转觉醒
+Mov S$天赋颜色47 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T207)> 0~115 0 0 N$天赋临时变量47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量47 0 S$天赋显示47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量47 1 S$天赋备注47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量47 2 S$天赋颜色47
+
+
+#IF
+Equal T208
+#ACT
+Mov S$天赋显示48 七转觉醒
+Mov S$天赋备注48 七转觉醒
+Mov S$天赋颜色48 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T208)> 0~115 0 0 N$天赋临时变量48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量48 0 S$天赋显示48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量48 1 S$天赋备注48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量48 2 S$天赋颜色48
+
+
+#IF
+Equal T209
+#ACT
+Mov S$天赋显示49 八转觉醒
+Mov S$天赋备注49 八转觉醒
+Mov S$天赋颜色49 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T209)> 0~115 0 0 N$天赋临时变量49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量49 0 S$天赋显示49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量49 1 S$天赋备注49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量49 2 S$天赋颜色49
+
+
+#IF
+Equal T60
+#ACT
+Mov S$天赋显示60 九转觉醒
+Mov S$天赋备注60 九转觉醒
+Mov S$天赋颜色60 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T60)> 0~115 0 0 N$天赋临时变量60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量60 0 S$天赋显示60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量60 1 S$天赋备注60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量60 2 S$天赋颜色60
+
+
+#IF
+Equal T61
+#ACT
+Mov S$天赋显示61 十转觉醒
+Mov S$天赋备注61 十转觉醒
+Mov S$天赋颜色61 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T61)> 0~115 0 0 N$天赋临时变量61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量61 0 S$天赋显示61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量61 1 S$天赋备注61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量61 2 S$天赋颜色61
+
+#IF
+Equal T62
+#ACT
+Mov S$天赋显示62 保底说明
+Mov S$天赋备注62 第26次必出^三红选一
+Mov S$天赋颜色62 255
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$Str(T62)> 0~115 0 0 N$天赋临时变量62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量62 0 S$天赋显示62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量62 1 S$天赋备注62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$天赋临时变量62 2 S$天赋颜色62
+
+
+
+;------------------------------------------------------副天命
+
+
+#IF
+Equal T240
+#ACT
+Mov S$天赋显示240 50级觉醒
+Mov S$天赋备注240 50级觉醒
+Mov S$天赋颜色240 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T240)> 0~115 0 0 N$天赋临时变量240
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量240 0 S$天赋显示240
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量240 1 S$天赋备注240
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量240 2 S$天赋颜色240
+
+#IF
+Equal T241
+#ACT
+Mov S$天赋显示241 55级觉醒
+Mov S$天赋备注241 55级觉醒
+Mov S$天赋颜色241 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T241)> 0~115 0 0 N$天赋临时变量241
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量241 0 S$天赋显示241
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量241 1 S$天赋备注241
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量241 2 S$天赋颜色241
+
+
+#IF
+Equal T242
+#ACT
+Mov S$天赋显示242 60级觉醒
+Mov S$天赋备注242 60级觉醒
+Mov S$天赋颜色242 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T242)> 0~115 0 0 N$天赋临时变量242
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量242 0 S$天赋显示242
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量242 1 S$天赋备注242
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量242 2 S$天赋颜色242
+
+
+#IF
+Equal T243
+#ACT
+Mov S$天赋显示243 65级觉醒
+Mov S$天赋备注243 65级觉醒
+Mov S$天赋颜色243 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T243)> 0~115 0 0 N$天赋临时变量243
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量243 0 S$天赋显示243
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量243 1 S$天赋备注243
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量243 2 S$天赋颜色243
+
+
+
+#IF
+Equal T244
+#ACT
+Mov S$天赋显示244 三转觉醒
+Mov S$天赋备注244 三转觉醒
+Mov S$天赋颜色244 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T244)> 0~115 0 0 N$天赋临时变量244
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量244 0 S$天赋显示244
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量244 1 S$天赋备注244
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量244 2 S$天赋颜色244
+
+
+#IF
+Equal T245
+#ACT
+Mov S$天赋显示245 四转觉醒
+Mov S$天赋备注245 四转觉醒
+Mov S$天赋颜色245 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T245)> 0~115 0 0 N$天赋临时变量245
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量245 0 S$天赋显示245
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量245 1 S$天赋备注245
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量245 2 S$天赋颜色245
+
+
+#IF
+Equal T246
+#ACT
+Mov S$天赋显示246 五转觉醒
+Mov S$天赋备注246 五转觉醒
+Mov S$天赋颜色246 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T246)> 0~115 0 0 N$天赋临时变量246
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量246 0 S$天赋显示246
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量246 1 S$天赋备注246
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量246 2 S$天赋颜色246
+
+
+#IF
+Equal T247
+#ACT
+Mov S$天赋显示247 六转觉醒
+Mov S$天赋备注247 六转觉醒
+Mov S$天赋颜色247 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T247)> 0~115 0 0 N$天赋临时变量247
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量247 0 S$天赋显示247
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量247 1 S$天赋备注247
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量247 2 S$天赋颜色247
+
+
+#IF
+Equal T248
+#ACT
+Mov S$天赋显示248 七转觉醒
+Mov S$天赋备注248 七转觉醒
+Mov S$天赋颜色248 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T248)> 0~115 0 0 N$天赋临时变量248
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量248 0 S$天赋显示248
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量248 1 S$天赋备注248
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量248 2 S$天赋颜色248
+
+
+#IF
+Equal T249
+#ACT
+Mov S$天赋显示249 八转觉醒
+Mov S$天赋备注249 八转觉醒
+Mov S$天赋颜色249 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T249)> 0~115 0 0 N$天赋临时变量249
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量249 0 S$天赋显示249
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量249 1 S$天赋备注249
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量249 2 S$天赋颜色249
+
+
+#IF
+Equal T260
+#ACT
+Mov S$天赋显示260 九转觉醒
+Mov S$天赋备注260 九转觉醒
+Mov S$天赋颜色260 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T260)> 0~115 0 0 N$天赋临时变量260
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量260 0 S$天赋显示260
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量260 1 S$天赋备注260
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量260 2 S$天赋颜色260
+
+
+#IF
+Equal T261
+#ACT
+Mov S$天赋显示261 十转觉醒
+Mov S$天赋备注261 十转觉醒
+Mov S$天赋颜色261 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T261)> 0~115 0 0 N$天赋临时变量261
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量261 0 S$天赋显示261
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量261 1 S$天赋备注261
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量261 2 S$天赋颜色261
+
+#IF
+Equal T262
+#ACT
+Mov S$天赋显示262 暂未开放
+Mov S$天赋备注262 暂未开放
+Mov S$天赋颜色262 7
+#ELSEACT
+CSVFindTexTRow ..\QuesTDiary\数据文件\天赋配置\TF.csv <$STr(T262)> 0~115 0 0 N$天赋临时变量262
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量262 0 S$天赋显示262
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量262 1 S$天赋备注262
+CSVGeTCellTexT ..\QuesTDiary\数据文件\天赋配置\TF.csv N$天赋临时变量262 2 S$天赋颜色262
+
+
+
+
+
+
+
+
+
+
+
+
+;--------------------------------------------------天命显示
+
+#IF
+#ACT
+AddDlgEx 42 118 795 1 590:-470 0:0 6 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+;AddDlgEx 15 118 793 0 229:10 0:0 9 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+;AddDlgEx 16 118 793 0 229:10 0:0 15 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+;AddDlgEx 17 118 793 0 229:10 0:0 17 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+;AddDlgEx 18 118 793 0 229:10 0:0 13 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+;AddDlgEx 19 118 793 0 229:18 0:0 11 ..\..\..\..\迦楼沉默通区\天赋人物列表ces.txt 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+[@dq他人天赋]
+{
+
+#ACT
+MOV S2 <$UserStateName>
+SetCurrTarget S2
+
+
+#IF
+Equal <$C.Str(T40)>
+#ACT
+Mov S$他人天赋显示40 (未觉醒)
+Mov S$他人天赋备注40 (未觉醒)
+Mov S$他人天赋颜色40 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T200)> 0~115 0 0 N$他人天赋临时变量40
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量40 0 S$他人天赋显示40
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量40 1 S$他人天赋备注40
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量40 2 S$他人天赋颜色40
+
+
+#IF
+Equal <$C.Str(T41)>
+#ACT
+Mov S$他人天赋显示41 (未觉醒)
+Mov S$他人天赋备注41 (未觉醒)
+Mov S$他人天赋颜色41 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T201)> 0~115 0 0 N$他人天赋临时变量41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量41 0 S$他人天赋显示41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量41 1 S$他人天赋备注41
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量41 2 S$他人天赋颜色41
+
+#IF
+Equal <$C.Str(T42)>
+#ACT
+Mov S$他人天赋显示42 (未觉醒)
+Mov S$他人天赋备注42 (未觉醒)
+Mov S$他人天赋颜色42 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T202)> 0~115 0 0 N$他人天赋临时变量42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量42 0 S$他人天赋显示42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量42 1 S$他人天赋备注42
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量42 2 S$他人天赋颜色42
+
+
+#IF
+Equal <$C.Str(T43)>
+#ACT
+Mov S$他人天赋显示43 (未觉醒)
+Mov S$他人天赋备注43 (未觉醒)
+Mov S$他人天赋颜色43 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T203)> 0~115 0 0 N$他人天赋临时变量43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量43 0 S$他人天赋显示43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量43 1 S$他人天赋备注43
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量43 2 S$他人天赋颜色43
+
+
+#IF
+Equal <$C.Str(T44)>
+#ACT
+Mov S$他人天赋显示44 (未觉醒)
+Mov S$他人天赋备注44 (未觉醒)
+Mov S$他人天赋颜色44 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T204)> 0~115 0 0 N$他人天赋临时变量44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量44 0 S$他人天赋显示44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量44 1 S$他人天赋备注44
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量44 2 S$他人天赋颜色44
+
+
+#IF
+Equal <$C.Str(T45)>
+#ACT
+Mov S$他人天赋显示45 (未觉醒)
+Mov S$他人天赋备注45 (未觉醒)
+Mov S$他人天赋颜色45 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T205)> 0~115 0 0 N$他人天赋临时变量45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量45 0 S$他人天赋显示45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量45 1 S$他人天赋备注45
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量45 2 S$他人天赋颜色45
+
+
+#IF
+Equal <$C.Str(T46)>
+#ACT
+Mov S$他人天赋显示46 (未觉醒)
+Mov S$他人天赋备注46 (未觉醒)
+Mov S$他人天赋颜色46 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T206)> 0~115 0 0 N$他人天赋临时变量46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量46 0 S$他人天赋显示46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量46 1 S$他人天赋备注46
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量46 2 S$他人天赋颜色46
+
+
+#IF
+Equal <$C.Str(T27)>
+#ACT
+Mov S$他人天赋显示47 (未觉醒)
+Mov S$他人天赋备注47 (未觉醒)
+Mov S$他人天赋颜色47 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T207)> 0~115 0 0 N$他人天赋临时变量47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量47 0 S$他人天赋显示47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量47 1 S$他人天赋备注47
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量47 2 S$他人天赋颜色47
+
+
+#IF
+Equal <$C.Str(T28)>
+#ACT
+Mov S$他人天赋显示48 (未觉醒)
+Mov S$他人天赋备注48 (未觉醒)
+Mov S$他人天赋颜色48 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T208)> 0~115 0 0 N$他人天赋临时变量48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量48 0 S$他人天赋显示48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量48 1 S$他人天赋备注48
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量48 2 S$他人天赋颜色48
+
+
+
+#IF
+Equal <$C.Str(T29)>
+#ACT
+Mov S$他人天赋显示49 (未觉醒)
+Mov S$他人天赋备注49 (未觉醒)
+Mov S$他人天赋颜色49 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T209)> 0~115 0 0 N$他人天赋临时变量49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量49 0 S$他人天赋显示49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量49 1 S$他人天赋备注49
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量49 2 S$他人天赋颜色49
+
+#IF
+Equal <$C.Str(T60)>
+#ACT
+Mov S$他人天赋显示60 (未觉醒)
+Mov S$他人天赋备注60 (未觉醒)
+Mov S$他人天赋颜色60 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T60)> 0~115 0 0 N$他人天赋临时变量60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量60 0 S$他人天赋显示60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量60 1 S$他人天赋备注60
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量60 2 S$他人天赋颜色60
+
+#IF
+Equal <$C.Str(T61)>
+#ACT
+Mov S$他人天赋显示61 (未觉醒)
+Mov S$他人天赋备注61 (未觉醒)
+Mov S$他人天赋颜色61 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T61)> 0~115 0 0 N$他人天赋临时变量61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量61 0 S$他人天赋显示61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量61 1 S$他人天赋备注61
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量61 2 S$他人天赋颜色61
+
+#IF
+Equal <$C.Str(T62)>
+#ACT
+Mov S$他人天赋显示62 (未觉醒)
+Mov S$他人天赋备注62 (未觉醒)
+Mov S$他人天赋颜色62 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T62)> 0~115 0 0 N$他人天赋临时变量62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量62 0 S$他人天赋显示62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量62 1 S$他人天赋备注62
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量62 2 S$他人天赋颜色62
+
+;---------------------------------------------------副命格他人
+
+#IF
+Equal <$C.Str(T240)>
+#ACT
+Mov S$他人天赋显示240 (未觉醒)
+Mov S$他人天赋备注240 (未觉醒)
+Mov S$他人天赋颜色240 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T240)> 0~115 0 0 N$他人天赋临时变量240
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量240 0 S$他人天赋显示240
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量240 1 S$他人天赋备注240
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量240 2 S$他人天赋颜色240
+
+
+#IF
+Equal <$C.Str(T241)>
+#ACT
+Mov S$他人天赋显示241 (未觉醒)
+Mov S$他人天赋备注241 (未觉醒)
+Mov S$他人天赋颜色241 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T241)> 0~115 0 0 N$他人天赋临时变量241
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量241 0 S$他人天赋显示241
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量241 1 S$他人天赋备注241
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量241 2 S$他人天赋颜色241
+
+#IF
+Equal <$C.Str(T242)>
+#ACT
+Mov S$他人天赋显示242 (未觉醒)
+Mov S$他人天赋备注242 (未觉醒)
+Mov S$他人天赋颜色242 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T242)> 0~115 0 0 N$他人天赋临时变量242
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量242 0 S$他人天赋显示242
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量242 1 S$他人天赋备注242
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量242 2 S$他人天赋颜色242
+
+
+#IF
+Equal <$C.Str(T243)>
+#ACT
+Mov S$他人天赋显示243 (未觉醒)
+Mov S$他人天赋备注243 (未觉醒)
+Mov S$他人天赋颜色243 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T243)> 0~115 0 0 N$他人天赋临时变量243
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量243 0 S$他人天赋显示243
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量243 1 S$他人天赋备注243
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量243 2 S$他人天赋颜色243
+
+
+#IF
+Equal <$C.Str(T244)>
+#ACT
+Mov S$他人天赋显示244 (未觉醒)
+Mov S$他人天赋备注244 (未觉醒)
+Mov S$他人天赋颜色244 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T244)> 0~115 0 0 N$他人天赋临时变量244
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量244 0 S$他人天赋显示244
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量244 1 S$他人天赋备注244
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量244 2 S$他人天赋颜色244
+
+
+#IF
+Equal <$C.Str(T245)>
+#ACT
+Mov S$他人天赋显示245 (未觉醒)
+Mov S$他人天赋备注245 (未觉醒)
+Mov S$他人天赋颜色245 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T245)> 0~115 0 0 N$他人天赋临时变量245
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量245 0 S$他人天赋显示245
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量245 1 S$他人天赋备注245
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量245 2 S$他人天赋颜色245
+
+
+#IF
+Equal <$C.Str(T246)>
+#ACT
+Mov S$他人天赋显示246 (未觉醒)
+Mov S$他人天赋备注246 (未觉醒)
+Mov S$他人天赋颜色246 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T246)> 0~115 0 0 N$他人天赋临时变量246
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量246 0 S$他人天赋显示246
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量246 1 S$他人天赋备注246
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量246 2 S$他人天赋颜色246
+
+
+#IF
+Equal <$C.Str(T247)>
+#ACT
+Mov S$他人天赋显示247 (未觉醒)
+Mov S$他人天赋备注247 (未觉醒)
+Mov S$他人天赋颜色247 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T247)> 0~115 0 0 N$他人天赋临时变量247
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量247 0 S$他人天赋显示247
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量247 1 S$他人天赋备注247
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量247 2 S$他人天赋颜色247
+
+
+#IF
+Equal <$C.Str(T248)>
+#ACT
+Mov S$他人天赋显示248 (未觉醒)
+Mov S$他人天赋备注248 (未觉醒)
+Mov S$他人天赋颜色248 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T248)> 0~115 0 0 N$他人天赋临时变量248
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量248 0 S$他人天赋显示248
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量248 1 S$他人天赋备注248
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量248 2 S$他人天赋颜色248
+
+
+
+#IF
+Equal <$C.Str(T249)>
+#ACT
+Mov S$他人天赋显示249 (未觉醒)
+Mov S$他人天赋备注249 (未觉醒)
+Mov S$他人天赋颜色249 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T249)> 0~115 0 0 N$他人天赋临时变量249
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量249 0 S$他人天赋显示249
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量249 1 S$他人天赋备注249
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量249 2 S$他人天赋颜色249
+
+#IF
+Equal <$C.Str(T260)>
+#ACT
+Mov S$他人天赋显示260 (未觉醒)
+Mov S$他人天赋备注260 (未觉醒)
+Mov S$他人天赋颜色260 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T260)> 0~115 0 0 N$他人天赋临时变量260
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量260 0 S$他人天赋显示260
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量260 1 S$他人天赋备注260
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量260 2 S$他人天赋颜色260
+
+#IF
+Equal <$C.Str(T261)>
+#ACT
+Mov S$他人天赋显示261 (未觉醒)
+Mov S$他人天赋备注261 (未觉醒)
+Mov S$他人天赋颜色261 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T261)> 0~115 0 0 N$他人天赋临时变量261
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量261 0 S$他人天赋显示261
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量261 1 S$他人天赋备注261
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量261 2 S$他人天赋颜色261
+
+#IF
+Equal <$C.Str(T262)>
+#ACT
+Mov S$他人天赋显示262 (未觉醒)
+Mov S$他人天赋备注262 (未觉醒)
+Mov S$他人天赋颜色262 7
+#ELSEACT
+CSVFindTextRow ..\QuestDiary\数据文件\天赋配置\TF.csv <$C.Str(T262)> 0~115 0 0 N$他人天赋临时变量262
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量262 0 S$他人天赋显示262
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量262 1 S$他人天赋备注262
+CSVGetCellText ..\QuestDiary\数据文件\天赋配置\TF.csv N$他人天赋临时变量262 2 S$他人天赋颜色262
+
+
+
+
+
+
+#IF
+#ACT
+AddDlgEx 44 118 794 1 484:-350 0:0 6 ..\..\..\..\迦楼沉默通区\他人天赋人物列表ss.txt 1
+;AddDlgEx 7 118 793 0 284:-110 0:0 29 ..\..\..\..\迦楼沉默通区\他人天赋人物列表.txt 1
+;AddDlgEx 8 118 793 0 285:-110 0:0 30 ..\..\..\..\迦楼沉默通区\他人天赋人物列表.txt 1
+
+}

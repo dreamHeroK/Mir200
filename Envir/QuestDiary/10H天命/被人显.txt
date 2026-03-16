@@ -1,0 +1,121 @@
+[@被人]
+{
+
+#IF
+#act
+CloseBigDialogBox
+OPENMERCHANTBIGDLG 1 2596 1 4 0 0 1 105 17 1
+
+#IF
+#act
+goto @被人显示对话框
+
+
+[@被人显示对话框]
+
+#ACT
+MOV S1 <$UserStateName>
+SetCurrTarget S1
+
+
+#IF
+<$USERSTATENAME>.Check [90] 0
+#act
+MOV S$被天命图标1 <><Img:2594:1:-15:-11>\
+#elseact
+MOV S$被天命图标1 <><Text:<$C.STR(T101)>:8:-3{FCOLOR=<$C.STR(T141)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [91] 0
+#act
+MOV S$被天命图标2 <><Img:2594:1:-17:6>\
+#elseact
+MOV S$被天命图标2 <><Text:<$C.STR(T102)>:8:17{FCOLOR=<$C.STR(T142)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [92] 0
+#act
+MOV S$被天命图标3 <><Img:2594:1::-15:28>\
+#elseact
+MOV S$被天命图标3 <><Text:<$C.STR(T103)>:8:37{FCOLOR=<$C.STR(T143)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [93] 0
+#act
+MOV S$被天命图标4 <><Img:2594:1::-15:48>\
+#elseact
+MOV S$被天命图标4 <><Text:<$C.STR(T104)>:8:56{FCOLOR=<$C.STR(T144)>;FSIZE=11;FNAME=楷体}>\
+
+
+
+#IF
+<$USERSTATENAME>.Check [94] 0
+#act
+MOV S$被天命图标5 <><Img:2594:1::-15:68>\
+#elseact
+MOV S$被天命图标5 <><Text:<$C.STR(T105)>:8:75{FCOLOR=<$C.STR(T145)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [95] 0
+#act
+MOV S$被天命图标6 <><Img:2594:1::-15:88>\
+#elseact
+MOV S$被天命图标6 <><Text:<$C.STR(T106)>:8:96{FCOLOR=<$C.STR(T146)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [96] 0
+#act
+MOV S$被天命图标7 <><Img:2594:1::-15:108>\
+#elseact
+MOV S$被天命图标7 <><Text:<$C.STR(T107)>:8:116{FCOLOR=<$C.STR(T147)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [97] 0
+#act
+MOV S$被天命图标8 <><Img:2594:1::-15:128>\
+#elseact
+MOV S$被天命图标8 <><Text:<$C.STR(T108)>:8:136{FCOLOR=<$C.STR(T148)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [98] 0
+#act
+MOV S$被天命图标9 <><Img:2594:1::-15:148>\
+#elseact
+MOV S$被天命图标9 <><Text:<$C.STR(T109)>:8:156{FCOLOR=<$C.STR(T149)>;FSIZE=11;FNAME=楷体}>\
+
+
+#IF
+<$USERSTATENAME>.Check [99] 0
+#act
+MOV S$被天命图标10 <><Img:2594:1::-15:168>\
+#elseact
+MOV S$被天命图标10 <><Text:<$C.STR(T110)>:8:176{FCOLOR=<$C.STR(T150)>;FSIZE=11;FNAME=楷体}>\
+
+
+
+
+#if
+#act
+#say
+<>\
+<$Str(S$被天命图标1)>
+<$Str(S$被天命图标2)>
+<$Str(S$被天命图标3)>
+<$Str(S$被天命图标4)>
+<$Str(S$被天命图标5)>
+<$Str(S$被天命图标6)>
+<$Str(S$被天命图标7)>
+<$Str(S$被天命图标8)>
+<$Str(S$被天命图标9)>
+<$Str(S$被天命图标10)>
+
+
+
+}

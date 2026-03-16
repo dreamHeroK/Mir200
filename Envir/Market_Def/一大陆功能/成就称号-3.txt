@@ -1,0 +1,1472 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+goto @材料成就对话框
+BREAK
+
+
+
+
+[@材料成就对话框]
+#if
+#say
+\ \
+
+<Img:41:52:180:-4>\
+
+<Img:216:52:13:22>\
+
+<Text:萧兮兮：:19:132{FCOLOR=222}>\
+
+<Text:杏花红去，海:19:136{FCOLOR=7}>\
+
+<Text:棠枝树，桃叶:19:138{FCOLOR=7}>\
+
+<Text:桃根浑未觉，:19:140{FCOLOR=7}>\
+
+<Text:樱桃杨柳成轻:19:142{FCOLOR=7}>\
+
+<Text:负。:19:144{FCOLOR=7}>\
+\
+
+<Text:材料成就称号:19:150{FCOLOR=251}/@材料成就对话框>\
+
+<Text:技能成就称号:19:155{FCOLOR=146}/@技能成就对话框>\
+
+<Text:宠物成就称号:19:160{FCOLOR=146}/@宠物成就对话框>\
+
+\  \
+
+
+<Text:噩梦地图及更高级的地图，BOSS有几率掉落地图专属材料，:120:-157{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Text:使用此材料可以在这里进阶成就称号。:120:-157{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Text:提示：指向下列称号的名字，可以查看称号的属性。:120:-157{FCOLOR=7}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1166:0:115:-158><Text:斩妖除魔|250#斩妖除魔lv.1：暴击几率+1%   生命上限+1%   法力上限+1%^250#斩妖除魔lv.2：暴击几率+3%   生命上限+3%   法力上限+3%^250#斩妖除魔lv.3：暴击几率+6%   生命上限+6%   法力上限+6%^250#斩妖除魔lv.4：暴击几率+12%  生命上限+12%  法力上限+12%^250#斩妖除魔lv.5：暴击几率+20%  生命上限+20%  法力上限+20%:120:-156{FCOLOR=253}>      <Text:需要材料：:120:-156{FCOLOR=146}><Text:点击此处查看|7#斩妖除魔lv.1：诺玛水晶10个（噩梦地图：诺玛洞窟BOSS掉落）+ 真天之骨10个（噩梦地图：真天宫殿BOSS掉落）^7#斩妖除魔lv.2：秦皇钥匙30个（炼狱地图：秦皇古墓BOSS掉落）+ 万妖之爪30个（炼狱地图：万妖洞窟BOSS掉落）^7#斩妖除魔lv.3：蛇魔苦胆50个（深渊地图：蛇魔宫殿BOSS掉落）+ 火龙之炎50个（深渊地图：火龙洞窟BOSS掉落）^7#斩妖除魔lv.4：旱魃之血100个（酆都城：旱魃古墓BOSS掉落）^7#斩妖除魔lv.5：圣冰之泪150个（酆都城：圣冰殿BOSS掉落）:120:-156{FCOLOR=7}>      <Text:进阶称号:120:-156{FCOLOR=251}/@进阶斩妖除魔>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1172:0:115:-158><Text:不动明王|250#不动明王lv.1：致命吸收+1%   生命上限+1%   法力上限+1%^250#不动明王lv.2：致命吸收+3%   生命上限+3%   法力上限+3%^250#不动明王lv.3：致命吸收+6%   生命上限+6%   法力上限+6%^250#不动明王lv.4：致命吸收+12%  生命上限+12%  法力上限+12%^250#不动明王lv.5：致命吸收+20%  生命上限+20%  法力上限+20%:120:-156{FCOLOR=253}>      <Text:需要材料：:120:-156{FCOLOR=146}><Text:点击此处查看|7#不动明王lv.1：潘夜之牙10个（噩梦地图：潘夜海岛BOSS掉落）+ 蚂蚁触角10个（噩梦地图：蚂蚁洞穴BOSS掉落）^7#不动明王lv.2：瘟疫残卵30个（炼狱地图：瘟疫沼泽BOSS掉落）+ 狐月断尾30个（炼狱地图：狐月山洞BOSS掉落）^7#不动明王lv.3：冰龙雪晶50个（深渊地图：冰龙宫殿BOSS掉落）+ 通天羽毛50个（深渊地图：通天巢穴BOSS掉落）^7#不动明王lv.4：鬼骨之心100个（酆都城：鬼骨暗殿BOSS掉落）^7#不动明王lv.5：圣火灵珠150个（酆都城：圣火殿BOSS掉落）:120:-156{FCOLOR=7}>      <Text:进阶称号:120:-156{FCOLOR=251}/@进阶不动明王>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1165:0:115:-158><Text:上善若水|250#上善若水lv.1：致命几率+1%   生命上限+1%   法力上限+1%^250#上善若水lv.2：致命几率+3%   生命上限+3%   法力上限+3%^250#上善若水lv.3：致命几率+6%   生命上限+6%   法力上限+6%^250#上善若水lv.4：致命几率+12%  生命上限+12%  法力上限+12%^250#上善若水lv.5：致命几率+20%  生命上限+20%  法力上限+20%:120:-156{FCOLOR=253}>      <Text:需要材料：:120:-156{FCOLOR=146}><Text:点击此处查看|7#上善若水lv.1：猫妖牙齿10个（噩梦地图：猫 妖 殿BOSS掉落）+ 虎王之爪10个（噩梦地图：虎王森林BOSS掉落）^7#上善若水lv.2：铁血之锤30个（炼狱地图：铁血暗殿BOSS掉落）+ 蝠魔毒液30个（炼狱地图：蝠魔宫殿BOSS掉落）^7#上善若水lv.3：叛军信件50个（深渊地图：叛军宫殿BOSS掉落）+ 天外之石50个（深渊地图：天外之门BOSS掉落）^7#上善若水lv.4：寒冥鳞片100个（酆都城：寒冥洞窟BOSS掉落）^7#上善若水lv.5：昆仑雪莲150个（酆都城：昆仑城BOSS掉落）:120:-156{FCOLOR=7}>      <Text:进阶称号:120:-156{FCOLOR=251}/@进阶上善若水>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1163:0:115:-158><Text:大巧若拙|250#大巧若拙lv.1：破防几率+1%   生命上限+1%   法力上限+1%^250#大巧若拙lv.2：破防几率+3%   生命上限+3%   法力上限+3%^250#大巧若拙lv.3：破防几率+6%   生命上限+6%   法力上限+6%^250#大巧若拙lv.4：破防几率+12%  生命上限+12%  法力上限+12%^250#大巧若拙lv.5：破防几率+20%  生命上限+20%  法力上限+20%:120:-156{FCOLOR=253}>      <Text:需要材料：:120:-156{FCOLOR=146}><Text:点击此处查看|7#大巧若拙lv.1：雷炎蛛丝10个（噩梦地图：雷炎溶洞BOSS掉落）+ 雪域冰晶10个（噩梦地图：雪域平原BOSS掉落）^7#大巧若拙lv.2：血腥手骨30个（炼狱地图：血腥魔窟BOSS掉落）+ 修罗面具30个（炼狱地图：修罗古刹BOSS掉落）^7#大巧若拙lv.3：应龙之心50个（深渊地图：应龙湖底BOSS掉落）+ 血海头骨50个（深渊地图：血海魔窟BOSS掉落）^7#大巧若拙lv.4：龙痕血石100个（酆都城：龙痕丘陵BOSS掉落）^7#大巧若拙lv.5：鬼门之眼150个（酆都城：鬼门关BOSS掉落）:120:-156{FCOLOR=7}>      <Text:进阶称号:120:-156{FCOLOR=251}/@进阶大巧若拙>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1162:0:115:-158><Text:仙人指路|250#仙人指路lv.1：杀人爆率+1%   生命上限+1%   法力上限+1%^250#仙人指路lv.2：杀人爆率+3%   生命上限+3%   法力上限+3%^250#仙人指路lv.3：杀人爆率+6%   生命上限+6%   法力上限+6%^250#仙人指路lv.4：杀人爆率+12%  生命上限+12%  法力上限+12%^250#仙人指路lv.5：杀人爆率+20%  生命上限+20%  法力上限+20%:120:-156{FCOLOR=253}>      <Text:需要材料：:120:-156{FCOLOR=146}><Text:点击此处查看|7#仙人指路lv.1：傀儡心脏10个（噩梦地图：傀儡洞穴BOSS掉落）+ 逆魔之角10个（噩梦地图：逆魔暗殿BOSS掉落）^7#仙人指路lv.2：神木果实30个（炼狱地图：神木洞窟BOSS掉落）+ 蛮荒灵草30个（炼狱地图：蛮荒部落BOSS掉落）^7#仙人指路lv.3：伽蓝佛珠50个（深渊地图：伽蓝神宫BOSS掉落）+ 雷泽之水50个（深渊地图：雷泽船阵BOSS掉落）^7#仙人指路lv.4：真龙之爪100个（酆都城：真龙神宫BOSS掉落）^7#仙人指路lv.5：太古铜印150个（酆都城：太古宫BOSS掉落）:120:-156{FCOLOR=7}>      <Text:进阶称号:120:-156{FCOLOR=251}/@进阶仙人指路>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Text:如果你有多余的材料，可以在下方点击回收获得经验值和金币:120:-157{FCOLOR=22}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Text:回收所有材料：:120:-156{FCOLOR=146}><Text:每个材料回收1万经验+1万金币:120:-156{FCOLOR=7}>    <Text:回收材料|146#点击回收包裹所有材料:122:-156{FCOLOR=251}/@回收称号材料>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+
+
+[@进阶斩妖除魔]
+#IF
+NOT CHECKFENGHAO 斩妖除魔lv.1
+NOT CHECKFENGHAO 斩妖除魔lv.2
+NOT CHECKFENGHAO 斩妖除魔lv.3
+NOT CHECKFENGHAO 斩妖除魔lv.4
+NOT CHECKFENGHAO 斩妖除魔lv.5
+#ACT
+GOTO @斩妖除魔1
+break
+
+#IF
+CHECKFENGHAO 斩妖除魔lv.1
+#ACT
+GOTO @斩妖除魔2
+break
+
+#IF
+CHECKFENGHAO 斩妖除魔lv.2
+#ACT
+GOTO @斩妖除魔3
+break
+
+#IF
+CHECKFENGHAO 斩妖除魔lv.3
+#ACT
+GOTO @斩妖除魔4
+break
+
+#IF
+CHECKFENGHAO 斩妖除魔lv.4
+#ACT
+GOTO @斩妖除魔5
+break
+
+#IF
+CHECKFENGHAO 斩妖除魔lv.5
+#ACT
+messagebox 此称号已经达到最高级，无法升阶
+break
+
+
+[@斩妖除魔1]
+#IF
+checkitem 诺玛水晶 10
+checkitem 真天之骨 10
+#ACT
+TAKE 诺玛水晶 10
+TAKE 真天之骨 10
+GiveFengHao 斩妖除魔lv.1
+messagebox <恭喜你进阶称号[斩妖除魔lv.1]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[斩妖除魔lv.1]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@斩妖除魔2]
+#IF
+checkitem 秦皇钥匙 30
+checkitem 万妖之爪 30
+#ACT
+TAKE 秦皇钥匙 30
+TAKE 万妖之爪 30
+RECYCFENGHAO 斩妖除魔lv.1
+GiveFengHao 斩妖除魔lv.2
+messagebox <恭喜你进阶称号[斩妖除魔lv.2]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[斩妖除魔lv.2]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@斩妖除魔3]
+#IF
+checkitem 蛇魔苦胆 50
+checkitem 火龙之炎 50
+#ACT
+TAKE 蛇魔苦胆 50
+TAKE 火龙之炎 50
+RECYCFENGHAO 斩妖除魔lv.2
+GiveFengHao 斩妖除魔lv.3
+messagebox <恭喜你进阶称号[斩妖除魔lv.3]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[斩妖除魔lv.3]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@斩妖除魔4]
+#IF
+checkitem 旱魃之血 100
+#ACT
+TAKE 旱魃之血 100
+RECYCFENGHAO 斩妖除魔lv.3
+GiveFengHao 斩妖除魔lv.4
+messagebox <恭喜你进阶称号[斩妖除魔lv.4]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[斩妖除魔lv.4]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@斩妖除魔5]
+#IF
+checkitem 圣冰之泪 150
+#ACT
+TAKE 圣冰之泪 150
+RECYCFENGHAO 斩妖除魔lv.4
+GiveFengHao 斩妖除魔lv.5
+messagebox <恭喜你进阶称号[斩妖除魔lv.5]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[斩妖除魔lv.5]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+
+
+
+
+[@进阶不动明王]
+#IF
+NOT CHECKFENGHAO 不动明王lv.1
+NOT CHECKFENGHAO 不动明王lv.2
+NOT CHECKFENGHAO 不动明王lv.3
+NOT CHECKFENGHAO 不动明王lv.4
+NOT CHECKFENGHAO 不动明王lv.5
+#ACT
+GOTO @不动明王1
+break
+
+#IF
+CHECKFENGHAO 不动明王lv.1
+#ACT
+GOTO @不动明王2
+break
+
+#IF
+CHECKFENGHAO 不动明王lv.2
+#ACT
+GOTO @不动明王3
+break
+
+#IF
+CHECKFENGHAO 不动明王lv.3
+#ACT
+GOTO @不动明王4
+break
+
+#IF
+CHECKFENGHAO 不动明王lv.4
+#ACT
+GOTO @不动明王5
+break
+
+#IF
+CHECKFENGHAO 不动明王lv.5
+#ACT
+messagebox 此称号已经达到最高级，无法升阶
+break
+
+
+[@不动明王1]
+#IF
+checkitem 潘夜之牙 10
+checkitem 蚂蚁触角 10
+#ACT
+TAKE 潘夜之牙 10
+TAKE 蚂蚁触角 10
+GiveFengHao 不动明王lv.1
+messagebox <恭喜你进阶称号[不动明王lv.1]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[不动明王lv.1]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@不动明王2]
+#IF
+checkitem 瘟疫残卵 30
+checkitem 狐月断尾 30
+#ACT
+TAKE 瘟疫残卵 30
+TAKE 狐月断尾 30
+RECYCFENGHAO 不动明王lv.1
+GiveFengHao 不动明王lv.2
+messagebox <恭喜你进阶称号[不动明王lv.2]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[不动明王lv.2]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@不动明王3]
+#IF
+checkitem 冰龙雪晶 50
+checkitem 通天羽毛 50
+#ACT
+TAKE 冰龙雪晶 50
+TAKE 通天羽毛 50
+RECYCFENGHAO 不动明王lv.2
+GiveFengHao 不动明王lv.3
+messagebox <恭喜你进阶称号[不动明王lv.3]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[不动明王lv.3]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@不动明王4]
+#IF
+checkitem 鬼骨之心 100
+#ACT
+TAKE 鬼骨之心 100
+RECYCFENGHAO 不动明王lv.3
+GiveFengHao 不动明王lv.4
+messagebox <恭喜你进阶称号[不动明王lv.4]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[不动明王lv.4]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@不动明王5]
+#IF
+checkitem 圣火灵珠 150
+#ACT
+TAKE 圣火灵珠 150
+RECYCFENGHAO 不动明王lv.4
+GiveFengHao 不动明王lv.5
+messagebox <恭喜你进阶称号[不动明王lv.5]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[不动明王lv.5]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+
+[@进阶上善若水]
+#IF
+NOT CHECKFENGHAO 上善若水lv.1
+NOT CHECKFENGHAO 上善若水lv.2
+NOT CHECKFENGHAO 上善若水lv.3
+NOT CHECKFENGHAO 上善若水lv.4
+NOT CHECKFENGHAO 上善若水lv.5
+#ACT
+GOTO @上善若水1
+break
+
+#IF
+CHECKFENGHAO 上善若水lv.1
+#ACT
+GOTO @上善若水2
+break
+
+#IF
+CHECKFENGHAO 上善若水lv.2
+#ACT
+GOTO @上善若水3
+break
+
+#IF
+CHECKFENGHAO 上善若水lv.3
+#ACT
+GOTO @上善若水4
+break
+
+#IF
+CHECKFENGHAO 上善若水lv.4
+#ACT
+GOTO @上善若水5
+break
+
+#IF
+CHECKFENGHAO 上善若水lv.5
+#ACT
+messagebox 此称号已经达到最高级，无法升阶
+break
+
+
+[@上善若水1]
+#IF
+checkitem 猫妖牙齿 10
+checkitem 虎王之爪 10
+#ACT
+TAKE 猫妖牙齿 10
+TAKE 虎王之爪 10
+GiveFengHao 上善若水lv.1
+messagebox <恭喜你进阶称号[上善若水lv.1]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[上善若水lv.1]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@上善若水2]
+#IF
+checkitem 铁血之锤 30
+checkitem 蝠魔毒液 30
+#ACT
+TAKE 铁血之锤 30
+TAKE 蝠魔毒液 30
+RECYCFENGHAO 上善若水lv.1
+GiveFengHao 上善若水lv.2
+messagebox <恭喜你进阶称号[上善若水lv.2]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[上善若水lv.2]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@上善若水3]
+#IF
+checkitem 叛军信件 50
+checkitem 天外之石 50
+#ACT
+TAKE 叛军信件 50
+TAKE 天外之石 50
+RECYCFENGHAO 上善若水lv.2
+GiveFengHao 上善若水lv.3
+messagebox <恭喜你进阶称号[上善若水lv.3]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[上善若水lv.3]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@上善若水4]
+#IF
+checkitem 寒冥鳞片 100
+#ACT
+TAKE 寒冥鳞片 100
+RECYCFENGHAO 上善若水lv.3
+GiveFengHao 上善若水lv.4
+messagebox <恭喜你进阶称号[上善若水lv.4]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[上善若水lv.4]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@上善若水5]
+#IF
+checkitem 昆仑雪莲 150
+#ACT
+TAKE 昆仑雪莲 150
+RECYCFENGHAO 上善若水lv.4
+GiveFengHao 上善若水lv.5
+messagebox <恭喜你进阶称号[上善若水lv.5]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[上善若水lv.5]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+
+[@进阶大巧若拙]
+#IF
+NOT CHECKFENGHAO 大巧若拙lv.1
+NOT CHECKFENGHAO 大巧若拙lv.2
+NOT CHECKFENGHAO 大巧若拙lv.3
+NOT CHECKFENGHAO 大巧若拙lv.4
+NOT CHECKFENGHAO 大巧若拙lv.5
+#ACT
+GOTO @大巧若拙1
+break
+
+#IF
+CHECKFENGHAO 大巧若拙lv.1
+#ACT
+GOTO @大巧若拙2
+break
+
+#IF
+CHECKFENGHAO 大巧若拙lv.2
+#ACT
+GOTO @大巧若拙3
+break
+
+#IF
+CHECKFENGHAO 大巧若拙lv.3
+#ACT
+GOTO @大巧若拙4
+break
+
+#IF
+CHECKFENGHAO 大巧若拙lv.4
+#ACT
+GOTO @大巧若拙5
+break
+
+#IF
+CHECKFENGHAO 大巧若拙lv.5
+#ACT
+messagebox 此称号已经达到最高级，无法升阶
+break
+
+
+[@大巧若拙1]
+#IF
+checkitem 雷炎蛛丝 10
+checkitem 雪域冰晶 10
+#ACT
+TAKE 雷炎蛛丝 10
+TAKE 雪域冰晶 10
+GiveFengHao 大巧若拙lv.1
+messagebox <恭喜你进阶称号[大巧若拙lv.1]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[大巧若拙lv.1]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@大巧若拙2]
+#IF
+checkitem 血腥手骨 30
+checkitem 修罗面具 30
+#ACT
+TAKE 血腥手骨 30
+TAKE 修罗面具 30
+RECYCFENGHAO 大巧若拙lv.1
+GiveFengHao 大巧若拙lv.2
+messagebox <恭喜你进阶称号[大巧若拙lv.2]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[大巧若拙lv.2]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@大巧若拙3]
+#IF
+checkitem 应龙之心 50
+checkitem 血海头骨 50
+#ACT
+TAKE 应龙之心 50
+TAKE 血海头骨 50
+RECYCFENGHAO 大巧若拙lv.2
+GiveFengHao 大巧若拙lv.3
+messagebox <恭喜你进阶称号[大巧若拙lv.3]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[大巧若拙lv.3]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@大巧若拙4]
+#IF
+checkitem 龙痕血石 100
+#ACT
+TAKE 龙痕血石 100
+RECYCFENGHAO 大巧若拙lv.3
+GiveFengHao 大巧若拙lv.4
+messagebox <恭喜你进阶称号[大巧若拙lv.4]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[大巧若拙lv.4]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@大巧若拙5]
+#IF
+checkitem 鬼门之眼 150
+#ACT
+TAKE 鬼门之眼 150
+RECYCFENGHAO 大巧若拙lv.4
+GiveFengHao 大巧若拙lv.5
+messagebox <恭喜你进阶称号[大巧若拙lv.5]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[大巧若拙lv.5]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+
+[@进阶仙人指路]
+#IF
+NOT CHECKFENGHAO 仙人指路lv.1
+NOT CHECKFENGHAO 仙人指路lv.2
+NOT CHECKFENGHAO 仙人指路lv.3
+NOT CHECKFENGHAO 仙人指路lv.4
+NOT CHECKFENGHAO 仙人指路lv.5
+#ACT
+GOTO @仙人指路1
+break
+
+#IF
+CHECKFENGHAO 仙人指路lv.1
+#ACT
+GOTO @仙人指路2
+break
+
+#IF
+CHECKFENGHAO 仙人指路lv.2
+#ACT
+GOTO @仙人指路3
+break
+
+#IF
+CHECKFENGHAO 仙人指路lv.3
+#ACT
+GOTO @仙人指路4
+break
+
+#IF
+CHECKFENGHAO 仙人指路lv.4
+#ACT
+GOTO @仙人指路5
+break
+
+#IF
+CHECKFENGHAO 仙人指路lv.5
+#ACT
+messagebox 此称号已经达到最高级，无法升阶
+break
+
+
+[@仙人指路1]
+#IF
+checkitem 傀儡心脏 10
+checkitem 逆魔之角 10
+#ACT
+TAKE 傀儡心脏 10
+TAKE 逆魔之角 10
+GiveFengHao 仙人指路lv.1
+messagebox <恭喜你进阶称号[仙人指路lv.1]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[仙人指路lv.1]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@仙人指路2]
+#IF
+checkitem 神木果实 30
+checkitem 蛮荒灵草 30
+#ACT
+TAKE 神木果实 30
+TAKE 蛮荒灵草 30
+RECYCFENGHAO 仙人指路lv.1
+GiveFengHao 仙人指路lv.2
+messagebox <恭喜你进阶称号[仙人指路lv.2]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[仙人指路lv.2]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@仙人指路3]
+#IF
+checkitem 伽蓝佛珠 50
+checkitem 雷泽之水 50
+#ACT
+TAKE 伽蓝佛珠 50
+TAKE 雷泽之水 50
+RECYCFENGHAO 仙人指路lv.2
+GiveFengHao 仙人指路lv.3
+messagebox <恭喜你进阶称号[仙人指路lv.3]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[仙人指路lv.3]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@仙人指路4]
+#IF
+checkitem 真龙之爪 100
+#ACT
+TAKE 真龙之爪 100
+RECYCFENGHAO 仙人指路lv.3
+GiveFengHao 仙人指路lv.4
+messagebox <恭喜你进阶称号[仙人指路lv.4]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[仙人指路lv.4]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+[@仙人指路5]
+#IF
+checkitem 太古铜印 150
+#ACT
+TAKE 太古铜印 150
+RECYCFENGHAO 仙人指路lv.4
+GiveFengHao 仙人指路lv.5
+messagebox <恭喜你进阶称号[仙人指路lv.5]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，进阶成就称号[仙人指路lv.5]！
+#ELSEACT
+messagebox 你的材料不足，请点击查看需要材料
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@回收称号材料]
+#IF
+checkgold 2000000000
+#ACT
+messagebox 金币上限20亿，你已经无法携带更多的金币
+break
+
+#IF
+#ACT
+MESSAGEBOX <注意：此操作会回收包裹内所有称号材料！请谨慎操作！！！/SCOLOR=249>\<是否回收所有称号材料？/SCOLOR=7> @确认回收材料 @取消6
+BREAK
+
+
+[@确认回收材料]
+#IF
+#ACT
+TakeBagItem 诺玛水晶|真天之骨|潘夜之牙|蚂蚁触角|猫妖牙齿|虎王之爪|雷炎蛛丝|雪域冰晶|傀儡心脏|逆魔之角 46 0 10000 0 10000 N1 0
+TakeBagItem 秦皇钥匙|万妖之爪|瘟疫残卵|狐月断尾|铁血之锤|蝠魔毒液|血腥手骨|修罗面具|神木果实|蛮荒灵草 46 0 10000 0 10000 N1 0
+TakeBagItem 蛇魔苦胆|火龙之炎|冰龙雪晶|通天羽毛|叛军信件|天外之石|应龙之心|血海头骨|伽蓝佛珠|雷泽之水 46 0 10000 0 10000 N1 0
+TakeBagItem 旱魃之血|鬼骨之心|寒冥鳞片|龙痕血石|真龙之爪|圣冰之泪|圣火灵珠|昆仑雪莲|鬼门之眼|太古铜印 46 0 10000 0 10000 N1 0
+BREAK
+
+
+[@取消6]
+#IF
+#ACT
+break
+
+
+
+
+
+
+
+
+
+[@技能成就对话框]
+#if
+#say
+\ \
+
+<Img:41:52:180:-4>\
+
+<Img:216:52:13:22>\
+
+<Text:萧兮兮：:19:132{FCOLOR=222}>\
+
+<Text:杏花红去，海:19:136{FCOLOR=7}>\
+
+<Text:棠枝树，桃叶:19:138{FCOLOR=7}>\
+
+<Text:桃根浑未觉，:19:140{FCOLOR=7}>\
+
+<Text:樱桃杨柳成轻:19:142{FCOLOR=7}>\
+
+<Text:负。:19:144{FCOLOR=7}>\
+\
+
+<Text:材料成就称号:19:150{FCOLOR=146}/@材料成就对话框>\
+
+<Text:技能成就称号:19:155{FCOLOR=251}/@技能成就对话框>\
+
+<Text:宠物成就称号:19:160{FCOLOR=146}/@宠物成就对话框>\
+
+\  \ 
+
+
+<Text:指向称号名字，可查看称号的属性，达到要求即可领取称号。:120:-157{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1160:0:115:-158><Text:初学乍练|151#初学乍练^7#-^255#全属性：1-1^7#-^250#全属性：+1％^70#血量蓝量：+100^254#物理吸收：+1％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有 2个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取初学乍练>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1161:0:115:-158><Text:渐入佳境|151#渐入佳境^7#-^255#全属性：2-2^7#-^250#全属性：+2％^70#血量蓝量：+200^254#物理吸收：+2％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有 4个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取渐入佳境>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1162:0:115:-158><Text:融会贯通|151#融会贯通^7#-^255#全属性：3-3^7#-^250#全属性：+3％^70#血量蓝量：+300^254#物理吸收：+3％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有 6个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取融会贯通>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1163:0:115:-158><Text:炉火纯青|151#炉火纯青^7#-^255#全属性：5-5^7#-^250#全属性：+5％^70#血量蓝量：+500^254#物理吸收：+4％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有 8个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取炉火纯青>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1164:0:115:-158><Text:登峰造极|151#登峰造极^7#-^255#全属性：10-10^7#-^250#全属性：+10％^70#血量蓝量：+700^254#物理吸收：+5％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有10个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取登峰造极>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1165:0:115:-158><Text:神乎其技|151#神乎其技^7#-^255#全属性：15-15^7#-^250#全属性：+13％^70#血量蓝量：+1000^254#物理吸收：+6％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有11个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取神乎其技>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1166:0:115:-158><Text:出神入化|151#出神入化^7#-^255#全属性：20-20^7#-^250#全属性：+16％^70#血量蓝量：+1300^254#物理吸收：+8％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有12个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取出神入化>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1167:0:115:-158><Text:举世无双|151#举世无双^7#-^255#全属性：30-30^7#-^250#全属性：+20％^70#血量蓝量：+1600^254#物理吸收：+11％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有13个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取举世无双>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1168:0:115:-158><Text:震古铄今|151#震古铄今^7#-^255#全属性：50-50^7#-^250#全属性：+30％^70#血量蓝量：+2000^254#物理吸收：+15％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>      <Text:要求：:120:-156{FCOLOR=146}><Text:拥有14个九重技能:120:-156{FCOLOR=7}>      <Text:领取称号:120:-156{FCOLOR=251}/@领取震古铄今>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+
+
+
+[@领取初学乍练]
+#if
+check [121] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [121] 0
+LARGE U70 1
+#ACT
+set [121] 1
+GiveFengHao 初学乍练
+messagebox <恭喜你获得称号[初学乍练]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[初学乍练]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到2个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取渐入佳境]
+#if
+check [122] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [121] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [122] 0
+LARGE U70 3
+#ACT
+set [122] 1
+RECYCFENGHAO 初学乍练
+GiveFengHao 渐入佳境
+messagebox <恭喜你获得称号[渐入佳境]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[渐入佳境]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到4个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取融会贯通]
+#if
+check [123] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [122] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [123] 0
+LARGE U70 5
+#ACT
+set [123] 1
+RECYCFENGHAO 渐入佳境
+GiveFengHao 融会贯通
+messagebox <恭喜你获得称号[融会贯通]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[融会贯通]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到6个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取炉火纯青]
+#if
+check [124] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [123] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [124] 0
+LARGE U70 7
+#ACT
+set [124] 1
+RECYCFENGHAO 融会贯通
+GiveFengHao 炉火纯青
+messagebox <恭喜你获得称号[炉火纯青]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[炉火纯青]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到8个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取登峰造极]
+#if
+check [125] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [124] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [125] 0
+LARGE U70 9
+#ACT
+set [125] 1
+RECYCFENGHAO 炉火纯青
+GiveFengHao 登峰造极
+messagebox <恭喜你获得称号[登峰造极]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[登峰造极]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到10个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取神乎其技]
+#if
+check [126] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [125] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [126] 0
+LARGE U70 10
+#ACT
+set [126] 1
+RECYCFENGHAO 登峰造极
+GiveFengHao 神乎其技
+messagebox <恭喜你获得称号[神乎其技]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[神乎其技]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到11个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取出神入化]
+#if
+check [127] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [126] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [127] 0
+LARGE U70 11
+#ACT
+set [127] 1
+RECYCFENGHAO 神乎其技
+GiveFengHao 出神入化
+messagebox <恭喜你获得称号[出神入化]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[出神入化]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到12个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取举世无双]
+#if
+check [128] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [127] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [128] 0
+LARGE U70 12
+#ACT
+set [128] 1
+RECYCFENGHAO 出神入化
+GiveFengHao 举世无双
+messagebox <恭喜你获得称号[举世无双]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[举世无双]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到13个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+[@领取震古铄今]
+#if
+check [129] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [128] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [129] 0
+LARGE U70 13
+#ACT
+set [129] 1
+RECYCFENGHAO 举世无双
+GiveFengHao 震古铄今
+messagebox <恭喜你获得称号[震古铄今]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[震古铄今]！
+#ELSEACT
+messagebox <当前有<$STR(U70)>个九重技能，需要达到14个九重技能才可领取/SCOLOR=251>\<佩戴符石可以强化技能重数，部分暗金符石附带高级技能/SCOLOR=146>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@宠物成就对话框]
+#if
+CHECKUSEITEM 30
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM1> expand4 <$STR(N$一号宠物评测)>
+#ELSEACT
+MOV N$一号宠物评测 0
+
+#if
+CHECKUSEITEM 31
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM2> expand4 <$STR(N$二号宠物评测)>
+#ELSEACT
+MOV N$二号宠物评测 0
+
+#if
+CHECKUSEITEM 32
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM3> expand4 <$STR(N$三号宠物评测)>
+#ELSEACT
+MOV N$三号宠物评测 0
+
+#if
+CHECKUSEITEM 33
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM4> expand4 <$STR(N$四号宠物评测)>
+#ELSEACT
+MOV N$四号宠物评测 0
+
+#if
+CHECKUSEITEM 34
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM5> expand4 <$STR(N$五号宠物评测)>
+#ELSEACT
+MOV N$五号宠物评测 0
+
+#if
+CHECKUSEITEM 35
+#ACT
+GetDBItemFieldValue <$JEWELRYITEM6> expand4 <$STR(N$六号宠物评测)>
+#ELSEACT
+MOV N$六号宠物评测 0
+
+
+
+#if
+#say
+\ \
+
+<Img:41:52:180:-4>\
+
+<Img:216:52:13:22>\
+
+<Text:萧兮兮：:19:132{FCOLOR=222}>\
+
+<Text:杏花红去，海:19:136{FCOLOR=7}>\
+
+<Text:棠枝树，桃叶:19:138{FCOLOR=7}>\
+
+<Text:桃根浑未觉，:19:140{FCOLOR=7}>\
+
+<Text:樱桃杨柳成轻:19:142{FCOLOR=7}>\
+
+<Text:负。:19:144{FCOLOR=7}>\
+\ 
+
+<Text:材料成就称号:19:150{FCOLOR=146}/@材料成就对话框>\
+
+<Text:技能成就称号:19:155{FCOLOR=146}/@技能成就对话框>\
+
+<Text:宠物成就称号:19:160{FCOLOR=251}/@宠物成就对话框>\
+
+\  \ \
+
+
+<Text:指向称号名字，可查看称号的属性，达到要求即可领取称号。:120:-157{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1170:0:115:-158><Text:初级驭兽师|151#初级驭兽师^7#-^255#全属性：1-1^7#-^250#全属性：+1％^70#血量蓝量：+100^254#魔法吸收：+1％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个 A级以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取初级驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1171:0:115:-158><Text:中级驭兽师|151#中级驭兽师^7#-^255#全属性：2-2^7#-^250#全属性：+2％^70#血量蓝量：+200^254#魔法吸收：+2％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个 S级以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取中级驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1172:0:115:-158><Text:高级驭兽师|151#高级驭兽师^7#-^255#全属性：3-3^7#-^250#全属性：+3％^70#血量蓝量：+300^254#魔法吸收：+3％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个SS级以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取高级驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1173:0:115:-158><Text:超级驭兽师|151#超级驭兽师^7#-^255#全属性：5-5^7#-^250#全属性：+5％^70#血量蓝量：+500^254#魔法吸收：+4％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个SR级以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取超级驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1174:0:115:-158><Text:百年驭兽师|151#百年驭兽师^7#-^255#全属性：10-10^7#-^250#全属性：+10％^70#血量蓝量：+700^254#魔法吸收：+5％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个百年以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取百年驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1175:0:115:-158><Text:千年驭兽师|151#千年驭兽师^7#-^255#全属性：15-15^7#-^250#全属性：+13％^70#血量蓝量：+1000^254#魔法吸收：+6％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个千年以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取千年驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1176:0:115:-158><Text:万年驭兽师|151#万年驭兽师^7#-^255#全属性：20-20^7#-^250#全属性：+16％^70#血量蓝量：+1300^254#魔法吸收：+8％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个万年以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取万年驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+<Img:1177:0:115:-158><Text:亿年驭兽师|151#亿年驭兽师^7#-^255#全属性：30-30^7#-^250#全属性：+20％^70#血量蓝量：+1600^254#魔法吸收：+11％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个亿年以上宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取亿年驭兽师>\
+
+<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+;<Img:1178:0:115:-158><Text:天神驭兽师|151#天神驭兽师^7#-^255#全属性：50-50^7#-^250#全属性：+30％^70#血量蓝量：+2000^254#魔法吸收：+15％^7#-^7#无需佩戴，获得即可生效:120:-156{FCOLOR=253}>   <Text:要求：:120:-156{FCOLOR=146}><Text:拥有6个天神级的宠物:120:-156{FCOLOR=7}>    <Text:领取称号:120:-156{FCOLOR=251}/@领取天神驭兽师>\
+
+;<Text:-------------------------------------------------------:114:-157{FCOLOR=10}>\
+
+
+
+
+[@领取初级驭兽师]
+#if
+check [131] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [131] 0
+LARGE N$一号宠物评测 249
+LARGE N$二号宠物评测 249
+LARGE N$三号宠物评测 249
+LARGE N$四号宠物评测 249
+LARGE N$五号宠物评测 249
+LARGE N$六号宠物评测 249
+#ACT
+set [131] 1
+GiveFengHao 初级驭兽师
+messagebox <恭喜你获得称号[初级驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[初级驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[A级]以上的宠物，包括[A级]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取中级驭兽师]
+#if
+check [132] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [131] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [132] 0
+LARGE N$一号宠物评测 349
+LARGE N$二号宠物评测 349
+LARGE N$三号宠物评测 349
+LARGE N$四号宠物评测 349
+LARGE N$五号宠物评测 349
+LARGE N$六号宠物评测 349
+#ACT
+set [132] 1
+RECYCFENGHAO 初级驭兽师
+GiveFengHao 中级驭兽师
+messagebox <恭喜你获得称号[中级驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[中级驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[S级]以上的宠物，包括[S级]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取高级驭兽师]
+#if
+check [133] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [132] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [133] 0
+LARGE N$一号宠物评测 449
+LARGE N$二号宠物评测 449
+LARGE N$三号宠物评测 449
+LARGE N$四号宠物评测 449
+LARGE N$五号宠物评测 449
+LARGE N$六号宠物评测 449
+#ACT
+set [133] 1
+RECYCFENGHAO 中级驭兽师
+GiveFengHao 高级驭兽师
+messagebox <恭喜你获得称号[高级驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[高级驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[SS级]以上的宠物，包括[SS级]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取超级驭兽师]
+#if
+check [134] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [133] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [134] 0
+LARGE N$一号宠物评测 549
+LARGE N$二号宠物评测 549
+LARGE N$三号宠物评测 549
+LARGE N$四号宠物评测 549
+LARGE N$五号宠物评测 549
+LARGE N$六号宠物评测 549
+#ACT
+set [134] 1
+RECYCFENGHAO 高级驭兽师
+GiveFengHao 超级驭兽师
+messagebox <恭喜你获得称号[超级驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[超级驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[SR级]以上的宠物，包括[SR级]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取百年驭兽师]
+#if
+check [135] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [134] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [135] 0
+LARGE N$一号宠物评测 699
+LARGE N$二号宠物评测 699
+LARGE N$三号宠物评测 699
+LARGE N$四号宠物评测 699
+LARGE N$五号宠物评测 699
+LARGE N$六号宠物评测 699
+#ACT
+set [135] 1
+RECYCFENGHAO 超级驭兽师
+GiveFengHao 百年驭兽师
+messagebox <恭喜你获得称号[百年驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[百年驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[百年]以上的宠物，包括[百年]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取千年驭兽师]
+#if
+check [136] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [135] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [136] 0
+LARGE N$一号宠物评测 899
+LARGE N$二号宠物评测 899
+LARGE N$三号宠物评测 899
+LARGE N$四号宠物评测 899
+LARGE N$五号宠物评测 899
+LARGE N$六号宠物评测 899
+#ACT
+set [136] 1
+RECYCFENGHAO 百年驭兽师
+GiveFengHao 千年驭兽师
+messagebox <恭喜你获得称号[千年驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[千年驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[千年]以上的宠物，包括[千年]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取万年驭兽师]
+#if
+check [137] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [136] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [137] 0
+LARGE N$一号宠物评测 1199
+LARGE N$二号宠物评测 1199
+LARGE N$三号宠物评测 1199
+LARGE N$四号宠物评测 1199
+LARGE N$五号宠物评测 1199
+LARGE N$六号宠物评测 1199
+#ACT
+set [137] 1
+RECYCFENGHAO 千年驭兽师
+GiveFengHao 万年驭兽师
+messagebox <恭喜你获得称号[万年驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[万年驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[万年]以上的宠物，包括[万年]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取亿年驭兽师]
+#if
+check [138] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [137] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [138] 0
+LARGE N$一号宠物评测 1799
+LARGE N$二号宠物评测 1799
+LARGE N$三号宠物评测 1799
+LARGE N$四号宠物评测 1799
+LARGE N$五号宠物评测 1799
+LARGE N$六号宠物评测 1799
+#ACT
+set [138] 1
+RECYCFENGHAO 万年驭兽师
+GiveFengHao 亿年驭兽师
+messagebox <恭喜你获得称号[亿年驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[亿年驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[亿年]以上的宠物，包括[亿年]/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+
+[@领取天神驭兽师]
+#if
+check [139] 1
+#ACT
+messagebox 你已经领过此称号
+BREAK
+
+#if
+check [138] 1
+#ACT
+#ELSEACT
+messagebox 你还没有领取上个称号，请按顺序领取称号
+BREAK
+
+#if
+check [139] 0
+LARGE N$一号宠物评测 2599
+LARGE N$二号宠物评测 2599
+LARGE N$三号宠物评测 2599
+LARGE N$四号宠物评测 2599
+LARGE N$五号宠物评测 2599
+LARGE N$六号宠物评测 2599
+#ACT
+set [139] 1
+RECYCFENGHAO 亿年驭兽师
+GiveFengHao 天神驭兽师
+messagebox <恭喜你获得称号[天神驭兽师]/SCOLOR=250>\<此称号无需佩戴，获得即可生效/SCOLOR=70>
+sendmsg 0 恭喜玩家[%s]，领取技能成就称号[天神驭兽师]！
+#ELSEACT
+messagebox <需要拥有6个[天神]宠物/SCOLOR=251>\<[灵兽使者]可以孵化宠物，[驯兽师]可以进化宠物/SCOLOR=146>
+BREAK
+
+
+

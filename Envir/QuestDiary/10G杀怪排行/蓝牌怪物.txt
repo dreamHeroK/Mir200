@@ -1,0 +1,49 @@
+[@蓝牌计数]
+{
+#or
+CheckKillMonName	尸王
+CheckKillMonName	触龙神
+CheckKillMonName	黑暗教主
+CheckKillMonName	沃玛教主
+CheckKillMonName	石墓尸王
+CheckKillMonName	祖玛教主
+CheckKillMonName	牛魔王
+CheckKillMonName	赤月恶魔
+CheckKillMonName	奴隶主
+CheckKillMonName	蚁后
+CheckKillMonName	魔龙树妖
+CheckKillMonName	龙王
+CheckKillMonName	猫妖灵兽
+CheckKillMonName	雪域天将
+CheckKillMonName	蛮荒统帅
+CheckKillMonName	虎王首领
+CheckKillMonName	雷炎蛛王
+CheckKillMonName	傀儡铜兽
+CheckKillMonName	火龙守护神
+CheckKillMonName	诺玛将军
+CheckKillMonName	真天战将
+CheckKillMonName	龟丞相
+CheckKillMonName	神木祭祀
+CheckKillMonName	修罗王
+CheckKillMonName	狐月天珠
+CheckKillMonName	瘟疫长老
+CheckKillMonName	闪电妖
+CheckKillMonName	禁军元帅
+CheckKillMonName	血魔护法
+CheckKillMonName	死海魔鱼
+CheckKillMonName	叛军大将军
+CheckKillMonName	通天恶鹰
+CheckKillMonName	冰龙玄龟
+CheckKillMonName	九头蛇妖
+CheckKillMonName	铁血骑士
+CheckKillMonName	罗刹
+#ACT
+
+CALCVAR HUMAN 杀怪数量 + 1
+SAVEVAR HUMAN 杀怪数量 ..\..\..\..\通区捐款\杀怪文本.txt
+inc <$STR(N$一大陆精英)> 1
+
+
+
+
+}

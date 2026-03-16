@@ -1,0 +1,578 @@
+
+[@MAIN]
+#IF
+#ACT
+goto @渡劫飞升界面
+
+[@渡劫飞升界面]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 113 665 1 4 0 -90 1 357 30 1
+#SAY
+<PLAYIMGEX:113:650:15:100:999999:-50:-45:0>\
+<&Text:逆天改命一阶:160:107{FCOLOR=240;FSIZE=12;FNAME=楷体}>
+<&Text:要求70级:230:107{FCOLOR=241;FSIZE=12;FNAME=楷体}>
+<&Text:等级降低1级:300:107{FCOLOR=242;FSIZE=12;FNAME=楷体}>
+<&Text:全属性5-5:390:107{FCOLOR=243;FSIZE=12;FNAME=楷体}>
+<&Text:体力+2%:485:107{FCOLOR=244;FSIZE=12;FNAME=楷体}>
+<&Text:逆天改命一阶:560:107/@一重_渡劫>
+;-----------------------------------------------
+<&Text:逆天改命二阶:160:137{FCOLOR=240;FSIZE=12;FNAME=楷体}>
+<&Text:要求71级:230:137{FCOLOR=241;FSIZE=12;FNAME=楷体}>
+<&Text:等级降低2级:300:137{FCOLOR=242;FSIZE=12;FNAME=楷体}>
+<&Text:全属性10-10:390:137{FCOLOR=243;FSIZE=12;FNAME=楷体}>
+<&Text:体力+4%:485:137{FCOLOR=244;FSIZE=12;FNAME=楷体}>
+<&Text:逆天改命二阶:560:137/@二重_渡劫>
+;-----------------------------------------------
+<&Text:逆天改命三阶:160:167{FCOLOR=240;FSIZE=12;FNAME=楷体}>
+<&Text:要求72级:230:167{FCOLOR=241;FSIZE=12;FNAME=楷体}>
+<&Text:等级降低3级:300:167{FCOLOR=242;FSIZE=12;FNAME=楷体}>
+<&Text:全属性15-15:390:167{FCOLOR=243;FSIZE=12;FNAME=楷体}>
+<&Text:体力+6%:485:167{FCOLOR=244;FSIZE=12;FNAME=楷体}>
+<&Text:逆天改命三阶:560:167/@三重_渡劫>
+;-----------------------------------------------
+<&Text:逆天改命四阶:160:197{FCOLOR=240;FSIZE=12;FNAME=楷体}>
+<&Text:要求73级:230:197{FCOLOR=241;FSIZE=12;FNAME=楷体}>
+<&Text:等级降低4级:300:197{FCOLOR=242;FSIZE=12;FNAME=楷体}>
+<&Text:全属性20-20:390:197{FCOLOR=243;FSIZE=12;FNAME=楷体}>
+<&Text:体力+8%:485:197{FCOLOR=244;FSIZE=12;FNAME=楷体}>
+<&Text:逆天改命四阶:560:197/@四重_渡劫>
+;-----------------------------------------------
+<&Text:逆天改命五阶:160:227{FCOLOR=240;FSIZE=12;FNAME=楷体}>
+<&Text:要求74级:230:227{FCOLOR=241;FSIZE=12;FNAME=楷体}>
+<&Text:等级降低5级:300:227{FCOLOR=242;FSIZE=12;FNAME=楷体}>
+<&Text:全属性25-25:390:227{FCOLOR=243;FSIZE=12;FNAME=楷体}>
+<&Text:体力+10%:485:227{FCOLOR=244;FSIZE=12;FNAME=楷体}>
+<&Text:逆天改命五阶:560:227/@五重_渡劫>
+;===================================
+<&Text:70-71:160:277{FCOLOR=245;FSIZE=12;FNAME=楷体}>
+<&Text:金币突破|250#成功几率10%^BOSS精华*500^金币*1000W:160:297/@70_金币>
+;<&Text:元宝突破|250#成功几率100%^BOSS精华*500^元宝*300:320:477/@70_元宝{FCOLOR=245>
+;----------------------------------
+<&Text:71-72:230:277{FCOLOR=245;FSIZE=12;FNAME=楷体}>
+<&Text:金币突破|250#成功几率10%^神器碎片*2^金币*2000W:230:297/@71_金币>
+;<&Text:元宝突破|250#一合关闭^免费领取:420:477/@71_元宝{FCOLOR=245>
+;----------------------------------
+<&Text:72-73:300:277{FCOLOR=245;FSIZE=12;FNAME=楷体}>
+<&Text:金币突破|250#成功几率10%^神器晶核*2^金币*3000W:300:297/@72_金币>
+;<&Text:元宝突破|250#一合关闭^免费领取:500:477/@72_元宝{FCOLOR=245>
+;----------------------------------
+<&Text:73-74:390:277{FCOLOR=245;FSIZE=12;FNAME=楷体}>
+<&Text:金币突破|250#成功几率10%^神源*2^金币*4000W:390:297/@73_金币>
+;<&Text:元宝突破|250#一合关闭^免费领取:600:477/@73_元宝{FCOLOR=245>
+;----------------------------------
+<&Text:74-75:470:277{FCOLOR=245;FSIZE=12;FNAME=楷体}>
+<&Text:金币突破|250#成功几率10%^天命石*5^金币*5000W:470:297/@74_金币>
+;<&Text:元宝突破|250#一合关闭^免费领取:700:477/@74_元宝{FCOLOR=245>
+;----------------------------------
+
+
+[@一重_渡劫]
+#IF
+CHECKRENEWLEVEL < 10
+#ACT
+Messagebox 系统提示：“你的转生等级低于10转，无法渡劫”
+Break
+
+
+#IF
+CHECKLEVELEX < 70
+#ACT
+messagebox 等级不足70级
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命一阶
+CHECKFENGHAO 逆天改命二阶
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+MessageBox 　\　\　　　已经渡过此劫,或者更高!!!
+break
+
+#IF
+#ACT
+CHANGELEVEL = 69
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+GiveFengHao 逆天改命一阶
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命一阶】 13 10 0
+break
+
+[@二重_渡劫]
+#IF
+CHECKRENEWLEVEL < 10
+#ACT
+Messagebox 系统提示：“你的转生等级低于10转，无法渡劫”
+Break
+
+
+#IF
+CHECKLEVELEX < 71
+#ACT
+messagebox 等级不足71级
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命二阶
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+MessageBox 　\　\　　　已经渡过此劫,或者更高!!!
+break
+
+#IF
+#ACT
+CHANGELEVEL = 69
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+GiveFengHao 逆天改命二阶
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命二阶】 13 10 0
+break
+
+[@三重_渡劫]
+#IF
+CHECKRENEWLEVEL < 10
+#ACT
+Messagebox 系统提示：“你的转生等级低于10转，无法渡劫”
+Break
+
+
+#IF
+CHECKLEVELEX < 72
+#ACT
+messagebox 等级不足72级
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+MessageBox 　\　\　　　已经渡过此劫,或者更高!!!
+break
+
+#IF
+#ACT
+CHANGELEVEL = 69
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+GiveFengHao 逆天改命三阶
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命三阶】 13 10 0
+break
+
+
+[@四重_渡劫]
+#IF
+CHECKRENEWLEVEL < 10
+#ACT
+Messagebox 系统提示：“你的转生等级低于10转，无法渡劫”
+Break
+
+
+#IF
+CHECKLEVELEX < 73
+#ACT
+messagebox 等级不足73级
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命五阶
+#ACT
+MessageBox 　\　\　　　已经渡过此劫,或者更高!!!
+break
+
+#IF
+#ACT
+CHANGELEVEL = 69
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+GiveFengHao 逆天改命四阶
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命四阶】 13 10 0
+break
+
+
+[@五重_渡劫]
+#IF
+CHECKRENEWLEVEL < 10
+#ACT
+Messagebox 系统提示：“你的转生等级低于10转，无法渡劫”
+Break
+
+
+#IF
+CHECKLEVELEX < 74
+#ACT
+messagebox 等级不足74级
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命五阶
+#ACT
+MessageBox 　\　\　　　已经渡过此劫,或者更高!!!
+break
+
+#IF
+#ACT
+CHANGELEVEL = 69
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+GiveFengHao 逆天改命五阶
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命五阶】 13 10 0
+break
+
+;-------------------------------------------------------------
+
+[@70_金币]
+
+#IF
+CHECKLEVELEX = 70
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是70级!
+BREAK
+
+
+
+#IF
+not CheckGold  10000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足1000W！
+BREAK
+
+
+#IF
+not checkitem BOSS精华 500
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　BOSS精华不足500个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命一阶
+CHECKFENGHAO 逆天改命二阶
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命一阶!!!
+break
+
+#IF
+LARGE U560 9
+#ACT
+TAKE BOSS精华 500
+TAKE 金币 10000000
+CHANGELEVEL + 1
+MOV U560 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【70级】 13 10 0
+goto @main
+BREAK
+
+
+#IF
+LARGE U560 5
+randomex 10 100
+#ACT
+TAKE BOSS精华 500
+TAKE 金币 10000000
+CHANGELEVEL + 1
+MOV U560 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【70级】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE BOSS精华 500
+TAKE 金币 10000000
+INC U560 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+[@71_金币]
+
+#IF
+CHECKLEVELEX = 71
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是71级!
+BREAK
+
+
+
+#IF
+not CheckGold  20000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足2000W！
+BREAK
+
+
+#IF
+not checkitem 神器碎片 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　神器碎片不足2个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命二阶
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命二阶!!!
+break
+
+
+
+#IF
+LARGE U561 9
+#ACT
+TAKE 神器碎片 2
+TAKE 金币 20000000
+CHANGELEVEL + 1
+mov u561 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【71级】 13 10 0
+goto @main
+BREAK
+
+
+
+
+#IF
+LARGE U561 5
+randomex 10 100
+#ACT
+TAKE 神器碎片 2
+TAKE 金币 20000000
+CHANGELEVEL + 1
+mov u561 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【71级】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 神器碎片 2
+TAKE 金币 20000000
+inc u561 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+
+[@72_金币]
+
+#IF
+CHECKLEVELEX = 72
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是72级!
+BREAK
+
+
+
+#IF
+not CheckGold  30000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足3000W！
+BREAK
+
+
+#IF
+not checkitem 神器晶核 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　神器晶核不足2个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命三阶!!!
+break
+
+
+
+#IF
+LARGE U562 9
+#ACT
+TAKE 神器晶核 2
+TAKE 金币 30000000
+CHANGELEVEL + 1
+mov U562 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【72级】 13 10 0
+goto @main
+BREAK
+
+
+#IF
+LARGE U562 5
+randomex 10 100
+#ACT
+TAKE 神器晶核 2
+TAKE 金币 30000000
+CHANGELEVEL + 1
+mov U562 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【72级】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 神器晶核 2
+TAKE 金币 30000000
+inc U562 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+[@73_金币]
+
+#IF
+CHECKLEVELEX = 73
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是73级!
+BREAK
+
+
+
+#IF
+not CheckGold  40000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足4000W！
+BREAK
+
+
+#IF
+not checkitem 神源 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　神源不足2个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命四阶!!!
+break
+
+#IF
+LARGE U563 9
+#ACT
+TAKE 神源 2
+TAKE 金币 40000000
+CHANGELEVEL + 1
+mov U563 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【73级】 13 10 0
+goto @main
+BREAK
+
+
+#IF
+LARGE U563 5
+randomex 10 100
+#ACT
+TAKE 神源 2
+TAKE 金币 40000000
+CHANGELEVEL + 1
+mov U563 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【73级】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 神源 2
+TAKE 金币 40000000
+INC U563 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+
+[@74_金币]
+
+#IF
+CHECKLEVELEX = 74
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是74级!
+BREAK
+
+
+
+#IF
+not CheckGold  50000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足5000W！
+BREAK
+
+
+#IF
+not checkitem 天命石 5
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　天命石不足5个！
+BREAK
+
+#IF
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命五阶!!!
+break
+
+#IF
+LARGE U564 9
+#ACT
+TAKE 天命石 5
+TAKE 金币 50000000
+CHANGELEVEL + 1
+MOV U564 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【74级】 13 10 0
+goto @main
+BREAK
+
+
+#IF
+LARGE U564 5
+randomex 10 100
+#ACT
+TAKE 天命石 5
+TAKE 金币 50000000
+CHANGELEVEL + 1
+MOV U564 0
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功突破【74级】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 天命石 5
+TAKE 金币 50000000
+INC U564 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+
+
+

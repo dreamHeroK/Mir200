@@ -1,0 +1,458 @@
+[@领取充值累计]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\01.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\02.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\03.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\04.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\05.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\06.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\07.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\08.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\09.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 0
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计0,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 1
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计1,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\2.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 2
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计2,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\3.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 3
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计3,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\4.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 4
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计4,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\5.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 5
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计5,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\6.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 6
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计6,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\7.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 7
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计7,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\8.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 8
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计8,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\9.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 9
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计9,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\10.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 10
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计10,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\20.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 20
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计20,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\30.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 30
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计30,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\40.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 40
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计40,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\50.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 50
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计50,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\60.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 60
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计60,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\70.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 70
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计70,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\80.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 80
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计80,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\90.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 90
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计90,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\100.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 100
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计100,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\200.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 200
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计200,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\300.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 300
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计300,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\400.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 400
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计400,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\500.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 500
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计500,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\600.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 600
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计600,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\700.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 700
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计700,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\800.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 800
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计800,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\900.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 900
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计900,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 1000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计1000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\2000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 2000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计2000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\3000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 3000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计3000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\4000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 4000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计4000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\5000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 5000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计5000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\6000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 6000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计6000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\7000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 7000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计7000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\8000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 8000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计8000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\9000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 9000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计9000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\10000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 10000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计10000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\20000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 20000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计20000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\30000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 30000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计30000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\40000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 40000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计40000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\50000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 50000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计50000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\60000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 60000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计60000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\70000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 70000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计70000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\80000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 80000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计80000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\90000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 90000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计90000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\100000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 100000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计100000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\200000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 200000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计200000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\300000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 300000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计300000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\400000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 400000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计400000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\500000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 500000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计500000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\600000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 600000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计600000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\700000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 700000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计700000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\800000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 800000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计800000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\900000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 900000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计900000,如果您也想获得,请赶快充值吧!
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000000.txt
+#ACT
+CALCVAR HUMAN 充值累计 + 1000000
+SAVEVAR HUMAN 充值累计 ..\QuestDiary\充值累计Save.txt
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值累计1000000,如果您也想获得,请赶快充值吧!
+
+
+#ELSESAY
+
+请查看自己的数量!\
+如果没有充值请按提示进行充值!\
+<退出/@exit>
+}

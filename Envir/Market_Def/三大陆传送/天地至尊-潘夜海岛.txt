@@ -1,0 +1,34 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 414 1 4 0 0 1 535 4 1
+#say
+
+<>\
+<ItemShow:444:0:148:285:1> <ItemShow:446:0:158:285:1> <ItemShow:383:0:170:285:1> <ItemShow:384:0:180:285:1> <ItemShow:385:0:190:285:1> <ItemShow:513:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@天地至尊>
+
+
+[@天地至尊]
+#IF
+CHECKLEVELEX > 61
+#ACT
+#ELSEACT
+messagebox 等级不足62级
+BREAK
+
+#if
+CHECKFENGHAO 天地至尊
+#ELSEACT
+messagebox 需要获得[天地至尊]称号或更高级!
+BREAK
+
+
+
+#if
+#ACT
+MAP 天地至尊(暗殿) 
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[天地至尊(暗殿)]，祝他满载而归！
+BREAK
+

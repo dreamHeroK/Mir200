@@ -1,0 +1,571 @@
+[@命格配置]
+{
+#if
+#act
+MOV N$命格防御 0
+MOV N$命格攻击 0
+MOV N$命格HP 0
+
+MOV N$命格物理减免 0
+MOV N$命格魔法减免 0
+MOV N$命格攻击伤害 0
+MOV N$命格伤害抗性 0
+MOV N$命格致命一击 0
+MOV N$命格致命伤害 0
+MOV N$命格爆击抗性 0
+MOV N$命格致命抗性 0
+MOV N$命格HP百分比 0
+
+
+
+MOV N$命格鞭尸几率 0
+mov N$命格暴率 0
+MOV N$命格攻击速度 0
+MOV N$命格攻击速度上限 0
+
+
+;-----------------------------BUFF重置
+mov N$双重开天 0
+mov N$双重烈火 0
+mov N$双重逐日 0
+mov N$先发制怪 0
+mov N$红毒高手 0
+mov N$绿毒高手 0
+mov N$一剑封喉 0
+mov N$上毒高手 0
+mov N$无处可逃 0
+mov N$站住别动 0
+mov N$罪恶都市 0
+mov N$越战越勇 0
+mov N$快人一步 0
+mov N$无敌巨像 0
+mov N$画地为牢 0
+mov N$神技大师 0
+mov N$越战越娘 0
+
+
+
+;=====================================================
+
+#or
+EQUAL T101 忍气吞声
+EQUAL T102 忍气吞声
+EQUAL T103 忍气吞声
+EQUAL T104 忍气吞声
+EQUAL T105 忍气吞声
+EQUAL T106 忍气吞声
+EQUAL T107 忍气吞声
+EQUAL T108 忍气吞声
+EQUAL T109 忍气吞声
+EQUAL T110 忍气吞声
+#act
+inc N$命格防御 10
+inc N$命格物理减免 1
+inc N$命格魔法减免 1
+
+
+#or
+EQUAL T101 有备无患
+EQUAL T102 有备无患
+EQUAL T103 有备无患
+EQUAL T104 有备无患
+EQUAL T105 有备无患
+EQUAL T106 有备无患
+EQUAL T107 有备无患
+EQUAL T108 有备无患
+EQUAL T109 有备无患
+EQUAL T110 有备无患
+#act
+inc N$命格攻击伤害 1
+inc N$命格伤害抗性 1
+
+
+#or
+EQUAL T101 生生不息
+EQUAL T102 生生不息
+EQUAL T103 生生不息
+EQUAL T104 生生不息
+EQUAL T105 生生不息
+EQUAL T106 生生不息
+EQUAL T107 生生不息
+EQUAL T108 生生不息
+EQUAL T109 生生不息
+EQUAL T110 生生不息
+#act
+inc N$命格HP 50
+inc N$命格HP百分比 2
+
+
+#or
+EQUAL T101 一触即发
+EQUAL T102 一触即发
+EQUAL T103 一触即发
+EQUAL T104 一触即发
+EQUAL T105 一触即发
+EQUAL T106 一触即发
+EQUAL T107 一触即发
+EQUAL T108 一触即发
+EQUAL T109 一触即发
+EQUAL T110 一触即发
+#act
+inc N$命格攻击 10
+inc N$命格攻击伤害 2
+
+#or
+EQUAL T101 得心应手
+EQUAL T102 得心应手
+EQUAL T103 得心应手
+EQUAL T104 得心应手
+EQUAL T105 得心应手
+EQUAL T106 得心应手
+EQUAL T107 得心应手
+EQUAL T108 得心应手
+EQUAL T109 得心应手
+EQUAL T110 得心应手
+#act
+inc N$命格鞭尸几率 2
+inc N$命格暴率 20
+
+
+#or
+EQUAL T101 昙花一现
+EQUAL T102 昙花一现
+EQUAL T103 昙花一现
+EQUAL T104 昙花一现
+EQUAL T105 昙花一现
+EQUAL T106 昙花一现
+EQUAL T107 昙花一现
+EQUAL T108 昙花一现
+EQUAL T109 昙花一现
+EQUAL T110 昙花一现
+#act
+inc N$命格攻击速度 1
+inc N$命格攻击速度上限 1
+
+#or
+EQUAL T101 求全责备
+EQUAL T102 求全责备
+EQUAL T103 求全责备
+EQUAL T104 求全责备
+EQUAL T105 求全责备
+EQUAL T106 求全责备
+EQUAL T107 求全责备
+EQUAL T108 求全责备
+EQUAL T109 求全责备
+EQUAL T110 求全责备
+#act
+inc N$命格攻击伤害 2
+inc N$命格伤害抗性 2
+
+#or
+EQUAL T101 能屈能伸
+EQUAL T102 能屈能伸
+EQUAL T103 能屈能伸
+EQUAL T104 能屈能伸
+EQUAL T105 能屈能伸
+EQUAL T106 能屈能伸
+EQUAL T107 能屈能伸
+EQUAL T108 能屈能伸
+EQUAL T109 能屈能伸
+EQUAL T110 能屈能伸
+#act
+inc N$命格防御 20
+inc N$命格物理减免 2
+inc N$命格魔法减免 2
+
+#or
+EQUAL T101 致命一击
+EQUAL T102 致命一击
+EQUAL T103 致命一击
+EQUAL T104 致命一击
+EQUAL T105 致命一击
+EQUAL T106 致命一击
+EQUAL T107 致命一击
+EQUAL T108 致命一击
+EQUAL T109 致命一击
+EQUAL T110 致命一击
+#act
+inc N$命格致命一击 2
+inc N$命格致命伤害 2
+
+#or
+EQUAL T101 大敌当前
+EQUAL T102 大敌当前
+EQUAL T103 大敌当前
+EQUAL T104 大敌当前
+EQUAL T105 大敌当前
+EQUAL T106 大敌当前
+EQUAL T107 大敌当前
+EQUAL T108 大敌当前
+EQUAL T109 大敌当前
+EQUAL T110 大敌当前
+#act
+inc N$命格攻击 50
+inc N$命格攻击伤害 5
+
+#or
+EQUAL T101 铜墙铁壁
+EQUAL T102 铜墙铁壁
+EQUAL T103 铜墙铁壁
+EQUAL T104 铜墙铁壁
+EQUAL T105 铜墙铁壁
+EQUAL T106 铜墙铁壁
+EQUAL T107 铜墙铁壁
+EQUAL T108 铜墙铁壁
+EQUAL T109 铜墙铁壁
+EQUAL T110 铜墙铁壁
+#act
+inc N$命格爆击抗性 2
+inc N$命格致命抗性 2
+
+#or
+EQUAL T101 一命归阴
+EQUAL T102 一命归阴
+EQUAL T103 一命归阴
+EQUAL T104 一命归阴
+EQUAL T105 一命归阴
+EQUAL T106 一命归阴
+EQUAL T107 一命归阴
+EQUAL T108 一命归阴
+EQUAL T109 一命归阴
+EQUAL T110 一命归阴
+#act
+inc N$命格致命一击 4
+inc N$命格致命伤害 4
+
+#or
+EQUAL T101 万事亨通
+EQUAL T102 万事亨通
+EQUAL T103 万事亨通
+EQUAL T104 万事亨通
+EQUAL T105 万事亨通
+EQUAL T106 万事亨通
+EQUAL T107 万事亨通
+EQUAL T108 万事亨通
+EQUAL T109 万事亨通
+EQUAL T110 万事亨通
+#act
+inc N$命格鞭尸几率 10
+inc N$命格暴率 100
+
+#or
+EQUAL T101 坚若磐石
+EQUAL T102 坚若磐石
+EQUAL T103 坚若磐石
+EQUAL T104 坚若磐石
+EQUAL T105 坚若磐石
+EQUAL T106 坚若磐石
+EQUAL T107 坚若磐石
+EQUAL T108 坚若磐石
+EQUAL T109 坚若磐石
+EQUAL T110 坚若磐石
+#act
+inc N$命格爆击抗性 5
+inc N$命格致命抗性 5
+
+#or
+EQUAL T101 攻守兼备
+EQUAL T102 攻守兼备
+EQUAL T103 攻守兼备
+EQUAL T104 攻守兼备
+EQUAL T105 攻守兼备
+EQUAL T106 攻守兼备
+EQUAL T107 攻守兼备
+EQUAL T108 攻守兼备
+EQUAL T109 攻守兼备
+EQUAL T110 攻守兼备
+#act
+inc N$命格攻击伤害 5
+inc N$命格伤害抗性 5
+
+#or
+EQUAL T101 潮鸣电擎
+EQUAL T102 潮鸣电擎
+EQUAL T103 潮鸣电擎
+EQUAL T104 潮鸣电擎
+EQUAL T105 潮鸣电擎
+EQUAL T106 潮鸣电擎
+EQUAL T107 潮鸣电擎
+EQUAL T108 潮鸣电擎
+EQUAL T109 潮鸣电擎
+EQUAL T110 潮鸣电擎
+#act
+inc N$命格攻击速度 2
+inc N$命格攻击速度上限 3
+
+#or
+EQUAL T101 生龙活虎
+EQUAL T102 生龙活虎
+EQUAL T103 生龙活虎
+EQUAL T104 生龙活虎
+EQUAL T105 生龙活虎
+EQUAL T106 生龙活虎
+EQUAL T107 生龙活虎
+EQUAL T108 生龙活虎
+EQUAL T109 生龙活虎
+EQUAL T110 生龙活虎
+#act
+inc N$命格HP 500
+inc N$命格HP百分比 5
+
+
+
+#or
+EQUAL T101 双重开天
+EQUAL T102 双重开天
+EQUAL T103 双重开天
+EQUAL T104 双重开天
+EQUAL T105 双重开天
+EQUAL T106 双重开天
+EQUAL T107 双重开天
+EQUAL T108 双重开天
+EQUAL T109 双重开天
+EQUAL T110 双重开天
+#act
+MOV N$双重开天 1
+
+#or
+EQUAL T101 双重烈火
+EQUAL T102 双重烈火
+EQUAL T103 双重烈火
+EQUAL T104 双重烈火
+EQUAL T105 双重烈火
+EQUAL T106 双重烈火
+EQUAL T107 双重烈火
+EQUAL T108 双重烈火
+EQUAL T109 双重烈火
+EQUAL T110 双重烈火
+#act
+MOV N$双重烈火 1
+
+#or
+EQUAL T101 双重逐日
+EQUAL T102 双重逐日
+EQUAL T103 双重逐日
+EQUAL T104 双重逐日
+EQUAL T105 双重逐日
+EQUAL T106 双重逐日
+EQUAL T107 双重逐日
+EQUAL T108 双重逐日
+EQUAL T109 双重逐日
+EQUAL T110 双重逐日
+#act
+MOV N$双重逐日 1
+
+#or
+EQUAL T101 先发制怪
+EQUAL T102 先发制怪
+EQUAL T103 先发制怪
+EQUAL T104 先发制怪
+EQUAL T105 先发制怪
+EQUAL T106 先发制怪
+EQUAL T107 先发制怪
+EQUAL T108 先发制怪
+EQUAL T109 先发制怪
+EQUAL T110 先发制怪
+#act
+MOV N$先发制怪 1
+
+#or
+EQUAL T101 红毒高手
+EQUAL T102 红毒高手
+EQUAL T103 红毒高手
+EQUAL T104 红毒高手
+EQUAL T105 红毒高手
+EQUAL T106 红毒高手
+EQUAL T107 红毒高手
+EQUAL T108 红毒高手
+EQUAL T109 红毒高手
+EQUAL T110 红毒高手
+#act
+MOV N$红毒高手 1
+
+#or
+EQUAL T101 绿毒高手
+EQUAL T102 绿毒高手
+EQUAL T103 绿毒高手
+EQUAL T104 绿毒高手
+EQUAL T105 绿毒高手
+EQUAL T106 绿毒高手
+EQUAL T107 绿毒高手
+EQUAL T108 绿毒高手
+EQUAL T109 绿毒高手
+EQUAL T110 绿毒高手
+#act
+MOV N$绿毒高手 1
+
+#or
+EQUAL T101 一剑封喉
+EQUAL T102 一剑封喉
+EQUAL T103 一剑封喉
+EQUAL T104 一剑封喉
+EQUAL T105 一剑封喉
+EQUAL T106 一剑封喉
+EQUAL T107 一剑封喉
+EQUAL T108 一剑封喉
+EQUAL T109 一剑封喉
+EQUAL T110 一剑封喉
+#act
+MOV N$一剑封喉 1
+
+#or
+EQUAL T101 上毒高手
+EQUAL T102 上毒高手
+EQUAL T103 上毒高手
+EQUAL T104 上毒高手
+EQUAL T105 上毒高手
+EQUAL T106 上毒高手
+EQUAL T107 上毒高手
+EQUAL T108 上毒高手
+EQUAL T109 上毒高手
+EQUAL T110 上毒高手
+#act
+MOV N$上毒高手 1
+
+
+#or
+EQUAL T101 无处可逃
+EQUAL T102 无处可逃
+EQUAL T103 无处可逃
+EQUAL T104 无处可逃
+EQUAL T105 无处可逃
+EQUAL T106 无处可逃
+EQUAL T107 无处可逃
+EQUAL T108 无处可逃
+EQUAL T109 无处可逃
+EQUAL T110 无处可逃
+#act
+MOV N$无处可逃 1
+
+#or
+EQUAL T101 站住别动
+EQUAL T102 站住别动
+EQUAL T103 站住别动
+EQUAL T104 站住别动
+EQUAL T105 站住别动
+EQUAL T106 站住别动
+EQUAL T107 站住别动
+EQUAL T108 站住别动
+EQUAL T109 站住别动
+EQUAL T110 站住别动
+#act
+MOV N$站住别动 1
+
+#or
+EQUAL T101 罪恶都市
+EQUAL T102 罪恶都市
+EQUAL T103 罪恶都市
+EQUAL T104 罪恶都市
+EQUAL T105 罪恶都市
+EQUAL T106 罪恶都市
+EQUAL T107 罪恶都市
+EQUAL T108 罪恶都市
+EQUAL T109 罪恶都市
+EQUAL T110 罪恶都市
+#act
+MOV N$罪恶都市 1
+
+
+#or
+EQUAL T101 越战越勇
+EQUAL T102 越战越勇
+EQUAL T103 越战越勇
+EQUAL T104 越战越勇
+EQUAL T105 越战越勇
+EQUAL T106 越战越勇
+EQUAL T107 越战越勇
+EQUAL T108 越战越勇
+EQUAL T109 越战越勇
+EQUAL T110 越战越勇
+#act
+MOV N$越战越勇 1
+
+#or
+EQUAL T101 快人一步
+EQUAL T102 快人一步
+EQUAL T103 快人一步
+EQUAL T104 快人一步
+EQUAL T105 快人一步
+EQUAL T106 快人一步
+EQUAL T107 快人一步
+EQUAL T108 快人一步
+EQUAL T109 快人一步
+EQUAL T110 快人一步
+#act
+MOV N$快人一步 1
+
+#or
+EQUAL T101 无敌巨像
+EQUAL T102 无敌巨像
+EQUAL T103 无敌巨像
+EQUAL T104 无敌巨像
+EQUAL T105 无敌巨像
+EQUAL T106 无敌巨像
+EQUAL T107 无敌巨像
+EQUAL T108 无敌巨像
+EQUAL T109 无敌巨像
+EQUAL T110 无敌巨像
+#act
+MOV N$无敌巨像 1
+
+#or
+EQUAL T101 画地为牢
+EQUAL T102 画地为牢
+EQUAL T103 画地为牢
+EQUAL T104 画地为牢
+EQUAL T105 画地为牢
+EQUAL T106 画地为牢
+EQUAL T107 画地为牢
+EQUAL T108 画地为牢
+EQUAL T109 画地为牢
+EQUAL T110 画地为牢
+#act
+MOV N$画地为牢 1
+
+#or
+EQUAL T101 神技大师
+EQUAL T102 神技大师
+EQUAL T103 神技大师
+EQUAL T104 神技大师
+EQUAL T105 神技大师
+EQUAL T106 神技大师
+EQUAL T107 神技大师
+EQUAL T108 神技大师
+EQUAL T109 神技大师
+EQUAL T110 神技大师
+#act
+MOV N$神技大师 1
+
+#or
+EQUAL T101 越战越娘
+EQUAL T102 越战越娘
+EQUAL T103 越战越娘
+EQUAL T104 越战越娘
+EQUAL T105 越战越娘
+EQUAL T106 越战越娘
+EQUAL T107 越战越娘
+EQUAL T108 越战越娘
+EQUAL T109 越战越娘
+EQUAL T110 越战越娘
+#act
+MOV N$越战越娘 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;#if
+;#act
+;sendmsg 7 攻击伤21323害：<$STR(N$命格攻击速度)>
+
+
+}

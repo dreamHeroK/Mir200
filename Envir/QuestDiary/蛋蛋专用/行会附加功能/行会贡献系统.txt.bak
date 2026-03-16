@@ -1,0 +1,133 @@
+{
+(@@InPutString @@InPutInteger)
+[@行会贡献系统]
+
+;行会等级 <$GUILDBUILDPOINT>
+;行会贡献 <$GUILDAURAEPOINT>
+
+
+#IF
+#ACT
+MOV S$显示行会等级 <$GUILDBUILDPOINT>级
+MOV N$预览行会下级 <$GUILDBUILDPOINT>
+INC N$预览行会下级 1
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini <$STR(N$预览行会下级)> 需要贡献 <$STR(N$升级需要贡献)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 5 需要贡献 <$STR(N$封顶贡献值)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 1 行会BUFF <$STR(S$行会BUFF1)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 2 行会BUFF <$STR(S$行会BUFF2)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 3 行会BUFF <$STR(S$行会BUFF3)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 4 行会BUFF <$STR(S$行会BUFF4)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 5 行会BUFF <$STR(S$行会BUFF5)>
+
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 1 需要贡献 <$STR(S$判断升级贡献1)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 2 需要贡献 <$STR(S$判断升级贡献2)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 3 需要贡献 <$STR(S$判断升级贡献3)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 4 需要贡献 <$STR(S$判断升级贡献4)>
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\行会附加功能\行会贡献配置项.ini 5 需要贡献 <$STR(S$判断升级贡献5)>
+
+#IF
+EQUAL <$STR(N$升级需要贡献)> 
+#ACT
+MOV S$显示行会等级 已满级
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 208 1 4 0 0 1 435 15 1
+#SAY
+
+<TEXT:行会等级：<$STR(S$显示行会等级)>:150:60{FCOLOR=94;FBOLD;FSIZE=15;FNAME=楷体}>\
+
+　\
+<ProgressBar:117:70:111:182:183:1:1000:0:0:0:<$STR(N$升级需要贡献)>:<$GUILDAURAEPOINT>:0:255:0:0:%p／%m:贡献进度>\
+　\
+<TEXT:行会BUFF预览：:10:80/FCOLOR=250>\
+<TEXT:1级行会BUFF：<$STR(S$行会BUFF1)>:10:80/FCOLOR=250>\
+<TEXT:2级行会BUFF：<$STR(S$行会BUFF2)>:10:80/FCOLOR=250>\
+<TEXT:3级行会BUFF：<$STR(S$行会BUFF3)>:10:80/FCOLOR=250>\
+<TEXT:4级行会BUFF：<$STR(S$行会BUFF4)>:10:80/FCOLOR=250>\
+<TEXT:5级行会BUFF：<$STR(S$行会BUFF5)>:10:80/FCOLOR=250>\
+　\
+<IMGEX:111:11:12:13:320:98/@@InPutInteger601(请输入你要捐出的贡献值[1-1000])><TEXT:我要贡献:250:109/FCOLOR=251>　\
+
+<TEXT:贡献值：<$GAMEPOINT>:10:100/FCOLOR=150>　\
+
+
+
+[@InPutInteger601]
+
+#IF
+EQUAL S$显示行会等级 已满级
+#ACT
+MESSAGEBOX 你的行会已满级！
+BREAK
+
+
+#OR
+SMALL N601 1
+LARGE N601 1000
+#ACT
+MESSAGEBOX 只能输入1-1000之间的数字！
+BREAK
+
+#IF
+SMALL <$GAMEPOINT> <$STR(N601)>
+#ACT
+MESSAGEBOX 你没有<$STR(N601)>贡献！
+BREAK
+
+
+#IF
+#ACT
+MOV N$预计达到贡献值 <$GUILDAURAEPOINT>
+INC N$预计达到贡献值 <$STR(N601)>
+
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(N$封顶贡献值)>
+#ACT
+MESSAGEBOX 你的行会贡献值已满
+BREAK
+
+
+#IF
+NOT SMALL <$GAMEPOINT> <$STR(N601)>
+SMALL <$GUILDAURAEPOINT> <$STR(N$封顶贡献值)>
+#ACT
+GAMEPOINT - <$STR(N601)>
+GUILDAURAEPOINT + <$STR(N601)>
+SENDMSG 5 [行会贡献]消耗<$STR(N601)>贡献
+SENDMSG 5 [行会贡献]行会贡献增加<$STR(N601)>
+GOTO @判断行会是否升级
+GOTO @行会贡献系统
+
+
+
+
+[@判断行会是否升级]
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(S$判断升级贡献1)>
+#ACT
+GUILDBUILDPOINT = 1
+
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(S$判断升级贡献2)>
+#ACT
+GUILDBUILDPOINT = 2
+
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(S$判断升级贡献3)>
+#ACT
+GUILDBUILDPOINT = 3
+
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(S$判断升级贡献4)>
+#ACT
+GUILDBUILDPOINT = 4
+
+#IF
+NOT SMALL <$GUILDAURAEPOINT> <$STR(S$判断升级贡献5)>
+#ACT
+GUILDBUILDPOINT = 5
+
+
+}

@@ -1,0 +1,79 @@
+[@轮回状态]
+{
+#if
+small U401 19
+#act
+messagebox 当前渡劫未满，请前往上一大陆突破！
+break
+
+#if
+large U401 21
+#act
+messagebox 当前轮回已满，请前往后续大陆继续突破！
+break
+
+#if
+#act
+OPENMERCHANTBIGDLG 118 40 1 4 0 0 1 615 90
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 轮回名称mc S$轮回名称
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 元宝消耗yb S$元宝消耗
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 材料消耗xh S$材料消耗
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 返利点消耗aj S$返利点消耗
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 称号前端qd S$称号前端
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 轮回晋升_<$STR(U401)> 称号后端hd S$称号后端
+
+
+#if
+#act
+#say
+<><Img:555:118:591:67>\
+<><TEXT:<$STR(S$轮回名称)>:308:146:{SCOLOR=255}>\
+<><ImgEx:118:38:38:37:200:260|250#需要元宝*<$STR(S$元宝消耗)>^轮回丹*<$STR(S$材料消耗)>/@轮回路线一>\
+<><ImgEx:118:36:36:35:408:246|250#需要返利点*<$STR(S$返利点消耗)>/@轮回路线二>\
+
+[@轮回路线一]
+#if
+checklevelex < 120
+#act
+messagebox 您的等级不足120级，无法进行轮回。
+break
+
+#if
+checkitem 轮回丹 <$STR(S$材料消耗)>
+checkgamegold ? <$STR(S$元宝消耗)>
+CHECKFENGHAO <$STR(S$称号前端)>
+#act
+take 轮回丹 <$STR(S$材料消耗)>
+gamegold - <$STR(S$元宝消耗)>
+INC U401 1
+RECYCFENGHAO <$STR(S$称号前端)>
+GIVEFENGHAO <$STR(S$称号后端)>
+#CALL [\10属性重置\倍攻加成.txt] @倍攻重载
+#CALL [\10属性重置\属性重置.txt] @属性重置
+goto @轮回状态
+#elseact
+messagebox 您的材料或者元宝不足！无法进行轮回转生！
+[@轮回路线二]
+#if
+checklevelex < 120
+#act
+messagebox 您的等级不足120级，无法进行轮回。
+break
+
+#if
+checkGameDiamond ? <$STR(S$返利点消耗)>
+CHECKFENGHAO <$STR(S$称号前端)>
+#act
+GameDiamond - <$STR(S$返利点消耗)>
+INC U401 1
+RECYCFENGHAO <$STR(S$称号前端)>
+GIVEFENGHAO <$STR(S$称号后端)>
+#CALL [\10属性重置\倍攻加成.txt] @倍攻重载
+#CALL [\10属性重置\属性重置.txt] @属性重置
+goto @轮回状态
+#elseact
+messagebox 您的返利点不足！无法进行轮回转生！
+}

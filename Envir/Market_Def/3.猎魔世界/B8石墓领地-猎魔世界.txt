@@ -1,0 +1,40 @@
+﻿[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:1642:0:50:70:1>
+MOV S$世界DT2 <itemshow:1643:0:50:70:1>
+MOV S$世界DT3 <itemshow:1644:0:50:70:1>
+MOV S$世界DT4 <itemshow:1645:0:50:70:1>
+MOV S$世界DT5 <itemshow:1646:0:50:70:1>
+MOV S$世界DT6 <itemshow:1647:0:50:70:1>
+
+#IF
+#ACT
+#SAY
+<TEXT:二章八幕·石墓领地:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:传闻石墓底层连接着地狱，而地狱中的一把魔剑就丢失在这里:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:，或许可以去碰碰运气！:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133|249#直达洞口需费用：{14000银币|251}^215#当然，你也可以跑着去--免费。/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+SMALL <$GAMEGOLD> 14000
+#act
+MessageBox 你的银币不足14000，无法直达该地图，跑着去吧。
+break
+
+#IF
+#act
+GAMEGOLD - 14000
+mapmove 猎魔世界 527 883
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{猎魔世界|7:0:1}】的【{石墓领地|249:0:1}】进行探索！ self

@@ -1,0 +1,368 @@
+[@转生状态2]
+{
+
+
+#if
+large U401 4
+#act
+close
+messagebox 当前转生已满，请前往后续大陆继续突破！
+break
+
+#if
+large U402 98
+#act
+MOV U402 99
+MOV S$转生等级 <$RELEVEL>
+MOV S$升级按钮 <><ImgEx:165:600:601:600:192:308|250#点击选择是否晋升/@选择晋升2>\
+messagebox 您的能量已经累积满了，可以进行晋升！
+
+;#elseact
+
+
+#if
+EQUAL U401 0
+SMALL U402 99
+#act
+MOV S$升级按钮 <><ImgEx:165:597:598:597:192:308|250#吞噬【命运之书(一阶)】—获得1～13点能量^^249#吞噬【天外飞石】—获得65点能量/@进行吞噬1>\
+
+#if
+EQUAL U401 1
+SMALL U402 99
+#act
+MOV S$升级按钮 <><ImgEx:165:597:598:597:192:308|250#吞噬【命运之书(二阶)】—获得1～12点能量^249#吞噬【天外飞石】—获得60点能量/@进行吞噬2>\
+
+#if
+EQUAL U401 2
+SMALL U402 99
+#act
+MOV S$升级按钮 <><ImgEx:165:597:598:597:192:308|250#吞噬【命运之书(三阶)】—获得1～11点能量^249#吞噬【天外飞石】—获得55点能量/@进行吞噬3>\
+
+
+
+#if
+EQUAL U401 3
+SMALL U402 99
+#act
+MOV S$升级按钮 <><ImgEx:165:597:598:597:192:308|250#吞噬【命运之书(四阶)】—获得1～10点能量^249#吞噬【天外飞石】—获得50点能量/@进行吞噬4>\
+
+#if
+EQUAL U401 4
+SMALL U402 99
+#act
+MOV S$升级按钮 <><ImgEx:165:597:598:597:192:308|250#吞噬【命运之书(五阶)】—获得1～9点能量^249#吞噬【天外飞石】—获得45点能量/@进行吞噬5>\
+
+
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 全属性sx S$全属性
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 生命值sm S$生命值
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 神力倍攻sl S$神力倍攻
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 所需元宝yb S$所需元宝
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 所需金币jb S$所需金币
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 所需材料jb S$所需材料
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 称号前端qd S$称号前端
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 称号后端hd S$称号后端
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 所需等级dj S$所需等级
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 转生晋升_<$STR(U401)> 减少等级jj S$减少等级
+
+
+#if
+#act
+goto @转生界面2
+
+[@转生界面2]
+#if
+#act
+OPENMERCHANTBIGDLG 165 599 1 4 0 0 1 460 20
+
+#if
+#act
+#say
+\
+<>\
+<>   <TEXT:★【所需等级】：:265:269:{SCOLOR=151}><TEXT:<$STR(S$所需等级)>:265:268:{SCOLOR=151}>\
+<><TEXT:★【生命值】：:73:251:{SCOLOR=250}><TEXT:+  :73:251:{SCOLOR=22}><TEXT:<$STR(S$生命值)>:73:251:{SCOLOR=151}>  \
+<><TEXT:★【神力倍攻】：:73:267:{SCOLOR=151}><TEXT:+  :73:267:{SCOLOR=22}><TEXT:<$STR(S$神力倍攻)>:73:267:{SCOLOR=151}>  \
+<><TEXT:★【金币收费】：:73:284:{SCOLOR=151}><TEXT:+  :73:284:{SCOLOR=22}><TEXT:<$STR(S$所需元宝)>:73:284:{SCOLOR=151}>  \
+<><TEXT:★【BOSS精华】：:283:238:{SCOLOR=151}><TEXT:<$STR(S$所需材料)>:283:238:{SCOLOR=151}>\
+<><TEXT:★【金币收费】：:283:254:{SCOLOR=151}><TEXT:<$STR(S$所需金币)>:283:254:{SCOLOR=151}>\
+<><TEXT:★【降低等级】：:283:270:{SCOLOR=151}><TEXT:<$STR(S$减少等级)>:283:270:{SCOLOR=151}>\
+<$STR(S$升级按钮)>\
+<><Img:<$STR(U402)>:119:46:65>\
+
+
+
+
+[@进行吞噬1]
+
+#if
+checkitem 命运之书(一阶) 1
+#act
+take 命运之书(一阶) 1
+MOVR P44 1 13
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运之书(一阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 命运水晶(一阶) 1
+#act
+take 命运水晶(一阶) 1
+MOVR P44 1 20
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运水晶(一阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 天外飞石 1
+#act
+take 天外飞石 1
+INC U402 65
+messagebox 吞噬了【天外飞石】，获得了65点能量！
+goto @转生状态2
+break
+
+#if
+#act
+messagebox 您的材料或金币不足，请检查背包！
+
+
+[@进行吞噬2]
+#if
+checkitem 命运之书(二阶) 1
+#act
+take 命运之书(二阶) 1
+MOVR P44 1 12
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运之书(二阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 命运水晶(二阶) 1
+#act
+take 命运水晶(二阶) 1
+MOVR P44 1 18
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运水晶(二阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 天外飞石 1
+#act
+take 天外飞石 1
+INC U402 60
+messagebox 吞噬了【天外飞石】，获得了60点能量！
+goto @转生状态2
+break
+
+#if
+#act
+messagebox 您的材料或金币不足，请检查背包！
+
+[@进行吞噬3]
+#if
+checkitem 命运之书(三阶) 1
+#act
+take 命运之书(三阶) 1
+MOVR P44 1 11
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运之书(三阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 命运水晶(三阶) 1
+#act
+take 命运水晶(三阶) 1
+MOVR P44 1 16
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运水晶(三阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 天外飞石 1
+#act
+take 天外飞石 1
+INC U402 55
+messagebox 吞噬了【天外飞石】，获得了55点能量！
+goto @转生状态2
+break
+
+#if
+#act
+messagebox 您的材料或金币不足，请检查背包！
+
+
+
+[@进行吞噬4]
+#if
+checkitem 命运之书(四阶) 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 命运之书(四阶) 1
+MOVR P44 1 10
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运之书(四阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 命运水晶(四阶) 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 命运水晶(四阶) 1
+MOVR P44 1 14
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运水晶(四阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 天外飞石 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 天外飞石 1
+INC U402 50
+messagebox 吞噬了【天外飞石】，获得了50点能量！
+goto @转生状态2
+break
+
+#if
+#act
+messagebox 您的材料或金币不足，请检查背包！
+
+
+[@进行吞噬5]
+#if
+checkitem 命运之书(五阶) 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 命运之书(五阶) 1
+MOVR P44 1 9
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运之书(五阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 命运水晶(五阶) 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 命运水晶(五阶) 1
+MOVR P44 1 12
+INC U402 <$STR(P44)>
+messagebox 吞噬了【命运水晶(五阶)】，获得了<$STR(P44)>点能量！
+goto @转生状态2
+break
+
+#if
+checkitem 天外飞石 1
+CheckGold <$STR(S$所需元宝)>
+#act
+TAKE 金币 <$STR(S$所需元宝)>
+take 天外飞石 1
+INC U402 45
+messagebox 吞噬了【天外飞石】，获得了45点能量！
+goto @转生状态2
+break
+
+#if
+#act
+messagebox 您的材料或金币不足，请检查背包！
+
+
+
+[@选择晋升2]
+#if
+#act
+OPENMERCHANTBIGDLG 165 599 1 4 0 0 1 460 20
+
+#if
+#act
+#say
+<>     <TEXT:【晋升所需】:185:110:{SCOLOR=151}>\
+<><TEXT:★【所需等级】：:185:110:{SCOLOR=151}><TEXT:<$STR(S$所需等级)>:185:110:{SCOLOR=151}>\
+<><TEXT:★【BOSS精华】：:185:110:{SCOLOR=151}><TEXT:<$STR(S$所需材料)>:185:110:{SCOLOR=151}>\
+<><TEXT:★【金币收费】：:185:110:{SCOLOR=151}><TEXT:<$STR(S$所需金币)>:185:110:{SCOLOR=151}>\
+<><TEXT:★【降低等级】：:185:110:{SCOLOR=151}><TEXT:<$STR(S$减少等级)>:185:110:{SCOLOR=151}>\
+<>\
+;<><Img:100:119:66:0>\
+<><Img:31:118:78:-60>\
+<><ImgEx:165:597:598:597:122:95/@晋升成功2>\
+<><ImgEx:165:595:596:595:270:79/@exit>\
+<><PlayImg:3:8600:12:80:193:-70:0>\
+[@晋升成功2]
+
+#IF
+CHECKLEVELEX < <$STR(S$所需等级)>
+#ACT
+messagebox 等级不足<$STR(S$所需等级)>级
+BREAK
+
+
+#IF
+not CheckGold  <$STR(S$所需金币)>
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足<$STR(S$所需金币)>！
+BREAK
+
+#if
+checkitem BOSS精华 <$STR(S$所需材料)>
+#ELSEACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前BOSS精华不足<$STR(S$所需材料)>！
+break
+
+
+#if
+EQUAL  U401 0
+#act
+CHANGELEVEL - <$STR(S$减少等级)>
+TAKE 金币 <$STR(S$所需金币)>
+TAKE BOSS精华 <$STR(S$所需材料)>
+RENEWLEVEL 1 0
+inc U401 1
+MOV U402 0
+GIVEFENGHAO <$STR(S$称号后端)>
+#CALL [10E登陆触发\登陆触发.TXT] @登陆显示
+#CALL [\转生晋升\转生晋升二大陆.txt] @转生状态2
+#CALL [\10属性重置\倍攻加成.txt] @倍攻重载
+#CALL [\10属性重置\属性重置.txt] @属性重置
+goto @转生状态2
+messagebox 转生成功！
+break
+
+
+
+#if
+CHECKFENGHAO <$STR(S$称号前端)>
+large U401 0
+#act
+CHANGELEVEL - <$STR(S$减少等级)>
+TAKE 金币 <$STR(S$所需金币)>
+TAKE BOSS精华 <$STR(S$所需材料)>
+RENEWLEVEL 1 0
+inc U401 1
+MOV U402 0
+RECYCFENGHAO <$STR(S$称号前端)>
+GIVEFENGHAO <$STR(S$称号后端)>
+#CALL [10E登陆触发\登陆触发.TXT] @登陆显示
+#CALL [\转生晋升\转生晋升二大陆.txt] @转生状态2
+#CALL [\10属性重置\倍攻加成.txt] @倍攻重载
+#CALL [\10属性重置\属性重置.txt] @属性重置
+goto @转生状态2
+messagebox 转生成功！
+break
+
+}

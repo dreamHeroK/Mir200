@@ -1,0 +1,97 @@
+[@main]
+
+
+;#IF
+;#ACT
+;OPENMERCHANTBIGDLG 165 751 1 4 0 0 1 660 20 0
+;#say
+;<><ImgEx:165:747:748:747:400:250/@进入选择> \ \  
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ELSEACT
+MESSAGEBOX 你运的黄金棺材呢？
+BREAK
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ACT
+OPENMERCHANTBIGDLG 165 746 1 4 0 0 1 590 2 0
+#say
+<ItemShow:1616:1:25:120:1>
+<ItemShow:1775:10:175:120:1>
+<ItemShow:1771:50:323:120:1>
+<>\
+<><ImgEx:165:747:748:747:50:180/@选择1>
+<><ImgEx:165:747:748:747:150:180/@选择2>
+<><ImgEx:165:747:748:747:250:180/@选择3>
+
+
+[@进入选择]
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ELSEACT
+MESSAGEBOX 你运的黄金棺材呢？
+BREAK
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ACT
+OPENMERCHANTBIGDLG 165 746 1 4 0 0 1 590 2 0
+#say
+<><ImgEx:165:747:748:747:50:190/@选择1>
+<><ImgEx:165:747:748:747:150:190/@选择2>
+<><ImgEx:165:747:748:747:250:190/@选择3>
+
+
+
+[@选择1]
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ELSEACT
+MESSAGEBOX 你运的黄金棺材呢？
+BREAK
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ACT
+KILLCALLMOB 黄金棺材 100 1
+GIVE 金盒 1
+SENDMSG 6 恭喜完成了黄金棺材任务获得【金盒*1】！
+;MESSAGEBOX 侠士您选择的答案错误，很可惜！，正确答案是和尚无心\　\侠士您选择的答案错误，很可惜！给予您100万元宝激励奖励！
+goto @main
+BREAK
+
+[@选择2]
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ELSEACT
+MESSAGEBOX 你运的黄金棺材呢？
+BREAK
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ACT
+KILLCALLMOB 黄金棺材 100 1
+GIVE 舍利子 10
+SENDMSG 6 恭喜完成了黄金棺材任务获得【舍利子*10】！
+;MESSAGEBOX 侠士您选择的答案错误，很可惜！，正确答案是和尚无心\　\给予您一本佛门秘籍（般若心钟）激励奖励！
+goto @main
+BREAK
+
+[@选择3]
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ELSEACT
+MESSAGEBOX 你运的黄金棺材呢？
+BREAK
+
+#IF
+CheckSlaveInRange 黄金棺材 3
+#ACT
+KILLCALLMOB 黄金棺材 100 1
+GIVE 剑匣碎片 50
+SENDMSG 6 恭喜完成了黄金棺材任务获得【剑匣碎片*50】！
+;MESSAGEBOX 给予500万元宝+（佛法六通）BUFF抵挡目标10%的物理防御BOSS切割+1000爆率加50%！
+goto @main
+BREAK

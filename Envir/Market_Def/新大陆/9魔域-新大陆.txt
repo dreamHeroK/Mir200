@@ -1,0 +1,48 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 435 1 4 0 0 1 535 4 1
+#say
+<>\
+<>  \  \
+<ImgEx:165:338:339:338:300:120/@进入AA>
+<>\ \
+<ItemShow:971:0:147:136:1>
+<ItemShow:972:0:164:136:1>
+<ItemShow:973:0:181:136:1>
+<ItemShow:974:0:198:135:1>
+<ItemShow:975:0:215:135:1>
+<ItemShow:976:0:233:135:1>\ \ 
+
+[@进入AA]
+
+#IF
+not CheckGold  6000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足600W！
+BREAK
+
+#IF
+not checkitem 装备精华 300
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　装备精华不足300个！
+BREAK
+#IF
+not checkitem BOSS精华 300
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　BOSS精华不足300个！
+BREAK
+
+#if
+CHECKVAR HUMAN 切割之力 < 600
+#act
+MessageBox 操作失败：\　\　　　　　　您的怪物猎人切割小于600。
+break
+
+#if
+#ACT
+TAKE BOSS精华 300
+TAKE 装备精华 300
+take 金币 6000000
+map 深冷大厅3

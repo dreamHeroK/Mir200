@@ -1,0 +1,74 @@
+[@金牌计数]
+{
+#or
+CheckKillMonName	蝠魔之王
+CheckKillMonName	血腥魔王
+CheckKillMonName	潘夜霸主
+CheckKillMonName	天门死神
+CheckKillMonName	旱魃
+CheckKillMonName	圣火神王
+CheckKillMonName	鬼骨之王
+CheckKillMonName	寒冥之主
+CheckKillMonName	龙痕霸主
+CheckKillMonName	真龙神
+CheckKillMonName	圣冰神王
+CheckKillMonName	东皇太一
+CheckKillMonName	鬼门冥王
+CheckKillMonName	太古真人
+CheckKillMonName	逆魔之王
+CheckKillMonName	技能魔王
+CheckKillMonName	特殊魔王
+CheckKillMonName	撒旦
+CheckKillMonName	海岛岛主
+CheckKillMonName	盟重城主
+CheckKillMonName	古镇镇长
+CheckKillMonName	兽王
+CheckKillMonName	圣·猪皇
+CheckKillMonName	圣·祖玛教皇
+CheckKillMonName	圣·变异牛魔王
+CheckKillMonName	圣·赤月魔神
+CheckKillMonName	圣·奴隶教皇
+CheckKillMonName	圣·蚁巢之皇
+CheckKillMonName	圣·魔龙教主
+CheckKillMonName	圣·鳍鱼霸王
+CheckKillMonName	圣·猫妖之王
+CheckKillMonName	圣·雪域魔王
+CheckKillMonName	圣·蛮荒魔王
+CheckKillMonName	圣·虎王神灵
+CheckKillMonName	圣·雷炎蛛皇
+CheckKillMonName	圣·傀儡领主
+CheckKillMonName	圣·火龙神
+CheckKillMonName	圣·诺玛教主
+CheckKillMonName	圣·真天魔王
+CheckKillMonName	圣·水上龙神
+CheckKillMonName	圣·神木树王
+CheckKillMonName	圣·修罗神
+CheckKillMonName	圣·九尾妖狐
+CheckKillMonName	圣·瘟疫统帅
+CheckKillMonName	圣·万妖王
+CheckKillMonName	圣·秦皇玉辇
+CheckKillMonName	圣·血魔教主
+CheckKillMonName	圣·应龙神
+CheckKillMonName	圣·叛军大元帅
+CheckKillMonName	圣·通天鹰王
+CheckKillMonName	圣·冰龙神
+CheckKillMonName	圣·万年蛇魔
+CheckKillMonName	圣·铁血教主
+CheckKillMonName	圣·迦楼罗神
+CheckKillMonName	圣·盟重城主
+CheckKillMonName	圣·古镇镇长
+CheckKillMonName	圣·海岛岛主
+CheckKillMonName	圣·撒旦
+CheckKillMonName	圣·特殊魔王
+CheckKillMonName	圣·技能魔王
+CheckKillMonName	圣·兽王
+#ACT
+
+CALCVAR HUMAN 杀怪数量 + 5
+SAVEVAR HUMAN 杀怪数量 ..\..\..\..\通区捐款\杀怪文本.txt
+inc <$STR(N$san大陆精英)> 5
+
+
+
+
+}

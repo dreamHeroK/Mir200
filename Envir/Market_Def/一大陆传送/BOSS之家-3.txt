@@ -1,0 +1,41 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 396 1 4 0 0 1 535 4 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:300:130/@进入BOSS之家>
+<>\ \
+<ItemShow:377:0:147:142:1>
+<ItemShow:378:0:164:142:1>
+<ItemShow:379:0:181:142:1>
+<ItemShow:436:0:198:142:1>
+<ItemShow:438:0:215:142:1>
+<ItemShow:511:0:233:142:1>\ \ 
+
+
+
+
+[@进入BOSS之家]
+
+#IF
+CHECKLEVELEX > 47
+#ACT
+#ELSEACT
+messagebox 等级不足48级
+BREAK
+
+#IF
+checkitem BOSS之家[通行证]  1
+#Act
+take BOSS之家[通行证]  1
+MAPMOVE BOSS之家
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[BOSS之家]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要500000金币,或缺少BOSS之家[通行证]!
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK
+

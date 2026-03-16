@@ -1,0 +1,42 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 398 1 4 0 0 1 535 4 1
+#say
+<> \
+<ItemShow:440:0:148:285:1> <ItemShow:442:0:158:285:1> <ItemShow:380:0:170:285:1> <ItemShow:381:0:180:285:1> <ItemShow:382:0:190:285:1> <ItemShow:512:0:203:285:1>\
+<> \
+<ImgEx:165:338:339:338:310:206/@深渊秘境>
+
+
+
+
+[@深渊秘境]
+#IF
+CHECKGAMEGOLD ? 200
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:元宝不达标!
+break
+
+
+#IF
+CHECKLEVELEX > 57
+#ACT
+#ELSEACT
+messagebox 等级不足58级
+BREAK
+
+
+
+#IF
+#ACT
+GAMEGOLD - 200
+inc J134 200
+MAPMOVE 深渊秘境
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[深渊秘境]，祝他满载而归！
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

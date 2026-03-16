@@ -1,0 +1,60 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#say
+\ \
+
+<Img:47:113:4:33>  \  \
+
+<ItemShow:381:0:5:163:1> <ItemShow:1283:0:5:163:1> <ItemShow:150:0:5:163:1> <ItemShow:<$STR(P100)>:0:5:163:1> <ItemShow:<$STR(P101)>:0:5:163:1> <ItemShow:<$STR(P102)>:0:5:163:1> \ \ 
+
+<> <Text:公共地图:135:-48{FCOLOR=7}> <Text:[点击进入]:138:-48{FCOLOR=251}/@进入虎王森林>\
+
+<> <Text:进入要求：无任何要求:135:-43{FCOLOR=250}>\
+
+<> <Text:收取费用：100000金币:135:-39{FCOLOR=250}>\
+
+<>  <Text:--------------------------:125:-41{FCOLOR=12}>\
+
+<> <Text:刷新介绍：:135:-42{FCOLOR=70}>\
+
+<> <Text:精英：15分钟 BOSS：30分钟:135:-37{FCOLOR=254}>\
+
+<> <Text:隐藏：90分钟 福利：60分钟:135:-32{FCOLOR=254}>\
+
+#ACT
+OPENMERCHANTBIGDLG 113 87 1 4 0 0 1 315 17 1
+
+
+
+
+[@进入虎王森林]
+
+
+#IF
+checkgold 100000
+#ACT
+take 金币 100000
+inc J133 100000
+MAPMOVE huwang1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[虎王森林]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要100000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

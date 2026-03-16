@@ -1,0 +1,44 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\一大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 335 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:11:113:4:23>  \  \
+<ImgEx:165:338:339:338:300:120/@进入牛魔寺庙>
+<>\ \
+<ItemShow:436:0:147:136:1>
+<ItemShow:1274:0:164:136:1>
+<ItemShow:159:0:181:136:1>
+<ItemShow:<$STR(P100)>:0:198:135:1>
+<ItemShow:<$STR(P101)>:0:215:135:1>
+<ItemShow:<$STR(P102)>:0:233:135:1>\ \ 
+
+
+[@进入牛魔寺庙]
+
+#IF
+#ACT
+MAPMOVE 牛魔寺庙一层 221 224
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[牛魔寺庙]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要10000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

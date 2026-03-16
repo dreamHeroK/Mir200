@@ -1,0 +1,85 @@
+[@main]
+;#IF
+;#act
+;OPENMERCHANTBIGDLG 51 1566 1 4 0 -90 0 0 0
+;#SAY
+<>     \ 
+<>     <小伙子,我看你气质不凡,有资格继承我的衣钵/SCOLOR=250>\ 
+<>       <接下来就是考验,我需要你收集一些物品/SCOLOR=250> \  
+<>      <有两种方式晋升我的衣钵,具体看下面介绍/SCOLOR=250> <PlayImg:74:75:10:100:20:-50:0:0>\ 
+ <>              <切勿重复升级，后果自负/SCOLOR=249>\ 
+<>         <万象境属性:全元素+5%,攻击速度+3/SCOLOR=249> \ 
+
+<><方式一:神源*10+神器晶核*10+神器碎片*10+修炼石*1888+5888万金币/SCOLOR=253> \
+<><方式二:神源*5+神器晶核*5+神器碎片*5+修炼石*888+2888元宝/SCOLOR=253> \ 
+
+<>              <方式一晋升/@方式一晋升>              <方式二晋升/@方式二晋升>     
+
+
+
+ 
+[@方式一晋升]
+#if
+CHECKFENGHAO 后天境
+#act
+#elseact
+MESSAGEBOX 对不起，你的境界不是后天境，我能力有限！
+BREAK
+
+
+#if
+CheckGold 58880000
+checkitem 神源 10
+checkitem 神器晶核 10
+checkitem 神器碎片 10
+checkitem 修炼石 1888
+#act
+TAKE 神源 10
+TAKE 神器晶核 10
+TAKE 神器碎片 10
+TAKE 修炼石 1888
+TAKE 金币 58880000
+RECYCFENGHAO 先天境
+RECYCFENGHAO 后天境
+RECYCFENGHAO 万象境
+GiveFengHao 万象境
+SETICON 3 78 1545 33 20 10 0 0 100 
+sendmsg 7 晋升成功获得属性。
+SENDMSG 0 【<$USERNAME>】成功晋升万象境，大家远离它！！
+#elseact
+MESSAGEBOX 对不起，金币不足或者材料不足！
+BREAK
+
+
+
+ 
+[@方式二晋升]
+#if
+CHECKFENGHAO 后天境
+#act
+#elseact
+MESSAGEBOX 对不起，你的境界不是后天境，我能力有限！
+BREAK
+
+
+#if
+CHECKGAMEGOLD > 2887
+checkitem 神源 5
+checkitem 神器晶核 5
+checkitem 神器碎片 5
+checkitem 修炼石 888
+#act
+GAMEGOLD - 2888
+TAKE 神源 5
+TAKE 神器晶核 5
+TAKE 神器碎片 5
+TAKE 修炼石 888
+RECYCFENGHAO 先天境
+RECYCFENGHAO 后天境
+RECYCFENGHAO 万象境
+GiveFengHao 万象境
+SETICON 3 78 1545 33 20 10 0 0 100 
+sendmsg 7 晋升成功获得属性。
+SENDMSG 0 【<$USERNAME>】成功晋升万象境，大家远离它！！
+BREAK
+

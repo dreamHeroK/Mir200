@@ -1,0 +1,38 @@
+[@main]
+
+<><宝藏塔70关，关数越高，BOSS越强，掉落的物品越丰厚。/SCOLOR=253>\
+<------------------------------------------------------------/SCOLOR=13>\
+<><每一关限时15分钟，时间用尽若未开启下一关，则返还城内。/SCOLOR=146>\
+<------------------------------------------------------------/SCOLOR=13>\
+<><每天凌晨0：00重置塔的进入次数和关数，请注意！！！/SCOLOR=249>\
+<------------------------------------------------------------/SCOLOR=13>\  \ 
+
+<>                        <挑战第<$STR(J67)>关/@宝塔下一关>\  \
+
+
+
+
+[@宝塔下一关]
+#IF
+CheckMapMonCount <$USERNAME>宝塔 > 0 1
+#ACT
+MESSAGEBOX 请先击杀当前怪物
+BREAK
+
+#if
+LARGE J67 69
+#ACT
+messagebox 已经达到70关，无法继续挑战
+BREAK
+
+#IF
+SMALL J67 70
+#ACT
+GetRandomText ..\QuestDiary\BOSS列表.txt S$宝塔怪物 <$STR(J67)>
+MONGENEX <$USERNAME>宝塔 28 26 <$STR(S$宝塔怪物)> 1 1 249 0
+SENDMSG 5 开始挑战第<$STR(J67)>关，BOSS：[<$STR(S$宝塔怪物)>]
+inc J67 1
+SetMirrorMapTime <$USERNAME>宝塔 900 1
+CLOSEMERCHANTBIGDLG
+BREAK
+

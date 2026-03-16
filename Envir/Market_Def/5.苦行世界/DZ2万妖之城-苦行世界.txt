@@ -1,0 +1,5 @@
+#IF
+LARGE U51 15
+#ACT
+map 万妖之城
+break

@@ -1,0 +1,46 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 427 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:970:0:148:285:1> <ItemShow:971:0:158:285:1> <ItemShow:972:0:170:285:1> <ItemShow:973:0:180:285:1> <ItemShow:974:0:190:285:1> <ItemShow:975:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@进入逆天改命六阶>
+
+[@进入逆天改命六阶]
+
+
+#IF
+not CheckGold  5000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足500W！
+BREAK
+
+
+#IF
+not checkitem 天赋神石 250
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　天赋神石不足250个！
+BREAK
+
+#IF
+CHECKFENGHAO 逆天改命六阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命六阶!!!
+break
+
+
+#IF
+checkgold 5000000
+#ACT
+take 金币 5000000
+take 天赋神石 250
+inc J130 5000000
+MAPMOVE 六劫地图 184 214
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[五劫地图]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要5000000金币
+BREAK

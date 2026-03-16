@@ -1,0 +1,7 @@
+[@main]
+#IF
+#ACT
+MOV S1 
+MOV S2 
+MOV S1 地狱尊者
+#CALL [\蛋蛋专用\职业选择\职业选择.txt] @职业选择

@@ -1,0 +1,56 @@
+﻿[@main]
+#IF
+#ACT
+goto @执迷古镇对话框
+
+[@执迷古镇对话框]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 389 1 4 0 0 1 585 25 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:450:150/@进入古镇>
+<>\ \
+<>     <ItemShow:387:0:145:169:1>
+<ItemShow:450:0:161:169:1>
+<ItemShow:100:0:179:169:1>
+<ItemShow:1572:0:196:168:1>
+<ItemShow:512:0:213:168:1>
+<ItemShow:546:0:231:168:1>
+<ItemShow:550:0:244:168:1>\ \ 
+
+
+
+
+
+
+[@进入古镇]
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+
+
+#if
+#ACT
+MAPMOVE 执迷古镇 75 90
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+BREAK
+

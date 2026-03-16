@@ -1,0 +1,46 @@
+[@main]
+
+
+#act
+messagebox 活动未开放!!
+BREAK
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P105
+
+#if
+#say
+\ \
+
+<Img:720:113:4:33>  \  \
+
+<ItemShow:1300:0:5:163:1> <ItemShow:130:0:5:163:1> <ItemShow:<$STR(P100)>:0:5:163:1> <ItemShow:<$STR(P101)>:0:5:163:1> <ItemShow:<$STR(P102)>:0:5:163:1> <ItemShow:<$STR(P103)>:0:5:163:1> \ \ 
+
+<> <Text:公共地图:135:-48{FCOLOR=7}> <Text:[点击进入]:138:-48{FCOLOR=251}/@进入蝠魔宫殿>\
+
+<> <Text:进入要求：      70级:135:-43{FCOLOR=250}>\
+
+<> <Text:收取费用：装备精华*50:135:-39{FCOLOR=250}>\ 
+
+<>  <Text:--------------------------:125:-41{FCOLOR=12}>\
+
+<> <Text:刷新介绍：:135:-42{FCOLOR=70}>\
+
+<> <Text:精英：15分钟 BOSS：30分钟:135:-37{FCOLOR=254}>\
+
+<> <Text:隐藏：120分钟 福利：60分钟:135:-32{FCOLOR=254}>\
+
+#ACT
+OPENMERCHANTBIGDLG 113 87 1 4 0 0 1 315 17 1
+
+
+
+
+[@进入蝠魔宫殿]

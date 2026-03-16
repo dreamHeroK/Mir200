@@ -1,0 +1,71 @@
+[@百晓生]
+{
+#IF
+#ACT
+OPENMERCHANTBIGDLG 113 89 1 4 0 -90 1 613 7 1
+
+#SAY
+<ItemShow:340:0:4:60:1><ItemShow:341:0:19:60:1><ItemShow:342:0:33:60:1><ItemShow:367:0:47:60:1><ItemShow:368:0:61:60:1><ItemShow:369:0:75:60:1><ItemShow:386:0:89:60:1><ItemShow:389:0:103:60:1><ItemShow:416:0:117:60:1><ItemShow:418:0:131:60:1>\
+<ItemShow:420:0:4:100:1><ItemShow:436:0:19:100:1><ItemShow:438:0:33:100:1><ItemShow:89:0:47:100:1><ItemShow:90:0:61:100:1><ItemShow:1272:0:75:100:1><ItemShow:1273:0:89:100:1><ItemShow:1274:0:103:100:1><ItemShow:1275:0:117:100:1><ItemShow:1276:0:131:100:1>\
+<ItemShow:1277:0:4:139:1><ItemShow:97:0:19:139:1><ItemShow:98:0:33:139:1><ItemShow:125:0:47:139:1><ItemShow:128:0:61:139:1><ItemShow:131:0:75:139:1><ItemShow:134:0:89:139:1><ItemShow:137:0:103:139:1><ItemShow:140:0:117:139:1><ItemShow:143:0:131:139:1>\
+<ItemShow:146:0:4:179:1><ItemShow:149:0:19:179:1><ItemShow:611:0:33:179:1><ItemShow:613:0:47:179:1><ItemShow:535:0:61:179:1><ItemShow:536:0:75:179:1><ItemShow:537:0:89:179:1><ItemShow:540:0:103:179:1><ItemShow:541:0:117:179:1><ItemShow:542:0:131:179:1>\
+<ItemShow:543:0:4:218:1><ItemShow:544:0:19:218:1><ItemShow:545:0:33:218:1><ItemShow:695:0:47:218:1><ItemShow:698:0:61:218:1><ItemShow:701:0:75:218:1><ItemShow:704:0:89:218:1><ItemShow:707:0:103:218:1><ItemShow:711:0:117:218:1><ItemShow:715:0:131:218:1>\
+<> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+<>                                                                              <下一页/@百晓生下一页>
+
+
+[@百晓生下一页]
+#if
+SMALL U401 3
+CHECKLEVELEX < 50
+#act
+messagebox 防止盗版,等级达到50级并且3转才可以查看!!!
+break
+
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 113 89 1 4 0 -90 1 613 7 1
+
+#SAY
+<ItemShow:343:0:4:60:1><ItemShow:344:0:19:60:1><ItemShow:345:0:33:60:1><ItemShow:367:0:47:60:1><ItemShow:368:0:61:60:1><ItemShow:369:0:75:60:1><ItemShow:370:0:89:60:1><ItemShow:371:0:103:60:1><ItemShow:372:0:117:60:1><ItemShow:373:0:131:60:1>\
+<ItemShow:374:0:4:100:1><ItemShow:387:0:19:100:1><ItemShow:390:0:33:100:1><ItemShow:416:0:47:100:1><ItemShow:418:0:61:100:1><ItemShow:420:0:75:100:1><ItemShow:422:0:89:100:1><ItemShow:424:0:103:100:1><ItemShow:426:0:117:100:1><ItemShow:428:0:131:100:1>\
+<ItemShow:430:0:4:139:1><ItemShow:450:0:19:139:1><ItemShow:454:0:33:139:1><ItemShow:1278:0:47:139:1><ItemShow:1279:0:61:139:1><ItemShow:1280:0:75:139:1><ItemShow:1281:0:89:139:1><ItemShow:1282:0:103:139:1><ItemShow:1283:0:117:139:1><ItemShow:1284:0:131:139:1>\
+<ItemShow:1285:0:4:179:1><ItemShow:1286:0:19:179:1><ItemShow:100:0:33:179:1><ItemShow:101:0:47:179:1><ItemShow:623:0:61:179:1><ItemShow:625:0:75:179:1><ItemShow:719:0:89:179:1><ItemShow:723:0:103:179:1><ItemShow:727:0:117:179:1><ItemShow:728:0:131:179:1>\
+<ItemShow:732:0:4:218:1><ItemShow:736:0:19:218:1><ItemShow:546:0:33:218:1><ItemShow:547:0:47:218:1><ItemShow:548:0:61:218:1><ItemShow:549:0:75:218:1><ItemShow:550:0:89:218:1><ItemShow:551:0:103:218:1><ItemShow:512:0:117:218:1><ItemShow:1572:0:131:218:1>\
+<> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+<>        <上一页/@百晓生>                                                                <下一页/@百晓生下一页1>
+
+[@百晓生下一页1]
+#if
+SMALL U401 7
+CHECKLEVELEX < 60
+#act
+messagebox 防止盗版,等级达到60级并且7转才可以查看!!!
+break
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 113 89 1 4 0 -90 1 613 7 1
+
+#SAY
+<ItemShow:346:0:4:60:1><ItemShow:347:0:19:60:1><ItemShow:350:0:33:60:1><ItemShow:372:0:47:60:1><ItemShow:373:0:61:60:1><ItemShow:374:0:75:60:1><ItemShow:375:0:89:60:1><ItemShow:376:0:103:60:1><ItemShow:382:0:117:60:1><ItemShow:383:0:131:60:1>\
+<ItemShow:384:0:4:100:1><ItemShow:388:0:19:100:1><ItemShow:426:0:33:100:1><ItemShow:428:0:47:100:1><ItemShow:430:0:61:100:1><ItemShow:432:0:75:100:1><ItemShow:434:0:89:100:1><ItemShow:444:0:103:100:1><ItemShow:446:0:117:100:1><ItemShow:1333:0:131:100:1>\
+<ItemShow:111:0:4:139:1><ItemShow:112:0:19:139:1><ItemShow:127:0:33:139:1><ItemShow:130:0:47:139:1><ItemShow:133:0:61:139:1><ItemShow:136:0:75:139:1><ItemShow:139:0:89:139:1><ItemShow:142:0:103:139:1><ItemShow:145:0:117:139:1><ItemShow:148:0:131:139:1>\
+<ItemShow:151:0:4:179:1><ItemShow:153:0:19:179:1><ItemShow:154:0:33:179:1><ItemShow:158:0:47:179:1><ItemShow:159:0:61:179:1><ItemShow:637:0:75:179:1><ItemShow:638:0:89:179:1><ItemShow:740:0:103:179:1><ItemShow:746:0:117:179:1><ItemShow:749:0:131:179:1>\
+<ItemShow:755:0:4:218:1><ItemShow:760:0:19:218:1><ItemShow:767:0:33:218:1><ItemShow:771:0:47:218:1><ItemShow:1298:0:61:218:1><ItemShow:1297:0:75:218:1><ItemShow:1296:0:89:218:1><ItemShow:1295:0:103:218:1><ItemShow:1294:0:117:218:1><ItemShow:1293:0:131:218:1>\
+<> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+<>        <上一页/@百晓生下一页>                                                        <下一页/@百晓生下一页2>
+
+[@百晓生下一页2]
+#if
+SMALL U401 10
+CHECKLEVELEX < 70
+#act
+messagebox 防止盗版,等级达到70级并且10转才可以查看!!!
+break
+
+
+
+}                                     

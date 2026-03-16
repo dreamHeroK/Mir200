@@ -1,0 +1,379 @@
+{
+
+
+;占用变量 U53 记录赞助等级
+
+
+[@赞助系统]
+#IF
+EQUAL U53 0
+#ACT
+MOV S$基础赞助按钮 <IMGEX:111:11:12:13:36:127/@基础赞助><TEXT:基础赞助:-34:138/FCOLOR=150>
+#ELSEACT
+MOV S$基础赞助按钮 <IMGEX:111:13:13:13:36:127><TEXT:基础赞助:-34:138/FCOLOR=231>
+
+#IF
+EQUAL U53 1
+#ACT
+MOV S$进阶赞助按钮 <IMGEX:111:11:12:13:213:-65/@进阶赞助><TEXT:进阶赞助:143:-54/FCOLOR=150>
+#ELSEACT
+MOV S$进阶赞助按钮 <IMGEX:111:13:13:13:213:-65><TEXT:进阶赞助:143:-54/FCOLOR=231>
+
+#IF
+EQUAL U53 2
+#ACT
+MOV S$顶级赞助按钮 <IMGEX:111:11:12:13:390:-257/@顶级赞助><TEXT:顶级赞助:320:-246/FCOLOR=150>
+#ELSEACT
+MOV S$顶级赞助按钮 <IMGEX:111:13:13:13:390:-257><TEXT:顶级赞助:320:-246/FCOLOR=231>
+
+
+#IF
+LARGE U53 2
+#ACT
+GOTO @赞助第二页
+#ELSEACT
+GOTO @赞助第一页
+
+
+[@赞助第二页]
+
+#IF
+EQUAL U53 3
+#ACT
+MOV S$基础赞助按钮 <IMGEX:111:11:12:13:36:127/@白银赞助><TEXT:白银赞助:-34:138/FCOLOR=150>
+#ELSEACT
+MOV S$基础赞助按钮 <IMGEX:111:13:13:13:36:127><TEXT:白银赞助:-34:138/FCOLOR=231>
+
+#IF
+EQUAL U53 4
+#ACT
+MOV S$进阶赞助按钮 <IMGEX:111:11:12:13:213:-65/@黄金赞助><TEXT:黄金赞助:143:-54/FCOLOR=150>
+#ELSEACT
+MOV S$进阶赞助按钮 <IMGEX:111:13:13:13:213:-65><TEXT:黄金赞助:143:-54/FCOLOR=231>
+
+#IF
+EQUAL U53 5
+#ACT
+MOV S$顶级赞助按钮 <IMGEX:111:11:12:13:390:-257/@钻石赞助><TEXT:钻石赞助【顶赞】:320:-246/FCOLOR=150>
+#ELSEACT
+MOV S$顶级赞助按钮 <IMGEX:111:13:13:13:390:-257><TEXT:钻石赞助【顶赞】:320:-246/FCOLOR=231>
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 180 1 4 0 0 1 516 14 1
+#SAY
+<TEXT:白银赞助:43:70/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:需要累计充值198元:38:100/FCOLOR=249>　\
+
+<TEXT:获得属性:38:120/FCOLOR=150>　\
+
+<TEXT:对怪伤害+15%:38:120/FCOLOR=250>　\
+<TEXT:对怪防御+15%:38:120/FCOLOR=250>　\
+<TEXT:爆率加成+15%:38:120/FCOLOR=250>　\
+<TEXT:随身泡点+150(每秒):38:120/FCOLOR=250>　\
+<TEXT:背包格数+20 、增加300成就点:38:120/FCOLOR=250>　\
+<$STR(S$基础赞助按钮)>　\
+　\
+　\
+　\
+
+<TEXT:黄金赞助:219:-122/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:需要累计充值398元:214:-92/FCOLOR=249>　\
+
+<TEXT:获得属性:214:-72/FCOLOR=150>　\
+
+<TEXT:对怪伤害+20%:214:-72/FCOLOR=250>　\
+<TEXT:对怪防御+20%:214:-72/FCOLOR=250>　\
+<TEXT:爆率加成+20%:214:-72/FCOLOR=250>　\
+<TEXT:随身泡点+200(每秒):214:-72/FCOLOR=250>　\
+<TEXT:背包格数+30 、增加500成就点:214:-72/FCOLOR=250>　\
+<$STR(S$进阶赞助按钮)>　\
+　\
+　\
+　\
+
+
+<TEXT:钻石赞助:393:-314/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:【顶赞】需要累计充值598元:388:-284/FCOLOR=249>　\
+
+<TEXT:获得属性:388:-264/FCOLOR=150>　\
+
+<TEXT:对怪伤害+25%:388:-264/FCOLOR=250>　\
+<TEXT:对怪防御+25%:388:-264/FCOLOR=250>　\
+<TEXT:爆率加成+25%:388:-264/FCOLOR=250>　\
+<TEXT:随身泡点+300(每秒):388:-264/FCOLOR=250>　\
+<TEXT:背包格数+30 、增加800成就点:388:-264/FCOLOR=250>　\
+<$STR(S$顶级赞助按钮)>　\
+　\
+　\
+　\
+
+<TEXT:当前累充：<$GAMEGLORY>:33:-244/FCOLOR=70>　\
+
+
+
+
+[@赞助第一页]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 180 1 4 0 0 1 516 14 1
+#SAY
+<TEXT:基础赞助:43:70/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:需要累计充值39元:38:100/FCOLOR=249>　\
+
+<TEXT:获得属性:38:120/FCOLOR=150>　\
+
+<TEXT:对怪伤害+5%:38:120/FCOLOR=250>　\
+<TEXT:对怪防御+5%:38:120/FCOLOR=250>　\
+<TEXT:爆率加成+5%:38:120/FCOLOR=250>　\
+<TEXT:随身泡点+45(每秒):38:120/FCOLOR=250>　\
+<TEXT:背包格数+10:38:120/FCOLOR=250>　\
+<$STR(S$基础赞助按钮)>　\
+　\
+　\
+　\
+
+<TEXT:进阶赞助:219:-122/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:需要累计充值69元:214:-92/FCOLOR=249>　\
+
+<TEXT:获得属性:214:-72/FCOLOR=150>　\
+
+<TEXT:对怪伤害+8%:214:-72/FCOLOR=250>　\
+<TEXT:对怪防御+8%:214:-72/FCOLOR=250>　\
+<TEXT:爆率加成+8%:214:-72/FCOLOR=250>　\
+<TEXT:随身泡点+75(每秒):214:-72/FCOLOR=250>　\
+<TEXT:背包格数+20:214:-72/FCOLOR=250>　\
+<$STR(S$进阶赞助按钮)>　\
+　\
+　\
+　\
+
+
+<TEXT:顶级赞助:393:-314/FCOLOR=70:FBOLD:FSIZE=15:FNAME=楷体>　\
+
+<TEXT:需要累计充值99元:388:-284/FCOLOR=249>　\
+
+<TEXT:获得属性:388:-264/FCOLOR=150>　\
+
+<TEXT:对怪伤害+12%:388:-264/FCOLOR=250>　\
+<TEXT:对怪防御+12%:388:-264/FCOLOR=250>　\
+<TEXT:爆率加成+12%:388:-264/FCOLOR=250>　\
+<TEXT:随身泡点+100(每秒):388:-264/FCOLOR=250>　\
+<TEXT:背包格数+30:388:-264/FCOLOR=250>　\
+<$STR(S$顶级赞助按钮)>　\
+　\
+　\
+　\
+
+<TEXT:当前累充：<$GAMEGLORY>:33:-244/FCOLOR=70>　\
+
+
+
+
+
+[@跳转充值系统]
+#IF
+#ACT
+GetNpcName S1
+
+#IF
+CHECKCONTAINSTEXT <$STR(S1)> QFunction
+#ACT
+GOTO @充值系统
+BREAK
+
+#IF
+NOT CHECKCONTAINSTEXT <$STR(S1)> QFunction
+#ACT
+#CALL [\蛋蛋专用\充值系统\充值系统.txt] @充值系统
+BREAK
+
+[@基础赞助]
+#IF
+NOT EQUAL U53 0
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 39
+#ACT
+MESSAGEBOX 你的累充不足39元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 39
+EQUAL U53 0
+#ACT
+MOV U53 1
+GuildNoticeMsg 250 0 [基础赞助]你达到“基础赞助”，获得：对怪伤害+5%，对怪防御+5%，爆率加成+5%，随身泡点+45(每秒),背包格数+10 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“基础赞助”，获得：对怪伤害+5%，对怪防御+5%，爆率加成+5%，随身泡点+45(每秒),背包格数+10
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 10
+
+;成就相关
+#IF
+SMALL U178 1
+#ACT
+MOV U178 1
+
+
+
+[@进阶赞助]
+#IF
+NOT EQUAL U53 1
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 69
+#ACT
+MESSAGEBOX 你的累充不足69元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 69
+EQUAL U53 1
+#ACT
+MOV U53 2
+GuildNoticeMsg 250 0 [进阶赞助]你达到“进阶赞助”，获得：对怪伤害+8%，对怪防御+8%，爆率加成+8%，随身泡点+75(每秒),背包格数+20 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“进阶赞助”，获得：对怪伤害+8%，对怪防御+8%，爆率加成+8%，随身泡点+75(每秒),背包格数+20
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 20
+
+[@顶级赞助]
+#IF
+NOT EQUAL U53 2
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 99
+#ACT
+MESSAGEBOX 你的累充不足99元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 99
+EQUAL U53 2
+#ACT
+MOV U53 3
+GuildNoticeMsg 250 0 [顶级赞助]你达到“顶级赞助”，获得：对怪伤害+12%，对怪防御+12%，爆率加成+12%，随身泡点+100(每秒),背包格数+30 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“顶级赞助”，获得：对怪伤害+12%，对怪防御+12%，爆率加成+12%，随身泡点+100(每秒),背包格数+30
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 30
+
+
+;成就相关
+#IF
+SMALL U179 1
+#ACT
+MOV U179 1
+
+
+
+
+
+;===========================
+[@白银赞助]
+#IF
+NOT EQUAL U53 3
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 198
+#ACT
+MESSAGEBOX 你的累充不足198元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 198
+EQUAL U53 3
+#ACT
+MOV U53 4
+GuildNoticeMsg 250 0 [白银赞助]你达到“白银赞助”，获得：对怪伤害+15%，对怪防御+15%，爆率加成+15%，随身泡点+150(每秒),背包格数+20 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“白银赞助”，获得：对怪伤害+15%，对怪防御+15%，爆率加成+15%，随身泡点+150(每秒),背包格数+20
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 20
+INC U1 300
+
+;成就相关
+#IF
+SMALL U178 1
+#ACT
+MOV U178 1
+
+
+
+[@黄金赞助]
+#IF
+NOT EQUAL U53 4
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 398
+#ACT
+MESSAGEBOX 你的累充不足398元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 398
+EQUAL U53 4
+#ACT
+MOV U53 5
+GuildNoticeMsg 250 0 [进阶赞助]你达到“黄金赞助”，获得：对怪伤害+20%，对怪防御+20%，爆率加成+20%，随身泡点+200(每秒),背包格数+30 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“黄金赞助”，获得：对怪伤害+20%，对怪防御+20%，爆率加成+20%，随身泡点+200(每秒),背包格数+30
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 30
+INC U1 500
+
+[@钻石赞助]
+#IF
+NOT EQUAL U53 5
+#ACT
+MESSAGEBOX 数据错误！
+BREAK
+
+#IF
+SMALL <$GAMEGLORY> 598
+#ACT
+MESSAGEBOX 你的累充不足598元
+BREAK
+
+#IF
+NOT SMALL <$GAMEGLORY> 598
+EQUAL U53 5
+#ACT
+MOV U53 6
+GuildNoticeMsg 250 0 [顶级赞助]你达到“钻石赞助”，获得：对怪伤害+25%，对怪防御+25%，爆率加成+25%，随身泡点+300(每秒),背包格数+30 self
+GuildNoticeMsg 251 0 <$USERNAME>达到“钻石赞助”，获得：对怪伤害+25%，对怪防御+25%，爆率加成+25%，随身泡点+300(每秒),背包格数+30
+GOTO @统筹属性触发
+GOTO @赞助系统
+ExtBagOpenItemCount + 30
+INC U1 800
+
+;成就相关
+#IF
+SMALL U179 1
+#ACT
+MOV U179 1
+
+
+
+
+}

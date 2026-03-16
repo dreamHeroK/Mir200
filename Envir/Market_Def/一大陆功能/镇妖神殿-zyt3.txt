@@ -1,0 +1,67 @@
+[@main]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 803 1 4 0 0 1 610 20
+#SAY
+<>\
+<&ImgEx:165:794:795:794:540:420/@镇妖神殿>\
+
+
+[@镇妖神殿]
+
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+
+#if
+SMALL U401 9
+#act
+messagebox 当前转生小于9转!!！
+break
+
+
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　已经完成逆天改命四阶或者更高才可以!!!
+break
+
+
+#or
+CHECKDC > 1099 > 0
+LARGE <$MAXDC> 1099
+#act
+#ELSEACT
+messagebox 当前攻击小于1100!!！
+break
+
+
+
+#IF
+CHECKLEVELEX > 79
+#ACT
+#ELSEACT
+messagebox 等级不足70级
+BREAK
+
+
+
+#if
+#ACT
+MAPMOVE zyt4
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[镇妖神殿四]，祝他满载而归！
+BREAK

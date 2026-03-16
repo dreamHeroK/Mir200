@@ -1,0 +1,53 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 340 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:59:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入万妖洞窟>
+<>\ \
+<ItemShow:968:0:147:136:1>
+<ItemShow:1572:0:164:136:1>
+<ItemShow:1294:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+
+
+[@进入万妖洞窟]
+
+
+#IF
+CHECKLEVELEX > 61
+#ACT
+#ELSEACT
+messagebox 等级不足62级
+BREAK
+
+#IF
+checkgold 210000
+#ACT
+take 金币 210000
+inc J130 210000
+MAPMOVE wanyao1 30 219
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[万妖洞窟]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要210000金币
+BREAK

@@ -1,0 +1,56 @@
+[@main]
+
+<><天神塔层数越高，爆率越高，九层必爆终极物品。/SCOLOR=253>\
+<------------------------------------------------------------/SCOLOR=13>\  \ 
+
+
+<进入天神塔二层/@天神塔二层>     <(需要100声望)/SCOLOR=7>\  \
+
+
+
+
+[@天神塔二层]
+#if
+CheckMirrorMap <$USERNAME>塔1
+#ACT
+#ELSEACT
+messagebox 你不是队长
+BREAK
+
+
+#IF
+CheckMapMonCount <$USERNAME>塔1 = 0 1
+#ACT
+#ELSEACT
+MESSAGEBOX 请先杀死本层怪物
+BREAK
+
+#if
+CHECKGAMEGOLD > 99
+#ACT
+#ELSEACT
+messagebox 声望不足，需要消耗100声望
+BREAK
+
+#if
+CHECKGAMEGOLD > 99
+NOT CHECKGROUPMEMBERCOUNT > 1
+#ACT
+GAMEGOLD - 100
+ADDMIRRORMAP 九层妖塔二层 <$USERNAME>塔2 天神塔2层 3600 3 0 N$塔2标记 1 330,333
+CreateNPC 守塔人 <$USERNAME>塔2 26 27 241 二层守塔人 1
+MAPMOVE <$USERNAME>塔2 18 35
+MONGENEX <$USERNAME>塔2 26 36 无相神 1 1 249 0
+BREAK
+
+
+#if
+CHECKGAMEGOLD > 99
+CHECKGROUPMEMBERCOUNT > 1
+#ACT
+GAMEGOLD - 100
+ADDMIRRORMAP 九层妖塔二层 <$USERNAME>塔2 天神塔2层 3600 3 0 N$塔2标记 1 330,333
+CreateNPC 守塔人 <$USERNAME>塔2 26 27 241 二层守塔人 1
+GROUPMAPMOVE <$USERNAME>塔2 18 35
+MONGENEX <$USERNAME>塔2 26 36 无相神 1 1 249 0
+BREAK

@@ -1,0 +1,29 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 423 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:970:0:148:285:1> <ItemShow:971:0:158:285:1> <ItemShow:972:0:170:285:1> <ItemShow:973:0:180:285:1> <ItemShow:974:0:190:285:1> <ItemShow:975:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@真幻境四层>
+
+
+
+[@真幻境四层]
+
+#if
+Equal S$四级时装 激活 
+#ELSEACT
+messagebox 需要4级时装套!!
+BREAK
+
+
+
+
+#IF
+#Act
+MAPMOVE 真幻境四层
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[真幻境三层]，祝他满载而归！
+BREAK

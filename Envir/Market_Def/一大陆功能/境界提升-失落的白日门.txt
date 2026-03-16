@@ -1,0 +1,81 @@
+[@main]
+;#IF
+;#act
+;OPENMERCHANTBIGDLG 51 1566 1 4 0 -90 0 0 0
+;#SAY
+<>     \ 
+<>     <小伙子,我看你气质不凡,有资格继承我的衣钵/SCOLOR=250>\ 
+<>       <接下来就是考验,我需要你收集一些物品/SCOLOR=250> \  
+<>      <有两种方式晋升我的衣钵,具体看下面介绍/SCOLOR=250> <PlayImg:74:65:10:100:20:-50:0:0>\ 
+ <>              <切勿重复升级，后果自负/SCOLOR=249>\ 
+<>         <先天境属性:全元素+1%,攻击速度+1/SCOLOR=249> \ 
+
+<>    <方式一:神器碎片*10+兽王符咒*10+1888万金币/SCOLOR=253> \
+<>    <方式二:神器碎片*5+兽王符咒*5+888元宝/SCOLOR=253> \ 
+
+<>              <方式一晋升/@方式一晋升>              <方式二晋升/@方式二晋升>     
+
+
+
+ 
+[@方式一晋升]
+#OR
+CHECKFENGHAO 先天境
+CHECKFENGHAO 后天境
+CHECKFENGHAO 万象境
+#act
+MESSAGEBOX 对不起，你的境界太高了，我能力有限！
+BREAK
+
+#if
+CheckGold 18880000
+checkitem 兽王符咒 10
+checkitem 神器碎片 10
+#act
+TAKE 金币 18880000
+TAKE 兽王符咒 10
+TAKE 神器碎片 10
+RECYCFENGHAO 先天境
+RECYCFENGHAO 后天境
+RECYCFENGHAO 万象境
+GiveFengHao 先天境
+SETICON 3 78 1535 33 20 10 0 0 100 
+sendmsg 7 晋升成功获得属性。
+SENDMSG 0 【<$USERNAME>】成功晋升先天境，大家远离它！！
+#elseact
+MESSAGEBOX 对不起，金币不足或者材料不足！
+BREAK
+
+
+
+ 
+[@方式二晋升]
+#OR
+CHECKFENGHAO 先天境
+CHECKFENGHAO 后天境
+CHECKFENGHAO 万象境
+#act
+MESSAGEBOX 对不起，你的境界太高了，我能力有限！
+BREAK
+
+
+#if
+CHECKGAMEGOLD > 887
+checkitem 兽王符咒 5
+checkitem 神器碎片 5
+#act
+TAKE 兽王符咒 5
+TAKE 神器碎片 5
+GAMEGOLD - 888
+RECYCFENGHAO 先天境
+RECYCFENGHAO 后天境
+RECYCFENGHAO 万象境
+GiveFengHao 先天境
+SETICON 3 78 1535 33 20 10 0 0 100 
+sendmsg 7 晋升成功获得属性。
+SENDMSG 0 【<$USERNAME>】成功晋升先天境，大家远离它！！
+BREAK
+
+
+
+

@@ -1,0 +1,33 @@
+[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:1420:0:50:70:1>
+MOV S$世界DT2 <itemshow:1421:0:50:70:1>
+MOV S$世界DT3 <itemshow:1422:0:50:70:1>
+MOV S$世界DT4 <itemshow:1423:0:50:70:1>
+MOV S$世界DT5 <itemshow:1424:0:50:70:1>
+MOV S$世界DT6 
+
+#IF
+#ACT
+#SAY
+<TEXT:一章三幕·青苔腐地:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+<>　　　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:镇上已经好久没有人烟，处处青苔，土地被腐蚀，似乎变成一:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:块死地。:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+#act
+mapmove 星火世界 260 50
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{星火世界|7:0:1}】的【{青苔腐地|249:0:1}】进行探索！ self

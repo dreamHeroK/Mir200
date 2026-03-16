@@ -1,0 +1,40 @@
+﻿[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:1790:0:50:70:1>
+MOV S$世界DT2 <itemshow:1791:0:50:70:1>
+MOV S$世界DT3 <itemshow:1792:0:50:70:1>
+MOV S$世界DT4 <itemshow:1793:0:50:70:1>
+MOV S$世界DT5 <itemshow:1794:0:50:70:1>
+MOV S$世界DT6 
+
+#IF
+#ACT
+#SAY
+<TEXT:三章12幕·月色回廊:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+　　　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:不知道从何时起，也不知道是什么原因，世界上几位有名的职:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:业者都背叛了自己的世界，此处就藏匿着一位大法师。:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133|249#直达洞口需费用：{50000银币|251}^215#当然，你也可以跑着去--免费。/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+SMALL <$GAMEGOLD> 50000
+#act
+MessageBox 你的银币不足50000，无法直达该地图，跑着去吧。
+break
+
+#IF
+#act
+GAMEGOLD - 50000
+mapmove 信仰世界 900 325
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{信仰世界|7:0:1}】的【{月色回廊|249:0:1}】进行探索！ self

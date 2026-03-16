@@ -1,0 +1,48 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 113 1518 1 4 6 -15 1 1120 177 1
+PLAYSOUND WAV\91004.wav 1 0
+DELAYGOTO 1700 @MAIN_2
+#SAY
+\ \
+<PLAYIMGEX:113:137:18:100:1:-42:-100>\
+[@main_2]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 113 705 1 4 16 15 1 1120 177 1
+#SAY
+<PLAYIMG:113:164:15:100:38:360:1><PLAYIMG:113:164:15:100:-560:360:1>\ \
+<Text:进入跨服战场:140:63{FCOLOR=251;FSIZE=17;FNAME=楷体}/@进入战场>
+<PLAYIMG:113:470:4:200:15:322:2><PLAYIMG:113:474:8:100:30:342:2>\
+<>   <ItemShow:1800:0:140:408:1>  <ItemShow:1801:0:140:408:1>  <ItemShow:1802:0:140:408:1>  <ItemShow:1803:0:140:408:1>  <ItemShow:511:0:140:408:1>  <ItemShow:512:0:140:408:1>  <ItemShow:513:0:140:408:1>  <ItemShow:386:0:140:408:1>  <ItemShow:387:0:140:408:1>  <ItemShow:388:0:140:408:1>  <ItemShow:448:0:140:408:1>  <ItemShow:450:0:140:408:1>  <ItemShow:153:0:140:408:1>  \
+<>   <ItemShow:158:0:140:445:1>  <ItemShow:1333:0:140:445:1>  <ItemShow:159:0:140:445:1>  <ItemShow:1573:0:140:445:1>  <ItemShow:1572:0:140:445:1>  <ItemShow:480:0:140:445:1>  <ItemShow:481:0:140:445:1>  <ItemShow:482:0:140:445:1>  <ItemShow:350:0:140:445:1>  <ItemShow:580:0:140:445:1>  <ItemShow:13:0:140:445:1>  <ItemShow:14:0:140:445:1>  <ItemShow:1614:0:140:445:1>  
+
+[@进入战场]
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+
+#if
+EQUAL A13 跨服开放
+#act
+#ELSEACT
+messagebox 跨服地图暂未开放,请耐心等待!!！
+break
+
+#IF
+#ACT
+M2SpanRegion 1 kfzc 63 37 4
+BREAK
+
+
+
+
+
+

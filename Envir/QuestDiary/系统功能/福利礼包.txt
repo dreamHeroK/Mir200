@@ -1,0 +1,110 @@
+[@福利礼包]
+{
+
+
+#if
+#say
+\ \
+
+<Img:44:52:85:-5>\
+
+<Text:加入Q群2901556，查看群公告获取礼包码:30:30{FCOLOR=254}>\
+
+<ItemShow:591:1:88:45:1> <ItemShow:579:20:88:45:1>    \
+
+
+<Text:[领取Q群礼包]|250#白银称号*1^250#宠物福蛋*6:95:90/@@InputString195>\
+
+
+\ \ \ \ \ \ \
+
+<Text:-----------------------------------------:10:-5{FCOLOR=12}>\
+
+<Text:扫描二维码添加微信，获取微信礼包码:30:-5{FCOLOR=254}>\
+
+<ItemShow:591:1:160:15:1>  <ItemShow:579:20:160:15:1>\ \
+
+
+<Text:[领取微信礼包]|250#白银称号*1^250#宠物福蛋*20:170:70/@@InputString196>\
+
+<Img:563:52:10:-55>\
+
+#ACT
+OPENMERCHANTBIGDLG 52 17 1 0 0 0 1 262 25 1
+
+
+
+
+[@InputString195]
+#IF
+LARGE U5 0
+#ACT
+messagebox 你已经领取过了。
+BREAK
+
+#IF
+EQUAL S195 6666
+#ACT
+#ELSEACT
+MESSAGEBOX 你输入的礼包码不正确！
+BREAK
+
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+EQUAL U5 0
+EQUAL S195 6666
+#ACT
+MOV U5 1
+GiveStateItem 宠物福蛋 1 1 0 0 1 1 0 20
+SENDMSG 0 恭喜玩家【%s】领取了[QQ群礼包]：白银称号 + 宠物福蛋*20
+
+#IF
+check [111] 0
+#ACT
+GiveFengHao 白银赞助 1
+#ELSEACT
+SENDMSG 7 你已经有更高级的称号了，无法获得[白银赞助]称号
+BREAK
+
+
+
+[@InputString196]
+#IF
+LARGE U6 0
+#ACT
+messagebox 你已经领取过了。
+BREAK
+
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+EQUAL U6 0
+EQUAL S196 8888
+#ACT
+MOV U6 1
+GiveStateItem 宠物福蛋 1 1 0 0 1 1 0 20
+SENDMSG 0 恭喜玩家【%s】领取了[微信积赞包]：白银称号 + 宠物福蛋*20
+#ELSEACT
+MESSAGEBOX 你输入的礼包码不正确！
+BREAK
+
+#IF
+check [111] 0
+#ACT
+GiveFengHao 白银赞助 1
+#ELSEACT
+SENDMSG 7 你已经有更高级的称号了，无法获得[白银赞助]称号
+BREAK
+
+}

@@ -1,0 +1,82 @@
+[@登陆配置]
+{
+
+
+#IF
+ISDUMMY
+#ACT
+SETDUMMYCONFIGFILENAME ..\QuestDiary\假人功能\男战.txt
+LOADDUMMYCONFIGFILE
+
+#IF
+ISDUMMY
+#ACT
+SET [401] 1
+SET [409] 1
+SET [412] 1
+SET [413] 1
+SET [441] 1
+SET [201] 1
+SET [204] 1
+
+HAIRSTYLE 0
+Activationcasket
+ShowGodBless 1
+OpenGodBless All
+ExtBagPageCount = 4
+ExtBagOpenItemCount = 160
+AddMaxWeight + 10000
+GIVE 初心者之剑 1
+GIVE 初心者之甲 1
+GIVE 初心者头盔 1
+GIVE 初心者项链 1
+GIVE 初心者手镯 1
+GIVE 初心者戒指 1
+GIVE 初心者手镯 1
+GIVE 初心者戒指 1
+GIVE 初心者腰带 1
+GIVE 初心者靴子 1
+GIVE 初心者披风 1
+GIVE 初心者宝石 1
+GIVE 初心者护符 1
+GIVE 初心者头饰 1
+GIVE 初心者副手 1
+GIVE 初心者印记 1
+GIVE 神格 1
+AutoTakeOnItem 神格 17
+AutoTakeOnItem 初心者之剑 1
+AutoTakeOnItem 初心者头盔 4
+AutoTakeOnItem 初心者项链 3
+AutoTakeOnItem 初心者手镯 5
+AutoTakeOnItem 初心者手镯 6
+AutoTakeOnItem 初心者戒指 7
+AutoTakeOnItem 初心者戒指 8
+AutoTakeOnItem 初心者腰带 10
+AutoTakeOnItem 初心者靴子 11
+AutoTakeOnItem 初心者披风 15
+AutoTakeOnItem 初心者宝石 12
+AutoTakeOnItem 初心者护符 2
+AutoTakeOnItem 初心者头饰 9
+AutoTakeOnItem 初心者之甲 0
+AutoTakeOnItem 初心者副手 16
+AutoTakeOnItem 初心者印记 14
+OpenStoratge 2 1
+OpenStoratge 3 1
+Give 主城传送石 1
+Give 随机传送石 1
+GuildNoticeMsg 249 0 {欢迎新的冒险者|116:39:0}{[<$USERNAME>]|254:39:0}{成为|116:39:0}{|253:39:0}{黑暗仲裁者|116:39:0}{一员！|116:39:0}
+MOVR P85 3000 10000
+DELAYGOTO <$STR(P85)> @开始启动假人
+BREAK
+
+[@开始启动假人]
+
+#IF
+ISDUMMY
+#ACT
+;MAPMOVE 黑暗仲裁所 107 105 6
+SetOnTimer 220 5
+BREAK
+}
+
+

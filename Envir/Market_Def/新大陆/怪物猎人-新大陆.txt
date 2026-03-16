@@ -1,0 +1,80 @@
+[@main]
+
+
+#IF
+#act
+OPENMERCHANTBIGDLG 165 754 1 4 0 0 1 575 25 0
+#say
+<>\ \
+<text:<$HUMAN(切割之力)>:490:252{FCOLOR=254}>\
+<>\ \
+<ImgEx:165:755:756:755:330:230|费用：500w金币随机洗练一次^31#金币洗练无保底/@金币猎人>
+<ImgEx:165:752:753:752:330:230|费用：188元宝随机洗练一次^31#第十次必洗练888切割/@元宝猎人>\
+
+
+
+
+[@金币猎人]
+
+#if
+checkgold 5000000
+#act
+#elseact
+MessageBox 错误，你的金币不足500W，无法使用。
+break
+
+#if
+CHECKVAR HUMAN 切割之力 > 887
+#act
+MessageBox 错误，您的切割之力已到达888。
+break
+
+#IF
+#ACT
+movR n$切割值 88 800
+
+#if
+#act
+TAKE 金币 5000000
+CALCVAR HUMAN 切割之力 = <$STR(n$切割值)>
+SAVEVAR HUMAN 切割之力 ..\QuestDiary\05元宝捐献\切割之力值.txt
+MessageBox 恭喜你，成功洗练出【<$HUMAN(切割之力)>】点切割值。
+goto @main
+break
+
+
+[@元宝猎人]
+
+#if
+checkGameGold ? 188
+#act
+#elseact
+MessageBox 错误，你的元宝不足188，无法使用。
+break
+
+#if
+CHECKVAR HUMAN 切割之力 > 887
+#act
+MessageBox 错误，您的切割之力已到达888。
+break
+
+#IF
+SMALL U80 9
+#ACT
+movR n$切割值 88 800
+
+#IF
+EQUAL U80 9
+#ACT
+mov n$切割值 888
+mov U80 0
+#if
+#act
+GameGold - 188
+INC U80 1
+CALCVAR HUMAN 切割之力 = <$STR(n$切割值)>
+SAVEVAR HUMAN 切割之力 ..\QuestDiary\05元宝捐献\切割之力值.txt
+MessageBox 恭喜你，成功洗练出【<$HUMAN(切割之力)>】点切割值。
+goto @main
+break
+

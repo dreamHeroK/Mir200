@@ -1,0 +1,46 @@
+[@MAIN]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 124 47 1 4 0 -90 1 337 7 1
+#SAY
+<>\  \ 
+<>             <狂暴属性：暴击伤害+2%/SCOLOR=254>\ 
+<>             <狂暴属性：攻击伤害+5%/SCOLOR=254>\ 
+<>             <狂暴属性：攻魔道+5/SCOLOR=254> \ 
+<>             <狂暴属性：HP+200,MP+200/SCOLOR=254>\ 
+<>             <狂暴属性：+2攻击速度/SCOLOR=254>\ 
+<><杀死拥有狂暴之力者，可获得50元宝，皇宫不掉狂暴/SCOLOR=69> \ 
+<>        <狂暴属性：自动回收(小退生效)/SCOLOR=249>  \ 
+<>              <开启狂暴需要100元宝/SCOLOR=251>           \   \ 
+<>          <ImgEx:124:44:45:46:41:0/@开启狂暴> \
+
+
+[@开启狂暴]
+
+
+#if
+CHECKFENGHAO 狂暴之力
+#ACT
+MessageBox 　\　\　　　已经拥有狂暴之力!!!
+break
+
+
+#IF
+CHECKGAMEGOLD < 100
+#ACT
+MessageBox 　\　\　　　条件不足:元宝不足100！!
+break
+
+
+
+#if
+CHECKGAMEGOLD > 99
+#ACT
+GAMEGOLD - 100
+GiveFengHao 狂暴之力
+SETICON 2 78 1595 -35 42 8 0 0 100 
+#CALL [\10属性重置\属性重置.txt] @属性重置
+sendmsg 7 开启狂暴成功，请小退获得属性。
+SENDMSG 0 【<$USERNAME>】开启了狂暴之力，杀死他可以得到50元宝，大家快去追杀吧！！
+sendcentermsg 251 0 ★【<$USERNAME>】开启了狂暴之力,请小心了！ 1 10
+break

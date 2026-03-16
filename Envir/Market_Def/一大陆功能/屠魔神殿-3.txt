@@ -1,0 +1,160 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 796 1 4 0 0 1 610 23 1
+#say
+<>\ \ \ \
+<ImgEx:165:738:739:738:480:220/@屠魔神殿一> \
+<ImgEx:165:742:743:742:480:235/@屠魔神殿二> \
+<ImgEx:165:740:741:740:480:250/@屠魔神殿三> \
+<ImgEx:165:744:745:744:480:265/@屠魔神殿四> \
+
+
+
+
+[@屠魔神殿一]
+#if
+#ACT
+MAPMOVE tmsd1
+BREAK
+
+
+[@屠魔神殿二]
+
+
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+
+#if
+SMALL U401 3
+#act
+messagebox 当前转生小于3转!!！
+break
+
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+
+
+#if
+#ACT
+MAPMOVE tmsd2
+BREAK
+
+
+[@屠魔神殿三]
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+#or
+CHECKDC > 449 > 0
+LARGE <$MAXDC> 449
+#act
+#ELSEACT
+messagebox 当前攻击小于450!!！
+break
+
+#if
+SMALL U401 7
+#act
+messagebox 当前转生小于7转!!！
+break
+
+
+#IF
+CHECKLEVELEX > 59
+#ACT
+#ELSEACT
+messagebox 等级不足60级
+BREAK
+
+
+#if
+#ACT
+MAPMOVE tmsd3
+BREAK
+
+
+[@屠魔神殿四]
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+#if
+SMALL U401 9
+#act
+messagebox 当前转生小于9转!!！
+break
+
+
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　已经完成逆天改命四阶或者更高才可以!!!
+break
+
+
+#or
+CHECKDC > 1099 > 0
+LARGE <$MAXDC> 1099
+#act
+#ELSEACT
+messagebox 当前攻击小于1100!!！
+break
+
+
+
+#IF
+CHECKLEVELEX > 79
+#ACT
+#ELSEACT
+messagebox 等级不足70级
+BREAK
+
+
+
+#if
+#ACT
+MAPMOVE tmsd4
+BREAK

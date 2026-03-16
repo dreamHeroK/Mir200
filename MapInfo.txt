@@ -1,0 +1,1093 @@
+
+;-----------------------------------城市---------------------------------------
+
+[JRDT|T218 世外桃源]
+
+[doushou 斗兽场] Safe
+
+[JYSC|nGA0 交易市场] Safe
+
+[GM|nGUDONG03 密室]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL
+
+[DB001 八卦阵] 
+
+[JIANYU|HMW 监狱] SAFE NORANDOMMOVE NOPOSITIONMOVE NODRUG NORECONNECT(JIANYU) NORECALL NODEARRECALL NOGUILDRECALL NOMasterREC NoDeal NoShop NOCHALLENGE NODROPUSEITEMS NoAutoOnline MISSION  NOTHROWITEM NOALLOWUSEITEMS(传音筒|回城卷|盟重传送石|传音筒|超级传音筒)
+
+[nHERO1 卧龙山庄]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL
+
+[JT001|截图黑背景 截图]
+
+;-----------------------------------城市---------------------------------------
+
+[1      沃玛森林]
+[2	毒蛇山谷]
+[0|n0     比奇省]
+[n0122  比奇皇宫] 
+;皇宫
+0      350 184    ->   n0122   14  43
+n0122   14  43    ->   0      350 184
+n0122   14  44    ->   0      350 184
+n0122   13  43    ->   0      350 184
+
+[3|盟重改   盟重省] ALLOWUSEMYSHOP
+
+[n11	  白日门]
+[n1002	白日门虎卫堂]
+n11    228,268    ->  n1002   13  18
+n1002   12  19    ->  n11    227,269
+
+[n4       封魔谷]
+[nB341  封魔皇宫]
+[M101   姻缘神殿]
+n4      219,198  -> nB341     26,27
+n4      218,199  -> nB341     25,28
+nB341     27,28  -> n4     219,199
+nB341     26,29  -> n4     220,199
+
+[n5 苍月岛]
+
+[n6 魔龙城]
+
+[nGA0  庄园] Safe
+
+[nGUDONG01 珍宝阁一层]  Safe
+[nGUDONG02 珍宝阁二层]  Safe
+[nGUDONG03 珍宝阁三层]  Safe
+
+nGUDONG01  8 21  ->  nGUDONG02 10 20
+nGUDONG02  9 21  ->  nGUDONG01 8 22
+nGUDONG01  24 5  ->  nGUDONG02 19 12
+nGUDONG02 20 11  ->  nGUDONG01 24 6
+
+nGUDONG02  13 8  ->  nGUDONG03 21 21
+nGUDONG03 22 22  ->  nGUDONG02 13 9
+nGUDONG03 21 23  ->  nGUDONG02 13 9
+
+
+
+;-----------------------------------沙巴克---------------------------------------
+
+[ND701  沙城秘密通道]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL
+3     652 282  ->  ND701 171 133
+ND701 171 132  ->  3 651 281
+3     566 291  ->  ND701 34 127
+ND701  31 128  ->  3 567 291
+3     553 279  ->  ND701 28 22
+ND701   27 23  ->  3 552 278
+
+[new0150  沙巴克皇宫]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL RUNMON NOPOSITIONMOVE NOALLOWUSEITEMS(随机传送石)
+new0150 19 45  ->  3 609 263
+new0150 33 48  ->  3 617 269
+new0150 34 48  ->  3 616 270
+new0150 33 49  ->  3 616 270
+3  609 263 -> new0150 19 45
+3 613 272 -> new0150 26 52
+3 610 272 -> new0150 26 52
+3 620 265 -> new0150 37 41
+3 617 269 -> new0150 32 46
+3 616 270 -> new0150 31 47
+3 617 268 -> new0150 31 47
+3 616 269 -> new0150 31 47
+
+
+;--------------------------------------活动地图-------------------------------------------
+
+[jjc01     经验乐园] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL NODROPITEM
+
+[20170220    宝藏塔] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+[nr001     世外桃源] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+
+[fenghuo|Nlts102  烽火连天(活动)] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL NORANDOMMOVE NOHORSE NOSAFEPOSITIONMOVE NOALLOWUSEITEMS(随机传送石) NOPOSITIONMOVE NOTALLOWUSEMAGIC(移形换位)
+
+[tianjiang|T118   天降宝物(活动)] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL NoAutoRangePickItem
+
+[weijiao|nB341  围剿富贵兽(活动)] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+[guaiwu|n4        怪物攻城(活动)] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+
+
+
+;--------------------------------------计时收费地图-------------------------------------------
+
+[JS001|F011        噩梦秘境] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON DECGAMEGOLD(1/1)
+
+[JS002|nmizu2      炼狱秘境] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON DECGAMEGOLD(1/2)
+
+[JS003|nalx        深渊秘境] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON DECGAMEGOLD(1/3)
+
+[JS004|nHERO1      卧龙城] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON DECGAMEGOLD(1/5)
+
+[JS005|sldg        神龙城] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON DECGAMEGOLD(1/8)
+
+
+;--------------------------------------低级地图-------------------------------------------
+
+[XSZD|SD  新手之地] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL RUNMON RUNHUMAN Safe ONKILLMON NoDeal NOALLOWUSEITEMS(回城卷|盟重传送石|随机传送石)
+
+[XSZY|n0139  新手之园] NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL RUNMON RUNHUMAN Safe ONKILLMON
+
+[n0137  比奇竞技场]
+[n0139  新手之地] 
+[n0110  新手之地1] 
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■初级地图■■■■■■■■■■■■■■■■■■■■■■
+
+;------------------------------------------01僵尸矿洞------------------------------------------
+[kuangqu|F005       僵尸矿洞]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[JSFB1|F005   僵尸矿洞(个人)]  FB(99,僵尸矿洞[个人],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------02蜈蚣洞穴------------------------------------------
+[wugong|jjc02       蜈蚣洞穴]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[WGFB2|jjc02  蜈蚣洞穴(个人)]  FB(99,蜈蚣洞穴[个人],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------03沃玛寺庙------------------------------------------
+[woma|D024          沃玛大殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[WMFB3|D024   沃玛大殿(个人)]  FB(99,沃玛大殿[个人],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------04石墓洞窟------------------------------------------
+[shimu|D717         石墓洞窟]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[SMFB4|D717   石墓洞窟(个人)]  FB(99,石墓洞窟[个人],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------05祖玛大厅------------------------------------------
+[zuma|D5071         祖玛大厅]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[ZMFB5|D5071  祖玛大厅(个人)]  FB(99,祖玛大厅[个人],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------06封魔暗殿------------------------------------------
+[fengmo|D2013         封魔殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J1|D2013       封魔殿(副本)]  FB(99,封魔殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------07牛魔大殿------------------------------------------
+[niumo|D2079        牛魔大殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J2|D2079     牛魔大殿(副本)]  FB(99,牛魔大殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------08赤月之地-------------------------------------------
+[chiyue1|D10051	    赤月之地]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[chiyue2|D10061	    恶魔祭坛]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[chiyue3|D10062	    赤月魔穴]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+chiyue1     47,189         ->         chiyue2     20,25
+chiyue2      21,26         ->         chiyue1     48,188
+chiyue1     178,53         ->         chiyue3     13,23
+chiyue3      11,25         ->         chiyue1     179,55
+
+
+[J3|D10062    赤月魔穴(副本)]  FB(99,赤月魔穴[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------09幻境回廊------------------------------------------
+[huanjing|H007      幻境回廊]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J4|T140      幻境回廊(副本)]  FB(99,幻境回廊[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------10沙藏宝阁------------------------------------------
+
+[cangbao|H204       沙藏宝阁]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J5|H204      沙藏宝阁(副本)]  FB(99,沙藏宝阁[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■高级地图■■■■■■■■■■■■■■■■■■■■■■
+
+;------------------------------------------01黄金宝库------------------------------------------
+[huangjin|F010      黄金宝库]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J6|D71601    黄金宝库(副本)]  FB(99,黄金宝库[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------02玛雅神殿------------------------------------------
+[maya1|D2005      玛雅神殿一]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[maya2|D2006      玛雅神殿二]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[maya3|F013       玛雅神殿三]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+maya1     18,21   ->    maya2     74,81
+maya2     74,81   ->    maya1     18,21
+maya2     15,21   ->    maya3     27,11
+
+
+[J7|F013      玛雅神殿(副本)]  FB(99,玛雅神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------03重装禁地------------------------------------------
+[zhongzhuang|f014   重装禁地]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J8|f014      重装禁地(副本)]  FB(99,重装禁地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------04王者禁地------------------------------------------
+[wangzhe|R001       王者禁地]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J9|R001      王者禁地(副本)]  FB(99,王者禁地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------05屠 龙 殿------------------------------------------
+[tulong|jjc04         屠龙殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J10|jjc04      屠龙殿(副本)]  FB(99,屠龙殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------06万恶之地------------------------------------------
+[wane|F008          万恶之地]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J11|D607     万恶之地(副本)]  FB(99,万恶之地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------07奴隶洞天------------------------------------------
+[nuli|F004          奴隶洞天]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J12|F004     奴隶洞天(副本)]  FB(99,奴隶洞天[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------08黑暗峡谷------------------------------------------
+[heian|D2052        黑暗峡谷]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J13|D2052    黑暗峡谷(副本)]  FB(99,黑暗峡谷[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------09魔龙血域------------------------------------------
+[molong|66          魔龙血域]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J14|B341     魔龙血域(副本)]  FB(99,魔龙血域[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------10魔 龙 殿------------------------------------------
+[molongdian|zhuhuozhen  魔龙殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J15|zhuhuozhen   魔龙殿(副本)]  FB(99,魔龙殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■厄难地图■■■■■■■■■■■■■■■■■■■■■■
+
+
+;------------------------------------------01魔化骷髅------------------------------------------
+[MH1|E602          魔化骷髅]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J16|Q016    魔化骷髅(副本)]  FB(99,魔化骷髅[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------02魔化僵尸------------------------------------------
+[MH2|D402          魔化僵尸]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J17|Q004    魔化僵尸(副本)]  FB(99,魔化僵尸[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------03魔化蜈蚣------------------------------------------
+[MH3|D604          魔化蜈蚣]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON Safe
+[J18|D604    魔化蜈蚣(副本)]  FB(99,魔化蜈蚣[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------04魔化石墓------------------------------------------
+[MH4|ND717         魔化石墓]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J19|ND717   魔化石墓(副本)]  FB(99,魔化石墓[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------05魔化沃玛------------------------------------------
+[MH5|ND024         魔化沃玛]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J20|ND024   魔化沃玛(副本)]  FB(99,魔化沃玛[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------06魔化虹魔------------------------------------------
+[MH6|nD2013        魔化虹魔]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J21|nD2013  魔化虹魔(副本)]  FB(99,魔化虹魔[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------07魔化骨魔------------------------------------------
+[MH7|nF002         魔化骨魔]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J22|nF002   魔化骨魔(副本)]  FB(99,魔化骨魔[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------08魔化牛魔------------------------------------------
+[MH8|nD2079        魔化牛魔]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J23|nD2079  魔化牛魔(副本)]  FB(99,魔化牛魔[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------09魔化赤月------------------------------------------
+[MH9|shileyuan_1     魔化赤月]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[MH10|shileyuan  魔化赤月老巢]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+MH9  22,20     ->       MH10     33,35
+MH10  34,36    ->       MH9     23,22
+
+[J24|shileyuan  魔化赤月(副本)]  FB(99,魔化赤月[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------10魔化魔龙------------------------------------------
+[MH11|03gc         魔化魔龙]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+[J25|03gc    魔化魔龙(副本)]  FB(99,魔化魔龙[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■噩梦地图■■■■■■■■■■■■■■■■■■■■■■
+
+;------------------------------------------01诺玛洞窟------------------------------------------
+[nuoma1|NM02   诺玛洞窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  Safe
+[nuoma2|NM01   诺玛洞窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[nuoma3|NM05       诺玛巢穴]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+nuoma1  193,206  ->  nuoma2  196,204
+nuoma2  197,202  ->  nuoma1  191,204
+nuoma2   14,196  ->  nuoma3    22,26
+nuoma3    23,27  ->  nuoma2   14,198
+
+[J26|NM05    诺玛巢穴(副本)]  FB(99,诺玛巢穴[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------02真天宫殿------------------------------------------
+[zhentian1|ztdt2    真天宫殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  Safe
+[zhentian2|ztdt3    真天宫殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[zhentian3|ztdt5        真天神宫]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+zhentian1   16,187  ->  zhentian2   181,28
+zhentian2   182,27  ->  zhentian1   16,186
+zhentian2   13,108  ->  zhentian3    48,49
+zhentian3    48,51  ->  zhentian2   14,109
+
+[J27|ztdt5        真天神宫(副本)]  FB(99,真天神宫[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------03潘夜海岛------------------------------------------
+[panye1|9         潘夜海岛]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  Safe
+[panye2|n0122     潘夜宫殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+panye1   162,24  ->  panye2  14,43
+panye2    14,43  ->  panye1  161,26
+panye2    14,44  ->  panye1  161,26
+panye2    13,43  ->  panye1  161,26
+
+[J28|n0122  潘夜宫殿(副本)]  FB(99,潘夜宫殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------04蚂蚁洞穴------------------------------------------
+[mayi1|M997  蚂蚁洞穴一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[mayi2|M998  蚂蚁洞穴二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[mayi3|M999      蚁王巢穴]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+mayi1    7,184  ->  mayi2    88,12
+mayi2    89,10  ->  mayi1    8,183
+mayi2    92,85  ->  mayi2    29,88
+mayi2    28,89  ->  mayi2    91,85
+mayi2     4,19  ->  mayi3    91,40
+mayi3    92,41  ->  mayi2     5,21
+
+[J29|M999  蚁王巢穴(副本)]  FB(99,蚁王巢穴[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------05猫 妖 殿------------------------------------------
+[maoyao1|sanwangdian3	  猫妖殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[maoyao2|sanwangdian5	  猫妖殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[maoyao3|sanwangdian8	  猫妖殿三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[maoyao4|sanwangdianboss    猫妖神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+maoyao1   17,19  ->  maoyao2  87,87
+maoyao2   88,89  ->  maoyao1  18,21
+maoyao2   26,22  ->  maoyao3  84,88
+maoyao3   85,90  ->  maoyao2  27,23
+maoyao3   24,22  ->  maoyao4  83,83
+maoyao4   84,85  ->  maoyao3  25,23
+
+[J30|sanwangdianboss  猫妖神殿(副本)]  FB(99,猫妖神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------06虎王森林------------------------------------------
+[huwang1|ygfx3        虎王森林]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huwang2|nkuanggong   虎王回廊]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huwang3|ngrly        虎王庭院]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+huwang1   156,121  ->  huwang2  29,50
+huwang2     28,52  ->  huwang1  155,122
+huwang2   164,126  ->  huwang3  49,52
+huwang3     51,54  ->  huwang2  165,128
+
+[J31|ngrly      虎王庭院(副本)]  FB(99,虎王庭院[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------07雷炎熔洞------------------------------------------
+[leiyan1|hl001   雷炎熔洞一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[leiyan2|nhl002  雷炎熔洞二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[leiyan3|h301          雷炎殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+leiyan1   20,218  ->  leiyan2   160,178
+leiyan2   77,157  ->  leiyan3   50,73
+leiyan2   78,156  ->  leiyan3   50,73
+
+[J32|h301        雷炎殿(副本)]  FB(99,雷炎殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------08雪域平原------------------------------------------
+[xueyu1|jz001	 雪域平原一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xueyu2|hell204  雪域平原二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xueyu3|jjc03        雪域神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+xueyu1   16,49  ->  xueyu2  22,278
+xueyu2  21,279  ->  xueyu1   15,51
+xueyu2  262,34  ->  xueyu3   11,41
+
+[J33|jjc03     雪域神殿(副本)]  FB(99,雪域神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------09傀儡洞穴------------------------------------------
+[kuilei1|傀儡2   傀儡洞穴一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[kuilei2|傀儡3   傀儡洞穴二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[kuilei3|傀儡4       傀儡暗殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+kuilei1   12,49  ->  kuilei2  214,25
+kuilei2  216,22  ->  kuilei1   13,46
+kuilei2  67,237  ->  kuilei3   67,34
+kuilei3   69,32  ->  kuilei2  69,234
+
+[J34|傀儡4     傀儡暗殿(副本)]  FB(99,傀儡暗殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------10逆魔暗殿------------------------------------------
+[nimo1|新祖玛13   逆魔暗殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[nimo2|新祖玛14   逆魔暗殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[nimo3|新祖玛15       逆魔祭坛]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+nimo1  175,176  ->  nimo2     32,24
+nimo2    31,22  ->  nimo1   173,174
+nimo2  101,102  ->  nimo3    16,42
+nimo3    14,44  ->  nimo2   99,100
+
+[J35|新祖玛15   逆魔祭坛(副本)]  FB(99,逆魔祭坛[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■炼狱地图■■■■■■■■■■■■■■■■■■■■■■
+
+;------------------------------------------01秦皇古墓------------------------------------------
+[qinhuang1|E0020   秦皇古墓一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[qinhuang2|E0024   秦皇古墓二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[qinhuang3|E0027       秦皇大殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+qinhuang1   185,16  ->  qinhuang2   21,178
+qinhuang2   20,179  ->  qinhuang1   184,19
+qinhuang2   165,34  ->  qinhuang3   18,37
+
+[J36|E0027       秦皇大殿(副本)]  FB(99,秦皇大殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------02万妖洞窟------------------------------------------
+[wanyao1|hsdx2     万妖洞窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[wanyao2|hsdx1     万妖洞窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[wanyao3|hsdx3         万妖禁地]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+wanyao1    12,72  ->  wanyao2  222,230
+wanyao2  220,236  ->  wanyao1    12,70
+wanyao2  15,83  ->  wanyao3  64,89
+wanyao2  14,84  ->  wanyao3  64,89
+
+[J37|hsdx3       万妖禁地(副本)]  FB(99,万妖禁地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------03瘟疫沼泽------------------------------------------
+[wenyi1|wyzz	      瘟疫沼泽]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[wenyi2|wyzz01	      瘟疫之源]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+wenyi1  19,30  ->  wenyi2  22,63
+
+[J38|wyzz01	瘟疫之源(副本)]  FB(99,瘟疫之源[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------04狐月山洞------------------------------------------
+[huyue1|fox01     狐月山洞一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huyue2|fox01     狐月山洞二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huyue3|nfox03        狐月神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+huyue1   115,18  ->  huyue2  274,127
+huyue2  274,125  ->  huyue1   116,20
+huyue2   115,18  ->  huyue3   34,57
+
+[J39|nfox03     狐月神殿(副本)]  FB(99,狐月神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------05铁血暗殿------------------------------------------
+[tiexue1|NMDD3  铁血暗殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tiexue2|NMDD2  铁血暗殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tiexue3|NMDD5	    铁血王座]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+tiexue1   61,79  ->  tiexue2   40,159
+tiexue2  37,163  ->  tiexue1    59,82
+tiexue2  142,54  ->  tiexue3   19,476
+
+[J40|NMDD1    铁血王座(副本)]  FB(99,铁血王座[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------06蝠魔宫殿------------------------------------------
+[fumo1|hf003   蝠魔宫殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[fumo2|hf004   蝠魔宫殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[fumo3|hf005       蝠魔神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+fumo1     98,17  ->   fumo2  252,220
+fumo1     99,18  ->   fumo2  251,219
+fumo1     26,89  ->   fumo2  205,267
+fumo1     27,90  ->   fumo2  205,267
+fumo2   251,220  ->   fumo1    99,19
+fumo2   252,221  ->   fumo1    98,18
+fumo2   204,269  ->   fumo1    26,91
+fumo2   203,268  ->   fumo1    26,91
+fumo2   161,127  ->   fumo3    39,61
+fumo2   162,128  ->   fumo3    39,61
+
+[J41|hf005   蝠魔神殿(副本)]  FB(99,蝠魔神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------07血腥魔窟------------------------------------------
+[xuexing1|hell01   血腥魔窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xuexing2|hell02   血腥魔窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xuexing3|hell03   血腥魔窟底层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+xuexing1  280,107  ->  xuexing2    15,30
+xuexing2    15,28  ->  xuexing1  278,105
+xuexing1  280,192  ->  xuexing2   16,276
+xuexing2   15,279  ->  xuexing1  279,194
+xuexing2  282,230  ->  xuexing3   18,278
+xuexing3   17,281  ->  xuexing2  281,233
+xuexing3   233,78  ->  xuexing3   239,72
+xuexing3   237,73  ->  xuexing3   231,80
+
+[J42|bsrlm05     血腥魔窟(副本)]  FB(99,血腥魔窟[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------08修罗古刹------------------------------------------
+[xiuluo1|ygsd1  修罗古刹一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xiuluo2|ygsd3  修罗古刹二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xiuluo3|ygsd4      修罗大殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+xiuluo1  277,280  ->  xiuluo2    28,263
+xiuluo2   27,263  ->  xiuluo1   276,278
+xiuluo2   268,37  ->  xiuluo3    53,109
+
+[J43|ygsd4    修罗大殿(副本)]  FB(99,修罗大殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------09神木洞窟------------------------------------------
+[shenmu1|kumu3     神木洞窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shenmu2|kumu4     神木洞窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shenmu3|kumuboss      神木圣地]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+shenmu1     19,9  ->  shenmu2   129,130
+shenmu2  131,134  ->  shenmu1     21,11
+shenmu2    63,51  ->  shenmu3    42,46
+
+[J44|kumuboss    神木圣地(副本)]  FB(99,神木圣地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------10蛮荒部落------------------------------------------
+[manhuang1|bsr01   蛮荒部落一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[manhuang2|bsr02   蛮荒部落二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[manhuang3|bsrlm       蛮荒祭坛]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+manhuang1  123,179  ->  manhuang2   281,274
+manhuang2  282,276  ->  manhuang1   125,177
+manhuang2   26,23  ->  manhuang3   49,51
+
+[J45|bsrlm       蛮荒祭坛(副本)]  FB(99,蛮荒祭坛[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■深渊地图■■■■■■■■■■■■■■■■■■■■■■
+
+
+;------------------------------------------01蛇魔宫殿------------------------------------------
+[shemo1|lingshedian5   蛇魔宫殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shemo2|lingshedian2   蛇魔宫殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shemo3|lingshedian6   蛇魔宫殿三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shemo4|lingshedian        蛇魔神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+shemo1    18,18  ->  shemo2   166,146
+shemo2  163,144  ->  shemo1     18,22
+shemo2    48,21  ->  shemo3   123,135
+shemo3  120,132  ->  shemo2     48,25
+shemo3    19,25  ->  shemo4   129,134
+
+[J46|lingshedian     蛇魔神殿(副本)]  FB(99,蛇魔神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------02火龙洞窟------------------------------------------
+[huolong1|hl001  火龙洞窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huolong2|EV000  火龙洞窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[huolong3|D2083      火龙神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+huolong1   20,218  ->  huolong2   386,22
+huolong2  374,274  ->  huolong3  38,91
+huolong2  374,273  ->  huolong3  38,91
+huolong2  373,273  ->  huolong3  38,91
+
+[J47|D2083     火龙神殿(副本)]  FB(99,火龙神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------03冰龙宫殿------------------------------------------
+[binglong1|hell203  冰龙宫殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[binglong2|hell202  冰龙宫殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[binglong3|YXSD         冰龙神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+binglong1  420,41  ->  binglong2   30,476
+binglong2  29,478  ->  binglong1   418,43
+binglong2  449,48  ->  binglong3   30,82
+
+[J48|YXSD         冰龙神殿(副本)]  FB(99,冰龙神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------04通天巢穴------------------------------------------
+[tongtian1|sldx   通天巢穴一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tongtian2|d2     通天巢穴二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tongtian3|jjc06      通天圣地]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+tongtian1  179,60  ->  tongtian2   17,176
+tongtian2  13,180  ->  tongtian1   180,63
+tongtian2  187,16  ->  tongtian3   19,38
+
+[J49|jjc06      通天圣地(副本)]  FB(99,通天圣地[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------05叛军宫殿------------------------------------------
+[panjun1|sssd04  叛军宫殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[panjun2|sssd04  叛军宫殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[panjun3|sssd        叛军皇宫]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+panjun1   75,252  ->  panjun2   166,194
+panjun2  164,197  ->  panjun1    73,254
+panjun2   75,252  ->  panjun3     15,70
+
+[J50|sssd      叛军皇宫(副本)]  FB(99,叛军皇宫[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------06天外之门------------------------------------------
+[tianmen1|死亡禁地1  天外之门一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tianmen2|死亡禁地1  天外之门二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tianmen3|死亡禁地2  天外之门三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[tianmen4|死亡禁地3      天门王座]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+tianmen1  134,20  ->  tianmen2    30,92
+tianmen2   28,94  ->  tianmen1   133,22
+tianmen2  134,20  ->  tianmen3    28,42
+tianmen3   26,44  ->  tianmen2   133,22
+tianmen3  94,101  ->  tianmen4    25,67
+
+[J51|死亡禁地3     天门王座(副本)]  FB(99,天门王座[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------07应龙湖底------------------------------------------
+[yinglong1|D4302   应龙湖底一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[yinglong2|D4304   应龙湖底二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[yinglong3|D4305   应龙湖底三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[yinglong4|D4308       应龙死境]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+yinglong1  174,173  ->  yinglong2    31,126
+yinglong2   30,130  ->  yinglong1   172,171
+yinglong2   175,88  ->  yinglong3    86,370
+yinglong3   84,374  ->  yinglong2    174,91
+yinglong3   365,43  ->  yinglong4    34,128
+
+[J52|D4308       应龙死境(副本)]  FB(99,应龙死境[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------08血海魔窟------------------------------------------
+[xuehai1|xc1       血海魔窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xuehai2|xcljtd    血海魔窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xuehai3|hell304   血海魔窟三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[xuehai4|hell_boss     血海魔殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+xuehai1  285,165  ->  xuehai2    20,79
+xuehai2    18,81  ->  xuehai1  284,166
+xuehai2    85,21  ->  xuehai3    27,55
+xuehai3    25,56  ->  xuehai2    84,23
+xuehai3    51,33  ->  xuehai4   56,141
+
+[J53|hell_boss   血海魔殿(副本)]  FB(99,血海魔殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+;------------------------------------------09伽蓝神宫------------------------------------------
+[qielan1|D3002	 伽蓝神宫一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[qielan2|D3001	 伽蓝神宫二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[qielan3|D3006	     伽蓝神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+qielan1   17,127  ->  qielan2  271,247
+qielan2  274,251  ->  qielan1   19,124
+qielan2   285,30  ->  qielan3   86,207
+
+[J54|D3006    伽蓝神殿(副本)]  FB(99,伽蓝神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------10雷泽船阵------------------------------------------
+[leize1|kbhy    雷泽船阵一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[leize2|kbhy    雷泽船阵二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[leize3|HJXLY       雷泽鬼船]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+leize1   40,57  ->  leize2  223,248
+leize2 225,250  ->  leize1    41,19
+leize2   40,57  ->  leize3    64,83
+
+[J55|HJXLY      雷泽鬼船(副本)]  FB(99,雷泽鬼船[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+
+;■■■■■■■■■■■■■■■■■■■■■■酆都城■■■■■■■■■■■■■■■■■■■■■■
+
+[fengdu|酆都城      酆都城]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+
+
+;------------------------------------------1旱魃古墓------------------------------------------
+[hanba1|将军坟1      旱魃古墓一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[hanba2|将军坟2      旱魃古墓二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[hanba3|将军坟3          旱魃大殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+hanba1 64,9  ->  hanba2  31,85
+hanba2 30,86 ->  hanba1  63,11
+hanba2 33,39 ->  hanba3  44,49
+hanba2 33,40 ->  hanba3  44,49
+hanba2 33,41 ->  hanba3  44,49
+
+[J56|将军坟3       旱魃大殿(副本)]  FB(99,旱魃大殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------2鬼骨暗殿------------------------------------------
+[guigu1|雪域冰窟4    鬼骨暗殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[guigu2|雪域冰窟5    鬼骨暗殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[guigu3|雪域冰窟6    鬼骨暗殿三层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+guigu1  35,139  ->  guigu2   97,23
+guigu2   98,21  ->  guigu1   36,141
+guigu2  79,175  ->  guigu3  95,180
+
+[J57|xcboss        鬼骨暗殿(副本)]  FB(99,鬼骨暗殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+[xcboss  血海备用]
+
+;------------------------------------------3寒冥洞窟------------------------------------------
+[hanming1|雪域冰窟1  寒冥洞窟一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[hanming2|雪域冰窟3  寒冥洞窟二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[hanming3|雪域冰窟9      寒冥巢穴]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+hanming1  200,75  ->  hanming2  312,244
+hanming2 314,249  ->  hanming1  199,79
+hanming2  25,145  ->  hanming3   31,39
+
+[J58|雪域冰窟9     寒冥巢穴(副本)]  FB(99,寒冥巢穴[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------4龙痕丘陵------------------------------------------
+[longhen1|蛮荒之地2      龙痕丘陵]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[longhen2|蛮荒之地3      龙痕巢穴]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+longhen1  341,288  ->  longhen2  74,92
+
+[J59|蛮荒之地3     龙痕巢穴(副本)]  FB(99,龙痕巢穴[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------5真龙神宫------------------------------------------
+[zhenlong1|clzd1     真龙神宫一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[zhenlong2|clzd2     真龙神宫二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[zhenlong3|clzd3         真龙神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+zhenlong1  156,35  ->  zhenlong2  42,259
+zhenlong2  40,262  ->  zhenlong1  154,40
+zhenlong2  165,67  ->  zhenlong3  31,112
+zhenlong3  30,114  ->  zhenlong2  164,70
+
+[J60|clzd3         真龙神殿(副本)]  FB(99,真龙神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------6圣冰殿------------------------------------------
+[shengbing1|xybg1     圣冰殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shengbing2|xybg1     圣冰殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shengbing3|xybg3       圣冰神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+shengbing1  158,15  ->  shengbing2  33,191
+shengbing2  32,195  ->  shengbing1  156,20
+shengbing2  158,15  ->  shengbing3   16,63
+
+[J61|xybg3        圣冰神殿(副本)]  FB(99,圣冰神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------7圣火殿------------------------------------------
+[shenghuo1|hldy1      圣火殿一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shenghuo2|hldy1      圣火殿二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[shenghuo3|hldy3        圣火神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+shenghuo1  210,25  ->  shenghuo2  49,243
+shenghuo2  48,247  ->  shenghuo1  207,28
+shenghuo2  210,25  ->  shenghuo3  38,104
+shenghuo3  37,106  ->  shenghuo2  207,28
+
+[J62|hldy3        圣火神殿(副本)]  FB(99,圣火神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------8昆仑城------------------------------------------
+[kunlun1|InDun_01GonRyun_fix3    昆仑城]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[kunlun2|Indun_01MainHall_fix3   昆仑宫]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+kunlun1  93,98  ->  kunlun2  49,58
+
+[J63|Indun_01MainHall_fix3   昆仑宫(副本)]  FB(99,昆仑宫[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+;------------------------------------------9鬼门关------------------------------------------
+[guimen1|鬼城鬼狱2    鬼门关一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[guimen2|鬼城鬼狱1    鬼门关二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[guimen3|鬼城鬼狱5      鬼门神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+guimen1  219,13   ->  guimen2  281,281
+guimen2  282,282  ->  guimen1  218,16
+guimen2  21,27    ->  guimen3  199,183
+
+[J64|鬼城鬼狱6    鬼门神殿(副本)]  FB(99,鬼门神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+[a184|鬼城鬼狱6 鬼城宫殿]
+
+;------------------------------------------10太古宫------------------------------------------
+[taigu1|Indun_01UnderPass_fix3  太古宫一层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[taigu2|Indun_01UnderPass_fix3  太古宫二层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+[taigu3|InDun_01BossRoom_fix3   太古神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON  NOALLOWUSEITEMS(随机传送石)
+taigu1  132,122   ->  taigu2  39,127
+taigu2  132,122   ->  taigu3  36,76
+
+[J65|InDun_01BossRoom_fix3   太古神殿(副本)]  FB(99,太古神殿[副本],2,1,1) NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON NODROPITEM
+
+
+
+;------------------------------------------天神塔------------------------------------------
+
+[九层妖塔一层     天神塔1层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔二层     天神塔2层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔三层     天神塔3层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔四层     天神塔4层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔五层     天神塔5层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔六层     天神塔6层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔七层     天神塔7层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔迷宫     天神塔8层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔顶层     天神塔9层]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+[九层妖塔八层     天神塔大殿] NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON NODROPITEM
+
+
+
+
+;[a181|鬼城鬼狱3 鬼城3层]
+;[a182|鬼城鬼狱4 鬼城4层]
+;[a226|雪域冰窟2 极寒冰窟2层]
+;[a231|雪域冰窟7 极寒冰窟7层]
+;[a232|雪域冰窟8 极寒冰窟8层]
+;[a176|蛮荒之地1 蛮荒之地]
+
+;[GonRyun_fix3                  昆仑大城]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+;[KLMD|DogYoLym_fix3            昆仑魔地]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+;[KLJT|InDun_02DogYoArena_fix3  昆仑祭坛]  NORECALL  NOGUILDRECALL  NODEARRECALL  NOMasterRECALL  ONKILLMON
+;KLMD   281,21  ->  KLJT  29,88
+;KLMD   282,22  ->  KLJT  29,88
+;KLMD   283,23  ->  KLJT  29,88
+;[JYXG|nch001 经验峡谷]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL Safe RUNMON RUNHUMAN
+
+
+
+;-----------------------------------沙巴克商店---------------------------------------
+
+;[new0151	武器店]	FIGHT
+;3 629 318 -> new0151 25 40
+;3 637 311 -> new0151 37 28
+;new0151 25 40 -> 3 629 319
+;new0151 37 28 -> 3 637 311
+
+
+;[new0152	服饰店]	FIGHT
+;3 664 280 -> new0152 26 25
+;3 656 287 -> new0152 14 37
+;new0152 26 25 -> 3 664 280
+;new0152 14 37 -> 3 656 287
+
+;[new0153	药品店]	FIGHT
+;3 678 296 -> new0153 36 30
+;3 670 302 -> new0153 25 41
+;3 670 303 -> new0153 25 41
+;3 669 303 -> new0153 25 41
+;new0153 25 41 -> 3 670 303
+;new0153 37 30 -> 3 678 297
+
+;[new0154	杂货店]	FIGHT
+;3 633 341 -> new0154 36 31
+;3 625 350 -> new0154 25 42
+;new0154 36 31 -> 3 633 341
+;new0154 25 42 -> 3 625 350
+
+;[new0155	书店]	FIGHT
+;3 685 288 -> new0155 24 46
+;3 694 279 -> new0155 36 34
+;3 694 280 -> new0155 36 34
+;new0155 24 46 -> 3 685 288
+;new0155 36 34 -> 3 695 280
+
+;[new01571	仓库]	FIGHT
+;3 646 326 -> new01571 27 30
+;3 646 327 -> new01571 27 30
+;new01571 27 30 -> 3 646 327
+
+;[new0156	监狱]	FIGHT
+;3 613 331 -> new0156 23 32
+;new0156 24 32 -> 3 614 333
+
+;[new01581	首饰店]	FIGHT
+;3 670 272 -> new01581 24 45
+;3 678 266 -> new01581 34 35
+;new01581 24 45 -> 3 670 272
+;new01581 34 35 -> 3 678 266
+
+
+;-----------------------------------神龙帝国---------------------------------------
+
+;[sldg  神龙帝国]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL
+;[SHUD 书店]
+;SHUD 16 32 -> SLDG 250 240
+;SHUD 17 33 -> SLDG 250 240
+;SHUD 18 34 -> SLDG 250 240
+;SLDG 251 239 -> SHUD 19 32
+;SLDG 250 238 -> SHUD 19 32
+
+;[SD 商店]
+;SD 8 37 -> SLDG 286 243
+;SD 9 38 -> SLDG 286 243
+;SD 10 39 -> SLDG 286 243
+;SD 11 40 -> SLDG 286 243
+;SLDG 287 242 -> SD 11 37
+
+;[FZD 服装店]
+;SLDG 239 175 -> FZD 25 25
+;FZD 22 23 -> SLDG 238 176
+;FZD 23 24 -> SLDG 238 176
+;FZD 24 25 -> SLDG 238 176
+;FZD 25 26 -> SLDG 238 176
+;FZD 26 27 -> SLDG 238 176
+;FZD 27 28 -> SLDG 238 176
+
+;[YD 药店]
+;SLDG 282 215 -> YD 19 34
+;YD 17 34 -> SLDG 281 216
+;YD 18 35 -> SLDG 281 216
+;YD 19 36 -> SLDG 281 216
+
+;[WQD 武器店]
+;SLDG 233 293 -> WQD 32 33
+;WQD 31 37 -> SLDG 234 294
+;WQD 32 36 -> SLDG 234 294
+;WQD 33 35 -> SLDG 234 294
+;WQD 34 34 -> SLDG 234 294
+;WQD 35 33 -> SLDG 234 294
+
+;[JL1 酒楼一楼]
+;[JL2 酒楼二楼包间]
+;SLDG 142 297 -> JL1 24 38
+;JL1 22 39 -> SLDG 141 298
+;JL1 23 40 -> SLDG 141 298
+;JL1 24 41 -> SLDG 141 298
+;SLDG 137 291 -> JL1 11 24
+;JL1 8 24 -> SLDG 136 291
+;JL1 9 25 -> SLDG 136 291
+;JL1 10 26 -> SLDG 136 291
+;SLDG 149 305 -> JL1 38 51
+;JL1 36 52 -> SLDG 148 306
+;JL1 37 53 -> SLDG 148 306
+;JL1 38 54 -> SLDG 148 306
+;JL1 18 22 -> JL2 11 25
+;JL1 19 23 -> JL2 11 25
+;JL1 20 24 -> JL2 11 25
+;JL2 10 26 -> JL1 18 24
+;JL1 38 42 -> JL2 33 47
+;JL1 39 43 -> JL2 33 47
+;JL2 33 48 -> JL1 38 43
+
+;[SSD 首饰店]
+;SLDG 284 272 -> SSD 27 30
+;SSD 26 30 -> SLDG 283 273
+;SSD 27 31 -> SLDG 283 273
+
+;[HMW 帝国监狱]
+;SLDG 178 129 -> HMW 31 31
+;SLDG 179 128 -> HMW 31 31
+;HMW 31 33 -> SLDG 180 130
+;HMW 32 32 -> SLDG 180 130
+;HMW 33 31 -> SLDG 180 130
+
+;[HGZ 仓库]
+;SLDG 66 236 -> HGZ 34 36
+;HGZ 34 39 -> SLDG 67 237
+;HGZ 35 38 -> SLDG 67 237
+;HGZ 36 37 -> SLDG 67 237
+;HGZ 37 36 -> SLDG 67 237
+
+;[DDNB 帝国皇宫]
+;SLDG 169 250 -> DDNB 22 60
+;SLDG 170 251 -> DDNB 22 60
+;DDNB 20 60 -> SLDG 169 252
+;DDNB 21 61 -> SLDG 169 252
+;DDNB 22 62 -> SLDG 169 252
+
+;[FD 饭店]
+;SLDG 143 338 -> FD 13 38
+;SLDG 142 337 -> FD 13 38
+;FD 8 36 -> SLDG 142 339
+;FD 9 37 -> SLDG 142 339
+;FD 10 38 -> SLDG 142 339
+;FD 11 39 -> SLDG 142 339
+;FD 12 40 -> SLDG 142 339
+;FD 13 41 -> SLDG 142 339
+;FD 14 42 -> SLDG 142 339
+
+;[HZ01 官员府邸]
+;SLDG 113 268 -> HZ01 17 43
+;HZ01 14 43 -> SLDG 112 269
+;HZ01 15 44 -> SLDG 112 269
+;HZ01 16 45 -> SLDG 112 269
+;HZ01 17 46 -> SLDG 112 269
+;HZ01 18 47 -> SLDG 112 269
+;HZ01 19 48 -> SLDG 112 269
+
+;[HZ02 官员府邸]
+;SLDG 236 219 -> HZ02 16 45
+;HZ02 13 44 -> SLDG 235 220
+;HZ02 14 45 -> SLDG 235 220
+;HZ02 15 46 -> SLDG 235 220
+;HZ02 17 48 -> SLDG 235 220
+
+
+;-----------------------------------备用地图---------------------------------------
+
+[sanwangdianmimi  小地图1]
+[NM00	           小地图2]
+
+
+
+;[bsr03    蛮族备用]
+
+;[kumu5  神木备用]
+;[ygsd2  修罗备用]
+
+;[D4301	  海域备用98]
+;[D4303	  海域备用100]
+;[D43041  海域备用102]
+;[D43042  海域备用103]
+;[D4306	  海域备用105]
+;[D4307	  海域备用106]
+
+;[NMDD1	 铁血备用]
+;[NMDD4	 铁血备用]
+;[NMDD6	 铁血备用]
+
+;[E0025	 秦皇备用]
+;[E0026	 秦皇备用]
+
+;[FOX02   狐月备用]
+;[FOX03   狐月备用]
+;[nFOX02  狐月备用]
+
+;[NZ016    雪域备用]
+;[hell201  雪域备用]
+;[hell205  雪域备用]
+;[hell206  雪域备用]
+
+
+
+;[T232 钳虫巢穴]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[T218 死亡神殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[T339 地狱烈焰]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[T219 深渊魔域]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[T315 堕落坟场]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[T118 困惑殿堂]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+
+;[ND5074 魔化祖玛走廊]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+
+;[shimu1|D716	石墓六层]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+
+;[zuma1|D5072   祖玛七层一]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[zuma2|D5073   祖玛七层二]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[zuma3|D5074   祖玛七层三]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[zuma4|D515      祖玛之家]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;zuma1      90,20         ->         zuma2      10,69
+;zuma2      9,70          ->         zuma1      89,21
+;zuma2      60,9          ->         zuma3      47,90
+;zuma3      48,91         ->         zuma2      59,10
+;zuma3      77,15         ->         zuma4      14,31
+;zuma4      13,32         ->         zuma3      76,16
+
+
+;[zhuyao1|E702	猪妖洞窟]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;[zhuyao2|D717	猪妖祭坛]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL ONKILLMON
+;zhuyao1      60,68       ->        zhuyao2       26,74
+;zhuyao2      25,75       ->        zhuyao1       59,70
+
+
+;[ND5071    新祖玛七大厅]
+
+;[zlg101         孤岛]
+
+;[F012          备用1]
+
+;[dns001       富贵兽]
+
+;[nch001  备用]
+
+
+;[hf001   暗黑洞窟1]
+;[hf002   暗黑洞窟2]
+
+
+;[D2071_arthas  无补丁]
+;[D2072_arthas  无补丁]
+;[D2073_arthas  无补丁]
+;[D2074_arthas  无补丁]
+;[D2076_arthas  无补丁]
+;[D2077_arthas  无补丁]
+;[D2078_arthas  无补丁]
+
+
+;[bsrlm01  538]
+;[bsrlm03  540]
+;[bsrlm04  541]
+
+;[bsrlm02  兽人暗殿]  NORECALL  NOGUILDRECALL  NODEARRECALL NOMasterRECALL
+
+

@@ -1,0 +1,46 @@
+﻿[@main]
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 388 1 4 0 -90 1 590 23 1
+
+goto @海岛对话框
+
+[@海岛对话框]
+#if
+#say
+<><ItemShow:388:0:174:328:1><ItemShow:1333:0:191:328:1><ItemShow:1573:0:209:328:1><ItemShow:513:0:226:328:1><ItemShow:553:0:243:328:1><ItemShow:556:0:260:328:1>\
+<>          <ImgEx:165:338:339:338:382:255/@进入海岛>\
+
+
+
+[@进入海岛]
+
+#or
+CHECKDC > 449 > 0
+LARGE <$MAXDC> 449
+#act
+#ELSEACT
+messagebox 当前攻击小于450!!！
+break
+
+#if
+SMALL U401 5
+#act
+messagebox 当前转生小于5转!!！
+break
+
+
+#IF
+CHECKLEVELEX > 59
+#ACT
+#ELSEACT
+messagebox 等级不足60级
+BREAK
+
+
+#if
+#ACT
+MAPMOVE 潘夜海岛 329 297
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+BREAK

@@ -1,0 +1,692 @@
+﻿;请自行修改爆率和吸血的统计方式
+
+
+[@穿戴魂卡]
+{
+#IF
+#ACT
+MOV N$魂卡套装一 0
+MOV N$金卡套装二 0
+MOV N$紫卡套装三 0
+MOV N$蓝卡套装四 0
+MOV N$绿卡套装五 0
+MOV N$套装一吸血 0
+MOV N$套装一爆率 0
+MOV N$魂卡攻速 0
+MOV N$套装二百分比攻击 0
+MOV N$套装二百分比生命 0
+MOV N$套装二百分比防御 0
+MOV N$套装三百分比攻击 0
+MOV N$套装三百分比生命 0
+MOV N$套装三百分比防御 0
+MOV N$套装四百分比生命 0
+MOV N$套装四百分比防御 0
+MOV N$套装五百分比防御 0
+MOV N$全部魂卡百分比攻击统计 0
+MOV N$全部魂卡百分比生命统计 0
+MOV N$全部魂卡百分比防御统计 0
+
+
+PrintUseTime 1
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +1
+#act
+INC N$魂卡套装一 1
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +2
+#act
+INC N$魂卡套装一 2
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +2
+#act
+INC N$魂卡套装一 2
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +2
+#act
+INC N$魂卡套装一 2
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +2
+#act
+INC N$魂卡套装一 2
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +2
+#act
+INC N$魂卡套装一 2
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +2
+#act
+INC N$魂卡套装一 2
+
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +3
+#act
+INC N$魂卡套装一 3
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +3
+#act
+INC N$魂卡套装一 3
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +3
+#act
+INC N$魂卡套装一 3
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +3
+#act
+INC N$魂卡套装一 3
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +3
+#act
+INC N$魂卡套装一 3
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +3
+#act
+INC N$魂卡套装一 3
+
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +4
+#act
+INC N$魂卡套装一 4
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +4
+#act
+INC N$魂卡套装一 4
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +4
+#act
+INC N$魂卡套装一 4
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +4
+#act
+INC N$魂卡套装一 4
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +4
+#act
+INC N$魂卡套装一 4
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +4
+#act
+INC N$魂卡套装一 4
+
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +5
+#act
+INC N$魂卡套装一 5
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +5
+#act
+INC N$魂卡套装一 5
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +5
+#act
+INC N$魂卡套装一 5
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +5
+#act
+INC N$魂卡套装一 5
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +5
+#act
+INC N$魂卡套装一 5
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +5
+#act
+INC N$魂卡套装一 5
+
+
+#if
+CHECKUSEITEM 30
+CheckContainsText <$JEWELRYITEM1> +6
+#act
+INC N$魂卡套装一 6
+
+#if
+CHECKUSEITEM 31
+CheckContainsText <$JEWELRYITEM2> +6
+#act
+INC N$魂卡套装一 6
+
+#if
+CHECKUSEITEM 32
+CheckContainsText <$JEWELRYITEM3> +6
+#act
+INC N$魂卡套装一 6
+
+#if
+CHECKUSEITEM 33
+CheckContainsText <$JEWELRYITEM4> +6
+#act
+INC N$魂卡套装一 6
+
+#if
+CHECKUSEITEM 34
+CheckContainsText <$JEWELRYITEM5> +6
+#act
+INC N$魂卡套装一 6
+
+#if
+CHECKUSEITEM 35
+CheckContainsText <$JEWELRYITEM6> +6
+#act
+INC N$魂卡套装一 6
+
+
+#if
+CHECKUSEITEM 30
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM1>
+#act
+INC N$金卡套装二 1
+
+#if
+CHECKUSEITEM 31
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM2>
+#act
+INC N$金卡套装二 1
+
+#if
+CHECKUSEITEM 32
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM3>
+#act
+INC N$金卡套装二 1
+
+#if
+CHECKUSEITEM 33
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM4>
+#act
+INC N$金卡套装二 1
+
+#if
+CHECKUSEITEM 34
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM5>
+#act
+INC N$金卡套装二 1
+
+#if
+CHECKUSEITEM 35
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\金卡.txt <$JEWELRYITEM6>
+#act
+INC N$金卡套装二 1
+
+
+
+#if
+CHECKUSEITEM 30
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM1>
+#act
+INC N$蓝卡套装四 1
+
+#if
+CHECKUSEITEM 31
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM2>
+#act
+INC N$蓝卡套装四 1
+
+#if
+CHECKUSEITEM 32
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM3>
+#act
+INC N$蓝卡套装四 1
+
+#if
+CHECKUSEITEM 33
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM4>
+#act
+INC N$蓝卡套装四 1
+
+#if
+CHECKUSEITEM 34
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM5>
+#act
+INC N$蓝卡套装四 1
+
+#if
+CHECKUSEITEM 35
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\蓝卡.txt <$JEWELRYITEM6>
+#act
+INC N$蓝卡套装四 1
+
+
+
+#if
+CHECKUSEITEM 30
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM1>
+#act
+INC N$绿卡套装五 1
+
+#if
+CHECKUSEITEM 31
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM2>
+#act
+INC N$绿卡套装五 1
+
+#if
+CHECKUSEITEM 32
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM3>
+#act
+INC N$绿卡套装五 1
+
+#if
+CHECKUSEITEM 33
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM4>
+#act
+INC N$绿卡套装五 1
+
+#if
+CHECKUSEITEM 34
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM5>
+#act
+INC N$绿卡套装五 1
+
+#if
+CHECKUSEITEM 35
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\绿卡.txt <$JEWELRYITEM6>
+#act
+INC N$绿卡套装五 1
+
+
+
+#if
+CHECKUSEITEM 30
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM1>
+#act
+INC N$紫卡套装三 1
+
+#if
+CHECKUSEITEM 31
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM2>
+#act
+INC N$紫卡套装三 1
+
+#if
+CHECKUSEITEM 32
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM3>
+#act
+INC N$紫卡套装三 1
+
+#if
+CHECKUSEITEM 33
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM4>
+#act
+INC N$紫卡套装三 1
+
+#if
+CHECKUSEITEM 34
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM5>
+#act
+INC N$紫卡套装三 1
+
+#if
+CHECKUSEITEM 35
+CHECKTEXTLIST ..\QuestDiary\A魂卡系统\紫卡.txt <$JEWELRYITEM6>
+#act
+INC N$紫卡套装三 1
+
+;============================套装1属性================
+#IF
+LARGE N$魂卡套装一 5
+SMALL N$魂卡套装一 12
+#ACT
+MOV N$套装一吸血 1
+MOV N$套装一爆率 5
+
+#IF
+LARGE N$魂卡套装一 11
+SMALL N$魂卡套装一 18
+#ACT
+MOV N$套装一吸血 2
+MOV N$套装一爆率 10
+
+#IF
+LARGE N$魂卡套装一 17
+SMALL N$魂卡套装一 24
+#ACT
+MOV N$套装一吸血 4
+MOV N$套装一爆率 15
+
+#IF
+LARGE N$魂卡套装一 23
+SMALL N$魂卡套装一 30
+#ACT
+MOV N$套装一吸血 7
+MOV N$套装一爆率 20
+
+#IF
+LARGE N$魂卡套装一 29
+#ACT
+MOV N$套装一吸血 10
+MOV N$套装一爆率 30
+
+
+
+;套装二属性生效
+#IF
+EQUAL N$金卡套装二 1
+#ACT
+MOV N$魂卡攻速 1
+MOV N$套装二百分比攻击 1
+MOV N$套装二百分比生命 1
+MOV N$套装二百分比防御 1
+
+#IF
+EQUAL N$金卡套装二 2
+#ACT
+MOV N$魂卡攻速 2
+MOV N$套装二百分比攻击 2
+MOV N$套装二百分比生命 2
+MOV N$套装二百分比防御 2
+
+#IF
+EQUAL N$金卡套装二 3
+#ACT
+MOV N$魂卡攻速 3
+MOV N$套装二百分比攻击 3
+MOV N$套装二百分比生命 3
+MOV N$套装二百分比防御 3
+
+#IF
+EQUAL N$金卡套装二 4
+#ACT
+MOV N$魂卡攻速 4
+MOV N$套装二百分比攻击 5
+MOV N$套装二百分比生命 5
+MOV N$套装二百分比防御 5
+
+#IF
+EQUAL N$金卡套装二 5
+#ACT
+MOV N$魂卡攻速 5
+MOV N$套装二百分比攻击 7
+MOV N$套装二百分比生命 7
+MOV N$套装二百分比防御 7
+
+#IF
+EQUAL N$金卡套装二 6
+#ACT
+MOV N$魂卡攻速 6
+MOV N$套装二百分比攻击 10
+MOV N$套装二百分比生命 10
+MOV N$套装二百分比防御 10
+
+
+#IF
+EQUAL N$紫卡套装三 1
+#ACT
+MOV N$套装三百分比攻击 1
+MOV N$套装三百分比生命 1
+MOV N$套装三百分比防御 1
+
+#IF
+EQUAL N$紫卡套装三 2
+#ACT
+MOV N$套装三百分比攻击 2
+MOV N$套装三百分比生命 2
+MOV N$套装三百分比防御 2
+
+#IF
+EQUAL N$紫卡套装三 3
+#ACT
+MOV N$套装三百分比攻击 3
+MOV N$套装三百分比生命 3
+MOV N$套装三百分比防御 3
+
+#IF
+EQUAL N$紫卡套装三 4
+#ACT
+MOV N$套装三百分比攻击 5
+MOV N$套装三百分比生命 5
+MOV N$套装三百分比防御 5
+
+#IF
+EQUAL N$紫卡套装三 5
+#ACT
+MOV N$套装三百分比攻击 7
+MOV N$套装三百分比生命 7
+MOV N$套装三百分比防御 7
+#IF
+EQUAL N$紫卡套装三 6
+#ACT
+MOV N$套装三百分比攻击 10
+MOV N$套装三百分比生命 10
+MOV N$套装三百分比防御 10
+
+
+#IF
+EQUAL N$蓝卡套装四 1
+#ACT
+MOV N$套装四百分比生命 1
+MOV N$套装四百分比防御 1
+
+#IF
+EQUAL N$蓝卡套装四 2
+#ACT
+MOV N$套装四百分比生命 2
+MOV N$套装四百分比防御 2
+
+#IF
+EQUAL N$蓝卡套装四 3
+#ACT
+MOV N$套装四百分比生命 3
+MOV N$套装四百分比防御 3
+
+#IF
+EQUAL N$蓝卡套装四 4
+#ACT
+MOV N$套装四百分比生命 5
+MOV N$套装四百分比防御 5
+
+#IF
+EQUAL N$蓝卡套装四 5
+#ACT
+MOV N$套装四百分比生命 7
+MOV N$套装四百分比防御 7
+#IF
+EQUAL N$蓝卡套装四 6
+#ACT
+MOV N$套装四百分比生命 10
+MOV N$套装四百分比防御 10
+
+
+#IF
+EQUAL N$绿卡套装五 1
+#ACT
+MOV N$套装五百分比防御 1
+
+#IF
+EQUAL N$绿卡套装五 2
+#ACT
+MOV N$套装五百分比防御 2
+
+#IF
+EQUAL N$绿卡套装五 3
+#ACT
+MOV N$套装五百分比防御 3
+
+#IF
+EQUAL N$绿卡套装五 4
+#ACT
+MOV N$套装五百分比防御 5
+
+#IF
+EQUAL N$绿卡套装五 5
+#ACT
+MOV N$套装五百分比防御 7
+#IF
+EQUAL N$绿卡套装五 6
+#ACT
+MOV N$套装五百分比防御 10
+
+#IF
+#ACT
+MOV N$全部魂卡百分比攻击统计 <$STR(N$套装二百分比攻击)>
+INC N$全部魂卡百分比攻击统计 <$STR(N$套装三百分比攻击)>
+
+MOV N$全部魂卡百分比生命统计 <$STR(N$套装二百分比生命)>
+INC N$全部魂卡百分比生命统计 <$STR(N$套装三百分比生命)>
+INC N$全部魂卡百分比生命统计 <$STR(N$套装四百分比生命)>
+
+MOV N$全部魂卡百分比防御统计 <$STR(N$套装二百分比防御)>
+INC N$全部魂卡百分比防御统计 <$STR(N$套装三百分比防御)>
+INC N$全部魂卡百分比防御统计 <$STR(N$套装四百分比防御)>
+INC N$全部魂卡百分比防御统计 <$STR(N$套装五百分比防御)>
+
+;sendmsg 7 百分比+<$STR(N$全部魂卡百分比攻击统计)>
+
+FORMULATION  <$MAXDC>*<$STR(N$全部魂卡百分比攻击统计)>/100 N$魂卡攻击
+FORMULATION   <$HP>*<$STR(N$全部魂卡百分比生命统计)>/100 N$魂卡HP
+FORMULATION  <$MAXAC>*<$STR(N$全部魂卡百分比防御统计)>/100 N$魂卡防御
+
+
+
+;mov <$STR(N$全部魂卡百分比防御统计)> <$MAXAC>
+
+;DIV <$STR(N$全部魂卡百分比防御统计)> 100
+;mov N$魂卡防御 <$STR(N$全部魂卡百分比防御统计)>
+
+
+;sendmsg 7 全部魂卡百分比防御统计：<$STR(N$全部魂卡百分比防御统计)>
+;sendmsg 7 魂卡防御：<$STR(N$魂卡防御)>+<$MAXAC>
+
+
+
+;套装一属性生效
+;#IF
+;LARGE N$魂卡套装一 5
+;#ACT
+;CHANGESTATE 10 65535 100 <$STR(N$套装一吸血)>
+;KILLMONBURSTRATE <$STR(N$套装一爆率)> 0 0
+;sendmsg 7 当前套装一吸血几率：<$STR(N$套装一吸血)>%，爆率加成：<$STR(N$套装一爆率)>%
+;SENDMSG 7 套装一合计等级：<$STR(N$魂卡套装一)>
+
+
+
+
+;增加百分比攻击力
+;#IF
+;LARGE N$全部魂卡百分比攻击统计 0
+;#ACT
+;ChangeHumAbility 6 = <$STR(N$全部魂卡百分比攻击统计)> 65535 1
+;sendmsg 7 攻击增加<$STR(N$全部魂卡百分比攻击统计)>%！
+
+;增加百分比生命
+;#IF
+;LARGE N$全部魂卡百分比生命统计 0
+;#ACT
+;ChangeHumAbility 11 = <$STR(N$全部魂卡百分比生命统计)> 65535 1
+;sendmsg 7 生命增加<$STR(N$全部魂卡百分比生命统计)>%！
+
+;增加百分比防御和魔御
+;#IF
+;LARGE N$全部魂卡百分比防御统计 0
+;#ACT
+;ChangeHumAbility 2 = <$STR(N$全部魂卡百分比防御统计)> 65535 1
+;ChangeHumAbility 4 = <$STR(N$全部魂卡百分比防御统计)> 65535 1
+;sendmsg 7 防御和魔御增加<$STR(N$全部魂卡百分比防御统计)>%！
+
+
+
+
+;攻速属性统计，提升攻击和魔法速度
+;#IF
+;LARGE N$魂卡攻速 0
+;#ACT
+;ChangeSpeed 2 <$STR(N$魂卡攻速)>
+;ChangeSpeed 3 <$STR(N$魂卡攻速)>
+;sendmsg 7 攻击、魔法速度提升<$STR(N$魂卡攻速)>点！
+
+
+
+;提示统计
+;#IF
+;#ACT
+;SENDMSG 7 套装一合计等级：<$STR(N$魂卡套装一)>
+;sendmsg 7 金卡数量：<$STR(N$金卡套装二)>
+;sendmsg 7 防御统计：<$STR(N$全部魂卡百分比防御统计)>
+;sendmsg 7 魂卡防御：<$STR(N$魂卡防御)>+<$MAXAC>
+
+;sendmsg 7 金卡攻速：<$STR(N$魂卡攻速)>
+;sendmsg 7 紫卡数量：<$STR(N$紫卡套装三)>
+;sendmsg 7 蓝卡数量：<$STR(N$蓝卡套装四)>
+;sendmsg 7 绿卡数量：<$STR(N$绿卡套装五)>
+
+
+
+}

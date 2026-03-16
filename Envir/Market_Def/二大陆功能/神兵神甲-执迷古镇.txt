@@ -1,0 +1,154 @@
+[@main]
+
+
+
+#if
+#act
+OPENMERCHANTBIGDLG 165 887 1 4 0 -90 1 610 36 1
+#SAY
+<> \
+<ImgEx:165:891:892:891:38:387/@锻造幻彩狂龙刃>
+<ImgEx:165:889:890:889:88:387/@元宝锻造幻彩狂龙刃>
+<ImgEx:165:891:892:891:135:387/@锻造幻彩の羽翼>
+<ImgEx:165:889:890:889:185:387/@元宝锻造幻彩の羽翼>\
+<ItemShow:387:0:141:237:1><ItemShow:450:0:391:237:1>\
+<ItemShow:380:0:55:292:1>
+<ItemShow:381:0:71:292:1>
+<ItemShow:382:0:89:292:1>
+<ItemShow:386:0:101:292:1>
+<ItemShow:440:0:207:293:1>
+<ItemShow:442:0:223:293:1>
+<ItemShow:448:0:241:293:1>\
+
+
+[@锻造幻彩狂龙刃]
+#if
+checkitem 幽灵の魔 1
+checkitem 寒冰剑 1
+checkitem 魅影真身 1
+checkitem 轩辕雷裂刀
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好装备!
+break
+
+#if
+checkitem 神器碎片 1
+checkitem 神器晶核 1
+#ELSEACT
+MESSAGEBOX 对不起,你没有足够的材料!
+break
+
+#IF
+not CheckGold  3000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足3000000！
+BREAK
+
+#if
+randomex 5 100
+#act
+TAKE 金币  3000000
+take 神器碎片 1
+take 神器晶核 1
+take 幽灵の魔 1
+take 寒冰剑 1
+take 魅影真身 1
+take 轩辕雷裂刀
+Give 幻彩狂龙刃  1 
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.运气爆棚成功锻造出神兵【幻彩狂龙刃】 13 10 0
+#elseact
+TAKE 金币  3000000
+take 神器碎片 1
+take 神器晶核 1
+MESSAGEBOX \　\　　　很遗憾，合成失败，材料已破碎！
+Break
+;----------------------------------------------------------------------------------------
+[@锻造幻彩の羽翼]
+#if
+checkitem 天地の防(男) 1
+checkitem 蝴蝶羽翼 1
+checkitem 轩辕附身衣
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好装备!
+break
+
+#if
+checkitem 神器碎片 1
+checkitem 神器晶核 1
+#ELSEACT
+MESSAGEBOX 对不起,你没有足够的材料!
+break
+
+#IF
+not CheckGold  3000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足3000000！
+BREAK
+
+#if
+randomex 5 100
+#act
+TAKE 金币  3000000
+take 神器碎片 1
+take 神器晶核 1
+take 天地の防(男) 1
+take 蝴蝶羽翼 1
+take 轩辕附身衣
+Give 幻彩の羽翼  1 
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]ぐ:玩家<[<$USERNAME>].运气爆棚成功锻造出神兵【幻彩の羽翼】 13 10 0
+#elseact
+TAKE 金币  3000000
+take 神器碎片 1
+take 神器晶核 1
+MESSAGEBOX \　\　　　很遗憾，合成失败，材料已破碎！
+Break
+;----------------------------------------------------------------------------------------
+
+;----------------------------------------------------------------------------------------
+
+[@元宝锻造幻彩狂龙刃]
+#IF
+checkgamegold > 1887
+checkitem 幽灵の魔 1
+checkitem 寒冰剑 1
+checkitem 魅影真身 1
+checkitem 轩辕雷裂刀
+checkitem 神器碎片 10
+checkitem 神器晶核 10
+#ACT
+gamegold - 1888
+take  神器碎片 10
+take  神器晶核 10
+take 幽灵の魔 1
+take 寒冰剑 1
+take 魅影真身 1
+take  轩辕雷裂刀
+give 幻彩狂龙刃 1
+MESSAGEBOX 恭喜你成功解封神兵幻彩狂龙刃！！
+SENDMOVEMSG 0 253 255 150 1 <[全服公告]ぐ:【{<$USERNAME>】土豪成功解封神兵幻彩狂龙刃！ 15 20
+#ELSEACT
+MESSAGEBOX 您的元宝或材料装备不足.
+break
+
+[@元宝锻造幻彩の羽翼]
+#IF
+checkgamegold > 1887
+checkitem 天地の防(男) 1
+checkitem 蝴蝶羽翼 1
+checkitem 轩辕附身衣
+checkitem 神器碎片 10
+checkitem 神器晶核 10
+#ACT
+take  神器碎片 10
+take  神器晶核 10
+take 天地の防(男) 1
+take 蝴蝶羽翼 1
+take 轩辕附身衣
+give 幻彩の羽翼 1
+gamegold - 1888
+MESSAGEBOX 恭喜你成功解封神兵幻彩の羽翼！！
+SENDMOVEMSG 0 253 255 150 1 <[全服公告]ぐ:【{<$USERNAME>】土豪成功解封神兵幻彩の羽翼！15 20
+#ELSEACT
+MESSAGEBOX 您的元宝或材料装备不足.
+break
+

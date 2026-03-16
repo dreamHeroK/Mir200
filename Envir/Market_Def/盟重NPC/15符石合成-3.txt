@@ -1,0 +1,321 @@
+[@main]
+#if
+#say
+\ \
+
+<Img:59:52:180:-4>\
+
+<Img:201:52:13:22>\
+
+<Text:怪侠客：:19:132{FCOLOR=222}>\
+
+<Text:多余的符石可:19:136{FCOLOR=7}>\
+
+<Text:以在符石大师:19:138{FCOLOR=7}>\
+
+<Text:处回收，或者:19:140{FCOLOR=7}>\
+
+<Text:在我这里合成:19:142{FCOLOR=7}>\
+
+<Text:更高级符石。:19:144{FCOLOR=7}>\
+
+<Text:合成完全免费:19:146{FCOLOR=7}>\ 
+
+<Text:但是失败符石:19:148{FCOLOR=7}>\ 
+
+<Text:会消失。:19:150{FCOLOR=7}>\ 
+
+
+\  \
+
+
+<Text:3个普通符石合成1个[精良符石]，:120:-155{FCOLOR=250}><Text:成功率50％:120:-155{FCOLOR=7}>   <Text:[一键放入]|250#一键放入3个普通符石:120:-155{FCOLOR=251}/@一键放入普通>\
+
+<Text:-------------------------------------------------------:114:-155{FCOLOR=10}>\
+
+<Text:3个精良符石合成1个[稀有符石]，:120:-154{FCOLOR=146}><Text:成功率45％:120:-154{FCOLOR=7}>   <Text:[一键放入]|250#一键放入3个精良符石:120:-154{FCOLOR=251}/@一键放入精良>\
+
+<Text:-------------------------------------------------------:114:-154{FCOLOR=10}>\
+
+<Text:3个稀有符石合成1个[完美符石]，:120:-153{FCOLOR=253}><Text:成功率40％:120:-153{FCOLOR=7}>   <Text:[一键放入]|250#一键放入3个稀有符石:120:-153{FCOLOR=251}/@一键放入稀有>\
+
+<Text:-------------------------------------------------------:114:-153{FCOLOR=10}>\
+
+<Text:3个完美符石合成1个[史诗符石]，:120:-152{FCOLOR=70}><Text:成功率35％:120:-152{FCOLOR=7}>   <Text:[一键放入]|250#一键放入3个完美符石:120:-152{FCOLOR=251}/@一键放入完美>\
+
+<Text:-------------------------------------------------------:114:-152{FCOLOR=10}>\
+
+<Text:3个史诗符石合成1个[暗金符石]，:120:-151{FCOLOR=22}><Text:成功率30％:120:-151{FCOLOR=7}>   <Text:[一键放入]|250#一键放入3个史诗符石:120:-151{FCOLOR=251}/@一键放入史诗>\
+
+<Text:-------------------------------------------------------:114:-151{FCOLOR=10}>\
+
+
+<ITEMBOX:1:52:224:197:260:20:20:*:250#放入符石>\
+
+<ITEMBOX:2:52:224:277:260:20:20:*:250#放入符石>\
+
+<ITEMBOX:3:52:224:357:260:20:20:*:250#放入符石>\
+
+<Text:[开始合成符石]|250#点击免费合成符石:237:-90{FCOLOR=251}/@合成符石>\
+
+<ITEMBOX:0:-1:1:-100:-100:1:1:*:>\
+
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+
+
+
+[@ItemIntoBox1]
+#OR
+EQUAL <$BOXITEM[1].NAME> 普通符石
+EQUAL <$BOXITEM[1].NAME> 精良符石
+EQUAL <$BOXITEM[1].NAME> 稀有符石
+EQUAL <$BOXITEM[1].NAME> 完美符石
+EQUAL <$BOXITEM[1].NAME> 史诗符石
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX 
+messagebox 只能放入普通、精良、稀有、完美、史诗符石
+BREAK 
+
+
+[@ItemIntoBox2]
+#OR
+EQUAL <$BOXITEM[2].NAME> 普通符石
+EQUAL <$BOXITEM[2].NAME> 精良符石
+EQUAL <$BOXITEM[2].NAME> 稀有符石
+EQUAL <$BOXITEM[2].NAME> 完美符石
+EQUAL <$BOXITEM[2].NAME> 史诗符石
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX
+messagebox 只能放入普通、精良、稀有、完美、史诗符石
+BREAK 
+
+
+[@ItemIntoBox3]
+#OR
+EQUAL <$BOXITEM[3].NAME> 普通符石
+EQUAL <$BOXITEM[3].NAME> 精良符石
+EQUAL <$BOXITEM[3].NAME> 稀有符石
+EQUAL <$BOXITEM[3].NAME> 完美符石
+EQUAL <$BOXITEM[3].NAME> 史诗符石
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX
+messagebox 只能放入普通、精良、稀有、完美、史诗符石
+BREAK 
+
+
+
+[@一键放入普通]
+#IF
+checkitem 普通符石 3
+#ACT
+GiveBoxItem 1 普通符石
+GiveBoxItem 2 普通符石
+GiveBoxItem 3 普通符石
+#ELSEACT
+messagebox 你的包裹内没有3个普通符石
+BREAK
+
+
+[@一键放入精良]
+#IF
+checkitem 精良符石 3
+#ACT
+GiveBoxItem 1 精良符石
+GiveBoxItem 2 精良符石
+GiveBoxItem 3 精良符石
+#ELSEACT
+messagebox 你的包裹内没有3个精良符石
+BREAK
+
+
+[@一键放入稀有]
+#IF
+checkitem 稀有符石 3
+#ACT
+GiveBoxItem 1 稀有符石
+GiveBoxItem 2 稀有符石
+GiveBoxItem 3 稀有符石
+#ELSEACT
+messagebox 你的包裹内没有3个稀有符石
+BREAK
+
+
+[@一键放入完美]
+#IF
+checkitem 完美符石 3
+#ACT
+GiveBoxItem 1 完美符石
+GiveBoxItem 2 完美符石
+GiveBoxItem 3 完美符石
+#ELSEACT
+messagebox 你的包裹内没有3个完美符石
+BREAK
+
+
+[@一键放入史诗]
+#IF
+checkitem 史诗符石 3
+#ACT
+GiveBoxItem 1 史诗符石
+GiveBoxItem 2 史诗符石
+GiveBoxItem 3 史诗符石
+#ELSEACT
+messagebox 你的包裹内没有3个史诗符石
+BREAK
+
+
+[@合成符石]
+#IF
+CheckBoxItemCount 1
+CheckBoxItemCount 2
+CheckBoxItemCount 3
+EQUAL <$BOXITEM[1].NAME> <$BOXITEM[2].NAME>
+EQUAL <$BOXITEM[1].NAME> <$BOXITEM[3].NAME>
+EQUAL <$BOXITEM[2].NAME> <$BOXITEM[3].NAME>
+#ACT
+#ELSEACT
+messagebox 请放入3个相同品级的符石
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 普通符石
+EQUAL <$BOXITEM[2].NAME> 普通符石
+EQUAL <$BOXITEM[3].NAME> 普通符石
+#ACT
+GOTO @合成符石精良
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 精良符石
+EQUAL <$BOXITEM[2].NAME> 精良符石
+EQUAL <$BOXITEM[3].NAME> 精良符石
+#ACT
+GOTO @合成符石稀有
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 稀有符石
+EQUAL <$BOXITEM[2].NAME> 稀有符石
+EQUAL <$BOXITEM[3].NAME> 稀有符石
+#ACT
+GOTO @合成符石完美
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 完美符石
+EQUAL <$BOXITEM[2].NAME> 完美符石
+EQUAL <$BOXITEM[3].NAME> 完美符石
+#ACT
+GOTO @合成符石史诗
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 史诗符石
+EQUAL <$BOXITEM[2].NAME> 史诗符石
+EQUAL <$BOXITEM[3].NAME> 史诗符石
+#ACT
+GOTO @合成符石暗金
+BREAK
+
+
+
+[@合成符石精良]
+#if
+RANDOM 2
+#ACT
+MOV N$解封零标记 1
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+#CALL [5符石系统\0符石解封\精良解封零.TXT] @精良解封零
+SENDMSG 5 恭喜成功合出[精良符石]！
+BREAK
+#ELSEACT
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+GuildNoticeMsg 255 11 很遗憾，合成失败………… Self
+BREAK
+
+
+
+[@合成符石稀有]
+#if
+RANDOM 2
+#ACT
+MOV N$解封零标记 1
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+#CALL [5符石系统\0符石解封\稀有解封零.TXT] @稀有解封零
+SENDMSG 5 恭喜成功合出[稀有符石]！
+BREAK
+#ELSEACT
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+GuildNoticeMsg 255 11 很遗憾，合成失败………… Self
+BREAK
+
+
+[@合成符石完美]
+#if
+RANDOM 2
+#ACT
+MOV N$解封零标记 1
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+#CALL [5符石系统\0符石解封\完美解封零.TXT] @完美解封零
+SENDMSG 5 恭喜成功合出[完美符石]！
+BREAK
+#ELSEACT
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+GuildNoticeMsg 255 11 很遗憾，合成失败………… Self
+BREAK
+
+
+[@合成符石史诗]
+#if
+RANDOM 3
+#ACT
+MOV N$解封零标记 1
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+#CALL [5符石系统\0符石解封\史诗解封零.TXT] @史诗解封零
+SENDMSG 5 恭喜成功合出[史诗符石]！
+BREAK
+#ELSEACT
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+GuildNoticeMsg 255 11 很遗憾，合成失败………… Self
+BREAK
+
+
+[@合成符石暗金]
+#if
+RANDOM 3
+#ACT
+MOV N$解封零标记 1
+GetRandomText ..\QuestDiary\5符石系统\符石池\低级暗金符石.txt S$符石名字零
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+#CALL [5符石系统\0符石解封\暗金解封零.TXT] @暗金解封零
+SENDMSG 5 恭喜成功合出暗金符石：[<$STR(S$符石名字零)>]！
+BREAK
+#ELSEACT
+DelBoxItem 1
+DelBoxItem 2
+DelBoxItem 3
+GuildNoticeMsg 255 11 很遗憾，合成失败………… Self
+BREAK
+

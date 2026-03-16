@@ -1,0 +1,341 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 113 411 1 4 0 0 1 388 10 1
+
+
+#if
+check [50] 1
+#act
+mov s$50激活显示 <Text:已激活:-2:60{FCOLOR=250}>
+#ELSEACT
+mov s$50激活显示 <Text:未激活:-2:60{FCOLOR=251}/@一大流浪汉>
+
+
+#if
+check [51] 1
+#act
+mov s$51激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$51激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉1>
+
+#if
+check [52] 1
+#act
+mov s$52激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$52激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉2>
+
+#if
+check [53] 1
+#act
+mov s$53激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$53激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉3>
+
+#if
+check [54] 1
+#act
+mov s$54激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$54激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉4>
+
+#if
+check [55] 1
+#act
+mov s$55激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$55激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉5>
+
+#if
+check [56] 1
+#act
+mov s$56激活显示 <Text:已激活:-6:60{FCOLOR=250}>
+#ELSEACT
+mov s$56激活显示 <Text:未激活:-6:60{FCOLOR=251}/@一大流浪汉6>
+
+#if
+#act
+goto @流浪汉1对话框
+
+[@流浪汉1对话框]
+#if
+#say
+<Text:我一直在流浪，每个大陆的角落我都去过，只为寻找一些神兵神甲 :5:25{FCOLOR=250}>\
+<Text:我个人最大的爱好就是收集这些世间罕见的东西但是现在我累了，:5:25{FCOLOR=250}>\ 
+<Text:我需要休息，你可以帮我去寻找吗，如果找到了我会给予你奖励!:5:25{FCOLOR=250}>\ 
+<ItemShow:377:0:-4:30:1>  <ItemShow:378:0:-4:30:1>  <ItemShow:379:0:-4:30:1>  <ItemShow:436:0:-4:30:1><ItemShow:438:0:-4:30:1>\
+<$str(s$50激活显示)>    <$str(s$51激活显示)>   <$str(s$52激活显示)>   <$str(s$53激活显示)>   <$str(s$55激活显示)>\
+
+
+
+<text:已经收集齐|249#全部激活属性：攻魔道,防御魔御.体力元素+%1(可叠加)^BOSS精华*688^元宝*1888^前期不建议搞^三个大陆可叠加%10全属性:160:80/@流浪汉兑换1>
+
+[@一大流浪汉]
+#if
+check [50] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 破馆珍剑 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少破馆珍剑,无法激活！!
+break
+
+
+#IF
+check [50] 0
+checkitem 破馆珍剑 1
+#ACT
+TAKE  破馆珍剑 1
+set [50] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少破馆珍剑,无法激活！!
+break
+
+
+
+[@一大流浪汉1]
+#if
+check [51] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 光子剑 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少光子剑,无法激活！!
+break
+
+
+#IF
+check [51] 0
+checkitem 光子剑 1
+#ACT
+TAKE  光子剑 1
+set [51] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少光子剑,无法激活！!
+break
+
+
+[@一大流浪汉2]
+#if
+check [52] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 毒龙之身 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少毒龙之身,无法激活！!
+break
+
+
+#IF
+check [52] 0
+checkitem 毒龙之身 1
+#ACT
+TAKE  毒龙之身 1
+set [52] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少毒龙之身,无法激活！!
+break
+
+
+[@一大流浪汉3]
+#if
+check [53] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 猩猩战甲(男) 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少猩猩战甲(男),无法激活！!
+break
+
+
+#IF
+check [53] 0
+checkitem 猩猩战甲(男) 1
+#ACT
+TAKE  猩猩战甲(男) 1
+set [53] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少猩猩战甲(男),无法激活！!
+break
+
+
+
+[@一大流浪汉4]
+#if
+check [54] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 猩猩战甲(女) 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少猩猩战甲(女),无法激活！!
+break
+
+
+#IF
+check [54] 0
+checkitem 猩猩战甲(女) 1
+#ACT
+TAKE  猩猩战甲(女) 1
+set [54] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少猩猩战甲(女),无法激活！!
+break
+
+
+
+[@一大流浪汉5]
+#if
+check [55] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 麒麟战甲(男) 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少麒麟战甲(男),无法激活！!
+break
+
+
+#IF
+check [55] 0
+checkitem 麒麟战甲(男) 1
+#ACT
+TAKE  麒麟战甲(男) 1
+set [55] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少麒麟战甲(男),无法激活！!
+break
+
+
+[@一大流浪汉6]
+#if
+check [56] 1
+#act
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+checkitem 麒麟战甲(女) 1
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少麒麟战甲(女),无法激活！!
+break
+
+
+#IF
+check [56] 0
+checkitem 麒麟战甲(女) 1
+#ACT
+TAKE  麒麟战甲(女) 1
+set [56] 1
+goto @main
+MessageBox 　\　\　　　恭喜你激活成功！！
+#ELSEACT
+MessageBox 　\　\　　　条件不足:缺少麒麟战甲(女),无法激活！!
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@流浪汉兑换1]
+#or
+check [50] 0
+check [51] 0
+check [52] 0
+check [53] 0
+check [55] 0
+#act
+MESSAGEBOX 收集齐后再来找我!!
+BREAK
+
+
+
+#if
+EQUAL T81  一大流浪汉激活
+#ACT
+MESSAGEBOX 已经激活过了,别来捣乱!!
+BREAK
+
+
+#IF
+CHECKGAMEGOLD < 1888
+#ACT
+MessageBox 　\　\　　　条件不足:元宝不达标,需要1888!
+break
+
+#if
+checkitem BOSS精华 688
+#act
+#ELSEACT
+MessageBox 激活失败：你BOSS精华不足688
+break
+
+
+#or
+check [50] 1
+check [51] 1
+check [52] 1
+check [53] 1
+check [55] 1
+#act
+take BOSS精华 688
+GAMEGOLD - 1888
+mov T81  一大流浪汉激活
+#CALL [\10属性重置\神器激活加成.txt] @神器激活
+#CALL [\10属性重置\属性重置.txt] @属性重置
+MESSAGEBOX 恭喜你激活全部特殊神器,获得高额属性!!!
+BREAK
+
+
+

@@ -1,0 +1,13 @@
+[@main]
+#if
+#act
+MessageBox 你要前往第一世界：<TEXT:星火世界:-2:-2/FCOLOR=215:FBOLD:FSIZE=12:FNAME=宋体>冒险吗？\\<TEXT:星火世界是初心者必然前往的第一站:-2:-2/FCOLOR=94:FBOLD:FSIZE=12:FNAME=宋体>\\<TEXT:有着无数的宝藏，也是世界的起点。:-2:-2/FCOLOR=94:FBOLD:FSIZE=12:FNAME=宋体> @确定前往星火世界 @取消前往星火世界
+
+[@确定前往星火世界]
+#ACT
+MAPMOVE 星火世界 222 732
+GuildNoticeMsg 70 0 仲裁者：{[<$USERNAME>]|94:0:1}通过主城{[空间传送阵]|94:0:1}开始探险！
+
+[@取消前往星火世界]
+#ACT
+break

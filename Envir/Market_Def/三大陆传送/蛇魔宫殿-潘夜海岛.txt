@@ -1,0 +1,51 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 369 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:79:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入蛇魔宫殿>
+<>\ \
+<ItemShow:385:0:147:136:1>
+<ItemShow:1301:0:164:136:1>
+<ItemShow:<$STR(P100)>:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+[@进入蛇魔宫殿]
+
+
+#IF
+CHECKLEVELEX > 67
+#ACT
+#ELSEACT
+messagebox 等级不足67级
+BREAK
+
+#IF
+checkgold 280000
+#ACT
+take 金币 280000
+inc J130 280000
+MAPMOVE shemo1 120 129
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[蛇魔宫殿]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要280000金币
+BREAK

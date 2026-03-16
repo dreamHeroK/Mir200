@@ -1,0 +1,39 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 424 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:970:0:148:285:1> <ItemShow:971:0:158:285:1> <ItemShow:972:0:170:285:1> <ItemShow:973:0:180:285:1> <ItemShow:974:0:190:285:1> <ItemShow:975:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@失落的魔雾林>
+
+
+
+
+[@失落的魔雾林]
+
+
+#IF
+CHECKLEVELEX > 74
+#ACT
+#ELSEACT
+messagebox 等级不足75级
+BREAK
+
+#IF
+not checkitem 装备精华 200
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　装备精华不足200个！
+BREAK
+
+
+#IF
+#ACT
+TAKE 装备精华 200
+MAP 失落的魔雾林
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[失落的魔龙城]，祝他满载而归！
+#ELSEACT
+messagebox 装备精华不足!!
+BREAK

@@ -1,0 +1,81 @@
+[@寄售启动清理]
+{
+#IF
+NOT EQUAL A60 
+#ACT
+MOV G500 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A60)> 
+MOV A60 
+
+#IF
+NOT EQUAL A61 
+#ACT
+MOV G501 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A61)> 
+MOV A61 
+
+#IF
+NOT EQUAL A62 
+#ACT
+MOV G502 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A62)> 
+MOV A62 
+
+#IF
+NOT EQUAL A63 
+#ACT
+MOV G503 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A63)> 
+MOV A63 
+
+#IF
+NOT EQUAL A64 
+#ACT
+MOV G504 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A64)> 
+MOV A64 
+
+#IF
+NOT EQUAL A65 
+#ACT
+MOV G505 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A65)> 
+MOV A65 
+
+#IF
+NOT EQUAL A66 
+#ACT
+MOV G506 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A66)> 
+MOV A66 
+
+#IF
+NOT EQUAL A67 
+#ACT
+MOV G507 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A67)> 
+MOV A67 
+
+#IF
+NOT EQUAL A68 
+#ACT
+MOV G508 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A68)> 
+MOV A68 
+
+#IF
+NOT EQUAL A69 
+#ACT
+MOV G509 0
+DelTextList ..\..\..\..\前程跨服数据\通区寄售\进行中订单.ini <$STR(A69)> 
+MOV A69 
+
+
+
+
+
+
+
+
+
+}

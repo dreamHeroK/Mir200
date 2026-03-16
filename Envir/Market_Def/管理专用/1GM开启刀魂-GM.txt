@@ -1,0 +1,51 @@
+(@ArmRemoveStone)
+[@MAIN]
+#IF
+ISADMIN
+#ACT
+GOTO @管理开刀魂
+#ELSEACT
+MESSAGEBOX 你不是管理员，无法使用!
+BREAK
+
+
+
+[@管理开刀魂]
+
+<ITEMBOX:1:52:221:50:70:20:20:*:放入装备> \  \  \  \  \   \ 
+
+<>  <开启刀魂/@开刀魂>  <刀魂经验/@@InPutString172>\  \ 
+
+
+[@InPutString172]
+#IF
+ISADMIN
+#ACT
+LockUpdateItem boxitem1
+SetCustomItemProgressbarValue boxitem1 0 1 + <$STR(S172)>
+UpdateItem boxitem1
+clearLinkItem
+SENDMSG 5 刀魂增加<$STR(S172)>经验！
+BREAK
+
+
+[@开刀魂]
+#IF
+ISADMIN
+#ACT
+GetCustomItemProgressbarValue boxitem1 0 0 N$灵气上限
+LockUpdateItem boxitem1
+GetDBItemFieldValue <$BOXITEM[1].NAME> stock <$STR(N$灵气上限)>
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 0 1
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 1 灵气:
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 2 255
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 3 1
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 4 2
+SetCustomItemProgressbarValue boxitem1 0 0 = <$STR(N$灵气上限)>
+MOV N$开启半值 <$STR(N$灵气上限)>
+DIV N$开启半值 2
+SetCustomItemProgressbarValue boxitem1 0 1 = <$STR(N$开启半值)>
+UpdateItem boxitem1
+clearLinkItem
+SENDMSG 5 开启刀魂！
+BREAK

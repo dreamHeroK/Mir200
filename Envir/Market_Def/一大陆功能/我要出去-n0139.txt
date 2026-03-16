@@ -1,0 +1,67 @@
+[@main]
+<Img:29:9:0:8>　\
+　　　　<独家沉默/SCOLOR=154>\
+　      <工作人员:/SCOLOR=70><尊敬的玩家您好!/SCOLOR=251><欢迎来到独家沉默热血传奇/SCOLOR=242>\
+<┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈/SCOLOR=13>\ \ \
+　　　　　　　　　　　　<前往打怪点/@huijia3>
+
+[@huijia3]
+
+#IF
+Equal T11 
+#ACT
+MessageBox 请先选择职业!!
+Break
+
+
+#IF
+Equal T8 
+#ACT
+MessageBox 请先设置二级密码
+Break
+
+#IF
+CHECK [113] 1
+#ACT
+mapmove 3 323 331
+BREAK
+
+
+#if
+NOT Equal T8
+CHECKJOB warrior
+#act
+activationcasket
+SetSndacasket 1
+;开启生肖
+SetSndacasket 1
+ShowGodBless 1
+OpenGodBless 0
+OpenGodBless 1
+OpenGodBless 2
+OpenGodBless 3
+OpenGodBless 4
+OpenGodBless 5
+OpenGodBless 6
+OpenGodBless 7
+OpenGodBless 8
+OpenGodBless 9
+OpenGodBless 10
+OpenGodBless 11
+;开启背包
+ExtBagPageCount + 5
+ExtBagOpenItemCount + 120
+;开启仓库
+OpenStoratge 2 1
+OpenStoratge 3 1
+OpenStoratge 4 1
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+SET [113] 1
+mapmove 3 323 331
+;map XSZY
+BREAK

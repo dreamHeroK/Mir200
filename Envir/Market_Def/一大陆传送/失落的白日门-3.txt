@@ -1,0 +1,33 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 395 1 4 0 0 1 535 4 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:300:130/@失落的白日门>
+<>\ \
+<ItemShow:377:0:147:142:1>
+<ItemShow:378:0:164:142:1>
+<ItemShow:379:0:181:142:1>
+<ItemShow:436:0:198:142:1>
+<ItemShow:438:0:215:142:1>
+<ItemShow:511:0:233:142:1>\ \ 
+
+
+
+
+
+[@失落的白日门]
+#IF
+#ACT
+MAP 失落的白日门 
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[失落的白日门]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要200000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK
+
+

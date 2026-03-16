@@ -1,0 +1,44 @@
+[@main]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 124 50 1 4 0 -90 1 417 7 1
+#SAY
+<>  \      
+<>      <ItemShow:588:1:50:6:1>   <ItemShow:589:1:150:6:1>   \ \ \ \ \ \
+<>  <治愈石·魔/SCOLOR=249> :<治愈石·神/SCOLOR=69>+<1000万金币/SCOLOR=69>+<装备精华*1000/SCOLOR=69>   <点击合成/@点击合成1>\
+<>  <治愈石·北荒/SCOLOR=249> :<治愈石·魔/SCOLOR=69> +<2000万金币/SCOLOR=69>+<装备精华*2000/SCOLOR=69>   <点击合成/@点击合成2>\
+
+
+[@点击合成1]
+#if
+checkitem 装备精华 1000
+checkitem 治愈石·神 1
+CheckGold 5000000
+#ACT
+TAKE 装备精华 1000
+TAKE 治愈石·神 1
+TAKE 金币 5000000
+give 治愈石·魔
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+
+[@点击合成2]
+#if
+checkitem 装备精华 2000
+checkitem 治愈石·魔 1
+CheckGold 10000000
+#ACT
+TAKE 装备精华 2000
+TAKE 治愈石·魔 1
+TAKE 金币 10000000
+GiveStateItem  治愈石·北荒   1 1 1 0 1 1 1
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+
+
+
+

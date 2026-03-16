@@ -1,0 +1,322 @@
+[@领取声望点]
+{
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz1.txt
+#ACT
+GAMEGIRD + 100
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz1.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了100声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz2.txt
+#ACT
+GAMEGIRD + 200
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz2.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了200声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz3.txt
+#ACT
+GAMEGIRD + 300
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz3.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了300声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz4.txt
+#ACT
+GAMEGIRD + 400
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz4.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了400声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz5.txt
+#ACT
+GAMEGIRD + 500
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz5.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了500声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz6.txt
+#ACT
+GAMEGIRD + 600
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz6.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了600声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz7.txt
+#ACT
+GAMEGIRD + 700
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz7.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了700声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz8.txt
+#ACT
+GAMEGIRD + 800
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz8.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了800声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz9.txt
+#ACT
+GAMEGIRD + 900
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz9.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了900声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz10.txt
+#ACT
+GAMEGIRD + 1000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz10.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了1000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz20.txt
+#ACT
+GAMEGIRD + 2000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz20.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了2000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz30.txt
+#ACT
+GAMEGIRD + 3000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz30.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了3000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz40.txt
+#ACT
+GAMEGIRD + 4000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz40.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了4000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz50.txt
+#ACT
+GAMEGIRD + 5000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz50.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了5000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz60.txt
+#ACT
+GAMEGIRD + 6000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz60.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了6000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz70.txt
+#ACT
+GAMEGIRD + 7000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz70.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了7000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz80.txt
+#ACT
+GAMEGIRD + 8000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz80.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了8000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz90.txt
+#ACT
+GAMEGIRD + 9000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz90.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了9000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz100.txt
+#ACT
+GAMEGIRD + 10000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz100.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了10000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz200.txt
+#ACT
+GAMEGIRD + 20000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz200.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了20000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz300.txt
+#ACT
+GAMEGIRD + 30000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz300.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了30000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz400.txt
+#ACT
+GAMEGIRD + 40000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz400.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了40000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz500.txt
+#ACT
+GAMEGIRD + 50000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz500.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了50000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz600.txt
+#ACT
+GAMEGIRD + 60000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz600.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了60000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz700.txt
+#ACT
+GAMEGIRD + 70000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz700.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了70000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz800.txt
+#ACT
+GAMEGIRD + 80000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz800.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了80000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz900.txt
+#ACT
+GAMEGIRD + 90000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz900.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了90000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz1000.txt
+#ACT
+GAMEGIRD + 100000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz1000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了100000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz2000.txt
+#ACT
+GAMEGIRD + 200000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz2000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了200000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz3000.txt
+#ACT
+GAMEGIRD + 300000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz3000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了300000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz4000.txt
+#ACT
+GAMEGIRD + 400000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz4000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了400000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz5000.txt
+#ACT
+GAMEGIRD + 500000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz5000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了500000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz6000.txt
+#ACT
+GAMEGIRD + 600000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz6000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了600000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz7000.txt
+#ACT
+GAMEGIRD + 700000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz7000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了700000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz8000.txt
+#ACT
+GAMEGIRD + 800000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz8000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了800000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz9000.txt
+#ACT
+GAMEGIRD + 900000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz9000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了900000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz10000.txt
+#ACT
+GAMEGIRD + 1000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz10000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了1000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz20000.txt
+#ACT
+GAMEGIRD + 2000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz20000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了2000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz30000.txt
+#ACT
+GAMEGIRD + 3000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz30000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了3000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz40000.txt
+#ACT
+GAMEGIRD + 4000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz40000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了4000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz50000.txt
+#ACT
+GAMEGIRD + 5000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz50000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了5000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz60000.txt
+#ACT
+GAMEGIRD + 6000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz60000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了6000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz70000.txt
+#ACT
+GAMEGIRD + 7000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz70000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了7000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz80000.txt
+#ACT
+GAMEGIRD + 8000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz80000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了8000000声望点。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz90000.txt
+#ACT
+GAMEGIRD + 9000000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\声望点\cz90000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了9000000声望点。
+
+#ELSESAY
+请查看自己的声望点数量!\
+没有充值请按提示进行充值!\
+<返回/@main>
+}

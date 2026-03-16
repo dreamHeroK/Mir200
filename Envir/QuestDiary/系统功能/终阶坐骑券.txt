@@ -1,0 +1,64 @@
+[@终阶坐骑券]
+{
+#if
+#say
+<Text:放入[坐骑]，点击升阶，直接升至十阶坐骑[麒麟载天]，属性强大。:20:25{FCOLOR=70}>\
+<Text:-----------------------------------------------------------:20:24{FCOLOR=7}>\
+<ITEMBOX:3:52:221:190:80:20:20:*:255#放入坐骑>\
+
+<Text:[坐骑升阶]:163:80{FCOLOR=151}/@直升麒麟载天>\
+
+#ACT
+MOV P1 0
+OPENMERCHANTBIGDLG 52 20 1 0 0 0 1 390 15 1
+
+
+
+[@直升麒麟载天]
+#IF
+CheckBoxItemCount 3
+#act
+#ELSEACT
+messagebox 请放入坐骑
+BREAK
+
+#IF
+EQUAL <$BOXITEM[3].STDMODE> 28
+#ACT
+#ELSEACT
+messagebox 只可以放入<坐骑/SCOLOR=250>
+BREAK
+
+#IF
+CHECKITEM 终阶坐骑券
+#ACT
+#ELSEACT
+messagebox 请把[终阶坐骑券]放在包裹内
+BREAK
+
+
+#IF
+EQUAL <$BOXITEM[3].STDMODE> 28
+CHECKITEM 终阶坐骑券
+#ACT
+TAKE 终阶坐骑券 1
+DelBoxItem 3 1
+GiveOnItem boxitem3 麒麟载天 1
+SetItemState boxitem3 1
+LockUpdateItem boxitem3
+SETCUSTOMITEMPROGRESSBAR boxitem3 0 0 1
+SETCUSTOMITEMPROGRESSBAR boxitem3 0 1 灵气:
+SETCUSTOMITEMPROGRESSBAR boxitem3 0 2 255
+SETCUSTOMITEMPROGRESSBAR boxitem3 0 3 1
+SETCUSTOMITEMPROGRESSBAR boxitem3 0 4 1
+SetCustomItemProgressbarValue boxitem3 0 0 = 50000
+SetCustomItemProgressbarValue boxitem3 0 2 = 100
+SetItemState boxitem3 1 1
+UpdateItem boxitem3
+clearLinkItem
+ReturnBoxItem 3
+CLOSEMERCHANTBIGDLG
+messagebox 恭喜你的坐骑升至十阶，请查看包裹
+BREAK
+
+}

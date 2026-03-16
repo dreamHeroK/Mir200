@@ -1,0 +1,40 @@
+﻿[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:1613:0:50:70:1>
+MOV S$世界DT2 <itemshow:1614:0:50:70:1>
+MOV S$世界DT3 <itemshow:1615:0:50:70:1>
+MOV S$世界DT4 <itemshow:1616:0:50:70:1>
+MOV S$世界DT5 <itemshow:1617:0:50:70:1>
+MOV S$世界DT6 <itemshow:1618:0:50:70:1>
+
+#IF
+#ACT
+#SAY
+<TEXT:二章五幕·月光林地:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:月光下的猎手正在伺机而动，夜幕中的刺客正在蓄势待发，看:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:似静谧的月光林地危险重重。:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133|249#直达洞口需费用：{11000银币|251}^215#当然，你也可以跑着去--免费。/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+SMALL <$GAMEGOLD> 11000
+#act
+MessageBox 你的银币不足11000，无法直达该地图，跑着去吧。
+break
+
+#IF
+#act
+GAMEGOLD - 11000
+mapmove 猎魔世界 30 329
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{猎魔世界|7:0:1}】的【{月光林地|249:0:1}】进行探索！ self

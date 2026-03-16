@@ -1,0 +1,39 @@
+[@转生显示]
+{
+#if
+CHECKRENEWLEVEL = 1
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力一阶
+BREAK
+
+#if
+CHECKRENEWLEVEL = 2
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力二阶
+BREAK
+
+#if
+CHECKRENEWLEVEL = 3
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力三阶
+BREAK
+
+#if
+CHECKRENEWLEVEL = 4
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力四阶
+BREAK
+
+#if
+CHECKRENEWLEVEL = 5
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力五阶
+BREAK
+
+#if
+CHECKRENEWLEVEL = 6
+#ACT
+SETRANKLEVELNAME  %s\轮回吞噬之力六阶
+BREAK
+
+}

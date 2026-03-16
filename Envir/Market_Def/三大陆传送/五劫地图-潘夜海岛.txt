@@ -1,0 +1,63 @@
+[@main]
+
+
+#if
+#say
+\ \
+
+<Img:703:113:4:33>  \  \
+
+<ItemShow:773:0:5:163:1> <ItemShow:774:0:5:163:1> <ItemShow:775:0:5:163:1> <ItemShow:779:0:5:163:1> <ItemShow:772:0:5:163:1> <ItemShow:783:0:5:163:1>\ \ 
+
+<>   <Text:公共地图:135:-48{FCOLOR=7}> <Text:[点击进入]:138:-48{FCOLOR=251}/@进入逆天改命五阶>\
+
+<>   <Text:进入要求：逆天改命五阶:135:-43{FCOLOR=250}>\
+
+<>   <Text:收取费用：500W+天赋神石*250:135:-39{FCOLOR=250}>\
+
+<>  <Text:--------------------------:125:-41{FCOLOR=12}>\
+
+<>   <Text:怪物刷新介绍：:135:-42{FCOLOR=70}>\
+
+<>   <Text:BOSS：360分钟  隐藏：360分钟:135:-37{FCOLOR=254}>\
+
+<>   <Text:王级：720分钟 :135:-32{FCOLOR=254}>\
+
+#ACT
+OPENMERCHANTBIGDLG 113 87 1 4 0 0 1 315 17 1
+
+[@进入逆天改命五阶]
+
+
+#IF
+not CheckGold  5000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足500W！
+BREAK
+
+
+#IF
+not checkitem 天赋神石 250
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　天赋神石不足250个！
+BREAK
+
+#IF
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命五阶!!!
+break
+
+
+#IF
+checkgold 5000000
+#ACT
+take 金币 5000000
+take 天赋神石 250
+inc J130 5000000
+MAPMOVE 五劫地图 184 214
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[五劫地图]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要5000000金币
+BREAK

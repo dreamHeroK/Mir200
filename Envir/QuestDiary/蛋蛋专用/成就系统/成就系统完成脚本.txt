@@ -1,0 +1,1156 @@
+{
+[@成就系统完成脚本]
+
+;------------------------------杀死小怪成就-----------------------------
+#IF
+CHECK [500] 0
+NOT SMALL U151 1000
+#ACT
+MOV S$成就标识 500
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [501] 0
+NOT SMALL U151 5000
+#ACT
+MOV S$成就标识 501
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [502] 0
+NOT SMALL U151 50000
+#ACT
+MOV S$成就标识 502
+GOTO @发放成就点数奖励
+
+
+;------------------------------杀死首领成就-----------------------------
+#IF
+CHECK [503] 0
+NOT SMALL U152 300
+#ACT
+MOV S$成就标识 503
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [504] 0
+NOT SMALL U152 1000
+#ACT
+MOV S$成就标识 504
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [505] 0
+NOT SMALL U152 3000
+#ACT
+MOV S$成就标识 505
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------杀死超级BOSS成就-----------------------------
+#IF
+CHECK [506] 0
+NOT SMALL U153 150
+#ACT
+MOV S$成就标识 506
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [507] 0
+NOT SMALL U153 300
+#ACT
+MOV S$成就标识 507
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [508] 0
+NOT SMALL U153 600
+#ACT
+MOV S$成就标识 508
+GOTO @发放成就点数奖励
+
+
+
+
+;------------------------------杀死剧情BOSS成就-----------------------------
+#IF
+CHECK [509] 0
+NOT SMALL U154 50
+#ACT
+MOV S$成就标识 509
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [510] 0
+NOT SMALL U154 150
+#ACT
+MOV S$成就标识 510
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [511] 0
+NOT SMALL U154 300
+#ACT
+MOV S$成就标识 511
+GOTO @发放成就点数奖励
+
+
+;------------------------------杀死世界BOSS成就-----------------------------
+#IF
+CHECK [512] 0
+NOT SMALL U155 10
+#ACT
+MOV S$成就标识 512
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [513] 0
+NOT SMALL U155 50
+#ACT
+MOV S$成就标识 513
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [514] 0
+NOT SMALL U155 100
+#ACT
+MOV S$成就标识 514
+GOTO @发放成就点数奖励
+
+
+;------------------------------杀死小怪成就（新增）-----------------------------
+#IF
+CHECK [588] 0
+NOT SMALL U151 100000
+#ACT
+MOV S$成就标识 588
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [589] 0
+NOT SMALL U151 200000
+#ACT
+MOV S$成就标识 589
+GOTO @发放成就点数奖励
+
+;------------------------------杀死首领成就（新增）-----------------------------
+#IF
+CHECK [590] 0
+NOT SMALL U152 5000
+#ACT
+MOV S$成就标识 590
+GOTO @发放成就点数奖励
+
+;------------------------------杀死超级BOSS成就（新增）-----------------------------
+#IF
+CHECK [591] 0
+NOT SMALL U153 1000
+#ACT
+MOV S$成就标识 591
+GOTO @发放成就点数奖励
+
+;------------------------------杀死剧情BOSS成就（新增）-----------------------------
+#IF
+CHECK [592] 0
+NOT SMALL U154 500
+#ACT
+MOV S$成就标识 592
+GOTO @发放成就点数奖励
+
+;------------------------------杀死世界BOSS成就（新增）-----------------------------
+#IF
+CHECK [593] 0
+NOT SMALL U155 200
+#ACT
+MOV S$成就标识 593
+GOTO @发放成就点数奖励
+
+
+;------------------------------装备重铸成就-----------------------------
+
+
+#IF
+CHECK [515] 0
+NOT SMALL U156 100
+#ACT
+MOV S$成就标识 515
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [516] 0
+NOT SMALL U156 500
+#ACT
+MOV S$成就标识 516
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [517] 0
+NOT SMALL U156 3000
+#ACT
+MOV S$成就标识 517
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [518] 0
+NOT SMALL U156 5000
+#ACT
+MOV S$成就标识 518
+GOTO @发放成就点数奖励
+
+
+;------------------------------制药成就-----------------------------
+
+
+#IF
+CHECK [519] 0
+NOT SMALL U157 100
+#ACT
+MOV S$成就标识 519
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [520] 0
+NOT SMALL U157 500
+#ACT
+MOV S$成就标识 520
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [521] 0
+NOT SMALL U157 3000
+#ACT
+MOV S$成就标识 521
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [522] 0
+NOT SMALL U157 5000
+#ACT
+MOV S$成就标识 522
+GOTO @发放成就点数奖励
+
+
+;------------------------------查询成就-----------------------------
+
+
+#IF
+CHECK [523] 0
+NOT SMALL U158 100
+#ACT
+MOV S$成就标识 523
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [524] 0
+NOT SMALL U158 300
+#ACT
+MOV S$成就标识 524
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [525] 0
+NOT SMALL U158 600
+#ACT
+MOV S$成就标识 525
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [526] 0
+NOT SMALL U158 1500
+#ACT
+MOV S$成就标识 526
+GOTO @发放成就点数奖励
+
+
+;------------------------------转职成就-----------------------------
+
+
+#IF
+CHECK [527] 0
+NOT SMALL U159 10
+#ACT
+MOV S$成就标识 527
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [528] 0
+NOT SMALL U159 30
+#ACT
+MOV S$成就标识 528
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [529] 0
+NOT SMALL U159 50
+#ACT
+MOV S$成就标识 529
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [530] 0
+NOT SMALL U159 100
+#ACT
+MOV S$成就标识 530
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------属性专精成就-----------------------------
+
+#IF
+CHECK [531] 0
+NOT SMALL U481 100
+#ACT
+MOV S$成就标识 531
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [532] 0
+NOT SMALL U482 100
+#ACT
+MOV S$成就标识 532
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [533] 0
+NOT SMALL U483 100
+#ACT
+MOV S$成就标识 533
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [534] 0
+NOT SMALL U484 100
+#ACT
+MOV S$成就标识 534
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [535] 0
+NOT SMALL U485 100
+#ACT
+MOV S$成就标识 535
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [536] 0
+NOT SMALL U486 100
+#ACT
+MOV S$成就标识 536
+GOTO @发放成就点数奖励
+
+
+
+
+#IF
+CHECK [537] 0
+NOT SMALL U160 1
+#ACT
+MOV S$成就标识 537
+GOTO @发放成就点数奖励
+
+
+;------------------------------职业技能成就-----------------------------
+
+#IF
+CHECK [538] 0
+NOT SMALL U167 1
+#ACT
+MOV S$成就标识 538
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------掉狂暴成就-----------------------------
+
+
+#IF
+CHECK [539] 0
+NOT SMALL U168 10
+#ACT
+MOV S$成就标识 539
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [540] 0
+NOT SMALL U168 100
+#ACT
+MOV S$成就标识 540
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------杀狂暴成就-----------------------------
+
+
+#IF
+CHECK [541] 0
+NOT SMALL U169 10
+#ACT
+MOV S$成就标识 541
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [542] 0
+NOT SMALL U169 100
+#ACT
+MOV S$成就标识 542
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------杀人成就-----------------------------
+
+#IF
+CHECK [543] 0
+NOT SMALL U170 10
+#ACT
+MOV S$成就标识 543
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [544] 0
+NOT SMALL U170 30
+#ACT
+MOV S$成就标识 544
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [545] 0
+NOT SMALL U170 100
+#ACT
+MOV S$成就标识 545
+GOTO @发放成就点数奖励
+
+
+;------------------------------排行成就-----------------------------
+
+#IF
+CHECK [546] 0
+NOT SMALL U171 1
+#ACT
+MOV S$成就标识 546
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [547] 0
+NOT SMALL U172 1
+#ACT
+MOV S$成就标识 547
+GOTO @发放成就点数奖励
+
+
+;------------------------------捐献成就-----------------------------
+
+
+#IF
+CHECK [548] 0
+NOT SMALL U173 1
+#ACT
+MOV S$成就标识 548
+GOTO @发放成就点数奖励
+
+
+
+
+
+
+;------------------------------行会相关成就-----------------------------
+
+
+#IF
+CHECK [549] 0
+NOT SMALL U174 1
+#ACT
+MOV S$成就标识 549
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [550] 0
+NOT SMALL U175 1
+#ACT
+MOV S$成就标识 550
+GOTO @发放成就点数奖励
+
+
+
+;沙巴克成员成就
+#IF
+EQUAL <$OWNERGUILD> <$GUILDNAME>
+NOT EQUAL <$LORD> <$USERNAME>
+SMALL U176 1
+#ACT
+INC U176 1
+
+#IF
+CHECK [551] 0
+NOT SMALL U176 1
+#ACT
+MOV S$成就标识 551
+GOTO @发放成就点数奖励
+
+
+;沙巴克老大成就
+#IF
+EQUAL <$OWNERGUILD> <$GUILDNAME>
+EQUAL <$LORD> <$USERNAME>
+SMALL U177 1
+#ACT
+INC U177 1
+
+
+
+#IF
+CHECK [552] 0
+NOT SMALL U177 1
+#ACT
+MOV S$成就标识 552
+GOTO @发放成就点数奖励
+
+
+
+
+;------------------------------充值相关成就-----------------------------
+
+
+#IF
+CHECK [553] 0
+NOT SMALL U178 1
+#ACT
+MOV S$成就标识 553
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [554] 0
+NOT SMALL U179 1
+#ACT
+MOV S$成就标识 554
+GOTO @发放成就点数奖励
+
+
+
+;------------------------------消费贡献成就-----------------------------
+
+
+#IF
+CHECK [555] 0
+NOT SMALL U180 150
+#ACT
+MOV S$成就标识 555
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [556] 0
+NOT SMALL U180 300
+#ACT
+MOV S$成就标识 556
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [557] 0
+NOT SMALL U180 750
+#ACT
+MOV S$成就标识 557
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [558] 0
+NOT SMALL U180 1500
+#ACT
+MOV S$成就标识 558
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [559] 0
+NOT SMALL U180 3000
+#ACT
+MOV S$成就标识 559
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [560] 0
+NOT SMALL U180 5000
+#ACT
+MOV S$成就标识 560
+GOTO @发放成就点数奖励
+
+;------------------------------累计充值成就-----------------------------
+
+#IF
+NOT EQUAL U181 <$GAMEGLORY>
+#ACT
+MOV U181 <$GAMEGLORY>
+
+
+#IF
+CHECK [561] 0
+NOT SMALL U181 1000
+#ACT
+MOV S$成就标识 561
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [562] 0
+NOT SMALL U181 3000
+#ACT
+MOV S$成就标识 562
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [563] 0
+NOT SMALL U181 10000
+#ACT
+MOV S$成就标识 563
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [583] 0
+NOT SMALL U181 30000
+#ACT
+MOV S$成就标识 583
+GOTO @发放成就点数奖励
+
+
+
+
+;------------------------------累计在线时间相关成就-----------------------------
+
+
+#IF
+CHECK [564] 0
+NOT SMALL U182 1440
+#ACT
+MOV S$成就标识 564
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [565] 0
+NOT SMALL U182 2880
+#ACT
+MOV S$成就标识 565
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [566] 0
+NOT SMALL U182 7200
+#ACT
+MOV S$成就标识 566
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [567] 0
+NOT SMALL U182 14400
+#ACT
+MOV S$成就标识 567
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [568] 0
+NOT SMALL U182 43200
+#ACT
+MOV S$成就标识 568
+GOTO @发放成就点数奖励
+
+;------------------------------累计挂机时间相关成就-----------------------------
+
+
+#IF
+CHECK [569] 0
+NOT SMALL U183 1440
+#ACT
+MOV S$成就标识 569
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [570] 0
+NOT SMALL U183 2880
+#ACT
+MOV S$成就标识 561
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [571] 0
+NOT SMALL U183 7200
+#ACT
+MOV S$成就标识 562
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [572] 0
+NOT SMALL U183 14400
+#ACT
+MOV S$成就标识 563
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [573] 0
+NOT SMALL U183 43200
+#ACT
+MOV S$成就标识 564
+GOTO @发放成就点数奖励
+
+;------------------------------累计签到时间相关成就-----------------------------
+
+
+#IF
+CHECK [574] 0
+NOT SMALL U54 1
+#ACT
+MOV S$成就标识 574
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [575] 0
+NOT SMALL U54 3
+#ACT
+MOV S$成就标识 575
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [576] 0
+NOT SMALL U54 7
+#ACT
+MOV S$成就标识 576
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [577] 0
+NOT SMALL U54 30
+#ACT
+MOV S$成就标识 577
+GOTO @发放成就点数奖励
+
+
+
+
+;------------------------------转种族相关成就-----------------------------
+
+#IF
+CHECK [578] 0
+NOT SMALL U184 5
+#ACT
+MOV S$成就标识 578
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [579] 0
+NOT SMALL U184 10
+#ACT
+MOV S$成就标识 579
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [580] 0
+NOT SMALL U184 30
+#ACT
+MOV S$成就标识 580
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [581] 0
+NOT SMALL U184 50
+#ACT
+MOV S$成就标识 581
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [582] 0
+NOT SMALL U184 100
+#ACT
+MOV S$成就标识 582
+GOTO @发放成就点数奖励
+
+
+;------------------------------打怪获得金币相关成就-----------------------------
+
+#IF
+CHECK [584] 0
+NOT SMALL U185 10000
+#ACT
+MOV S$成就标识 584
+GOTO @发放成就点数奖励
+
+#IF
+CHECK [585] 0
+NOT SMALL U185 30000
+#ACT
+MOV S$成就标识 585
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [586] 0
+NOT SMALL U185 100000
+#ACT
+MOV S$成就标识 586
+GOTO @发放成就点数奖励
+
+
+#IF
+CHECK [587] 0
+NOT SMALL U185 300000
+#ACT
+MOV S$成就标识 587
+GOTO @发放成就点数奖励
+
+
+
+
+
+
+
+;------------------------------成就点数达成发放奖励-----------------------------
+
+
+#IF
+CHECK [716] 0
+NOT SMALL <$STR(U1)> 150
+SMALL <$STR(U1)> 650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 716
+MOV S$成就点数 150
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [717] 0
+NOT SMALL <$STR(U1)> 650
+SMALL <$STR(U1)> 1150
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 717
+MOV S$成就点数 650
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [718] 0
+NOT SMALL <$STR(U1)> 1150
+SMALL <$STR(U1)> 1650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 718
+MOV S$成就点数 1150
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [719] 0
+NOT SMALL <$STR(U1)> 1650
+SMALL <$STR(U1)> 2150
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 719
+MOV S$成就点数 1650
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [720] 0
+NOT SMALL <$STR(U1)> 2150
+SMALL <$STR(U1)> 2650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 720
+MOV S$成就点数 2150
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [721] 0
+NOT SMALL <$STR(U1)> 2650
+SMALL <$STR(U1)> 3150
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 721
+MOV S$成就点数 2650
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [722] 0
+NOT SMALL <$STR(U1)> 3150
+SMALL <$STR(U1)> 3650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 722
+MOV S$成就点数 3150
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [723] 0
+NOT SMALL <$STR(U1)> 3650
+SMALL <$STR(U1)> 4150
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+MOV S$成就标识 723
+MOV S$成就点数 3650
+GOTO @成就点数达成发放奖励
+
+
+#IF
+CHECK [724] 0
+NOT SMALL <$STR(U1)> 4150
+SMALL <$STR(U1)> 4650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+RECYCFENGHAO 传奇霸主 1
+RECYCFENGHAO 神话传说 1
+RECYCFENGHAO 宇宙主宰 1
+MOV S$成就标识 724
+MOV S$成就点数 4150
+GOTO @成就点数达成发放奖励
+
+#IF
+CHECK [725] 0
+NOT SMALL <$STR(U1)> 4650
+SMALL <$STR(U1)> 5150
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+RECYCFENGHAO 传奇霸主 1
+RECYCFENGHAO 神话传说 1
+RECYCFENGHAO 宇宙主宰 1
+MOV S$成就标识 725
+MOV S$成就点数 4650
+GOTO @成就点数达成发放奖励
+
+#IF
+CHECK [726] 0
+NOT SMALL <$STR(U1)> 5150
+SMALL <$STR(U1)> 5650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+RECYCFENGHAO 传奇霸主 1
+RECYCFENGHAO 神话传说 1
+RECYCFENGHAO 宇宙主宰 1
+MOV S$成就标识 726
+MOV S$成就点数 5150
+GOTO @成就点数达成发放奖励
+
+#IF
+CHECK [727] 0
+NOT SMALL <$STR(U1)> 5650
+#ACT
+RECYCFENGHAO 无畏黑铁 1
+RECYCFENGHAO 倔强青铜 1
+RECYCFENGHAO 秩序白银 1
+RECYCFENGHAO 荣耀黄金 1
+RECYCFENGHAO 尊贵铂金 1
+RECYCFENGHAO 永恒钻石 1
+RECYCFENGHAO 至尊星耀 1
+RECYCFENGHAO 超凡大师 1
+RECYCFENGHAO 最强王者 1
+RECYCFENGHAO 传奇霸主 1
+RECYCFENGHAO 神话传说 1
+RECYCFENGHAO 宇宙主宰 1
+MOV S$成就标识 727
+MOV S$成就点数 5650
+GOTO @成就点数达成发放奖励
+
+
+[@发放成就点数奖励]
+#IF
+EQUAL <$STR(S$成就标识)> 
+#ACT
+BREAK
+
+#IF
+CHECK [<$STR(S$成就标识)>] 0
+#ACT
+GetStringPos ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini 成就标识=<$STR(S$成就标识)>
+MOV N$当前提取行数 <$STR(N0)>
+DEC N$当前提取行数 6
+GetListString ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(N$当前提取行数)> S$成就标题字符串
+DEC S$成就标题字符串 [
+DEC S$成就标题字符串 ]
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就奖励 N$成就奖励点数
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就名字 S$成就名字显示
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就说明 S$成就说明显示
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就变量 N$成就变量读取
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就目标 N$成就目标读取
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就标题字符串)> 成就标识 S$成就标识读取
+
+#IF
+EQUAL <$STR(S$成就标识)> <$STR(S$成就标识读取)>
+CHECK [<$STR(S$成就标识)>] 0
+NOT SMALL U<$STR(N$成就变量读取)> <$STR(N$成就目标读取)>
+#ACT
+SET [<$STR(S$成就标识)>] 1
+INC U1 <$STR(N$成就奖励点数)>
+GuildNoticeMsg 250 0 [成就系统]恭喜你完成“<$STR(S$成就名字显示)>，<$STR(S$成就说明显示)>”奖励成就点数：<$STR(N$成就奖励点数)>点 self
+GuildNoticeMsg 249 0 冒险者【<$USERNAME>】完成“<$STR(S$成就名字显示)>，<$STR(S$成就说明显示)>”奖励成就点数：<$STR(N$成就奖励点数)>点！
+BREAK
+
+
+
+
+[@成就点数达成发放奖励]
+#IF
+EQUAL <$STR(S$成就标识)> 
+#ACT
+BREAK
+
+#IF
+CHECK [<$STR(S$成就标识)>] 0
+#ACT
+ReadcacheConfigFileItem ..\QuestDiary\蛋蛋专用\成就系统\成就系统配置项.ini <$STR(S$成就点数)>点奖励 奖励 S$成就奖励物品字符串
+TextSplit : <$STR(S$成就奖励物品字符串)> s101
+MOV S$奖励物品名字 <$STR(s101)>
+MOV S$奖励物品数量 <$STR(s102)>
+#ELSEACT
+BREAK
+
+
+
+
+#IF
+CHECK [<$STR(S$成就标识)>] 0
+EQUAL S$奖励物品名字 称号
+NOT CHECKFENGHAO <$STR(S$奖励物品数量)>
+#ACT
+SET [<$STR(S$成就标识)>] 1
+GIVEFENGHAO <$STR(S$奖励物品数量)> 1 
+GuildNoticeMsg 250 0 [获得称号]恭喜你获得了称号“<$STR(S$奖励物品数量)>”！ self
+GuildNoticeMsg 249 0 {[成就]|251:249:1}：{【<$USERNAME>】|146:0:1}获得成就{“<$STR(S$奖励物品数量)>”|70:0:1}！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

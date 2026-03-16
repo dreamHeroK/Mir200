@@ -1,0 +1,39 @@
+[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 124 252 1 4 0 -90 1 412 6 1
+#SAY
+<> \   \
+<> \
+<> \ 
+<>               <攻沙快捷键-请走此条通道-进入/SCOLOR=253>\
+<>        <为了增加拿沙趣味性，特设置沙城秘道可直达皇宫/SCOLOR=254>\ 
+<> \ <> \ 
+
+<>                         <进入皇宫/@皇宫>      \
+<> \ 
+
+[@皇宫]
+#if
+ISCASTLEGUILD
+#ACT
+MESSAGEBOX 沙巴克成员禁止使用!
+break 
+
+
+
+#if
+;Checklevelex > 46
+;checkgold 20000
+hour  21
+min 30 50
+#ACT
+;take 金币 20000
+map NEW0150 
+SENDMSG 0 {ぐ〖皇宫直达〗:|250:0:0}{玩家【<$username>】|251:0}{『<直达皇宫,开始征战沙城！>』|254:0}{
+break 
+#ELSEACT
+MESSAGEBOX \　\此功能在21:30分才可以使用!
+break 
+
+

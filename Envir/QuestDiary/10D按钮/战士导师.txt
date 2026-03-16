@@ -1,0 +1,1537 @@
+﻿[@战士导师]
+{
+
+#IF
+Equal T11 
+#ACT
+Mov S$技能树按钮 <ImgEx:165:7:8:7:329:237/@领悟技能>\
+Mov N$职业树职业图片 3428
+Goto @剑皇界面
+#IF
+Equal T11 剑皇
+#ACT
+Mov S$技能树按钮 <ImgEx:130:3370:3371:3372:22:237/@领悟技能><ImgEx:130:3373:3373:3373:69:237><ImgEx:130:3373:3373:3373:119:237>\
+Mov N$职业树职业图片 3430
+Goto @剑皇界面
+#IF
+Equal T11 剑圣
+#ACT
+Mov S$技能树按钮 <ImgEx:130:3373:3373:3373:22:237><ImgEx:130:3370:3371:3372:69:237/@领悟技能><ImgEx:130:3373:3373:3373:119:237>\
+Mov N$职业树职业图片 3431
+Goto @剑圣界面
+#IF
+Equal T11 剑魔
+#ACT
+Mov S$技能树按钮 <ImgEx:130:3373:3373:3373:22:237><ImgEx:130:3373:3373:3373:69:237><ImgEx:130:3370:3371:3372:119:237/@领悟技能>\
+Mov N$职业树职业图片 3432
+Goto @剑魔界面
+#IF
+#ACT
+Mov N$剑皇技能图显1 3366
+Mov N$剑皇技能图显2 3362
+Mov N$剑皇技能图显3 3363
+Mov N$剑皇技能图显4 3364
+Mov N$剑皇技能图显5 3365
+Mov N$剑皇技能图显6 3368
+Mov N$剑皇技能图显7 3367
+Mov N$剑圣技能图显1 3377
+Mov N$剑圣技能图显2 3376
+Mov N$剑圣技能图显3 3374
+Mov N$剑圣技能图显4 3379
+Mov N$剑圣技能图显5 3375
+Mov N$剑圣技能图显6 3380
+Mov N$剑圣技能图显7 3367
+Mov N$剑魔技能图显1 3385
+Mov N$剑魔技能图显2 3381
+Mov N$剑魔技能图显3 3382
+Mov N$剑魔技能图显4 3381
+Mov N$剑魔技能图显5 3387
+Mov N$剑魔技能图显6 3386
+Mov N$剑魔技能图显7 3367
+Mov N$剑帝技能图显1 3366
+Mov N$剑帝技能图显2 3363
+Mov N$剑帝技能图显3 3377
+Mov N$剑帝技能图显4 3362
+Mov N$剑帝技能图显5 3362
+Mov N$剑帝技能图显6 3450
+Mov N$剑帝技能图显7 3367
+
+
+;剑皇
+#IF
+CHECKSKILL 攻击强化 > 2
+#ACT
+Inc N$剑皇技能图显1 40
+
+#IF
+CHECKSKILL 烈火精通 > 2
+#ACT
+Inc N$剑皇技能图显2 40
+
+#IF
+CHECKSKILL 高级剑术 > 2
+#ACT
+Inc N$剑皇技能图显3 40
+
+#IF
+CHECKSKILL 开天精通 > 2
+#ACT
+Inc N$剑皇技能图显4 40
+
+#IF
+CHECKSKILL 逐日精通 > 2
+#ACT
+Inc N$剑皇技能图显5 40
+
+#IF
+CHECKSKILL 擒龙精通 > 2
+#ACT
+Inc N$剑皇技能图显6 40
+
+#IF
+CHECKSKILL 剑皇奥义 > 2
+#ACT
+Inc N$剑皇技能图显7 40
+
+;剑圣
+#IF
+CHECKSKILL 钢筋铁骨 > 2
+#ACT
+Inc N$剑圣技能图显1 40
+
+#IF
+CHECKSKILL 快速疗伤 > 2
+#ACT
+Inc N$剑圣技能图显2 40
+
+#IF
+CHECKSKILL 反伤术 > 2
+#ACT
+Inc N$剑圣技能图显3 40
+
+#IF
+CHECKSKILL 护体精通 > 2
+#ACT
+Inc N$剑圣技能图显4 40
+
+#IF
+CHECKSKILL 狮子吼 > 2
+#ACT
+Inc N$剑圣技能图显5 40
+
+#IF
+CHECKSKILL 武力盾精通 > 2
+#ACT
+Inc N$剑圣技能图显6 40
+
+#IF
+CHECKSKILL 剑圣奥义 > 2
+#ACT
+Inc N$剑圣技能图显7 40
+
+;剑魔
+#IF
+CHECKSKILL 攻速强化 > 2
+#ACT
+Inc N$剑魔技能图显1 40
+
+#IF
+CHECKSKILL 吸血强化 > 2
+#ACT
+Inc N$剑魔技能图显2 40
+
+#IF
+CHECKSKILL 刺杀强化 > 2
+#ACT
+Inc N$剑魔技能图显3 40
+
+#IF
+CHECKSKILL 刺杀精通 > 2
+#ACT
+Inc N$剑魔技能图显4 40
+
+#IF
+CHECKSKILL 暴走 > 2
+#ACT
+Inc N$剑魔技能图显5 40
+
+#IF
+CHECKSKILL 十步精通 > 2
+#ACT
+Inc N$剑魔技能图显6 40
+
+#IF
+CHECKSKILL 剑魔奥义 > 2
+#ACT
+Inc N$剑魔技能图显7 40
+
+;剑帝
+#IF
+CHECKSKILL 均衡之力 > 2
+#ACT
+Inc N$剑帝技能图显1 40
+
+#IF
+CHECKSKILL 雷霆剑法 > 2
+#ACT
+Inc N$剑帝技能图显2 40
+
+#IF
+CHECKSKILL 疾风步 > 2
+#ACT
+Inc N$剑帝技能图显3 40
+
+#IF
+CHECKSKILL 烈火奥义 > 2
+#ACT
+Inc N$剑帝技能图显4 40
+
+#IF
+CHECKSKILL 烈火剑气 > 2
+#ACT
+Inc N$剑帝技能图显5 40
+
+#IF
+CHECKSKILL 辟地斩 > 2
+#ACT
+Dec N$剑帝技能图显6 10
+
+#IF
+CHECKSKILL 剑帝奥义 > 2
+#ACT
+Inc N$剑帝技能图显7 40
+
+#IF
+#ACT
+Goto @职业选择清空
+
+
+[@职业选择清空]
+#IF
+#ACT
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 
+
+[@剑皇界面]
+#IF
+#ACT
+OpenMerChantBigDlg 165 5 0 4 -40 -50 1 610 20
+#SAY
+<ImgEx:165:2:2:2:30:14/@剑皇界面>\
+<ImgEx:165:4:0:4:30:150/@剑圣界面>\
+<ImgEx:165:3:1:3:30:290/@剑魔界面>\
+<ImgEx:130:<$Str(N$剑皇技能图显1)>:<$Str(N$剑皇技能图显1)>:<$Str(N$剑皇技能图显1)>:277:-5|249#攻击强化^-^250#需要书页：0^-^253#剑皇将剑术发挥到极致,暴击+5%/@攻击强化>\
+<ImgEx:130:<$Str(N$剑皇技能图显2)>:<$Str(N$剑皇技能图显2)>:<$Str(N$剑皇技能图显2)>:451:-20|249#烈火精通^-^250#需要书页：50^金币*500W^-^253#剑皇曾获得火神祝融的指导,对火焰的掌控已臻至化境,烈火剑法%30几率额外释放一次/@烈火精通>\
+<ImgEx:130:<$Str(N$剑皇技能图显3)>:<$Str(N$剑皇技能图显3)>:<$Str(N$剑皇技能图显3)>:368:45|249#高级剑术^-^250#需要书页：200^金币*1000W^-^253#积年累月的刻苦修行,使得剑皇的攻击可以更加精准地命中敌人,准确+5,攻击伤害提升5/@高级剑术>\
+<ImgEx:130:<$Str(N$剑皇技能图显4)>:<$Str(N$剑皇技能图显4)>:<$Str(N$剑皇技能图显4)>:368:93|249#开天精通^-^250#需要书页：750^金币*1500W^-^253#一种古老的战技,可将全身力量幻化成一把巨剑,爆发出毁天灭地的威力,开天斩%30几率额外释放一次/@开天斩>\
+<ImgEx:130:<$Str(N$剑皇技能图显5)>:<$Str(N$剑皇技能图显5)>:<$Str(N$剑皇技能图显5)>:277:150|249#逐日精通^-^250#需要书页：1650^金币*2000W^-^253#剑气凝聚成形，瞬间化作一道光影，突装身前四格内的敌人,逐日剑法%30几率额外释放一次/@逐日剑法>\
+<ImgEx:130:<$Str(N$剑皇技能图显6)>:<$Str(N$剑皇技能图显6)>:<$Str(N$剑皇技能图显6)>:451:134|249#擒龙精通^-^250#需要书页：3600^金币*2500W^-^253#剑皇凝聚内力，把远处的敌人或怪物隔空拉到启已身边,50%麻痹其1秒(受等级限制)/@擒龙精通>\
+<ImgEx:130:<$Str(N$剑皇技能图显7)>:<$Str(N$剑皇技能图显7)>:<$Str(N$剑皇技能图显7)>:368:117|249#暂未开放>\
+<ImgEx:165:7:8:7:329:270/@领悟技能>\
+<PlayImg:130:3390:10:70:251:<$Str(N$剑皇选择1)>:0>  \
+<PlayImg:130:3390:10:70:425:<$Str(N$剑皇选择2)>:0> \
+<PlayImg:130:3390:10:70:342:<$Str(N$剑皇选择3)>:0>  \
+<PlayImg:130:3390:10:70:343:<$Str(N$剑皇选择4)>:0> \
+<PlayImg:130:3390:10:70:252:<$Str(N$剑皇选择5)>:0>  \
+<PlayImg:130:3390:10:70:-18:<$Str(N$剑皇选择7)>:0>      <PlayImg:130:3390:10:70:300:<$Str(N$剑皇选择6)>:0> \
+<&Text:转职为剑圣|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:470{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑圣>
+<&Text:转职为剑魔|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:490{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑魔>
+
+
+[@剑圣界面]
+#IF
+#ACT
+OpenMerChantBigDlg 165 5 0 4 -40 -50 1 610 20
+#SAY
+<ImgEx:165:6:2:6:30:14/@剑皇界面>\
+<ImgEx:165:0:4:0:30:150/@剑圣界面>\
+<ImgEx:165:3:1:3:30:290/@剑魔界面>\
+<ImgEx:130:<$Str(N$剑圣技能图显1)>:<$Str(N$剑圣技能图显1)>:<$Str(N$剑圣技能图显1)>:277:-5|249#钢筋铁骨^-^250#需要书页：0^-^253#剑圣汇聚丹田之力，体质得到犬幅度增强。HP+20%，双防上限+10%/@钢筋铁骨>\
+<ImgEx:130:<$Str(N$剑圣技能图显2)>:<$Str(N$剑圣技能图显2)>:<$Str(N$剑圣技能图显2)>:451:-20|249#快速疗伤^-^250#需要书页：50^金币*500W^-^253#剑圣吸取天地精华，每2秒恢复最大生命值1%的HP。/@快速疗伤>\
+<ImgEx:130:<$Str(N$剑圣技能图显3)>:<$Str(N$剑圣技能图显3)>:<$Str(N$剑圣技能图显3)>:368:45|249#反伤术^-^250#需要书页：200^金币*1000W^-^253#剑圣在受到伤害时，伤害反弹+%12。/@反伤术>\
+<ImgEx:130:<$Str(N$剑圣技能图显4)>:<$Str(N$剑圣技能图显4)>:<$Str(N$剑圣技能图显4)>:368:93|249#护体精通^-^250#需要书页：750^金币*1500W^-^253#剑圣御使真气凝结为护体精通，被攻击时有10%的概率抵挡本次伤害。/@护体精通>\
+<ImgEx:130:<$Str(N$剑圣技能图显5)>:<$Str(N$剑圣技能图显5)>:<$Str(N$剑圣技能图显5)>:277:150|249#狮子吼^-^250#需要书页：1650^金币*2000W^-^253#剑圣发出一声雷霆怒吼，震慑住周围2格内的敌人和怪物，使其2秒内动弹不得!/@狮子吼>\
+<ImgEx:130:<$Str(N$剑圣技能图显6)>:<$Str(N$剑圣技能图显6)>:<$Str(N$剑圣技能图显6)>:451:134|249#武力盾^-^250#需要书页：3600^金币*2500W^-^253#武力盾LV+1,每秒回复最大生命值1%的HP!/@武力盾精通>\
+<ImgEx:130:<$Str(N$剑圣技能图显7)>:<$Str(N$剑圣技能图显7)>:<$Str(N$剑圣技能图显7)>:368:117|249#暂未开放>\
+<ImgEx:165:7:8:7:329:270/@领悟技能>\
+<PlayImg:130:3390:10:70:251:<$Str(N$剑圣选择1)>:0>  \
+<PlayImg:130:3390:10:70:425:<$Str(N$剑圣选择2)>:0> \
+<PlayImg:130:3390:10:70:342:<$Str(N$剑圣选择3)>:0>  \
+<PlayImg:130:3390:10:70:343:<$Str(N$剑圣选择4)>:0> \
+<PlayImg:130:3390:10:70:252:<$Str(N$剑圣选择5)>:0>  \
+<PlayImg:130:3390:10:70:-18:<$Str(N$剑圣选择7)>:0>      <PlayImg:130:3390:10:70:300:<$Str(N$剑圣选择6)>:0> \
+<&Text:转职为剑皇|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:470{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑皇>
+<&Text:转职为剑魔|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:490{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑魔>
+
+[@剑魔界面]
+#IF
+#ACT
+OpenMerChantBigDlg 165 5 0 4 -40 -50 1 610 20
+#SAY
+<ImgEx:165:6:2:6:30:14/@剑皇界面>\
+<ImgEx:165:4:0:4:30:150/@剑圣界面>\
+<ImgEx:165:1:3:1:30:290/@剑魔界面>\
+<ImgEx:130:<$Str(N$剑魔技能图显1)>:<$Str(N$剑魔技能图显1)>:<$Str(N$剑魔技能图显1)>:277:-5|249#攻速强化^-^250#需要书页：0^-^253#剑魔将武器的灵活性发挥到极致，能够向敌人发起狂风骤雨般的进攻，攻速+1/@攻速强化>\
+<ImgEx:130:<$Str(N$剑魔技能图显2)>:<$Str(N$剑魔技能图显2)>:<$Str(N$剑魔技能图显2)>:451:-20|249#吸血强化^-^250#需要书页：50^金币*500W^-^253#剑魔嗜血如命，吸血+5%。/@吸血强化>\
+<ImgEx:130:<$Str(N$剑魔技能图显3)>:<$Str(N$剑魔技能图显3)>:<$Str(N$剑魔技能图显3)>:368:45|249#刺杀强化^-^250#需要书页：200^金币*1000W^-^253#刺杀剑术攻击时,对敌人造成8点切割伤害,每1点攻击速度,可提升此伤害8点/@刺杀强化>\
+<ImgEx:130:<$Str(N$剑魔技能图显4)>:<$Str(N$剑魔技能图显4)>:<$Str(N$剑魔技能图显4)>:368:93|249#刺杀精通^-^250#需要书页：750^金币*1500W^-^253#剑魔对刺杀剑术的研究已臻至化境，额外增加刺杀剑术20%伤害。/@刺杀精通>\
+<ImgEx:130:<$Str(N$剑魔技能图显5)>:<$Str(N$剑魔技能图显5)>:<$Str(N$剑魔技能图显5)>:277:150|249#暴走^-^250#需要书页：1650^金币*2000W^-^253#剑魔消耗33%的当前HP进入暴走状态，在15秒内攻速突破+2、吸血+10%、暴击+5%。/@暴走>\
+<ImgEx:130:<$Str(N$剑魔技能图显6)>:<$Str(N$剑魔技能图显6)>:<$Str(N$剑魔技能图显6)>:451:134|249#十步绝杀^-^250#需要书页：3600^金币*2500W^-^253#剑魔的终极技能，能像鬼影一般瞬移到敌人身边发动突袭%50冰冻敌人2秒(受等级限制)/@十步精通>\
+<ImgEx:130:<$Str(N$剑魔技能图显7)>:<$Str(N$剑魔技能图显7)>:<$Str(N$剑魔技能图显7)>:368:117|249#暂未开放>\
+<ImgEx:165:7:8:7:329:270/@领悟技能>\
+<PlayImg:130:3390:10:70:251:<$Str(N$剑魔选择1)>:0>  \
+<PlayImg:130:3390:10:70:425:<$Str(N$剑魔选择2)>:0> \
+<PlayImg:130:3390:10:70:342:<$Str(N$剑魔选择3)>:0>  \
+<PlayImg:130:3390:10:70:343:<$Str(N$剑魔选择4)>:0> \
+<PlayImg:130:3390:10:70:252:<$Str(N$剑魔选择5)>:0>  \
+<PlayImg:130:3390:10:70:-18:<$Str(N$剑魔选择7)>:0>      <PlayImg:130:3390:10:70:300:<$Str(N$剑魔选择6)>:0> \
+<&Text:转职为剑皇|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:470{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑皇>
+<&Text:转职为剑圣|250#转职以后删除所有技能，必须重新学习^249#转职需要500元宝^249#转职会删除所有技能，慎重!:230:490{FCOLOR=251;FSIZE=12;FNAME=楷体}/@转职为剑圣>
+
+[@转职为剑皇]
+#IF
+CHECKGAMEGOLD < 500
+#ACT
+MESSAGEBOX 　　　元宝不足，无法转职！
+BREAK
+#IF
+Equal T11 
+#ACT
+MESSAGEBOX 　　　你都还未选择，无需转职！
+BREAK
+#IF
+Equal T11 剑皇
+#ACT
+MESSAGEBOX 　　　你已经是剑皇，无法转职！
+BREAK
+
+#IF
+#ACT
+Mov T11 剑皇
+DELSKILL 攻击强化
+DELSKILL 烈火精通
+DELSKILL 高级剑术
+DELSKILL 开天精通
+DELSKILL 逐日精通
+DELSKILL 剑皇奥义
+DELSKILL 擒龙精通
+DELSKILL 钢筋铁骨
+DELSKILL 快速疗伤
+DELSKILL 反伤术
+DELSKILL 护体精通
+DELSKILL 狮子吼
+DELSKILL 武力盾
+DELSKILL 攻速强化
+DELSKILL 吸血强化
+DELSKILL 刺杀强化
+DELSKILL 刺杀精通
+DELSKILL 暴走
+DELSKILL 十步精通
+ADDSKILL 攻击强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你转职剑皇，学会了(攻击强化)
+Goto @main
+Goto @职业选择清空
+Break
+
+[@转职为剑圣]
+#IF
+CHECKGAMEGOLD < 500
+#ACT
+MESSAGEBOX 　　　元宝不足，无法转职！
+BREAK
+#IF
+Equal T11 
+#ACT
+MESSAGEBOX 　　　你都还未选择，无需转职！
+BREAK
+#IF
+Equal T11 剑圣
+#ACT
+MESSAGEBOX 　　　你已经是剑圣，无法转职！
+BREAK
+
+#IF
+#ACT
+Mov T11 剑圣
+DELSKILL 攻击强化
+DELSKILL 烈火精通
+DELSKILL 高级剑术
+DELSKILL 开天精通
+DELSKILL 逐日精通
+DELSKILL 剑皇奥义
+DELSKILL 擒龙精通
+DELSKILL 钢筋铁骨
+DELSKILL 快速疗伤
+DELSKILL 反伤术
+DELSKILL 护体精通
+DELSKILL 狮子吼
+DELSKILL 武力盾
+DELSKILL 攻速强化
+DELSKILL 吸血强化
+DELSKILL 刺杀强化
+DELSKILL 刺杀精通
+DELSKILL 暴走
+DELSKILL 十步精通
+ADDSKILL 钢筋铁骨 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你转职剑圣，学会了(钢筋铁骨)
+Goto @main
+Goto @职业选择清空
+Break
+
+[@转职为剑魔]
+#IF
+CHECKGAMEGOLD < 500
+#ACT
+MESSAGEBOX 　　　元宝不足，无法转职！
+BREAK
+#IF
+Equal T11 
+#ACT
+MESSAGEBOX 　　　你都还未选择，无需转职！
+BREAK
+#IF
+Equal T11 剑魔
+#ACT
+MESSAGEBOX 　　　你已经是剑魔，无法转职！
+BREAK
+
+#IF
+#ACT
+Mov T11 剑魔
+DELSKILL 攻击强化
+DELSKILL 烈火精通
+DELSKILL 高级剑术
+DELSKILL 开天精通
+DELSKILL 逐日精通
+DELSKILL 剑皇奥义
+DELSKILL 擒龙精通
+DELSKILL 钢筋铁骨
+DELSKILL 快速疗伤
+DELSKILL 反伤术
+DELSKILL 护体精通
+DELSKILL 狮子吼
+DELSKILL 武力盾
+DELSKILL 攻速强化
+DELSKILL 吸血强化
+DELSKILL 刺杀强化
+DELSKILL 刺杀精通
+DELSKILL 暴走
+DELSKILL 十步精通
+ADDSKILL 攻速强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你转职剑魔，学会了(攻速强化)
+Goto @main
+Goto @职业选择清空
+Break
+
+[@领悟技能]
+
+#IF
+#ACT
+GetMagicInfo 攻击强化 0 N$技能攻击强化
+GetMagicInfo 烈火精通 0 N$技能烈火精通
+GetMagicInfo 高级剑术 0 N$技能高级剑术
+GetMagicInfo 开天精通 0 N$技能开天精通
+GetMagicInfo 逐日精通 0 N$技能逐日精通
+GetMagicInfo 擒龙精通 0 N$技能擒龙精通
+GetMagicInfo 剑皇奥义 0 N$技能剑皇奥义
+
+GetMagicInfo 钢筋铁骨 0 N$技能钢筋铁骨
+GetMagicInfo 快速疗伤 0 N$技能快速疗伤
+GetMagicInfo 反伤术 0 N$技能反伤术
+GetMagicInfo 护体精通 0 N$技能护体精通
+GetMagicInfo 狮子吼 0 N$技能狮子吼
+GetMagicInfo 武力盾 0 N$技能武力盾
+GetMagicInfo 武力盾精通 0 N$技能武力盾精通
+GetMagicInfo 剑圣奥义 0 N$技能剑圣奥义
+
+GetMagicInfo 攻速强化 0 N$技能攻速强化
+GetMagicInfo 吸血强化 0 N$技能吸血强化
+GetMagicInfo 刺杀强化 0 N$技能刺杀强化
+GetMagicInfo 刺杀精通 0 N$技能刺杀精通
+GetMagicInfo 暴走 0 N$技能暴走
+GetMagicInfo 十步一杀 0 N$技能十步一杀
+GetMagicInfo 十步精通 0 N$技能十步精通
+GetMagicInfo 剑魔奥义 0 N$技能剑魔奥义
+
+GetMagicInfo 均衡之力 0 N$技能均衡之力
+GetMagicInfo 雷霆剑法 0 N$技能雷霆剑法
+GetMagicInfo 疾风步 0 N$技能疾风步
+GetMagicInfo 烈火奥义 0 N$技能烈火奥义
+GetMagicInfo 烈火剑气 0 N$技能烈火剑气
+GetMagicInfo 辟地斩 0 N$技能辟地斩
+GetMagicInfo 剑帝奥义 0 N$技能剑帝奥义
+
+#IF
+CHECKSKILL <$Str(S$选择技能)> > 2
+#ACT
+Messagebox 系统提示：你已经学习了这个技能了！
+Break
+
+#IF
+Equal S$选择技能 攻击强化
+Not Equal T11 
+#ACT
+Messagebox 系统提示：你已经拥有了基础技能！
+Break
+
+#IF
+Equal T11 
+Equal S$选择技能 攻击强化
+#ACT
+Mov T11 剑皇
+ADDSKILL 攻击强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(攻击强化)
+Goto @main
+Break
+
+#IF
+Equal S$选择技能 钢筋铁骨
+Not Equal T11 
+#ACT
+Messagebox 系统提示：你已经拥有了基础技能！
+Break
+
+#IF
+Equal T11 
+Equal S$选择技能 钢筋铁骨
+#ACT
+Mov T11 剑圣
+ADDSKILL 钢筋铁骨 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(钢筋铁骨)
+Goto @main
+Break
+
+#IF
+Equal S$选择技能 攻速强化
+Not Equal T11 
+#ACT
+Messagebox 系统提示：你已经拥有了基础技能！
+Break
+
+#IF
+Equal T11 
+Equal S$选择技能 攻速强化
+#ACT
+Mov T11 剑魔
+ADDSKILL 攻速强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(攻速强化)
+Goto @main
+Break
+
+
+
+;---------------------------------------------------------二技能
+
+#IF
+not CheckGold  <$Str(N$需要金币)>
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足<$Str(N$需要金币)>！
+BREAK
+
+#IF
+CheckItem 书页 <$Str(N$需要书页)>
+#ELSEACT
+Messagebox 系统提示：你没有<$Str(N$需要书页)>张书页！
+Break
+
+
+
+
+
+#IF
+Small N$技能攻击强化 3
+Equal S$选择技能 烈火精通
+#ACT
+Messagebox 系统提示：请先学习(攻击强化)技能后在来！
+Break
+
+#IF
+Large N$技能攻击强化 2
+Equal S$选择技能 烈火精通
+#ACT
+Take 书页 50
+Take 金币 <$Str(N$需要金币)>
+Inc U140 50
+ADDSKILL 烈火精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(烈火精通)
+Goto @main
+Break
+
+#IF
+Small N$技能烈火精通 3
+Equal S$选择技能 高级剑术
+#ACT
+Messagebox 系统提示：请先学习(烈火精通)技能后在来！
+Break
+
+#IF
+Large N$技能烈火精通 2
+Equal S$选择技能 高级剑术
+#ACT
+Take 书页 200
+Take 金币 <$Str(N$需要金币)>
+Inc U140 200
+ADDSKILL 高级剑术 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(高级剑术)
+Goto @main
+Break
+
+#IF
+Small N$技能高级剑术 3
+Equal S$选择技能 开天精通
+#ACT
+Messagebox 系统提示：请先学习(高级剑术)技能后在来！
+Break
+
+#IF
+Large N$技能高级剑术 2
+Equal S$选择技能 开天精通
+#ACT
+Take 书页 750
+Take 金币 <$Str(N$需要金币)>
+Inc U140 750
+ADDSKILL 开天精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(开天精通)
+Goto @main
+Break
+
+#IF
+Small N$技能开天精通 3
+Equal S$选择技能 逐日精通
+#ACT
+Messagebox 系统提示：请先学习(开天精通)技能后在来！
+Break
+
+#IF
+Large N$技能开天精通 2
+Equal S$选择技能 逐日精通
+#ACT
+Take 书页 1650
+Take 金币 <$Str(N$需要金币)>
+Inc U140 1650
+ADDSKILL 逐日精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(逐日精通)
+Goto @main
+Break
+
+
+
+
+#IF
+Small N$技能逐日精通 3
+Equal S$选择技能 擒龙精通
+#ACT
+Messagebox 系统提示：请先学习(逐日精通)技能后在来！
+Break
+
+#IF
+Large N$技能逐日精通 2
+Equal S$选择技能 擒龙精通
+#ACT
+Take 书页 3600
+Take 金币 <$Str(N$需要金币)>
+Inc U140 3600
+ADDSKILL 擒龙精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(擒龙精通)
+Goto @main
+Break
+
+#IF
+Small N$技能擒龙精通 3
+Equal S$选择技能 剑皇奥义
+#ACT
+Messagebox 系统提示：请先学习(擒龙精通)技能后在来！
+Break
+
+#IF
+Large N$技能擒龙精通 2
+Equal S$选择技能 剑皇奥义
+#ACT
+Take 书页 5
+Inc U140 5
+ADDSKILL 剑皇奥义 3
+Set [40] 1
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(剑皇奥义)
+Goto @main
+Break
+
+#IF
+Small N$技能钢筋铁骨 3
+Equal S$选择技能 快速疗伤
+#ACT
+Messagebox 系统提示：请先学习(钢筋铁骨)技能后在来！
+Break
+
+#IF
+Large N$技能钢筋铁骨 2
+Equal S$选择技能 快速疗伤
+#ACT
+Take 书页 50
+Take 金币 <$Str(N$需要金币)>
+Inc U140 50
+ADDSKILL 快速疗伤 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(快速疗伤)
+Goto @main
+Break
+
+#IF
+Small N$技能快速疗伤 3
+Equal S$选择技能 反伤术
+#ACT
+Messagebox 系统提示：请先学习(快速疗伤)技能后在来！
+Break
+
+#IF
+Large N$技能快速疗伤 2
+Equal S$选择技能 反伤术
+#ACT
+Take 书页 200
+Take 金币 <$Str(N$需要金币)>
+Inc U140 200
+ADDSKILL 反伤术 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(反伤术)
+Goto @main
+Break
+
+#IF
+Small N$技能反伤术 3
+Equal S$选择技能 护体精通
+#ACT
+Messagebox 系统提示：请先学习(反伤术)技能后在来！
+Break
+
+#IF
+Large N$技能反伤术 2
+Equal S$选择技能 护体精通
+#ACT
+Take 书页 750
+Take 金币 <$Str(N$需要金币)>
+Inc U140 750
+ADDSKILL 护体精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(护体精通)
+Goto @main
+Break
+
+#IF
+Small N$技能护体精通 3
+Equal S$选择技能 狮子吼
+#ACT
+Messagebox 系统提示：请先学习(护体精通)技能后在来！
+Break
+
+#IF
+Large N$技能护体精通 2
+Equal S$选择技能 狮子吼
+#ACT
+Take 书页 1650
+Take 金币 <$Str(N$需要金币)>
+Inc U140 1650
+ADDSKILL 狮子吼 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(狮子吼)
+Goto @main
+Break
+
+#IF
+Small N$技能狮子吼 3
+Equal S$选择技能 武力盾精通
+#ACT
+Messagebox 系统提示：请先学习(狮子吼)技能后在来！
+Break
+
+#IF
+Equal N$技能狮子吼 3
+Equal S$选择技能 武力盾精通
+Small N$技能武力盾 3
+#ACT
+Messagebox 系统提示：请先学习(武力盾)技能后在来[等级3级]！
+Break
+
+#IF
+Large N$技能狮子吼 2
+Equal S$选择技能 武力盾精通
+#ACT
+Take 书页 3600
+Take 金币 <$Str(N$需要金币)>
+Inc U140 3600
+ADDSKILL 武力盾精通 3
+  SKILLLEVEL 武力盾 = 4
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(武力盾精通)
+Goto @main
+Break
+
+#IF
+Small N$技能武力盾精通 3
+Equal S$选择技能 剑圣奥义
+#ACT
+Messagebox 系统提示：请先学习(武力盾精通)技能后在来！
+Break
+
+#IF
+Large N$技能武力盾精通 2
+Equal S$选择技能 剑圣奥义
+#ACT
+Take 书页 5
+Inc U140 5
+ADDSKILL 剑圣奥义 3
+Set [40] 1
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(剑圣奥义)
+Goto @main
+Break
+
+#IF
+Small N$技能攻速强化 3
+Equal S$选择技能 吸血强化
+#ACT
+Messagebox 系统提示：请先学习(攻速强化)技能后在来！
+Break
+
+#IF
+Large N$技能攻速强化 2
+Equal S$选择技能 吸血强化
+#ACT
+Take 书页 50
+Take 金币 <$Str(N$需要金币)>
+Inc U140 50
+ADDSKILL 吸血强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(吸血强化)
+Goto @main
+Break
+
+#IF
+Small N$技能吸血强化 3
+Equal S$选择技能 刺杀强化
+#ACT
+Messagebox 系统提示：请先学习(吸血强化)技能后在来！
+Break
+
+#IF
+Large N$技能吸血强化 2
+Equal S$选择技能 刺杀强化
+#ACT
+Take 书页 200
+Take 金币 <$Str(N$需要金币)>
+Inc U140 200
+ADDSKILL 刺杀强化 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(刺杀强化)
+Goto @main
+Break
+
+#IF
+Small N$技能刺杀强化 3
+Equal S$选择技能 刺杀精通
+#ACT
+Messagebox 系统提示：请先学习(刺杀强化)技能后在来！
+Break
+
+#IF
+Large N$技能刺杀强化 2
+Equal S$选择技能 刺杀精通
+#ACT
+Take 书页 750
+Take 金币 <$Str(N$需要金币)>
+Inc U140 750
+ADDSKILL 刺杀精通 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(刺杀精通)
+Goto @main
+Break
+
+#IF
+Small N$技能刺杀精通 3
+Equal S$选择技能 暴走
+#ACT
+Messagebox 系统提示：请先学习(刺杀精通)技能后在来！
+Break
+
+#IF
+Large N$技能刺杀精通 2
+Equal S$选择技能 暴走
+#ACT
+Take 书页 1650
+Take 金币 <$Str(N$需要金币)>
+Inc U140 1650
+ADDSKILL 暴走 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(暴走)
+Goto @main
+Break
+
+#IF
+Small N$技能暴走 3
+Equal S$选择技能 十步精通
+#ACT
+Messagebox 系统提示：请先学习(暴走)技能后在来！
+Break
+
+#IF
+Equal N$技能暴走 3
+Equal S$选择技能 十步精通
+Small N$技能十步一杀 3
+#ACT
+Messagebox 系统提示：请先学习(十步一杀)技能后在来[等级3级]！
+Break
+
+
+#IF
+Large N$技能暴走 2
+Equal S$选择技能 十步精通
+#ACT
+Take 书页 3600
+Take 金币 <$Str(N$需要金币)>
+Inc U140 3600
+ADDSKILL 十步精通 3
+ConvertSkill 十步一杀 十步绝杀
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(十步精通)
+Goto @main
+Break
+
+#IF
+Small N$技能十步精通 3
+Equal S$选择技能 剑魔奥义
+#ACT
+Messagebox 系统提示：请先学习(十步精通)技能后在来！
+Break
+
+#IF
+Large N$技能十步精通 2
+Equal S$选择技能 剑魔奥义
+#ACT
+Take 书页 5
+Inc U140 5
+ADDSKILL 剑魔奥义 3
+Set [40] 1
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(剑魔奥义)
+Goto @main
+Break
+
+#IF
+Small N$技能均衡之力 3
+Equal S$选择技能 雷霆剑法
+#ACT
+Messagebox 系统提示：请先学习(均衡之力)技能后在来！
+Break
+
+#IF
+Large N$技能均衡之力 2
+Equal S$选择技能 雷霆剑法
+#ACT
+Take 书页 50
+Inc U140 50
+ADDSKILL 雷霆剑法 3
+Messagebox 系统提示：恭喜你，学会了(雷霆剑法)
+Goto @main
+Break
+
+#IF
+Small N$技能雷霆剑法 3
+Equal S$选择技能 疾风步
+#ACT
+Messagebox 系统提示：请先学习(雷霆剑法)技能后在来！
+Break
+
+#IF
+Large N$技能雷霆剑法 2
+Equal S$选择技能 疾风步
+#ACT
+Take 书页 200
+Inc U140 200
+ADDSKILL 疾风步 3
+Messagebox 系统提示：恭喜你，学会了(疾风步)
+Goto @main
+Break
+
+#IF
+Small N$技能疾风步 3
+Equal S$选择技能 烈火奥义
+#ACT
+Messagebox 系统提示：请先学习(疾风步)技能后在来！
+Break
+
+#IF
+Large N$技能疾风步 2
+Equal S$选择技能 烈火奥义
+#ACT
+Take 书页 750
+Inc U140 750
+ADDSKILL 烈火奥义 3
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(烈火奥义)
+Goto @main
+Break
+
+#IF
+Small N$技能烈火奥义 3
+Equal S$选择技能 烈火剑气
+#ACT
+Messagebox 系统提示：请先学习(烈火奥义)技能后在来！
+Break
+
+#IF
+Large N$技能烈火奥义 2
+Equal S$选择技能 烈火剑气
+#ACT
+Take 书页 1650
+Inc U140 1650
+ADDSKILL 烈火剑气 3
+Messagebox 系统提示：恭喜你，学会了(烈火剑气)
+Goto @main
+Break
+
+#IF
+Small N$技能烈火剑气 3
+Equal S$选择技能 辟地斩
+#ACT
+Messagebox 系统提示：请先学习(烈火剑气)技能后在来！
+Break
+
+#IF
+Large N$技能烈火剑气 2
+Equal S$选择技能 辟地斩
+#ACT
+Take 书页 3600
+Inc U140 3600
+ADDSKILL 辟地斩 3
+Messagebox 系统提示：恭喜你，学会了(辟地斩)
+Goto @main
+Break
+
+#IF
+Small N$技能辟地斩 3
+Equal S$选择技能 剑帝奥义
+#ACT
+Messagebox 系统提示：请先学习(辟地斩)技能后在来！
+Break
+
+#IF
+Large N$技能辟地斩 2
+Equal S$选择技能 剑帝奥义
+#ACT
+Take 书页 5
+Inc U140 5
+ADDSKILL 剑帝奥义 3
+Set [40] 1
+#CALL [10属性重置\职业加成.txt] @职业加成
+#CALL [10属性重置\属性重置.TXT] @属性重置
+Messagebox 系统提示：恭喜你，学会了(剑帝奥义)
+Goto @main
+Break
+
+
+[@攻击强化]
+#IF
+#ACT
+Mov N$需要书页 0
+Goto @职业选择清空
+Mov N$剑皇选择1 -159
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 攻击强化
+Goto @剑皇界面
+
+[@烈火精通]
+#IF
+#ACT
+Mov N$需要金币 5000000
+Mov N$需要书页 50
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -173
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 烈火精通
+Goto @剑皇界面
+
+[@高级剑术]
+#IF
+#ACT
+Mov N$需要金币 10000000
+Mov N$需要书页 200
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -108
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 高级剑术
+Goto @剑皇界面
+
+[@开天斩]
+#IF
+#ACT
+Mov N$需要金币 15000000
+Mov N$需要书页 750
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -61
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 开天精通
+Goto @剑皇界面
+
+[@逐日剑法]
+#IF
+#ACT
+Mov N$需要金币 20000000
+Mov N$需要书页 1650
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -2
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 逐日精通
+Goto @剑皇界面
+
+[@擒龙精通]
+#IF
+#ACT
+Mov N$需要金币 25000000
+Mov N$需要书页 3600
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -18
+Mov N$剑皇选择7 -3000
+Mov S$选择技能 擒龙精通
+Goto @剑皇界面
+
+[@剑皇奥义]
+#IF
+#ACT
+Mov N$需要书页 5
+Goto @职业选择清空
+Mov N$剑皇选择1 -3000
+Mov N$剑皇选择2 -3000
+Mov N$剑皇选择3 -3000
+Mov N$剑皇选择4 -3000
+Mov N$剑皇选择5 -3000
+Mov N$剑皇选择6 -3000
+Mov N$剑皇选择7 58
+Mov S$选择技能 剑皇奥义
+Goto @职业选择主界面
+
+[@钢筋铁骨]
+#IF
+#ACT
+Mov N$需要书页 0
+Goto @职业选择清空
+Mov N$剑圣选择1 -159
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 钢筋铁骨
+Goto @剑圣界面
+
+[@快速疗伤]
+#IF
+#ACT
+Mov N$需要金币 5000000
+Mov N$需要书页 50
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -173
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 快速疗伤
+Goto @剑圣界面
+
+[@反伤术]
+#IF
+#ACT
+Mov N$需要金币 10000000
+Mov N$需要书页 200
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -108
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 反伤术
+Goto @剑圣界面
+
+[@护体精通]
+#IF
+#ACT
+Mov N$需要金币 15000000
+Mov N$需要书页 750
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -61
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 护体精通
+Goto @剑圣界面
+
+[@狮子吼]
+#IF
+#ACT
+Mov N$需要金币 20000000
+Mov N$需要书页 1650
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -2
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 狮子吼
+Goto @剑圣界面
+
+[@武力盾精通]
+#IF
+#ACT
+Mov N$需要金币 25000000
+Mov N$需要书页 3600
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -18
+Mov N$剑圣选择7 -3000
+Mov S$选择技能 武力盾精通
+Goto @剑圣界面
+
+[@剑圣奥义]
+#IF
+#ACT
+Mov N$需要书页 5
+Goto @职业选择清空
+Mov N$剑圣选择1 -3000
+Mov N$剑圣选择2 -3000
+Mov N$剑圣选择3 -3000
+Mov N$剑圣选择4 -3000
+Mov N$剑圣选择5 -3000
+Mov N$剑圣选择6 -3000
+Mov N$剑圣选择7 58
+Mov S$选择技能 剑圣奥义
+Goto @职业选择主界面
+
+[@攻速强化]
+#IF
+#ACT
+Mov N$需要书页 0
+Goto @职业选择清空
+Mov N$剑魔选择1 -159
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 攻速强化
+Goto @剑魔界面
+
+[@吸血强化]
+#IF
+#ACT
+Mov N$需要金币 5000000
+Mov N$需要书页 50
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -173
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 吸血强化
+Goto @剑魔界面
+
+[@刺杀强化]
+#IF
+#ACT
+Mov N$需要金币 10000000
+Mov N$需要书页 200
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -108
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 刺杀强化
+Goto @剑魔界面
+
+[@刺杀精通]
+#IF
+#ACT
+Mov N$需要金币 15000000
+Mov N$需要书页 750
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -61
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 刺杀精通
+Goto @剑魔界面
+
+[@暴走]
+#IF
+#ACT
+Mov N$需要金币 20000000
+Mov N$需要书页 1650
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -2
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 暴走
+Goto @剑魔界面
+
+[@十步精通]
+#IF
+#ACT
+Mov N$需要金币 25000000
+Mov N$需要书页 3600
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -18
+Mov N$剑魔选择7 -3000
+Mov S$选择技能 十步精通
+Goto @剑魔界面
+
+[@剑魔奥义]
+#IF
+#ACT
+Mov N$需要书页 5
+Goto @职业选择清空
+Mov N$剑魔选择1 -3000
+Mov N$剑魔选择2 -3000
+Mov N$剑魔选择3 -3000
+Mov N$剑魔选择4 -3000
+Mov N$剑魔选择5 -3000
+Mov N$剑魔选择6 -3000
+Mov N$剑魔选择7 -18
+Mov S$选择技能 剑魔奥义
+Goto @职业选择主界面
+
+[@均衡之力]
+#IF
+#ACT
+Mov N$需要书页 0
+Goto @职业选择清空
+Mov N$剑帝选择1 -73
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 均衡之力
+Goto @职业选择主界面
+
+[@雷霆剑法]
+#IF
+#ACT
+Mov N$需要金币 5000000
+Mov N$需要书页 50
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -41
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 雷霆剑法
+Goto @职业选择主界面
+
+[@疾风步]
+#IF
+#ACT
+Mov N$需要书页 200
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -11
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 疾风步
+Goto @职业选择主界面
+
+[@烈火奥义]
+#IF
+#ACT
+Mov N$需要书页 750
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 24
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 烈火奥义
+Goto @职业选择主界面
+
+[@烈火剑气]
+#IF
+#ACT
+Mov N$需要书页 1650
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 56
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 烈火剑气
+Goto @职业选择主界面
+
+[@辟地斩]
+#IF
+#ACT
+Mov N$需要书页 3600
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 56
+Mov N$剑帝选择7 -3000
+Mov S$选择技能 辟地斩
+Goto @职业选择主界面
+
+[@剑帝奥义]
+#IF
+#ACT
+Mov N$需要书页 5
+Goto @职业选择清空
+Mov N$剑帝选择1 -3000
+Mov N$剑帝选择2 -3000
+Mov N$剑帝选择3 -3000
+Mov N$剑帝选择4 -3000
+Mov N$剑帝选择5 -3000
+Mov N$剑帝选择6 -3000
+Mov N$剑帝选择7 40
+Mov S$选择技能 剑帝奥义
+Goto @职业选择主界面
+
+
+
+
+
+
+
+
+}

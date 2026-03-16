@@ -1,0 +1,50 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 346 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:67:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入叛军基地>
+<>\ \
+<ItemShow:555:0:147:136:1>
+<ItemShow:556:0:164:136:1>
+<ItemShow:557:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+[@进入叛军基地]
+
+#IF
+CHECKLEVELEX > 64
+#ACT
+#ELSEACT
+messagebox 等级不足65级
+BREAK
+
+#IF
+checkgold 250000
+#ACT
+take 金币 250000
+inc J130 250000
+MAPMOVE panjun1 170 189
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[叛军基地]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要250000金币
+BREAK

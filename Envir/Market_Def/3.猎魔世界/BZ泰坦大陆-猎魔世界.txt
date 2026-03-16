@@ -1,0 +1,9 @@
+[@main]
+#IF
+LARGE U51 9
+#ACT
+map 泰坦大陆
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{进入|116:39:0}{支线主城泰坦大陆|251:39:0}{!|116:39:0}
+break
+#elseact
+messagebox 进入条件需要称号达到【护卫骑士】级别。

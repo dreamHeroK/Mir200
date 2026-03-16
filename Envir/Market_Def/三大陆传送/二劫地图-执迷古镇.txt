@@ -1,0 +1,48 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 403 1 4 0 0 1 535 4 1
+#say
+<> \
+<ItemShow:773:0:148:285:1> <ItemShow:774:0:158:285:1> <ItemShow:775:0:170:285:1> <ItemShow:779:0:180:285:1> <ItemShow:772:0:190:285:1> <ItemShow:783:0:203:285:1>\
+<> \
+<ImgEx:165:338:339:338:310:206/@进入逆天改命二阶>
+
+[@进入逆天改命二阶]
+
+
+#IF
+not CheckGold  2000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足200W！
+BREAK
+
+
+#IF
+not checkitem 天赋神石 100
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　天赋神石不足100个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命二阶
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命二阶!!!
+break
+
+
+#IF
+checkgold 2000000
+#ACT
+take 金币 2000000
+take 天赋神石 100
+inc J130 2000000
+MAPMOVE 二劫地图 184 214
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[二劫地图]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要2000000金币
+BREAK

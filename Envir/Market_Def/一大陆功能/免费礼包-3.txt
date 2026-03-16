@@ -1,0 +1,132 @@
+[@MAIN]
+
+#IF
+#ACT
+#SAY
+<> \ \
+<Text:治愈石①:50:-50{FCOLOR=250}> <Text:火龙勋章[绑定]:150:-50{FCOLOR=250}>\
+<Text:木制盾牌:50:-40{FCOLOR=242}> <Text:开天斩:150:-40{FCOLOR=242}> \
+<Text:木制斗笠:50:-30{FCOLOR=254}> <Text:逐日剑法:150:-30{FCOLOR=254}> \
+<Text:复活戒指:50:-20{FCOLOR=251}> <Text:施毒术:150:-20{FCOLOR=251}> \
+<Text:爆率+10%:50:-10{FCOLOR=245}> <Text:爆率+10%:150:-10{FCOLOR=245}> \
+<> \
+<><Text:礼包码：888888:30:10{FCOLOR=249}> <Text:礼包码：888888:110:10{FCOLOR=249}>\
+<ImgEx:113:239:240:241:40:20|250#治愈石①^250#木制盾牌^250#木制斗笠^250#复活戒指*1^250#爆率+10%/@@InPutString100>
+<ImgEx:113:239:240:241:140:20|250#火龙勋章[绑定]^250#开天斩^250#逐日剑法^250#施毒术^250#爆率+10%/@@InPutString101>\
+
+
+
+
+
+[@InPutString100]
+#if
+CHECKFENGHAO QQ群礼包
+#ACT
+MessageBox 　\　\　　　已经领取过QQ群礼包!!!
+break
+
+#if
+not CHECKBAGSIZE  5
+#ACT
+CLOSEMERCHANTBIGDLG
+MessageBox 　\　\　　　背包空格不足5个,无法领取！!
+break
+
+#if
+NOT CHECKFENGHAO QQ群礼包
+EQUAL S100 888888
+#ACT
+GiveFengHao QQ群礼包
+Give 治愈石① 
+GiveStateItem 木制盾牌 1 1 1 0 1 1 1
+GiveStateItem 木制斗笠 1 1 1 0 1 1 1
+GiveStateItem 复活戒指 1 1 1 0 1 1 1 1
+#CALL [\10属性重置\属性重置.txt] @属性重置
+SendCenterMsg 224 0 QQ礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!. 1 10
+#elseact
+MESSAGEBOX [提示]：对不起，激活码错误\\[提示]：或者你已经领取过QQ礼包！
+
+
+[@InPutString101]
+#if
+CHECKFENGHAO 公众号礼包
+#ACT
+MessageBox 　\　\　　　已经领取过公众号礼包!!!
+break
+
+
+#if
+not CHECKBAGSIZE  5
+#ACT
+CLOSEMERCHANTBIGDLG
+MessageBox 　\　\　　　背包空格不足5个,无法领取！!
+break
+
+#if
+NOT CHECKFENGHAO 公众号礼包
+EQUAL S101 888888
+#ACT
+GiveFengHao 公众号礼包
+GiveStateItem 火龙勋章 1 1 1 0 1 1 1
+GiveStateItem 开天斩 0 1 1 0 1 1 1 
+GiveStateItem 逐日剑法 0 1 1 0 1 1 1 
+GiveStateItem 施毒术 0 1 1 0 1 1 1 
+ADDSKILL 召唤骷髅 3
+ADDSKILL 心灵召唤 3
+#CALL [\10属性重置\属性重置.txt] @属性重置
+SendCenterMsg 224 0 公众号礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!. 1 10
+#elseact
+MESSAGEBOX [提示]：对不起，激活码错误\\[提示]：或者你已经领取过公众号礼包！
+
+
+[@给武兽]
+#IF
+#ACT
+CLOSEMERCHANTBIGDLG
+GiveOnItem boxitem6 初级武兽 1
+LockUpdateItem boxitem6
+SetCustomItemProgressbar boxitem6 0 0 1
+SetCustomItemProgressbar boxitem6 0 1 
+SetCustomItemProgressbar boxitem6 0 2 255
+SETCUSTOMITEMPROGRESSBARVALUE boxitem6 0 3 = 350
+
+
+GetDBItemFieldValue 初级武兽 price <$STR(N$一号血初值)>
+GetDBItemFieldValue 初级武兽 stock <$STR(N$一号攻初值)>
+GetDBItemFieldValue 初级武兽 expand2 <$STR(N$一号防初值)>
+GetDBItemFieldValue 初级武兽 expand3 <$STR(N$一号速初值)>
+
+
+SetCustomItemAbil boxitem6 0 0 250
+SetCustomItemAbil boxitem6 0 1 8
+SetCustomItemAbil boxitem6 0 2 0
+SetCustomItemAbil boxitem6 0 3 0
+SetCustomItemValue boxitem6 0 = <$STR(N$一号血初值)>
+SetCustomItemAbil boxitem6 1 0 250
+SetCustomItemAbil boxitem6 1 1 9
+SetCustomItemAbil boxitem6 1 2 1
+SetCustomItemAbil boxitem6 1 3 0
+SetCustomItemValue boxitem6 1 = <$STR(N$一号攻初值)>
+SetCustomItemAbil boxitem6 2 0 250
+SetCustomItemAbil boxitem6 2 1 10
+SetCustomItemAbil boxitem6 2 2 2
+SetCustomItemAbil boxitem6 2 3 0
+SetCustomItemValue boxitem6 2 = <$STR(N$一号防初值)>
+SetCustomItemAbil boxitem6 3 0 250
+SetCustomItemAbil boxitem6 3 1 11
+SetCustomItemAbil boxitem6 3 2 3
+SetCustomItemAbil boxitem6 3 3 0
+SetCustomItemValue boxitem6 3 = <$STR(N$一号速初值)>
+SetCustomItemAbil boxitem6 4 0 250
+UpdateItem boxitem6
+clearLinkItem
+SetItemState boxitem6 1
+SetItemState boxitem6 0 1
+SetItemState boxitem6 1 1
+SetItemState boxitem6 4 1
+SetItemState boxitem6 5 1
+ReturnBoxItem 6
+break
+
+
+

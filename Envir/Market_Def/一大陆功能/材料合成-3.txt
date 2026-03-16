@@ -1,0 +1,268 @@
+[@MAIN]
+
+#if
+#act
+OPENMERCHANTBIGDLG 113 701 1 4 0 -90 1 451 6 1
+goto @材料商人_1
+
+[@材料商人_1]
+<ItemShow:1330:1:65:12:1>
+<ItemShow:1604:1:105:12:1>
+<ItemShow:1605:1:145:12:1>
+<ItemShow:1336:1:185:12:1>\
+
+
+<&ImgEx:113:590:591:590:83:116|246#合成说明：^246#金币*10W^222#BOSS精华*10/@材料商人_金币1>
+<&ImgEx:113:592:593:592:83:156|246#合成说明：^246#元宝*6^222#BOSS精华*10/@材料商人_元宝1>
+<&ImgEx:113:590:591:590:165:116|246#合成说明：^246#金币*300W^222##神器碎片*10/@材料商人_金币2>
+<&ImgEx:113:592:593:592:165:156|246#合成说明：^246#元宝*100^222##神器碎片*10/@材料商人_元宝2>
+<&ImgEx:113:590:591:590:248:116|246#合成说明：^246#金币*1000W^222#神器晶核*5/@材料商人_金币3>
+<&ImgEx:113:592:593:592:248:156|246#合成说明：^246#元宝*300^222#神器晶核*5/@材料商人_元宝3>
+<&ImgEx:113:590:591:590:331:116|246#合成说明：^246#金币*100W^222#天命碎片*10/@材料商人_金币4>
+<&ImgEx:113:592:593:592:331:156|246#合成说明：^246#元宝*300^222#天命碎片*10/@材料商人_元宝4>
+
+
+[@材料商人_金币1]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+#IF
+not CheckGold  100000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足100000！
+BREAK
+
+#if
+checkitem BOSS精华 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE BOSS精华 10
+TAKE 金币  1000000
+Give 修炼石 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[修炼石]
+BREAK
+
+[@材料商人_金币2]
+
+
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+#IF
+not CheckGold  3000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足3000000！
+BREAK
+
+#if
+checkitem 神器碎片 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 神器碎片 10
+TAKE 金币  3000000
+Give 神器晶核 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[神器晶核]
+BREAK
+
+
+[@材料商人_金币3]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+#IF
+not CheckGold  10000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足10000000！
+BREAK
+
+#if
+checkitem 神器晶核 5
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 神器晶核 5
+TAKE 金币  10000000
+Give 神源 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[神源]
+BREAK
+
+
+
+[@材料商人_金币4]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+#IF
+not CheckGold  1000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足1000000！
+BREAK
+
+#if
+checkitem 天命碎片 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 天命碎片 10
+TAKE 金币  1000000
+Give 天命石 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[天命石]
+BREAK
+
+
+[@材料商人_元宝1]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+#IF
+CHECKGAMEGOLD < 6
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足6！
+BREAK
+
+#if
+checkitem BOSS精华 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE BOSS精华 10
+GAMEGOLD - 6
+Give 修炼石 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[修炼石]
+BREAK
+
+
+
+
+[@材料商人_元宝2]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+
+#IF
+CHECKGAMEGOLD < 100
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足100！
+BREAK
+
+#if
+checkitem 神器碎片 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 神器碎片 10
+GAMEGOLD - 100
+Give 神器晶核 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[神器晶核]
+BREAK
+
+[@材料商人_元宝3]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+
+#IF
+CHECKGAMEGOLD < 300
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足300！
+BREAK
+
+#if
+checkitem 神器晶核 5
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 神器晶核 5
+GAMEGOLD - 300
+Give 神源 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[神源]
+BREAK
+
+
+[@材料商人_元宝4]
+
+#if
+CHECKBAGSIZE  5
+#ACT
+#elsesay
+MessageBox 　\　\　　　背包空格不足5个,无法购买！!
+break
+
+
+#IF
+CHECKGAMEGOLD < 300
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足300！
+BREAK
+
+#if
+checkitem 天命碎片 10
+#ELSEACT
+MESSAGEBOX 对不起,你没有准备好材料!
+break
+
+#IF
+#ACT
+TAKE 天命碎片 10
+GAMEGOLD - 300
+Give 天命石 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]合成[天命石]
+BREAK

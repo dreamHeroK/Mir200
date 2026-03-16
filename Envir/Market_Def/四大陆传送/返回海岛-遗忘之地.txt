@@ -1,0 +1,8 @@
+﻿[@main]
+
+
+#if
+#ACT
+MAPMOVE 潘夜海岛 329 297
+BREAK
+

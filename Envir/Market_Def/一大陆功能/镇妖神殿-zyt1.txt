@@ -1,0 +1,46 @@
+[@main]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 803 1 4 0 0 1 610 20
+#SAY
+<>\
+<&ImgEx:165:792:793:792:540:420/@镇妖神殿>\
+
+
+[@镇妖神殿]
+
+#if
+SMALL U171 1
+#ACT
+MessageBox 　\\进入失败:你没有开启会员,不可进入
+break
+
+
+#IF
+CHECKFENGHAO 狂暴之力
+#act
+#ELSEACT
+MESSAGEBOX \\进入失败:你没有开启狂暴,不可进入
+break
+
+#if
+SMALL U401 3
+#act
+messagebox 当前转生小于3转!!！
+break
+
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+
+
+#if
+#ACT
+MAPMOVE zyt2
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[镇妖神殿二]，祝他满载而归！
+BREAK

@@ -1,0 +1,458 @@
+[@领取充值点]
+{
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\01.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\02.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\03.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\04.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\05.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\06.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\07.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\08.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\09.txt
+#ACT
+GAMEGIRD + 0
+DelAccountList ..\QuestDiary\充值充值点\充值点\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点0,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\1.txt
+#ACT
+GAMEGIRD + 1
+DelAccountList ..\QuestDiary\充值充值点\充值点\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点1,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\2.txt
+#ACT
+GAMEGIRD + 2
+DelAccountList ..\QuestDiary\充值充值点\充值点\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点2,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\3.txt
+#ACT
+GAMEGIRD + 3
+DelAccountList ..\QuestDiary\充值充值点\充值点\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点3,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\4.txt
+#ACT
+GAMEGIRD + 4
+DelAccountList ..\QuestDiary\充值充值点\充值点\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点4,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\5.txt
+#ACT
+GAMEGIRD + 5
+DelAccountList ..\QuestDiary\充值充值点\充值点\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点5,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\6.txt
+#ACT
+GAMEGIRD + 6
+DelAccountList ..\QuestDiary\充值充值点\充值点\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点6,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\7.txt
+#ACT
+GAMEGIRD + 7
+DelAccountList ..\QuestDiary\充值充值点\充值点\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点7,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\8.txt
+#ACT
+GAMEGIRD + 8
+DelAccountList ..\QuestDiary\充值充值点\充值点\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点8,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\9.txt
+#ACT
+GAMEGIRD + 9
+DelAccountList ..\QuestDiary\充值充值点\充值点\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点9,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\10.txt
+#ACT
+GAMEGIRD + 10
+DelAccountList ..\QuestDiary\充值充值点\充值点\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点10,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\20.txt
+#ACT
+GAMEGIRD + 20
+DelAccountList ..\QuestDiary\充值充值点\充值点\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点20,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\30.txt
+#ACT
+GAMEGIRD + 30
+DelAccountList ..\QuestDiary\充值充值点\充值点\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点30,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\40.txt
+#ACT
+GAMEGIRD + 40
+DelAccountList ..\QuestDiary\充值充值点\充值点\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点40,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\50.txt
+#ACT
+GAMEGIRD + 50
+DelAccountList ..\QuestDiary\充值充值点\充值点\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点50,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\60.txt
+#ACT
+GAMEGIRD + 60
+DelAccountList ..\QuestDiary\充值充值点\充值点\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点60,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\70.txt
+#ACT
+GAMEGIRD + 70
+DelAccountList ..\QuestDiary\充值充值点\充值点\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点70,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\80.txt
+#ACT
+GAMEGIRD + 80
+DelAccountList ..\QuestDiary\充值充值点\充值点\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点80,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\90.txt
+#ACT
+GAMEGIRD + 90
+DelAccountList ..\QuestDiary\充值充值点\充值点\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点90,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\100.txt
+#ACT
+GAMEGIRD + 100
+DelAccountList ..\QuestDiary\充值充值点\充值点\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点100,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\200.txt
+#ACT
+GAMEGIRD + 200
+DelAccountList ..\QuestDiary\充值充值点\充值点\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点200,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\300.txt
+#ACT
+GAMEGIRD + 300
+DelAccountList ..\QuestDiary\充值充值点\充值点\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点300,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\400.txt
+#ACT
+GAMEGIRD + 400
+DelAccountList ..\QuestDiary\充值充值点\充值点\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点400,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\500.txt
+#ACT
+GAMEGIRD + 500
+DelAccountList ..\QuestDiary\充值充值点\充值点\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点500,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\600.txt
+#ACT
+GAMEGIRD + 600
+DelAccountList ..\QuestDiary\充值充值点\充值点\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点600,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\700.txt
+#ACT
+GAMEGIRD + 700
+DelAccountList ..\QuestDiary\充值充值点\充值点\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点700,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\800.txt
+#ACT
+GAMEGIRD + 800
+DelAccountList ..\QuestDiary\充值充值点\充值点\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点800,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\900.txt
+#ACT
+GAMEGIRD + 900
+DelAccountList ..\QuestDiary\充值充值点\充值点\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点900,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\1000.txt
+#ACT
+GAMEGIRD + 1000
+DelAccountList ..\QuestDiary\充值充值点\充值点\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点1000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\2000.txt
+#ACT
+GAMEGIRD + 2000
+DelAccountList ..\QuestDiary\充值充值点\充值点\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点2000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\3000.txt
+#ACT
+GAMEGIRD + 3000
+DelAccountList ..\QuestDiary\充值充值点\充值点\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点3000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\4000.txt
+#ACT
+GAMEGIRD + 4000
+DelAccountList ..\QuestDiary\充值充值点\充值点\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点4000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\5000.txt
+#ACT
+GAMEGIRD + 5000
+DelAccountList ..\QuestDiary\充值充值点\充值点\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点5000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\6000.txt
+#ACT
+GAMEGIRD + 6000
+DelAccountList ..\QuestDiary\充值充值点\充值点\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点6000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\7000.txt
+#ACT
+GAMEGIRD + 7000
+DelAccountList ..\QuestDiary\充值充值点\充值点\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点7000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\8000.txt
+#ACT
+GAMEGIRD + 8000
+DelAccountList ..\QuestDiary\充值充值点\充值点\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点8000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\9000.txt
+#ACT
+GAMEGIRD + 9000
+DelAccountList ..\QuestDiary\充值充值点\充值点\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点9000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\10000.txt
+#ACT
+GAMEGIRD + 10000
+DelAccountList ..\QuestDiary\充值充值点\充值点\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点10000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\20000.txt
+#ACT
+GAMEGIRD + 20000
+DelAccountList ..\QuestDiary\充值充值点\充值点\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点20000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\30000.txt
+#ACT
+GAMEGIRD + 30000
+DelAccountList ..\QuestDiary\充值充值点\充值点\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点30000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\40000.txt
+#ACT
+GAMEGIRD + 40000
+DelAccountList ..\QuestDiary\充值充值点\充值点\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点40000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\50000.txt
+#ACT
+GAMEGIRD + 50000
+DelAccountList ..\QuestDiary\充值充值点\充值点\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点50000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\60000.txt
+#ACT
+GAMEGIRD + 60000
+DelAccountList ..\QuestDiary\充值充值点\充值点\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点60000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\70000.txt
+#ACT
+GAMEGIRD + 70000
+DelAccountList ..\QuestDiary\充值充值点\充值点\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点70000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\80000.txt
+#ACT
+GAMEGIRD + 80000
+DelAccountList ..\QuestDiary\充值充值点\充值点\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点80000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\90000.txt
+#ACT
+GAMEGIRD + 90000
+DelAccountList ..\QuestDiary\充值充值点\充值点\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点90000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\100000.txt
+#ACT
+GAMEGIRD + 100000
+DelAccountList ..\QuestDiary\充值充值点\充值点\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点100000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\200000.txt
+#ACT
+GAMEGIRD + 200000
+DelAccountList ..\QuestDiary\充值充值点\充值点\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点200000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\300000.txt
+#ACT
+GAMEGIRD + 300000
+DelAccountList ..\QuestDiary\充值充值点\充值点\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点300000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\400000.txt
+#ACT
+GAMEGIRD + 400000
+DelAccountList ..\QuestDiary\充值充值点\充值点\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点400000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\500000.txt
+#ACT
+GAMEGIRD + 500000
+DelAccountList ..\QuestDiary\充值充值点\充值点\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点500000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\600000.txt
+#ACT
+GAMEGIRD + 600000
+DelAccountList ..\QuestDiary\充值充值点\充值点\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点600000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\700000.txt
+#ACT
+GAMEGIRD + 700000
+DelAccountList ..\QuestDiary\充值充值点\充值点\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点700000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\800000.txt
+#ACT
+GAMEGIRD + 800000
+DelAccountList ..\QuestDiary\充值充值点\充值点\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点800000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\900000.txt
+#ACT
+GAMEGIRD + 900000
+DelAccountList ..\QuestDiary\充值充值点\充值点\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点900000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值充值点\充值点\1000000.txt
+#ACT
+GAMEGIRD + 1000000
+DelAccountList ..\QuestDiary\充值充值点\充值点\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得充值点1000000,如果您也想获得,请赶快充值吧!
+
+#IF
+#ACT
+#ELSESAY
+请查看自己的充值点数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

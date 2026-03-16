@@ -1,0 +1,51 @@
+[@渡劫状态]
+{
+#if
+small U401 10
+#act
+messagebox 当前转生未满，请前往上一大陆突破！
+break
+
+#if
+large U401 18
+#act
+messagebox 当前渡劫已满，请前往后续大陆继续突破！
+break
+
+#if
+#act
+OPENMERCHANTBIGDLG 0 32 1 4 0 0 1 482 30
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 所需材料xq S$所需材料
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 材料消耗xh S$材料消耗
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 元宝消耗xh S$元宝消耗
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 所需血量xl S$所需血量
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 称号前端qd S$称号前端
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 称号后端hd S$称号后端
+ReadConfigFileItem ..\QuestDiary\转生晋升\转生配置.ini 渡劫晋升_<$STR(U401)> 雷劫伤害sh S$雷劫扣血
+
+
+#if
+#act
+#say
+<><Img:555:0:458:7>\
+<><TEXT:★【材料】：:295:200:{SCOLOR=70}><TEXT:<$STR(S$所需材料)>*<$STR(S$材料消耗)>:295:200:{SCOLOR=151}>\
+<><TEXT:★【元宝】：:295:200:{SCOLOR=250}><TEXT:<$STR(S$元宝消耗)>:295:200:{SCOLOR=151}>\
+<><ImgEx:0:34:34:33:282:210|250#拥有<$STR(S$所需血量)>容易度过雷劫/@选择渡劫>\
+
+[@选择渡劫]
+#if
+checkitem <$STR(S$所需材料)> <$STR(S$材料消耗)>
+checkgamegold ? <$STR(S$元宝消耗)>
+CHECKFENGHAO <$STR(S$称号前端)>
+#act
+take <$STR(S$所需材料)> <$STR(S$材料消耗)>
+gamegold - <$STR(S$元宝消耗)>
+MOVR U403 18 23
+map 九劫雷狱
+SetOnTimer 10 3
+#elseact
+messagebox 您的材料或者元宝不足！无法进行渡劫！
+}

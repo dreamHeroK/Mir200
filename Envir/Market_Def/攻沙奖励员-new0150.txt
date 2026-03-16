@@ -1,0 +1,32 @@
+[@main]
+<攻沙奖励员/AUTOCOLOR=250,100,180,47,253,50>：\
+<攻沙结束后请到这里领取金币/SCOLOR=254> \
+<攻沙奖励:2000万金币！/SCOLOR=254>\
+<领取时间晚上22点-23点，过期没领取的将不能再领取奖励！/SCOLOR=253>\
+<首次合区有微信红包/SCOLOR=253>\
+<领取红包要求:双方总人数不低于10人/SCOLOR=253>\
+<领取红包要求:必须要打架没有打架也没有红包/SCOLOR=253>\
+<领取红包要求:加微信CN77183182领取红包/SCOLOR=253>\
+<领取奖励/@领取>
+
+
+[@领取]
+#IF
+hour  22
+min 10 59
+ISCASTLEMASTER
+NOT CHECKTEXTLIST ..\QuestDiary\沙奖励.txt 
+small G32 1
+#ACT
+addnamelist ..\QuestDiary\沙奖励.txt
+Give 金币 20000000
+SENDMSG 1 恭喜： 沙城主[%s]领取攻沙奖励2000W金币！！！
+SENDMSG 1 恭喜： 沙城主[%s]领取攻沙奖励2000W金币！！！
+SENDMSG 1 恭喜： 沙城主[%s]领取攻沙奖励2000W金币！！！
+SENDMSG 1 恭喜： 沙城主[%s]领取攻沙奖励2000W金币！！！
+SENDMSG 1 恭喜： 沙城主[%s]领取攻沙奖励2000W金币！！！
+set [106] 1
+inc G32 1
+break
+#ELSEACT
+MESSAGEBOX 只有沙老大在22.10-23.00期间才能领取，领取过之后就不要再来麻烦我了

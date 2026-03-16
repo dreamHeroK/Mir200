@@ -1,0 +1,397 @@
+[@main]
+
+#IF
+#act
+OPENMERCHANTBIGDLG 165 827 1 4 0 -90 1 680 22 1
+#SAY
+<Text:<$STR(U18)>:568:330{FCOLOR=253}><Text:<$STR(U141)>:551:349{FCOLOR=253}>\
+<ImgEx:165:825:826:825:383:350|250#每次淬炼需要100万金币 + 天赋神石*1/@锻造神魔之体a>
+<ImgEx:165:821:822:821:403:350|250#累计失败400次+50个神器晶核免费激活满级神魔/@保底神魔>
+<ImgEx:165:823:824:823:423:350|250#累计失败200次+10个神器晶核+16888元宝激活满级神魔/@元宝保底>
+
+[@元宝保底]
+#IF
+equal U141 10
+#act
+MESSAGEBOX 你的神魔之体已是最高境界！
+BREAK
+
+#IF
+SMALL U18 200
+#act
+MESSAGEBOX 累计失败次数未达到200次！！
+GOTO @main
+BREAK
+
+#IF
+NOT checkitem 神器晶核 10
+#act
+MESSAGEBOX 错误\\你没有足够的神器晶核来淬炼！
+BREAK
+
+#IF
+CHECKGAMEGOLD < 16888
+#ACT
+MessageBox 　\　\　　　条件不足:元宝不达标!
+break
+
+
+#IF
+CHECKGAMEGOLD > 16887
+large U18 199
+checkitem 神器晶核 10
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+GIVEFENGHAO 神魔之体lv10
+MOV U141 10
+take 神器晶核 10
+GAMEGOLD - 16888
+MESSAGEBOX 恭喜你炼成神魔之体lv10！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv10]
+GOTO @main
+BREAK
+
+
+
+
+
+
+
+[@保底神魔]
+#IF
+equal U141 10
+#act
+MESSAGEBOX 你的神魔之体已是最高境界！
+BREAK
+
+#IF
+SMALL U18 400
+#act
+MESSAGEBOX 累计失败次数未达到400次！！
+GOTO @main
+BREAK
+
+#IF
+NOT checkitem 神器晶核 50
+#act
+MESSAGEBOX 错误\\你没有足够的神器晶核来淬炼！
+BREAK
+
+
+
+#IF
+large U18 399
+checkitem 神器晶核 50
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+GIVEFENGHAO 神魔之体lv10
+MOV U141 10
+take 神器晶核 50
+MESSAGEBOX 恭喜你炼成神魔之体lv10！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv10]
+GOTO @main
+BREAK
+
+
+
+
+
+[@锻造神魔之体a]
+
+#IF
+equal U141 10
+#act
+MESSAGEBOX 你的神魔之体已是最高境界！
+BREAK
+
+#IF
+checkitem 天赋神石 1
+CHECKGOLD 1000000
+#act
+#ELSEACT
+MESSAGEBOX 错误\\你没有足够的金币或天赋神石来淬炼！
+BREAK
+
+
+#if
+randomex 70 100
+#act
+take 天赋神石 1
+take 金币 1000000
+MOV U141 0
+inc U18 1
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+SENDMSG 6 很遗憾,你修炼失败,神魔之体离你而去了,请下次继续努力！
+GOTO @main
+BREAK
+#ELSEACT
+GOTO @成功
+BREAK
+
+
+
+
+
+[@成功]
+#IF
+equal U141 9
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv10
+MOV U141 10
+MESSAGEBOX 恭喜你炼成神魔之体lv10！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv10]
+GOTO @main
+BREAK
+
+
+#IF
+equal U141 8
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv9
+MOV U141 9
+MESSAGEBOX 恭喜你炼成神魔之体lv9！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv9]
+GOTO @main
+BREAK
+
+
+#IF
+equal U141 7
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv8
+MOV U141 8
+MESSAGEBOX 恭喜你炼成神魔之体lv8！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv8]
+GOTO @main
+BREAK
+
+#IF
+equal U141 6
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv7
+MOV U141 7
+MESSAGEBOX 恭喜你炼成神魔之体lv7！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv7]
+GOTO @main
+BREAK
+
+#IF
+equal U141 5
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv6
+MOV U141 6
+MESSAGEBOX 恭喜你炼成神魔之体lv6！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv6]
+GOTO @main
+BREAK
+
+#IF
+equal U141 4
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv5
+MOV U141 5
+MESSAGEBOX 恭喜你炼成神魔之体lv5！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv5]
+GOTO @main
+BREAK
+
+#IF
+equal U141 3
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv4
+MOV U141 4
+MESSAGEBOX 恭喜你炼成神魔之体lv4！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv4]
+GOTO @main
+BREAK
+
+#IF
+equal U141 2
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv3
+MOV U141 3
+MESSAGEBOX 恭喜你炼成神魔之体lv3！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv3]
+GOTO @main
+BREAK
+
+
+#IF
+equal U141 1
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv2
+MOV U141 2
+MESSAGEBOX 恭喜你炼成神魔之体lv2！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv2]
+GOTO @main
+BREAK
+
+
+
+#IF
+equal U141 0
+#act
+RECYCFENGHAO 神魔之体lv1
+RECYCFENGHAO 神魔之体lv2
+RECYCFENGHAO 神魔之体lv3
+RECYCFENGHAO 神魔之体lv4
+RECYCFENGHAO 神魔之体lv5
+RECYCFENGHAO 神魔之体lv6
+RECYCFENGHAO 神魔之体lv7
+RECYCFENGHAO 神魔之体lv8
+RECYCFENGHAO 神魔之体lv9
+RECYCFENGHAO 神魔之体lv10
+take 天赋神石 1
+take 金币 1000000
+GIVEFENGHAO 神魔之体lv1
+MOV U141 1
+MESSAGEBOX 恭喜你炼成神魔之体lv1！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv1]
+GOTO @main
+BREAK
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,278 @@
+
+[@MAIN]
+#IF
+#ACT
+goto @渡劫飞升界面
+
+[@渡劫飞升界面]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 604 1 4 0 -90 1 800 5 1
+#SAY
+<> <ImgEx:165:607:608:607:-3:280|250#成功几率10%^修炼石*500^金币*3000W^等级上限提升到70级/@三重_渡劫>
+<> <ImgEx:165:602:603:602:-3:280|250#成功几率100%^修炼石*1000^元宝*500^等级上限提升到70级/@三重_渡劫元宝>
+<> <ImgEx:165:607:608:607:355:280|250#成功几率10%^神源*2^金币*4000W^等级上限提升到75级/@四重_渡劫>
+<> <ImgEx:165:602:603:602:355:280|250#成功几率100%^神源*1^元宝*1500^等级上限提升到75级/@四重_渡劫元宝>
+
+
+
+[@三重_渡劫]
+#IF
+CHECKRENEWLEVEL < 7
+#ACT
+Messagebox 系统提示：“你的转生等级低于7转，无法渡劫”
+Break
+
+#IF
+CHECKLEVELEX = 65
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是65级!
+BREAK
+
+#IF
+not CheckGold  30000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足3000W！
+BREAK
+
+#IF
+not checkitem 修炼石 500
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　修炼石不足500个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+MessageBox 　\　\　　　已经完成逆天改命三阶或者更高!!!
+break
+
+#IF
+LARGE U562 9
+#ACT
+TAKE 修炼石 500
+TAKE 金币 30000000
+MOV U562 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命三阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命三阶】 13 10 0
+break
+goto @main
+BREAK
+
+#IF
+LARGE U562 5
+randomex 10 100
+#ACT
+TAKE 修炼石 500
+TAKE 金币 30000000
+MOV U562 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命三阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命三阶】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 修炼石 500
+TAKE 金币 30000000
+INC U562 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+[@四重_渡劫]
+#IF
+CHECKRENEWLEVEL < 9
+#ACT
+Messagebox 系统提示：“你的转生等级低于9转，无法渡劫”
+Break
+#IF
+CHECKLEVELEX = 70
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是70级!
+BREAK
+#IF
+not CheckGold  40000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足4000W！
+BREAK
+#IF
+not checkitem 神源 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　神源不足2个！
+BREAK
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+MessageBox 　\　\　　　已经完成逆天改命四阶或者更高!!!
+break
+#IF
+LARGE U563 9
+#ACT
+TAKE 神源 2
+TAKE 金币 40000000
+MOV U563 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命四阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命四阶】 13 10 0
+break
+goto @main
+BREAK
+
+#IF
+LARGE U563 5
+randomex 10 100
+#ACT
+TAKE 神源 2
+TAKE 金币 40000000
+MOV U563 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命四阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命四阶】 13 10 0
+goto @main
+BREAK
+#ELSEACT
+TAKE 神源 2
+TAKE 金币 40000000
+INC U563 1
+MESSAGEBOX 　　　提升失败材料,金币扣除!!！
+goto @main
+BREAK
+
+
+
+[@三重_渡劫元宝]
+#IF
+CHECKRENEWLEVEL < 7
+#ACT
+Messagebox 系统提示：“你的转生等级低于7转，无法渡劫”
+Break
+
+#IF
+CHECKLEVELEX = 65
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是65级!
+BREAK
+
+#IF
+not CHECKGAMEGOLD > 999
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足1000！
+BREAK
+
+#IF
+not checkitem 修炼石 300
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　修炼石不足300个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+MessageBox 　\　\　　　已经完成逆天改命三阶或者更高!!!
+break
+
+#IF
+CHECKGAMEGOLD > 999
+#ACT
+GAMEGOLD - 1000
+TAKE 修炼石 300
+MOV U562 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命三阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命三阶】 13 10 0
+break
+goto @main
+BREAK
+
+
+[@四重_渡劫元宝]
+#IF
+CHECKRENEWLEVEL < 9
+#ACT
+Messagebox 系统提示：“你的转生等级低于9转，无法渡劫”
+Break
+#IF
+CHECKLEVELEX = 70
+#ACT
+#ELSEACT
+messagebox  　　操作失败：\　\　　　　　　等级不是70级!
+BREAK
+
+#IF
+not CHECKGAMEGOLD > 1499
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前元宝不足1500！
+BREAK
+
+#IF
+not checkitem 神源 1
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　神源不足1个！
+BREAK
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+MessageBox 　\　\　　　已经完成逆天改命四阶或者更高!!!
+break
+#IF
+CHECKGAMEGOLD > 1499
+#ACT
+GAMEGOLD - 1500
+TAKE 神源 1
+MOV U563 0
+RECYCFENGHAO  逆天改命一阶
+RECYCFENGHAO  逆天改命二阶
+RECYCFENGHAO  逆天改命三阶
+RECYCFENGHAO  逆天改命四阶
+RECYCFENGHAO  逆天改命五阶
+RECYCFENGHAO  逆天改命六阶
+GiveFengHao 逆天改命四阶
+#CALL [10属性重置\属性重置.TXT] @属性重置
+SENDMOVEMSG 0 253 255 300 1 <[全服公告]>ぐ:玩家<[<$USERNAME>]>.成功渡劫【逆天改命四阶】 13 10 0
+break
+goto @main
+BREAK

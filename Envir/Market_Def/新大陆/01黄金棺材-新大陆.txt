@@ -1,0 +1,51 @@
+[@main]
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+MessageBox 错误：攻城期间禁止使用。
+BREAK
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 751 1 4 0 0 1 660 20 0
+#say
+
+
+<><ImgEx:165:749:750:749:400:250/@提交1> \ \  
+
+[@提交1]
+#IF
+CHECKSLAVENAME 黄金棺材
+#ACT
+MESSAGEBOX 请先完成当前进行中的押镖！！
+BREAK
+
+#if
+large j10 2
+#act
+MESSAGEBOX 每天只能护送三次黄金棺材！！
+BREAK
+
+#OR
+CHECK [27] 1
+CHECK [28] 1
+CHECK [29] 1
+#ACT
+MESSAGEBOX 提示：你已经提交完成任务，如有疑问去九龙寺npc查询更换！！
+BREAK
+
+#IF
+CHECKITEM 黄金棺材 1
+#ACT
+#ELSEACT
+MESSAGEBOX 提示：你都没有‘黄金棺材’瞎点个毛线！！
+BREAK
+
+#IF
+CHECKITEM 黄金棺材 1
+#ACT
+inc j10 1
+TAKE 黄金棺材 1
+KILLCALLMOB 黄金棺材 1 1
+RECALLMOB 黄金棺材 1 60 0 0 0 1
+MESSAGEBOX 提交任务成功：尽快护送‘黄金棺材’到‘沙漠守墓人’！！
+BREAK

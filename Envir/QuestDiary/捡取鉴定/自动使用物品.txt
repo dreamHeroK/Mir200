@@ -1,0 +1,85 @@
+[@自动使用物品]
+{
+#IF
+EQUAL <$CURRTEMNAME> 1银币
+checkitem 1银币 1
+#ACT
+take 1银币 1
+gamegold + 1
+GuildNoticeMsg 251 0 提示：银币增加1个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 2银币
+checkitem 2银币 1
+#ACT
+take 2银币 1
+gamegold + 2
+GuildNoticeMsg 251 0 提示：银币增加2个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 5银币
+checkitem 5银币 1
+#ACT
+take 5银币 1
+gamegold + 5
+GuildNoticeMsg 251 0 提示：银币增加5个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 10银币
+checkitem 10银币 1
+#ACT
+take 10银币 1
+gamegold + 10
+GuildNoticeMsg 251 0 提示：银币增加10个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 50银币
+checkitem 50银币 1
+#ACT
+take 50银币 1
+gamegold + 50
+GuildNoticeMsg 251 0 提示：银币增加50个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 100银币
+checkitem 100银币 1
+#ACT
+take 100银币 1
+gamegold + 100
+GuildNoticeMsg 251 0 提示：银币增加100个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 500银币
+checkitem 500银币 1
+#ACT
+take 500银币 1
+gamegold + 500
+GuildNoticeMsg 251 0 提示：银币增加500个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+EQUAL <$CURRTEMNAME> 1000银币
+checkitem 1000银币 1
+#ACT
+take 1000银币 1
+gamegold + 1000
+GuildNoticeMsg 251 0 提示：银币增加1000个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+CHECKLEVELEX > 180
+EQUAL <$CURRTEMNAME> 5000银币
+checkitem 5000银币 1
+#ACT
+take 5000银币 1
+gamegold + 5000
+GuildNoticeMsg 251 0 提示：银币增加5000个.您当前的银币为：<$GAMEGOLD>个。 self
+
+#IF
+CHECKLEVELEX > 200
+EQUAL <$CURRTEMNAME> 10000银币
+checkitem 10000银币 1
+#ACT
+take 10000银币 1
+gamegold + 10000
+GuildNoticeMsg 251 0 提示：银币增加10000个.您当前的银币为：<$GAMEGOLD>个。 self
+
+}

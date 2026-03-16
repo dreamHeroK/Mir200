@@ -1,0 +1,322 @@
+[@领取充值积分]
+{
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz1.txt
+#ACT
+GAMEDIAMOND + 1
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz1.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了1充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz2.txt
+#ACT
+GAMEDIAMOND + 2
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz2.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了2充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz3.txt
+#ACT
+GAMEDIAMOND + 3
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz3.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了3充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz4.txt
+#ACT
+GAMEDIAMOND + 4
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz4.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了4充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz5.txt
+#ACT
+GAMEDIAMOND + 5
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz5.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了5充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz6.txt
+#ACT
+GAMEDIAMOND + 6
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz6.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了6充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz7.txt
+#ACT
+GAMEDIAMOND + 7
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz7.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了7充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz8.txt
+#ACT
+GAMEDIAMOND + 8
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz8.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了8充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz9.txt
+#ACT
+GAMEDIAMOND + 9
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz9.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了9充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz10.txt
+#ACT
+GAMEDIAMOND + 10
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz10.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了10充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz20.txt
+#ACT
+GAMEDIAMOND + 20
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz20.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了20充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz30.txt
+#ACT
+GAMEDIAMOND + 30
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz30.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了30充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz40.txt
+#ACT
+GAMEDIAMOND + 40
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz40.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了40充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz50.txt
+#ACT
+GAMEDIAMOND + 50
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz50.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了50充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz60.txt
+#ACT
+GAMEDIAMOND + 60
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz60.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了60充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz70.txt
+#ACT
+GAMEDIAMOND + 70
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz70.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了70充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz80.txt
+#ACT
+GAMEDIAMOND + 80
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz80.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了80充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz90.txt
+#ACT
+GAMEDIAMOND + 90
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz90.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了90充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz100.txt
+#ACT
+GAMEDIAMOND + 100
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz100.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了100充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz200.txt
+#ACT
+GAMEDIAMOND + 200
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz200.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了200充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz300.txt
+#ACT
+GAMEDIAMOND + 300
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz300.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了300充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz400.txt
+#ACT
+GAMEDIAMOND + 400
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz400.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了400充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz500.txt
+#ACT
+GAMEDIAMOND + 500
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz500.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了500充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz600.txt
+#ACT
+GAMEDIAMOND + 600
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz600.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了600充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz700.txt
+#ACT
+GAMEDIAMOND + 700
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz700.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了700充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz800.txt
+#ACT
+GAMEDIAMOND + 800
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz800.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了800充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz900.txt
+#ACT
+GAMEDIAMOND + 900
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz900.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了900充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz1000.txt
+#ACT
+GAMEDIAMOND + 1000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz1000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了1000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz2000.txt
+#ACT
+GAMEDIAMOND + 2000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz2000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了2000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz3000.txt
+#ACT
+GAMEDIAMOND + 3000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz3000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了3000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz4000.txt
+#ACT
+GAMEDIAMOND + 4000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz4000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了4000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz5000.txt
+#ACT
+GAMEDIAMOND + 5000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz5000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了5000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz6000.txt
+#ACT
+GAMEDIAMOND + 6000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz6000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了6000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz7000.txt
+#ACT
+GAMEDIAMOND + 7000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz7000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了7000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz8000.txt
+#ACT
+GAMEDIAMOND + 8000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz8000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了8000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz9000.txt
+#ACT
+GAMEDIAMOND + 9000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz9000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了9000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz10000.txt
+#ACT
+GAMEDIAMOND + 10000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz10000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了10000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz20000.txt
+#ACT
+GAMEDIAMOND + 20000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz20000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了20000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz30000.txt
+#ACT
+GAMEDIAMOND + 30000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz30000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了30000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz40000.txt
+#ACT
+GAMEDIAMOND + 40000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz40000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了40000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz50000.txt
+#ACT
+GAMEDIAMOND + 50000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz50000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了50000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz60000.txt
+#ACT
+GAMEDIAMOND + 60000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz60000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了60000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz70000.txt
+#ACT
+GAMEDIAMOND + 70000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz70000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了70000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz80000.txt
+#ACT
+GAMEDIAMOND + 80000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz80000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了80000充值积分。
+
+#IF
+CheckAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz90000.txt
+#ACT
+GAMEDIAMOND + 90000
+DelAccountList ..\QuestDiary\元宝充值\附加赠送\充值积分\cz90000.txt
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，额外获得了90000充值积分。
+
+#ELSESAY
+请查看自己的充值积分数量!\
+没有充值请按提示进行充值!\
+<返回/@main>
+}

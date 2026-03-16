@@ -1,0 +1,81 @@
+{
+;占用变量 U0 可消耗累充
+
+(@@InPutString @@InPutInteger)
+[@仲裁者商会]
+
+#IF
+#ACT
+MOV N$可兑换贡献 <$STR(U0)>
+DIV N$可兑换贡献 10
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 202 1 4 0 0 1 340 14 1
+#SAY
+
+<TEXT:贡献为游戏中非常常见的货币，常见也代表它常用。:20:60/FCOLOR=150>　\
+<TEXT:贡献可以在贡献商城兑换多数打怪无法获得的道具。:20:60/FCOLOR=150>　\
+<TEXT:贡献商城中也有一些并不贵重但是消耗巨大的道具。:20:60/FCOLOR=150>　\ \
+<TEXT:贡献获得方式：:20:60/FCOLOR=94>　\
+<TEXT:①仲裁所每日任务获得贡献积分|215#(完美完成可得30贡献):20:60/FCOLOR=215>　\
+<TEXT:②推广或者充值可获得贡献积分|215#(每累计充值10元可兑换1点):20:60/FCOLOR=215>　\
+;<TEXT:③通过参与活动可获得贡献积分:20:60/FCOLOR=215>　\
+<TEXT:③通过其它玩法可获得贡献积分:20:60/FCOLOR=215>　\
+
+<TEXT:当前可兑换贡献：|215#(每累计充值10元可兑换1点):20:80/FCOLOR=251>　<TEXT:<$STR(N$可兑换贡献)>|215#(每累计充值10元可兑换1点):20:80/FCOLOR=94>　\
+<TEXT:当前已拥有贡献：:20:80/FCOLOR=94>　<TEXT:<$GAMEPOINT>:20:80/FCOLOR=251>　\
+　\
+　\
+
+
+<IMGEX:111:11:12:13:20:70/@@InPutInteger559(请输入你要兑换的贡献值)><TEXT:充值兑换贡献:-62:81/FCOLOR=250>　\
+
+
+<IMGEX:111:11:12:13:220:38/@前往贡献商城><TEXT:贡献商城:150:49/FCOLOR=254>　\
+
+
+
+[@跳转充值界面]
+#ACT
+#CALL [\蛋蛋专用\充值系统\充值系统.txt] @充值系统
+
+[@InPutInteger559]
+#IF
+#ACT
+MOV N$可兑换贡献 <$STR(U0)>
+DIV N$可兑换贡献 10
+
+#IF
+LARGE <$STR(N559)> <$STR(N$可兑换贡献)>
+#act
+MESSAGEBOX 你的积分不足无法兑换<$STR(N559)>贡献，当前最多可兑换<$STR(N$可兑换贡献)>贡献！
+BREAK
+
+
+#IF
+NOT LARGE <$STR(N559)> <$STR(N$可兑换贡献)>
+#act
+MOV N$扣除积分值 <$STR(N559)>
+MUL N$扣除积分值 10
+DEC U0 <$STR(N$扣除积分值)>
+GAMEPOINT + <$STR(N559)>
+MESSAGEBOX 恭喜！成功兑换<$STR(N559)>贡献！，本次消耗<$STR(N$扣除积分值)>积分！
+GOTO @仲裁者商会
+BREAK
+
+
+
+[@前往贡献商城]
+#IF
+#ACT
+#CALL [\蛋蛋专用\贡献商城\贡献商城.txt] @贡献商城
+
+
+
+
+
+
+
+
+}

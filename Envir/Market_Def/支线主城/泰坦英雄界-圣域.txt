@@ -1,0 +1,50 @@
+[@main]
+#IF
+#ACT
+close
+CloseBigDialogBox
+OPENMERCHANTBIGDLG 1 2090 1 4 10 -50 1 465 14
+#say
+\ \ \ \ \
+<>                    <消耗40专属点可进入支线主城/FCOLOR=103>:<泰坦英雄界/fcolor=222>\ \
+
+<>                    <地图内限时2小时后传出，小退死亡仍然可在此处进入/fcolor=146>\ \
+
+<>                    <进入泰坦英雄界/@进入支线扣除专属点>
+
+
+
+[@进入支线扣除专属点]
+#OR
+CHECKFENGHAO 大元帅
+#ACT
+CALCVAR HUMAN 四大陆支线SC = 7200
+SAVEVAR HUMAN 四大陆支线SC ..\QuestDiary\数据文件\四大陆支线SC.txt
+map 泰坦英雄界
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】进入了四大陆支线主城/FCOLOR=253>【泰坦英雄界】！！！内含众多特殊级BOSS及英雄级BOSS！！！
+break
+
+
+#IF
+CHECKVAR HUMAN 四大陆支线SC > 0
+#ACT
+map 泰坦英雄界
+break
+
+
+
+#IF
+CHECKGAMEGLORY > 39
+#ACT
+GAMEGLORY - 40
+CALCVAR HUMAN 四大陆支线SC = 7200
+SAVEVAR HUMAN 四大陆支线SC ..\QuestDiary\数据文件\四大陆支线SC.txt
+map 泰坦英雄界
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】进入了四大陆支线主城/FCOLOR=253>【泰坦英雄界】！！！内含众多特殊级BOSS及英雄级BOSS！！！
+#elseact
+messagebox 专属点不足，在主城分解专属可以获得专属点！！！
+
+
+

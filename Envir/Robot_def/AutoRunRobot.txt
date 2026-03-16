@@ -1,0 +1,135 @@
+#AutoRun NPC SEC 1 @MIRYZ角色安全RM
+
+
+;#AutoRun NPC SEC 30 @随机地图链接
+
+#AutoRun NPC SEC 3 @每秒触发
+
+;#AutoRun NPC HOUR 12 @世界BOSS刷新
+
+
+
+
+#AutoRun NPC MIN 1 @1分钟触发
+#AutoRun NPC SEC 1 @1秒触发
+#AutoRun NPC HOUR 1 @1小时触发
+#AutoRun NPC RUNONDAY 8:00 @清空排行榜
+
+#AutoRun NPC RUNONDAY 12:30 @攻城提示
+#AutoRun NPC RUNONDAY 18:00 @攻城提示
+#AutoRun NPC RUNONDAY 19:00 @攻城提示
+#AutoRun NPC RUNONDAY 19:30 @攻城提示
+#AutoRun NPC RUNONDAY 19:59:00 @攻城准备
+#AutoRun NPC RUNONDAY 20:00:00 @开启攻城
+#AutoRun NPC RUNONDAY 22:01:00 @攻城结束
+#AutoRun NPC RUNONDAY 21:00 @关闭下图
+#AutoRun NPC RUNONDAY 22:00 @开启下图
+
+
+
+#AutoRun NPC RUNONDAY 10:40 @等待区放行1201
+#AutoRun NPC RUNONDAY 14:40 @等待区放行1201
+#AutoRun NPC RUNONDAY 18:40 @等待区放行1201
+#AutoRun NPC RUNONDAY 22:40 @等待区放行1201
+
+
+#AutoRun NPC HOUR 1 @限时计时
+;---------------------新加功能--------------------------
+#AutoRun NPC RUNONDAY 00:01:00 @开区天数
+
+
+
+
+
+;-------------------------------------------------------
+;#AutoRun NPC HOUR 4 @剧情世界BOSS随机刷新
+
+;#AutoRun NPC HOUR 3 @特殊一二BOSS刷新机制
+
+
+
+
+
+;#AutoRun NPC SEC 60 @剧情世界BOSS随机刷新
+
+;#AutoRun NPC SEC 60 @特殊一二BOSS刷新机制
+
+
+
+
+;-------------------------------------------------------
+;#AutoRun NPC RUNONDAY 22:30:00 @每次合区攻城清空捐献变量
+;#AutoRun NPC RUNONDAY 22:30:10 @每次合区沙巴克复活点刷必爆怪
+
+
+
+
+
+
+
+
+
+
+
+
+;随机BUFF活动 - 每小时整点开启
+#AutoRun NPC RUNONDAY 0:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 1:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 2:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 3:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 4:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 5:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 6:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 7:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 8:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 9:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 10:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 11:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 12:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 13:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 14:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 15:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 16:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 17:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 18:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 19:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 20:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 21:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 22:00:00 @开启随机BUFF活动
+#AutoRun NPC RUNONDAY 23:00:00 @开启随机BUFF活动
+
+;随机BUFF活动 - 每小时整点开启，59分50秒关闭
+#AutoRun NPC RUNONDAY 0:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 1:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 2:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 3:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 4:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 5:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 6:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 7:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 8:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 9:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 10:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 11:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 12:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 13:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 14:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 15:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 16:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 17:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 18:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 19:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 20:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 21:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 22:59:50 @关闭随机BUFF活动
+#AutoRun NPC RUNONDAY 23:59:50 @关闭随机BUFF活动
+
+
+#AutoRun NPC RUNONDAY 19:50:00 @战场预告
+#AutoRun NPC RUNONDAY 19:55:00 @战场预告
+#AutoRun NPC RUNONDAY 20:00:00 @开启战场活动
+#AutoRun NPC RUNONDAY 20:03:00 @战场活动关门
+
+
+#AutoRun NPC RUNONDAY 12:00:00 @开启红包活动提醒1
+#AutoRun NPC RUNONDAY 20:00:00 @开启红包活动提醒2

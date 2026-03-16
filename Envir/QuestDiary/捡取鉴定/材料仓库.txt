@@ -1,0 +1,86 @@
+[@自动存放材料]
+{
+
+#IF
+EQUAL <$CURRTEMNAME> 宁神花
+checkitem 宁神花 1
+#ACT
+take 宁神花 1
+INC U40 1
+SENDMSG 7 提示：炼药材料宁神花增加1个.您当前的宁神花数量为：<$STR(U40)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 银叶草
+checkitem 银叶草 1
+#ACT
+take 银叶草 1
+INC U41 1
+SENDMSG 7 提示：炼药材料银叶草增加1个.您当前的银叶草数量为：<$STR(U41)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 地根草
+checkitem 地根草 1
+#ACT
+take 地根草 1
+INC U42 1
+SENDMSG 7 提示：炼药材料地根草增加1个.您当前的地根草数量为：<$STR(U42)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 魔皇草
+checkitem 魔皇草 1
+#ACT
+take 魔皇草 1
+INC U43 1
+SENDMSG 7 提示：炼药材料魔皇草增加1个.您当前的魔皇草数量为：<$STR(U43)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 石南草
+checkitem 石南草 1
+#ACT
+take 石南草 1
+INC U44 1
+SENDMSG 7 提示：炼药材料石南草增加1个.您当前的石南草数量为：<$STR(U44)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 荆棘藻
+checkitem 荆棘藻 1
+#ACT
+take 荆棘藻 1
+INC U45 1
+SENDMSG 7 提示：炼药材料荆棘藻增加1个.您当前的荆棘藻数量为：<$STR(U45)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 跌打草
+checkitem 跌打草 1
+#ACT
+take 跌打草 1
+INC U46 1
+SENDMSG 7 提示：炼药材料跌打草增加1个.您当前的跌打草数量为：<$STR(U46)>个。您可以在无限仓库界面内和存放材料
+
+#IF
+EQUAL <$CURRTEMNAME> 野钢花
+checkitem 野钢花 1
+#ACT
+take 野钢花 1
+INC U47 1
+SENDMSG 7 提示：炼药材料野钢花增加1个.您当前的野钢花数量为：<$STR(U47)>个。您可以在无限仓库界面内和存放材料
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,293 @@
+[@充值赞助]
+{
+#if
+#ACT
+MOV P1 0
+
+
+#if
+#say
+\ \
+
+<Img:45:52:180:-4>\
+
+<Img:210:52:13:22>\
+
+<Text:赞助使者：:19:132{FCOLOR=222}>\
+
+<Text:健康游戏，理:19:136{FCOLOR=7}>\
+
+<Text:性消费，保持:19:138{FCOLOR=7}>\
+
+<Text:良好的游戏心:19:140{FCOLOR=7}>\
+
+<Text:态。这位英俊:19:142{FCOLOR=7}>\
+
+<Text:的少侠，要不:19:144{FCOLOR=7}>\
+
+<Text:要氪一发？:19:146{FCOLOR=7}>\ 
+
+<Text:充值在网页:19:170{FCOLOR=251}>\
+
+
+\  \  \
+
+<Text:充值之后，请先领取元宝，然后再按顺序领取赞助回馈奖励。:120:-155{FCOLOR=70}>\
+
+<Text:(宝宝杀怪一样继承人物爆率）:120:-150{FCOLOR=7}>      <Text:你已经充值：<$GAMEDIAMOND>元:120:-150{FCOLOR=250}>\
+
+<Img:602:0:120:-113> <Text:累计充值 20元：:120:-113{FCOLOR=250}>  <ItemShow:591:0:125:-128:1>  <ItemShow:606:0:125:-128:1>      <Text:[点击领取]|250#领取20元赞助奖励:120:-113{FCOLOR=151}/@一元赞助>\
+
+
+<Img:602:0:120:-63> <Text:累计充值 50元：:120:-63{FCOLOR=145}>  <ItemShow:592:0:125:-78:1>  <ItemShow:607:0:125:-78:1>      <Text:[点击领取]|250#领取50元赞助奖励:120:-63{FCOLOR=151}/@五元赞助>\
+
+
+<Img:602:0:120:-13> <Text:累计充值100元：:120:-13{FCOLOR=253}>  <ItemShow:593:0:125:-28:1>  <ItemShow:608:0:125:-28:1>      <Text:[点击领取]|250#领取100元赞助奖励:120:-13{FCOLOR=151}/@十元赞助>\
+
+
+<Img:602:0:120:37> <Text:累计充值200元：:120:37{FCOLOR=70}>  <ItemShow:594:0:125:22:1>  <ItemShow:981:0:125:22:1>      <Text:[点击领取]|250#领取200元赞助奖励:120:37{FCOLOR=151}/@二十元赞助>\
+
+
+<Text:-------------------------------------------------------:114:-210{FCOLOR=12}>\
+
+<Text:-------------------------------------------------------:114:-160{FCOLOR=12}>\
+
+<Text:-------------------------------------------------------:114:-110{FCOLOR=12}>\
+
+<Text:-------------------------------------------------------:114:-60{FCOLOR=12}>\
+
+<ITEMBOX:0:-1:1:-100:-100:1:1:*:>\
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+
+
+
+
+
+[@一元赞助]
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+check [111] 1
+#ACT
+MESSAGEBOX 你已经领取过了，无法重复领取
+BREAK
+
+#IF
+check [111] 0
+CHECKGameDiamond > 19
+#ACT
+set [111] 1
+GiveFengHao 白银赞助 1
+GiveOnItem boxitem0 稀有符石 1
+LockUpdateItem boxitem0
+SETFLUTECOUNT boxitem0 3
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封战.txt S$赞助符石技1
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封法.txt S$赞助符石技2
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封道.txt S$赞助符石技3
+ItemAddStone boxitem0 <$STR(S$赞助符石技1)>+1 1
+ItemAddStone boxitem0 <$STR(S$赞助符石技2)>+1 2
+ItemAddStone boxitem0 <$STR(S$赞助符石技3)>+1 3
+UpdateItem boxitem0
+SetItemState boxitem0 1
+SetItemState boxitem0 0 1
+SetItemState boxitem0 1 1
+SetItemState boxitem0 4 1
+SetItemState boxitem0 5 1
+ReturnBoxItem 0
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【白银称号】，尊敬的玩家[%s]领取了赞助奖励【稀有符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【白银称号】，尊敬的玩家[%s]领取了赞助奖励【稀有符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【白银称号】，尊敬的玩家[%s]领取了赞助奖励【稀有符石】!
+#ELSEACT
+MESSAGEBOX 你的累计充值未达到20元\<充值后请先在NPC[元宝充值使者]领取元宝，再来领取赞助奖励/SCOLOR=250>
+BREAK
+
+
+
+[@五元赞助]
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+check [112] 1
+#ACT
+MESSAGEBOX 你已经领取过了，无法重复领取
+BREAK
+
+#IF
+CHECKGameDiamond > 49
+#ACT
+#ELSEACT
+MESSAGEBOX 你的累计充值未达到50元\<充值后请先在NPC[元宝充值使者]领取元宝，再来领取赞助奖励/SCOLOR=250>
+BREAK
+
+#IF
+check [111] 1
+#ACT
+#ELSEACT
+MESSAGEBOX 请先领取上一个赞助奖励\<需要从高到低，按顺序领取/SCOLOR=250>
+BREAK
+
+#IF
+check [111] 1
+check [112] 0
+CHECKGameDiamond > 49
+#ACT
+set [112] 1
+RECYCFENGHAO 白银赞助
+GiveFengHao 黄金赞助 1
+GiveOnItem boxitem0 完美符石 1
+LockUpdateItem boxitem0
+SETFLUTECOUNT boxitem0 4
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封战.txt S$赞助符石技1
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封法.txt S$赞助符石技2
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封道.txt S$赞助符石技3
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封.txt S$赞助符石技4
+ItemAddStone boxitem0 <$STR(S$赞助符石技1)>+1 1
+ItemAddStone boxitem0 <$STR(S$赞助符石技2)>+1 2
+ItemAddStone boxitem0 <$STR(S$赞助符石技3)>+1 3
+ItemAddStone boxitem0 <$STR(S$赞助符石技4)>+1 4
+UpdateItem boxitem0
+SetItemState boxitem0 1
+SetItemState boxitem0 0 1
+SetItemState boxitem0 1 1
+SetItemState boxitem0 4 1
+SetItemState boxitem0 5 1
+ReturnBoxItem 0
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【黄金称号】，尊敬的玩家[%s]领取了赞助奖励【完美符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【黄金称号】，尊敬的玩家[%s]领取了赞助奖励【完美符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【黄金称号】，尊敬的玩家[%s]领取了赞助奖励【完美符石】!
+BREAK
+
+
+[@十元赞助]
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+check [113] 1
+#ACT
+MESSAGEBOX 你已经领取过了，无法重复领取
+BREAK
+
+#IF
+CHECKGameDiamond > 99
+#ACT
+#ELSEACT
+MESSAGEBOX 你的累计充值未达到100元\<充值后请先在NPC[元宝充值使者]领取元宝，再来领取赞助奖励/SCOLOR=250>
+BREAK
+
+#IF
+check [112] 1
+#ACT
+#ELSEACT
+MESSAGEBOX 请先领取上一个赞助奖励\<需要从高到低，按顺序领取/SCOLOR=250>
+BREAK
+
+#IF
+check [112] 1
+check [113] 0
+CHECKGameDiamond > 99
+#ACT
+set [113] 1
+RECYCFENGHAO 黄金赞助
+GiveFengHao 钻石赞助 1
+GiveOnItem boxitem0 史诗符石 1
+LockUpdateItem boxitem0
+SETFLUTECOUNT boxitem0 5
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封战.txt S$赞助符石技1
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封法.txt S$赞助符石技2
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封道.txt S$赞助符石技3
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封.txt S$赞助符石技4
+GetRandomText ..\QuestDiary\5符石系统\赞助符石解封\赞助解封.txt S$赞助符石技5
+ItemAddStone boxitem0 <$STR(S$赞助符石技1)>+1 1
+ItemAddStone boxitem0 <$STR(S$赞助符石技2)>+1 2
+ItemAddStone boxitem0 <$STR(S$赞助符石技3)>+1 3
+ItemAddStone boxitem0 <$STR(S$赞助符石技4)>+1 4
+ItemAddStone boxitem0 <$STR(S$赞助符石技5)>+1 5
+UpdateItem boxitem0
+SetItemState boxitem0 1
+SetItemState boxitem0 0 1
+SetItemState boxitem0 1 1
+SetItemState boxitem0 4 1
+SetItemState boxitem0 5 1
+ReturnBoxItem 0
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【钻石称号】，尊敬的玩家[%s]领取了赞助奖励【史诗符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【钻石称号】，尊敬的玩家[%s]领取了赞助奖励【史诗符石】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【钻石称号】，尊敬的玩家[%s]领取了赞助奖励【史诗符石】!
+BREAK
+
+
+
+[@二十元赞助]
+#IF
+CheckBagSize 3
+#ACT
+#ELSEACT
+messagebox 请预留3个包裹空位
+BREAK
+
+#IF
+check [114] 1
+#ACT
+MESSAGEBOX 你已经领取过了，无法重复领取
+BREAK
+
+#IF
+CHECKGameDiamond > 199
+#ACT
+#ELSEACT
+MESSAGEBOX 你的累计充值未达到200元\<充值后请先在NPC[元宝充值使者]领取元宝，再来领取赞助奖励/SCOLOR=250>
+BREAK
+
+#IF
+check [113] 1
+#ACT
+#ELSEACT
+MESSAGEBOX 请先领取上一个赞助奖励\<需要从高到低，按顺序领取/SCOLOR=250>
+BREAK
+
+#IF
+check [113] 1
+check [114] 0
+CHECKGameDiamond > 199
+#ACT
+set [114] 1
+RECYCFENGHAO 钻石赞助
+GiveFengHao 至尊赞助 1
+GiveStateItem 暗金礼盒 1 1 1 0 1 1 0
+;GiveStateItem 至尊福袋 1 1 1 0 1 1 0
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【至尊称号】，尊敬的玩家[%s]领取了赞助奖励【暗金礼盒】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【至尊称号】，尊敬的玩家[%s]领取了赞助奖励【暗金礼盒】!
+SENDMSG 1 尊敬的玩家[%s]领取了赞助奖励【至尊称号】，尊敬的玩家[%s]领取了赞助奖励【暗金礼盒】!
+BREAK
+
+
+[@打开充值网页]
+#IF
+EQUAL <$GamePromotionFlag> L
+#ACT
+OpenWebSite http://czfc.xgteiw.xyz:188/gws/checkGroup.html?m=2618&g=10016043
+BREAK
+
+#IF
+EQUAL <$GamePromotionFlag> Y
+#ACT
+OpenWebSite http://czfc.xgteiw.xyz:188/gws/checkGroup.html?m=2618&g=10016044
+BREAK
+
+
+}

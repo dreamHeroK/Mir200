@@ -1,0 +1,57 @@
+[@main]
+#IF
+#SAY
+;GM请注意,所列各种脚本内有网关识别项,请勿修改,其他内容可按自己NPC样式修改
+<$USERNAME>你好，欢迎来到<$SERVERNAME>，很高兴为您服务\
+-----------------------注意充值事项------------------------\
+①本系统支持网上银行、微信扫码、支付宝。\
+②本服充值比例为:1元=10金币\
+③申明：请认准本服【官网】或本NPC充值渠道！！\ \
+<领取/@领取>　　　　<充值/@充值>　　　　<关闭/@exit>\
+
+[@领取]
+#CALL [\64pay充值金币\金币\金币.txt] @领取金币
+#CALL [\64pay充值金币\附加赠送\积分\积分.txt] @领取积分
+#CALL [\64pay充值金币\附加赠送\累计充值\累计充值.txt] @领取累计充值
+[@充值]
+#IF
+#SAY
+;GM请注意,变量 引擎脚本,3 后面的3为控制显示前面的空格数,需要调整NPC整体左右位置,更改后面的数字即可,3代表3个空格。
+　   <充值通道①/@通道一>　┆　<充值通道②/@通道二>　┆　<充值通道③/@通道三>\ \
+　   <充值通道④/@通道四>　┆　<充值通道⑤/@通道五>　┆　<充值通道⑥/@通道六>\ \
+　   <退出/@exit>
+[@通道一]
+#IF
+#ACT
+OpenWebSite https://lwxy1.170o.com/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break
+
+[@通道二]
+#IF
+#ACT
+OpenWebSite http://czz9.7api.cn:98/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break
+
+[@通道三]
+#IF
+#ACT
+OpenWebSite http://fuwo4.7api.cn/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break
+
+[@通道四]
+#IF
+#ACT
+OpenWebSite http://tencent.yaofaka.com/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break
+
+[@通道五]
+#IF
+#ACT
+OpenWebSite https://lwxy5.170o.com/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break
+
+[@通道六]
+#IF
+#ACT
+OpenWebSite http://cz446.7api.cn/Recharge/choose/D1283C15468A8799AE112F8451A2B664
+break

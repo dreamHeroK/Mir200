@@ -1,0 +1,66 @@
+[@微信礼包脚本]
+{
+#IF
+#ACT
+CloseBigDialogBox
+OPENMERCHANTBIGDLG 1 751 1 4 10 10 1 670 31
+close
+#SAY
+ \<imgex:1:752:753:752:280:330/@@InPutString11>\<IMG:757:1:507:36>\ \ \ \ \ \ \ \ \ \ \ \
+<>                                        <右上角微信扫码关注获得激活码/FCOLOR=251>\
+<>                                        <微信礼包：骨灰玩家/FCOLOR=253>\
+<>                                        <全属性5-5 生命500 经验5% 隐身术/FCOLOR=242>\
+
+
+
+[@InPutString11]
+#OR
+CheckContainsText <$STR(S11)> )
+CheckContainsText <$STR(S11)> [
+CheckContainsText <$STR(S11)> ]
+CheckContainsText <$STR(S11)> {
+CheckContainsText <$STR(S11)> }
+CheckContainsText <$STR(S11)> *
+CheckContainsText <$STR(S11)> /
+CheckContainsText <$STR(S11)> \
+CheckContainsText <$STR(S11)> $
+CheckContainsText <$STR(S11)> &
+CheckContainsText <$STR(S11)> @
+CheckContainsText <$STR(S11)> /
+CheckContainsText <$STR(S11)> \
+CheckContainsText <$STR(S11)> <
+CheckContainsText <$STR(S11)> >
+CheckContainsText <$STR(S11)> ＠
+CheckContainsText <$STR(S11)> 招募
+CheckContainsText <$STR(S11)> param
+#Act
+Mov S11 
+MessageBox 请不要输入特殊敏感字符！
+Break
+
+#if
+CHECK [333] 1
+#act
+messagebox 您已经领取过微信礼包！\\不需要重复领取了!
+break
+
+#if
+equal <$STR(S11)> 指环888
+check [333] 0
+#act
+
+ADDSKILL 隐身术
+SKILLLEVEL 隐身术 = 3
+
+SET [333] 1
+GIVEFENGHAO 骨灰玩家
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{微信礼包|253:39:0}{获得称号：骨灰玩家-奖励!附加各种属性以及技能隐身术|116:39:0}！！！
+;#CALL [\属性重载\打怪经验.txt] @经验倍数
+;;#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+close
+break
+#if
+#act
+messagebox 领取失败??\\1、输入错误,请重新输入!
+break
+}

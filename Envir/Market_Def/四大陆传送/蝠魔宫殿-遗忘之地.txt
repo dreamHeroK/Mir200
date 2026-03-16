@@ -1,0 +1,47 @@
+[@main]
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\四大陆.txt P105
+
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 371 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:720:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入蝠魔宫殿>
+<>\ \
+<ItemShow:956:0:147:136:1>
+<ItemShow:1354:0:164:136:1>
+<ItemShow:<$STR(P100)>:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+[@进入蝠魔宫殿]
+
+
+#IF
+CHECKLEVELEX > 69
+#ACT
+#ELSEACT
+messagebox 等级不足70级
+BREAK
+
+#IF
+checkitem 装备精华 50
+#ACT
+TAKE 装备精华 50
+MAPMOVE fumo1 226 244
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[冰龙宫殿]，祝他满载而归！
+#ELSEACT
+messagebox 装备精华不足.
+BREAK

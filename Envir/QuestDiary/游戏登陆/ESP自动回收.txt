@@ -1,0 +1,16 @@
+[@ESP自动回收开关]
+{
+#IF
+check [18] 1
+#ACT
+
+sendmsg 6 你已打开自动回收！！！！！！！！！！
+SetOnTimer 80 5
+
+
+
+
+;;;BACKPACKRECOVERY 1
+;sendmsg 7 回收系统开启成功。
+
+}

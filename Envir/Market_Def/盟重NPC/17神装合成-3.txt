@@ -1,0 +1,90 @@
+[@main]
+#if
+#say
+\ \
+
+<Img:66:52:180:-4>\
+
+<Img:197:52:13:22>\
+
+<Text:神工巧匠：:19:135{FCOLOR=222}>\
+
+<Text:听说有个叫王:19:139{FCOLOR=7}>\
+
+<Text:铁锤的自称铸:19:141{FCOLOR=7}>\
+
+<Text:造之神，呵呵:19:143{FCOLOR=7}>\
+
+<Text:他配吗？哪天:19:145{FCOLOR=7}>\
+
+<Text:让我碰到他，:19:147{FCOLOR=7}>\
+
+<Text:一锤子把他脑:19:149{FCOLOR=7}>\
+
+<Text:门砸开花！:19:151{FCOLOR=7}>\
+
+
+\  \  \
+
+
+<Text:击杀稀有级以上的BOSS几率掉落神装碎片，可以在这里合成。:120:-155{FCOLOR=253}>\
+
+<Text:-------------------------------------------------------:114:-155{FCOLOR=10}>\
+
+<Text:免费合成，每次需要100个神装碎片，合成的神装完全随机。:120:-155{FCOLOR=250}>\ 
+
+<Text:-------------------------------------------------------:114:-155{FCOLOR=10}>\
+
+<Text:提示：人物在死亡时，有可能从身上爆出神装，请小心谨慎。:120:-155{FCOLOR=7}>\ 
+
+<Text:-------------------------------------------------------:114:-155{FCOLOR=10}>\
+
+
+<ITEMBOX:1:52:220:275:220:20:20:*:146#放入神装碎片>\
+
+
+
+<Text:[开始合成神装]|250#点击开始合成神装:236:-25{FCOLOR=251}/@开始合成神装>\
+
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+
+
+
+
+
+
+
+
+[@ItemIntoBox1]
+#IF
+CheckContainsTextList ..\QuestDiary\装备划分\神装碎片.txt <$BOXITEM[1].NAME>
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX 
+messagebox 只能放入神装碎片
+BREAK
+
+
+
+[@开始合成神装]
+#IF
+CheckBoxItemCount 1 100
+CheckContainsTextList ..\QuestDiary\装备划分\神装碎片.txt <$BOXITEM[1].NAME>
+#ACT
+GetDBItemFieldValue <$BOXITEM[1].NAME> STOCK <$STR(N$神装池上限)>
+MOVR N$神装合成池 1 <$STR(N$神装池上限)>
+DelBoxItem 1 100
+GetRandomText ..\QuestDiary\神装合成池\<$STR(N$神装合成池)>阶神装池.txt S$合成神装名字
+GIVE <$STR(S$合成神装名字)> 1
+messagebox 成功合成出：<$STR(S$合成神装名字)>
+SENDMSG 0 恭喜玩家[<$USERNAME>]，合成出<$STR(N$神装合成池)>阶神装[<$STR(S$合成神装名字)>]
+#ELSEACT
+messagebox 需要放入100个神装碎片
+BREAK
+
+
+
+
+
+

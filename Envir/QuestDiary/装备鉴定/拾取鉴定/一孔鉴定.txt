@@ -1,0 +1,35 @@
+[@一孔鉴定]
+{
+
+#IF
+CheckItemStoneCount -1 = 0
+#ACT
+LockUpdateItem -1
+SetCustomItemProgressbar -1 0 0 1
+SetCustomItemProgressbar -1 0 1 <Img:995:0>
+SETCUSTOMITEMPROGRESSBARVALUE -1 0 3 = 0
+SetCustomItemProgressbar -1 1 0 1
+SetCustomItemProgressbar -1 1 1 <Img:990:0>
+SETCUSTOMITEMPROGRESSBARVALUE -1 1 3 = 0
+MOVR N$属性池1 1 4
+GetRandomText ..\QuestDiary\装备鉴定\拾取鉴定\元素池.txt S$一孔
+EXTRACTSTRING ★ <$STR(S$选中词缀1)> S$属性代码1 N$最小值1 N$最大值1 S$鉴定图像1
+MOVR N$提取范围1 <$STR(N$最小值1)> <$STR(N$最大值1)>
+SETFLUTECOUNT -1 2
+ItemAddStone -1 鉴定属性 1
+ItemAddStone -1 <$STR(S$一孔)> 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,49 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 342 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:63:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入修罗古刹>
+<>\ \
+<ItemShow:444:0:147:136:1>
+<ItemShow:1291:0:164:136:1>
+<ItemShow:148:0:181:136:1>
+<ItemShow:<$STR(P100)>:0:198:135:1>
+<ItemShow:<$STR(P101)>:0:215:135:1>
+<ItemShow:<$STR(P102)>:0:233:135:1>\ \ 
+
+
+[@进入修罗古刹]
+#IF
+CHECKLEVELEX > 59
+#ACT
+#ELSEACT
+messagebox 等级不足60级
+BREAK
+
+#IF
+checkgold 180000
+#ACT
+take 金币 180000
+inc J130 180000
+MAPMOVE xiuluo1 18 28
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[修罗古刹]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要180000金币
+BREAK

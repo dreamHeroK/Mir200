@@ -1,0 +1,111 @@
+{
+
+
+
+[@荒野战场领奖]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 223 1 4 0 0 1 435 15 1
+
+#IF
+EQUAL <$HP> 0
+#act
+MESSAGEBOX 你已经阵亡了！
+BREAK
+
+
+
+#IF
+#ACT
+GetMapHumCount 战场 1 N$战场剩余玩家
+
+#IF
+#ACT
+MOV S$领奖按钮 <IMGEX:111:13:13:13:173:60|当前战场上还有<$STR(N$战场剩余玩家)>位玩家！><TEXT:领取奖励:103:71/FCOLOR=231> 
+
+#IF
+EQUAL A15 战场关闭
+EQUAL A16 虚位以待
+EQUAL <$STR(N$战场剩余玩家)> 1
+#ACT
+MOV S$领奖按钮 <IMGEX:111:11:12:13:173:60/@领取战场奖励><TEXT:领取奖励:103:71/FCOLOR=250> 
+
+
+#IF
+#ACT
+#say
+　\
+　\
+　\
+　\
+　\
+　这里是荒野战场。在这里可以进行PK。\
+　目前战场处于活动中.......\ 
+　\
+　\
+　当荒野战场中只剩1人时，获胜者可来我这里领奖！
+　\
+　\
+　当前战场上共有{<$STR(N$战场剩余玩家)>/SCOLOR=250}位玩家！\ \
+
+
+<$STR(S$领奖按钮)>
+
+
+
+
+[@领取战场奖励]
+#if
+EQUAL A16 <$USERNAME>
+#ACT
+messagebox 您已经获得了今天的奖励！！
+break
+
+#if
+EQUAL A15 战场关闭
+CHECKMAPHUMANCOUNT 战场 < 2
+EQUAL A16 虚位以待
+#ACT
+MOV A16 <$USERNAME>
+RECYCFENGHAO 战场之王
+GiveFengHao 战场之王 1
+
+mov N$奖励积分 2
+mul N$奖励积分 <$STR(G11)>
+inc N$奖励积分 10
+GAMEPOINT + <$STR(N$奖励积分)>
+SENDMSG  0  恭喜今天的战场之王【%s】杀出重围，以横扫千军的气势获得【战场之王】称号！奖励{<$STR(N$奖励积分)>|150:0}点贡献积分！
+SENDMSG  0  恭喜今天的战场之王【%s】杀出重围，以横扫千军的气势获得【战场之王】称号！奖励{<$STR(N$奖励积分)>|150:0}点贡献积分！
+SENDMSG  0  恭喜今天的战场之王【%s】杀出重围，以横扫千军的气势获得【战场之王】称号！奖励{<$STR(N$奖励积分)>|150:0}点贡献积分！
+goto @荒野战场领奖
+#CALL [\蛋蛋专用\触发\统筹属性触发.txt] @统筹属性触发
+close
+MAPMOVE 永恒主城 311 328 10
+#elseact
+messagebox 对不起，可能是今天已经有人捷足先登了。\或者在场还有其他人。\或者活动未结束
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

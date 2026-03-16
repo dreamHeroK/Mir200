@@ -1,0 +1,45 @@
+[@MAIN]
+\ 
+<><只要本大爷的宝刀一挥，就可以让男人变女人，女人变男人。/SCOLOR=250> \
+<------------------------------------------------------------/SCOLOR=13>\ 
+<><什么？你不信？来来来，今天就表演一个小刀拉屁股，给你开开眼！/SCOLOR=146> \ 
+<------------------------------------------------------------/SCOLOR=13>\  \  \ 
+
+<>                       <开始变性/@开始变性> <(需要500万金币)/SCOLOR=7>\ 
+
+
+
+
+
+
+
+
+[@开始变性]
+#IF
+checkgold 5000000
+#ACT
+#ELSEACT
+MESSAGEBOX 你的金币不足
+BREAK
+
+#IF
+gender man
+checkgold 5000000
+#ACT
+take 金币 5000000
+CHANGEGENDER 1
+TakeOffItem 0
+MESSAGEBOX 手术成功，女人的幸福你想像不到
+break
+
+#IF
+gender woman
+checkgold 5000000
+#ACT
+take 金币 5000000
+CHANGEGENDER 0
+TakeOffItem 0
+MESSAGEBOX 手术成功，男人的快乐你想像不到
+break
+
+

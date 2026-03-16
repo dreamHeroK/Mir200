@@ -1,0 +1,340 @@
+[@MAIN]
+#if
+#act
+CloseBigDialogBox
+OPENMERCHANTBIGDLG 113 231 1 4 0 0 1 477 00
+MOV S$捐献按钮 <ImgEx:118:547:547:546:-30:15/@@inputString15(输入元宝点不得少于300)>
+goto @获取全部捐献第一
+
+#if
+equal G21 0
+#act
+mov A21 暂无
+
+#if
+equal G22 0
+#act
+mov A22 暂无
+
+
+#if
+equal G23 0
+#act
+mov A23 暂无
+
+#if
+equal G24 0
+#act
+mov A24 暂无
+
+
+#if
+#act
+MOV <$STR(S$捐献1)>
+MOV <$STR(S$捐献2)>
+MOV <$STR(S$捐献3)>
+MOV <$STR(S$捐献4)>
+MOV <$STR(S$捐献5)>
+MOV <$STR(S$额度1)>
+MOV <$STR(S$额度2)>
+MOV <$STR(S$额度3)>
+MOV <$STR(S$额度4)>
+MOV <$STR(S$额度5)>
+MOV S$捐献1  
+MOV S$捐献2 <$STR(A21)>
+MOV S$捐献3 <$STR(A22)>
+MOV S$捐献4 <$STR(A23)>
+MOV S$捐献5 <$STR(A24)>
+MOV S$额度1 0
+MOV S$额度2 <$STR(G21)>
+MOV S$额度3 <$STR(G22)>
+MOV S$额度4 <$STR(G23)>
+MOV S$额度5 <$STR(G24)>
+MOV S$第一名显示 捐献第一名|70#下列展示捐献第一玩家名单<$str(A89)>
+MOV S$第二名显示 <$STR(A21)>
+MOV S$第三名显示 <$STR(A22)>
+MOV S$第四名显示 <$STR(A23)>
+MOV S$第五名显示 <$STR(A24)>
+MOV S$第一额度显示 1000
+MOV S$第二额度显示 <$STR(G21)>
+MOV S$第三额度显示 <$STR(G22)>
+MOV S$第四额度显示 <$STR(G23)>
+MOV S$第五额度显示 <$STR(G24)>
+;SetStringBlank S$第一名显示 14 1
+SetStringBlank S$第二名显示 14 1
+SetStringBlank S$第三名显示 14 1
+SetStringBlank S$第四名显示 14 1
+SetStringBlank S$第五名显示 14 1
+SetStringBlank S$第一额度显示 5 1
+SetStringBlank S$第二额度显示 5 1
+SetStringBlank S$第三额度显示 5 1
+SetStringBlank S$第四额度显示 5 1
+SetStringBlank S$第五额度显示 5 1
+
+
+#if
+#act
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\一区.txt n60 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\二区.txt n61 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\三区.txt n62 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\四区.txt n63 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\五区.txt n64 1
+MOV N16 0
+INC N16 <$STR(n60)>
+INC N16 <$STR(n61)>
+INC N16 <$STR(n62)>
+INC N16 <$STR(n63)>
+INC N16 <$STR(n64)>
+
+#IF
+CheckContainsText <$SERVERNAME> 合
+#ACT
+mov S$总数  <TEXT:<$STR(N16)>:218:13:{SCOLOR=7}>
+#ELSEACT
+mov S$总数  <Text:暂时无法查询|146#合区后显示具体数值:218:13{FCOLOR=251}>
+
+
+#IF
+CHECKVAR HUMAN 捐献总数 > 999
+#ACT
+MOV S$捐献1 <$username>
+RECYCFENGHAO 沙捐保底
+RECYCFENGHAO 沙捐第五名
+RECYCFENGHAO 沙捐第四名
+RECYCFENGHAO 沙捐第三名
+RECYCFENGHAO 沙捐第二名
+GIVEFENGHAO 沙捐第一名
+
+#if
+not equal S$捐献1
+not equal S$捐献2
+equal S$捐献1 <$STR(S$捐献2)>
+#act
+mov  S$捐献2  <$STR(A21)>
+
+#IF
+CheckLevelEx > 0
+#ACT
+#SAY
+\ \ \
+<>     \ \
+<>      <$STR(S$总数)>\ 
+<>     <TEXT:<$STR(S$第一名显示)>:102:27:{SCOLOR=7}> <TEXT:<$STR(S$第一额度显示)>:170:27:{SCOLOR=7}>\ 
+<>     <TEXT:<$STR(S$第二名显示)>:102:40:{SCOLOR=7}> <TEXT:<$STR(S$第二额度显示)>:145:40:{SCOLOR=7}>\ 
+<>     <TEXT:<$STR(S$第三名显示)>:102:52:{SCOLOR=7}> <TEXT:<$STR(S$第三额度显示)>:145:52:{SCOLOR=7}>\ 
+<>     <TEXT:<$STR(S$第四名显示)>:102:64:{SCOLOR=7}> <TEXT:<$STR(S$第四额度显示)>:145:64:{SCOLOR=7}>\ 
+<>     <TEXT:<$STR(S$第五名显示)>:102:75:{SCOLOR=7}> <TEXT:<$STR(S$第五额度显示)>:145:75:{SCOLOR=7}>\ \ \ \ \ \ \
+<>   \
+<>    \ \
+<>                             <$STR(S$捐献按钮)>\ \ \
+<>     <Img:548:118:360:-251|168#基础属性：^-^103#攻魔道20-20^254#全元素+2%^58#攻击速度+3^70#自动吃金币[元宝]/SCOLOR=58>\ \
+<>     <Img:548:118:360:-253|168#基础属性：^-^103#攻魔道15-15^70#自动吃金币[元宝]/SCOLOR=58>\ \
+<>     <Img:548:118:360:-255|168#基础属性：^-^103#攻魔道10-10^70#自动吃金币[元宝]/SCOLOR=58>\ \
+<>     <Img:548:118:360:-259|168#基础属性：^-^103#攻魔道8-8^70#自动吃金币[元宝]/SCOLOR=58>\ \
+<>     <Img:548:118:360:-266|168#基础属性：^-^103#攻魔道5-5^70#自动吃金币[元宝]/SCOLOR=58>\ \
+
+[@inputString15]
+
+
+
+
+#IF
+check [103] 1
+#act
+sendmsg 6 [提示]:捐献已经超过1000,无需再次捐献.
+break
+#IF
+#ACT
+MOV N$捐献后计算  <$human(捐献总数)>
+INC N$捐献后计算  <$STR(S15)>
+
+#if
+large S15 1000
+#act
+messagebox 输入金额过大!
+break
+
+#IF
+small S15 300
+CHECKVAR HUMAN 捐献总数 < 300
+#ACT
+MESSAGEBOX 提示：捐献金额不能少于300元宝.
+BREAK
+
+
+
+#IF
+CHECKGAMEGOLD ? <$STR(S15)>
+#ACT
+goto @跨区捐献判定
+#ELSEACT
+MESSAGEBOX 提示：你没有<$STR(S15)>元宝。
+
+
+[@跨区捐献判定]
+#if
+equal G30 666
+CheckContainsText <$SERVERNAME> 合区
+#act
+GAMEGOLD - <$STR(S15)>
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+OpenAutoPickItem 3 0 15 1 0 0 300
+SENDMSG 7 自动捡物开启
+;GOTO @排名统计数据
+break
+
+#if
+CheckContainsText <$SERVERNAME> 合
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\一区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+OpenAutoPickItem 3 0 15 1 0 0 300
+SENDMSG 7 自动捡物开启
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+break
+
+
+
+#if
+CheckContainsText <$SERVERNAME> 测试
+#act
+MessageBox 　\　\　　　测试区无法捐献!!!
+break
+
+
+
+
+
+#if
+CheckContainsText <$SERVERNAME> 一区
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\一区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+
+
+
+#if
+CheckContainsText <$SERVERNAME> 二区
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\二区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+
+#if
+CheckContainsText <$SERVERNAME> 三区
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+GiveFengHao 捐献第四
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\三区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+
+#if
+CheckContainsText <$SERVERNAME> 四区
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\四区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+
+#if
+CheckContainsText <$SERVERNAME> 五区
+#act
+GAMEGOLD - <$STR(S15)>
+mov N$累计奖池 <$STR(S15)>
+inc G27 <$STR(N$累计奖池)>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>\五区.txt G27 0
+CALCVAR HUMAN 捐献总数 + <$STR(S15)>
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#CALL [10属性重置\属性重置.TXT] @属性重置
+GOTO @排名统计数据
+MOV S10 <$USERNAME>
+mov N$累计奖池 0
+
+[@排名统计数据]
+
+#IF
+LARGE <$human(捐献总数)>  1000
+#ACT
+CALCVAR HUMAN 捐献总数 = 1000
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+#IF
+EQUAL <$human(捐献总数)> 1000
+#ACT
+RECYCFENGHAO 沙捐第一名
+RECYCFENGHAO 沙捐第二名
+RECYCFENGHAO 沙捐第三名
+RECYCFENGHAO 沙捐第四名
+RECYCFENGHAO 沙捐第五名
+GIVEFENGHAO 沙捐第一名
+SET [103] 1
+;ADDSKILL 半月弯刀
+;SKILLLEVEL 半月弯刀 = 3
+CALCVAR HUMAN 捐献总数 = 0
+SAVEVAR HUMAN 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt
+INC A88 ^70#<$USERNAME>
+AddTextListEx ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\<$STR(A17)>.txt <$str(A88)> 0
+goto @获取全部捐献第一
+
+
+#if
+#ACT
+SortVarToList 捐献总数 ..\QuestDiary\捐献功能\捐献总数.txt ..\QuestDiary\捐献功能\数据排名.txt 0 1
+GetListString ..\QuestDiary\捐献功能\数据排名.txt 0 A21 G21
+GetListString ..\QuestDiary\捐献功能\数据排名.txt 1 A22 G22
+GetListString ..\QuestDiary\捐献功能\数据排名.txt 2 A23 G23
+GetListString ..\QuestDiary\捐献功能\数据排名.txt 3 A24 G24
+GetListString ..\QuestDiary\捐献功能\数据排名.txt 4 A25 G25
+GMEXECUTE 全服触发 @捐献排行检测
+SENDMOVEMSG 0 251 0 50 1 注意:玩家{[<$USERNAME>]/SCOLOR=205}捐献{『<$STR(S15)>』/SCOLOR=250}元宝! 15 20 0
+SENDMOVEMSG 0 251 0 80 1 注意:玩家{[<$USERNAME>]/SCOLOR=205}捐献{『<$STR(S15)>』/SCOLOR=250}元宝! 15 20 0
+MESSAGEBOX 提示：你成功捐献<$STR(S15)>元宝。\
+GOTO @MAIN
+
+
+[@获取全部捐献第一]
+#if
+#act
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\一区.txt S70 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\二区.txt S71 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\三区.txt S72 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\四区.txt S73 1
+GetRandomText ..\..\..\..\游戏记录\捐献文本\<$STR(A6)>通区第一\五区.txt S74 1
+MOV A89 
+INC A89 <$str(S70)><$str(S71)><$str(S72)><$str(S73)><$str(S74)>

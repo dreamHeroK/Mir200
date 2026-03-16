@@ -1,0 +1,458 @@
+[@领取自定义]
+{
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\01.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\01.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\02.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\02.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\03.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\03.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\04.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\04.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\05.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\05.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\06.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\06.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\07.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\07.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\08.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\08.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\09.txt
+#ACT
+inc u29 0
+DelAccountList ..\QuestDiary\自定义变量命令\09.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\1.txt
+#ACT
+inc u29 1
+DelAccountList ..\QuestDiary\自定义变量命令\1.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\2.txt
+#ACT
+inc u29 2
+DelAccountList ..\QuestDiary\自定义变量命令\2.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\3.txt
+#ACT
+inc u29 3
+DelAccountList ..\QuestDiary\自定义变量命令\3.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\4.txt
+#ACT
+inc u29 4
+DelAccountList ..\QuestDiary\自定义变量命令\4.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\5.txt
+#ACT
+inc u29 5
+DelAccountList ..\QuestDiary\自定义变量命令\5.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\6.txt
+#ACT
+inc u29 6
+DelAccountList ..\QuestDiary\自定义变量命令\6.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\7.txt
+#ACT
+inc u29 7
+DelAccountList ..\QuestDiary\自定义变量命令\7.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\8.txt
+#ACT
+inc u29 8
+DelAccountList ..\QuestDiary\自定义变量命令\8.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\9.txt
+#ACT
+inc u29 9
+DelAccountList ..\QuestDiary\自定义变量命令\9.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\10.txt
+#ACT
+inc u29 10
+DelAccountList ..\QuestDiary\自定义变量命令\10.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\20.txt
+#ACT
+inc u29 20
+DelAccountList ..\QuestDiary\自定义变量命令\20.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\30.txt
+#ACT
+inc u29 30
+DelAccountList ..\QuestDiary\自定义变量命令\30.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\40.txt
+#ACT
+inc u29 40
+DelAccountList ..\QuestDiary\自定义变量命令\40.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\50.txt
+#ACT
+inc u29 50
+DelAccountList ..\QuestDiary\自定义变量命令\50.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\60.txt
+#ACT
+inc u29 60
+DelAccountList ..\QuestDiary\自定义变量命令\60.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\70.txt
+#ACT
+inc u29 70
+DelAccountList ..\QuestDiary\自定义变量命令\70.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\80.txt
+#ACT
+inc u29 80
+DelAccountList ..\QuestDiary\自定义变量命令\80.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\90.txt
+#ACT
+inc u29 90
+DelAccountList ..\QuestDiary\自定义变量命令\90.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\100.txt
+#ACT
+inc u29 100
+DelAccountList ..\QuestDiary\自定义变量命令\100.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\200.txt
+#ACT
+inc u29 200
+DelAccountList ..\QuestDiary\自定义变量命令\200.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\300.txt
+#ACT
+inc u29 300
+DelAccountList ..\QuestDiary\自定义变量命令\300.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\400.txt
+#ACT
+inc u29 400
+DelAccountList ..\QuestDiary\自定义变量命令\400.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\500.txt
+#ACT
+inc u29 500
+DelAccountList ..\QuestDiary\自定义变量命令\500.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\600.txt
+#ACT
+inc u29 600
+DelAccountList ..\QuestDiary\自定义变量命令\600.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\700.txt
+#ACT
+inc u29 700
+DelAccountList ..\QuestDiary\自定义变量命令\700.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\800.txt
+#ACT
+inc u29 800
+DelAccountList ..\QuestDiary\自定义变量命令\800.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\900.txt
+#ACT
+inc u29 900
+DelAccountList ..\QuestDiary\自定义变量命令\900.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\1000.txt
+#ACT
+inc u29 1000
+DelAccountList ..\QuestDiary\自定义变量命令\1000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\2000.txt
+#ACT
+inc u29 2000
+DelAccountList ..\QuestDiary\自定义变量命令\2000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\3000.txt
+#ACT
+inc u29 3000
+DelAccountList ..\QuestDiary\自定义变量命令\3000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\4000.txt
+#ACT
+inc u29 4000
+DelAccountList ..\QuestDiary\自定义变量命令\4000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\5000.txt
+#ACT
+inc u29 5000
+DelAccountList ..\QuestDiary\自定义变量命令\5000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\6000.txt
+#ACT
+inc u29 6000
+DelAccountList ..\QuestDiary\自定义变量命令\6000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\7000.txt
+#ACT
+inc u29 7000
+DelAccountList ..\QuestDiary\自定义变量命令\7000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\8000.txt
+#ACT
+inc u29 8000
+DelAccountList ..\QuestDiary\自定义变量命令\8000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\9000.txt
+#ACT
+inc u29 9000
+DelAccountList ..\QuestDiary\自定义变量命令\9000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\10000.txt
+#ACT
+inc u29 10000
+DelAccountList ..\QuestDiary\自定义变量命令\10000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\20000.txt
+#ACT
+inc u29 20000
+DelAccountList ..\QuestDiary\自定义变量命令\20000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\30000.txt
+#ACT
+inc u29 30000
+DelAccountList ..\QuestDiary\自定义变量命令\30000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\40000.txt
+#ACT
+inc u29 40000
+DelAccountList ..\QuestDiary\自定义变量命令\40000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\50000.txt
+#ACT
+inc u29 50000
+DelAccountList ..\QuestDiary\自定义变量命令\50000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\60000.txt
+#ACT
+inc u29 60000
+DelAccountList ..\QuestDiary\自定义变量命令\60000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\70000.txt
+#ACT
+inc u29 70000
+DelAccountList ..\QuestDiary\自定义变量命令\70000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\80000.txt
+#ACT
+inc u29 80000
+DelAccountList ..\QuestDiary\自定义变量命令\80000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\90000.txt
+#ACT
+inc u29 90000
+DelAccountList ..\QuestDiary\自定义变量命令\90000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\100000.txt
+#ACT
+inc u29 100000
+DelAccountList ..\QuestDiary\自定义变量命令\100000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\200000.txt
+#ACT
+inc u29 200000
+DelAccountList ..\QuestDiary\自定义变量命令\200000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\300000.txt
+#ACT
+inc u29 300000
+DelAccountList ..\QuestDiary\自定义变量命令\300000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\400000.txt
+#ACT
+inc u29 400000
+DelAccountList ..\QuestDiary\自定义变量命令\400000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\500000.txt
+#ACT
+inc u29 500000
+DelAccountList ..\QuestDiary\自定义变量命令\500000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\600000.txt
+#ACT
+inc u29 600000
+DelAccountList ..\QuestDiary\自定义变量命令\600000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\700000.txt
+#ACT
+inc u29 700000
+DelAccountList ..\QuestDiary\自定义变量命令\700000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\800000.txt
+#ACT
+inc u29 800000
+DelAccountList ..\QuestDiary\自定义变量命令\800000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\900000.txt
+#ACT
+inc u29 900000
+DelAccountList ..\QuestDiary\自定义变量命令\900000.txt
+goto @领取自定义
+
+#IF
+CheckAccountList ..\QuestDiary\自定义变量命令\1000000.txt
+#ACT
+inc u29 1000000
+DelAccountList ..\QuestDiary\自定义变量命令\1000000.txt
+goto @领取自定义
+
+
+
+#ELSESAY
+
+请查看自己的数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

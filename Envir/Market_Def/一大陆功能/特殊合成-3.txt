@@ -1,0 +1,423 @@
+[@main]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 14 1 4 0 -90 1 597 27 1
+#SAY
+<ImgEx:165:24:25:24:45:22/@main>\
+<ImgEx:165:15:16:15:45:34/@盾牌>\
+<ImgEx:165:12:13:12:45:46/@斗笠>\
+
+<>  <ItemShow:583:0:153:-27:1>   <ItemShow:584:0:148:-27:1>   <ItemShow:585:0:143:-27:1>   <ItemShow:586:0:138:-27:1>   <ItemShow:587:0:133:-27:1>  \
+<>  <ImgEx:165:10:11:10:152:6|250#需要治愈石① + 10万金币/@点击合成2><ImgEx:165:10:11:10:164:6|250#需要治愈石② + 20万金币/@点击合成3><ImgEx:165:10:11:10:176:6|250#需要治愈石③ + 30万金币/@点击合成4><ImgEx:165:10:11:10:188:6|250#需要治愈石④ + 60万金币/@点击合成5><ImgEx:165:10:11:10:200:6|250#需要治愈石⑤ + 80万金币/@点击合成6>\
+<>  <Text:初级血石：Q礼包赠送:448:-13/FCOLOR=159>\
+<>  <Text:高级血石抗怪无压力:448:0/FCOLOR=159>\
+<>  <Text:鼠标移动到合成按钮查看:428:10/FCOLOR=159>\
+
+
+[@盾牌]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 14 1 4 0 -90 1 597 27 1
+#SAY
+<ImgEx:165:24:25:24:45:22/@main>\
+<ImgEx:165:15:16:15:45:34/@盾牌>\
+<ImgEx:165:12:13:12:45:46/@斗笠>\
+<>  <ItemShow:30:0:153:-27:1>
+<>   <ItemShow:31:0:148:-27:1/@购买盾牌(青铜盾牌,400000)>
+<>   <ItemShow:32:0:143:-27:1/@购买盾牌(白银盾牌,800000)>
+<>   <ItemShow:33:0:138:-27:1/@购买盾牌(黄金盾牌,1600000)>
+<>   <ItemShow:34:0:133:-27:1/@购买盾牌(赤金盾牌,3200000)> \
+<>  <ItemShow:35:0:153:37:1/@购买盾牌(铂金盾牌,6400000)>
+<>   <ItemShow:36:0:148:37:1/@购买盾牌(超凡盾牌,12800000)>
+<>   <ItemShow:37:0:143:37:1/@购买盾牌(王者盾牌,25600000)>
+<>   <ItemShow:38:0:138:37:1/@购买盾牌(天地盾牌,51200000)> \
+<>  <ImgEx:165:10:11:10:152:-11|需求：20W金币/@盾牌_1><ImgEx:165:10:11:10:164:-11|需求：木制盾牌*2/@盾牌_2><ImgEx:165:10:11:10:176:-11|需求：青铜盾牌*2/@盾牌_3><ImgEx:165:10:11:10:188:-11|需求：白银盾牌*2/@盾牌_4><ImgEx:165:10:11:10:200:-11|需求：黄金盾牌*2/@盾牌_5>\
+<>  <ImgEx:165:10:11:10:152:53|需求：赤金盾牌*2/@盾牌_6><ImgEx:165:10:11:10:164:53|需求：铂金盾牌*2/@盾牌_7><ImgEx:165:10:11:10:176:53|需求：超凡盾牌*2/@盾牌_8><ImgEx:165:10:11:10:188:53|需求：王者盾牌*2/@盾牌_9>\
+<>  <Text:点击图标可直接购买:446:-44/FCOLOR=159>\
+<>  <Text:高阶盾牌：上级盾牌*2:448:-32/FCOLOR=159>\
+
+[@斗笠]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 14 1 4 0 -90 1 597 27 1
+#SAY
+<ImgEx:165:24:25:24:45:22/@main>\
+<ImgEx:165:15:16:15:45:34/@盾牌>\
+<ImgEx:165:12:13:12:45:46/@斗笠>\
+<>  <ItemShow:19:0:153:-27:1>
+<>   <ItemShow:20:0:148:-27:1/@购买盾牌(青铜斗笠,400000)>
+<>   <ItemShow:21:0:143:-27:1/@购买盾牌(白银斗笠,800000)>
+<>   <ItemShow:22:0:138:-27:1/@购买盾牌(黄金斗笠,1600000)>
+<>   <ItemShow:23:0:133:-27:1/@购买盾牌(赤金斗笠,3200000)> \
+<>  <ItemShow:24:0:153:37:1/@购买盾牌(铂金斗笠,6400000)>
+<>   <ItemShow:25:0:148:37:1/@购买盾牌(超凡斗笠,12800000)>
+<>   <ItemShow:26:0:143:37:1/@购买盾牌(王者斗笠,25600000)>
+<>   <ItemShow:27:0:138:37:1/@购买盾牌(天地斗笠,51200000)> \
+<>  <ImgEx:165:10:11:10:152:-11|需求：20W金币/@斗笠_1><ImgEx:165:10:11:10:164:-11|需求：木制斗笠*2/@斗笠_2><ImgEx:165:10:11:10:176:-11|需求：青铜斗笠*2/@斗笠_3><ImgEx:165:10:11:10:188:-11|需求：白银斗笠*2/@斗笠_4><ImgEx:165:10:11:10:200:-11|需求：黄金斗笠*2/@斗笠_5>\
+<>  <ImgEx:165:10:11:10:152:53|需求：赤金斗笠*2/@斗笠_6><ImgEx:165:10:11:10:164:53|需求：铂金斗笠*2/@斗笠_7><ImgEx:165:10:11:10:176:53|需求：超凡斗笠*2/@斗笠_8><ImgEx:165:10:11:10:188:53|需求：王者斗笠*2/@斗笠_9>\
+<>  <Text:点击图标可直接购买:446:-44/FCOLOR=159>\
+<>  <Text:高阶斗笠：上级斗笠*2:448:-32/FCOLOR=159>\
+
+
+[@购买盾牌]
+#IF
+#ACT
+mov S$参数1 <$SCRIPTPARAM1>
+mov S$参数2 <$SCRIPTPARAM2>
+MESSAGEBOX 　　　确定是否花：<$STR(S$参数2)>金币购买[<$STR(S$参数1)>] @确定购买A @exit
+
+[@确定购买A]
+#IF
+not CheckGold  <$STR(S$参数2)>
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足<$STR(S$参数2)>！
+BREAK
+#IF
+#ACT
+TAKE 金币  <$STR(S$参数2)>
+GiveStateItem <$STR(S$参数1)> 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[<$STR(S$参数1)>>]
+BREAK
+
+
+
+
+[@点击合成1]
+#if
+checkitem 治愈石① 1
+CheckGold 200000
+#ACT
+TAKE 金币 200000
+give 治愈石①
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+
+[@点击合成2]
+#if
+checkitem 治愈石① 1
+CheckGold 100000
+#ACT
+TAKE 治愈石① 1
+TAKE 金币 100000
+give 治愈石②
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+[@点击合成3]
+#if
+checkitem 治愈石② 1
+CheckGold 200000
+#ACT
+TAKE 治愈石② 1
+TAKE 金币 200000
+give 治愈石③
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+[@点击合成4]
+#if
+checkitem 治愈石③ 1
+CheckGold 300000
+#ACT
+TAKE 治愈石③ 1
+TAKE 金币 300000
+give 治愈石④
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+[@点击合成5]
+#if
+checkitem 治愈石④ 1
+CheckGold 600000
+#ACT
+TAKE 治愈石④ 1
+TAKE 金币 600000
+give 治愈石⑤
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+
+[@点击合成6]
+#if
+checkitem 治愈石⑤ 1
+CheckGold 800000
+#ACT
+TAKE 治愈石⑤ 1
+TAKE 金币 800000
+give 治愈石·神
+SENDMSG 6 恭喜你合成成功!!
+#elseact
+MESSAGEBOX 对不起，材料不够!
+
+;====================================
+
+[@盾牌_1]
+#IF
+not CheckGold  200000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足200000！
+BREAK
+#IF
+#ACT
+TAKE 金币  200000
+GiveStateItem 木制盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[木制盾牌>]
+BREAK
+
+[@盾牌_2]
+#IF
+not checkitem 木制盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　木制盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 木制盾牌 2
+GiveStateItem 青铜盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[青铜盾牌>]
+BREAK
+
+[@盾牌_3]
+#IF
+not checkitem 青铜盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　青铜盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 青铜盾牌 2
+GiveStateItem 白银盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[白银盾牌>]
+BREAK
+
+
+[@盾牌_4]
+#IF
+not checkitem 白银盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　白银盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 白银盾牌 2
+GiveStateItem 黄金盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[黄金盾牌>]
+BREAK
+
+
+[@盾牌_5]
+#IF
+not checkitem 黄金盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　黄金盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 黄金盾牌 2
+GiveStateItem 赤金盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[赤金盾牌>]
+BREAK
+
+
+[@盾牌_6]
+#IF
+not checkitem 赤金盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　赤金盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 赤金盾牌 2
+GiveStateItem 铂金盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[铂金盾牌>]
+BREAK
+
+
+[@盾牌_7]
+#IF
+not checkitem 铂金盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　铂金盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 铂金盾牌 2
+GiveStateItem 超凡盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[超凡盾牌>]
+BREAK
+
+
+[@盾牌_8]
+#IF
+not checkitem 超凡盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　超凡盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 超凡盾牌 2
+GiveStateItem 王者盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[王者盾牌>]
+BREAK
+
+
+
+[@盾牌_9]
+#IF
+not checkitem 王者盾牌 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　王者盾牌不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 王者盾牌 2
+GiveStateItem 天地盾牌 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[天地盾牌>]
+BREAK
+;-----------------------------
+
+[@斗笠_1]
+#IF
+not CheckGold  200000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足200000！
+BREAK
+#IF
+#ACT
+TAKE 金币  200000
+GiveStateItem 木制斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[木制斗笠>]
+BREAK
+
+[@斗笠_2]
+#IF
+not checkitem 木制斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　木制斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 木制斗笠 2
+GiveStateItem 青铜斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[青铜斗笠>]
+BREAK
+
+[@斗笠_3]
+#IF
+not checkitem 青铜斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　青铜斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 青铜斗笠 2
+GiveStateItem 白银斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[白银斗笠>]
+BREAK
+
+
+[@斗笠_4]
+#IF
+not checkitem 白银斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　白银斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 白银斗笠 2
+GiveStateItem 黄金斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[黄金斗笠>]
+BREAK
+
+
+[@斗笠_5]
+#IF
+not checkitem 黄金斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　黄金斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 黄金斗笠 2
+GiveStateItem 赤金斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[赤金斗笠>]
+BREAK
+
+
+[@斗笠_6]
+#IF
+not checkitem 赤金斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　赤金斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 赤金斗笠 2
+GiveStateItem 铂金斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[铂金斗笠>]
+BREAK
+
+
+[@斗笠_7]
+#IF
+not checkitem 铂金斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　铂金斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 铂金斗笠 2
+GiveStateItem 超凡斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[超凡斗笠>]
+BREAK
+
+
+[@斗笠_8]
+#IF
+not checkitem 超凡斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　超凡斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 超凡斗笠 2
+GiveStateItem 王者斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[王者斗笠>]
+BREAK
+
+
+
+[@斗笠_9]
+#IF
+not checkitem 王者斗笠 2
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　王者斗笠不足2个！
+BREAK
+
+#IF
+#ACT
+TAKE 王者斗笠 2
+GiveStateItem 天地斗笠 1 1 0 0 1 1
+GuildNoticeMsg 5 255 恭喜玩家:[<$USERNAME>]成功合成[天地斗笠>]
+BREAK

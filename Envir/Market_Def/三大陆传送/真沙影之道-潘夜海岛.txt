@@ -1,0 +1,33 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 418 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:444:0:148:285:1> <ItemShow:446:0:158:285:1> <ItemShow:383:0:170:285:1> <ItemShow:384:0:180:285:1> <ItemShow:385:0:190:285:1> <ItemShow:513:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@真沙影之道1>
+
+
+
+
+[@真沙影之道1]
+#if
+ISCASTLEGUILD
+#ACT
+#ELSEACT
+MESSAGEBOX 非沙巴克成员禁止进入!
+break 
+
+
+#IF
+checkgold 2000000
+#Act
+take 金币 2000000
+inc J130 2000000
+MAP 沙影之道二层
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[真沙影之道二层]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要2000000金币!
+BREAK

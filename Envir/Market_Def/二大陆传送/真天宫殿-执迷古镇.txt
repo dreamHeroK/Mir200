@@ -1,0 +1,44 @@
+[@main]
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 363 1 4 0 0 1 535 4 1
+#say
+<> \
+<Img:45:113:5:22>  \
+<> \
+<ItemShow:1288:0:148:168:1> <ItemShow:144:0:158:168:1> <ItemShow:<$STR(P100)>:0:170:168:1> <ItemShow:<$STR(P101)>:0:180:168:1> <ItemShow:<$STR(P102)>:0:190:168:1> <ItemShow:<$STR(P103)>:0:203:168:1> \
+<> \
+<ImgEx:165:338:339:338:300:87/@进入真天宫>\
+
+
+
+
+[@进入真天宫]
+
+
+
+#IF
+checkgold 150000
+#ACT
+take 金币 150000
+inc J133 150000
+MAPMOVE zhentian1 183 21
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[真天宫]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要150000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

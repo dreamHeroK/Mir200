@@ -1,0 +1,51 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 378 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:85:113:4:33>  \  \
+<ImgEx:165:338:339:338:300:120/@进入铁血魔宫>
+<>\ \
+<ItemShow:1302:0:147:136:1>
+<ItemShow:1573:0:164:136:1>
+<ItemShow:<$STR(P100)>:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+[@进入铁血魔宫]
+
+
+#IF
+CHECKLEVELEX > 68
+#ACT
+#ELSEACT
+messagebox 等级不足69级
+BREAK
+
+#IF
+checkgold 290000
+#ACT
+take 金币 290000
+inc J130 290000
+MAPMOVE tiexue1 121 57
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[铁血魔宫]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要290000金币
+BREAK

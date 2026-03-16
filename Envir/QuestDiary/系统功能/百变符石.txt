@@ -1,0 +1,137 @@
+[@百变符石]
+{
+#if
+#say
+<Text:放入[百变符石]，输入想要转换的[暗金符石名称]，即可进行转换。:20:25{FCOLOR=250}>\
+<Text:-----------------------------------------------------------:20:24{FCOLOR=7}>\
+<Text:在NPC[符石大师](坐标318,321)处查看所有暗金符石的名称和属性。:20:23{FCOLOR=7}>\
+<Text:-----------------------------------------------------------:20:22{FCOLOR=7}>\
+<ITEMBOX:2:52:224:190:100:20:20:*:255#放入百变符石>\
+
+<Text:[点击转换]|250#点击输入符石名称:163:60{FCOLOR=151}/@@InPutString188>\
+
+#ACT
+MOV P1 0
+OPENMERCHANTBIGDLG 52 20 1 0 0 0 1 390 15 1
+
+
+
+[@ItemIntoBox2]
+#IF
+CHECKCUSTOMITEMPROGRESSBAR boxitem2 0
+#act
+GetCustomItemProgressbarValue boxitem2 0 3 N$百变符石等级
+#ELSEACT
+MOV N$百变符石等级 0
+
+
+[@ItemOutBox2]
+#IF
+#ACT
+MOV N$百变符石等级 0
+BREAK 
+
+
+
+[@InPutString188]
+#IF
+CheckBoxItemCount 2
+#act
+#ELSEACT
+messagebox 请放入百变符石
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\5符石系统\符石池\暗金符石大全.txt <$STR(S188)>
+#act
+#ELSEACT
+messagebox 你输入的暗金符石名称错误\在NPC[符石大师](坐标318,321)处查看所有暗金符石的名称
+BREAK
+
+#OR
+EQUAL <$BOXITEM[2].NAME> 百变符石
+EQUAL N$百变符石等级 888
+#act
+#ELSEACT
+messagebox 你放入的不是百变符石
+BREAK
+
+#IF
+
+EQUAL <$BOXITEM[2].NAME> 百变符石
+CheckContainsTextList ..\QuestDiary\5符石系统\符石池\暗金符石大全.txt <$STR(S188)>
+#act
+DelBoxItem 2 1
+GiveOnItem boxitem2 <$STR(S188)> 1
+SetItemState boxitem2 1
+SetItemState boxitem2 0 1
+SetItemState boxitem2 1 1
+SetItemState boxitem2 4 1
+SetItemState boxitem2 5 1
+LockUpdateItem boxitem2
+SETFLUTECOUNT boxitem2 6
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石1
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石2
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石3
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石4
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石5
+GetRandomText ..\QuestDiary\5符石系统\技能解封池.txt S$百变符石6
+ItemAddStone boxitem2 <$STR(S$百变符石1)>+1 1
+ItemAddStone boxitem2 <$STR(S$百变符石2)>+1 2
+ItemAddStone boxitem2 <$STR(S$百变符石3)>+1 3
+ItemAddStone boxitem2 <$STR(S$百变符石4)>+1 4
+ItemAddStone boxitem2 <$STR(S$百变符石5)>+1 5
+ItemAddStone boxitem2 <$STR(S$百变符石6)>+1 6
+SetCustomItemProgressbar boxitem2 0 0 1
+SetCustomItemProgressbar boxitem2 0 1 <Img:1190:0>
+SETCUSTOMITEMPROGRESSBARVALUE boxitem2 0 3 = 888
+SetCustomItemText boxitem2 <Img:1191:0>
+ChangeItemName boxitem2 百变·<$BOXITEM[2].NAME>
+UpdateItem boxitem2
+clearLinkItem
+ReturnBoxItem 2
+messagebox 百变符石转换完成，已放入你的包裹！
+break
+
+
+
+#IF
+
+CheckContainsTextList ..\QuestDiary\5符石系统\符石池\暗金符石大全.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\5符石系统\符石池\暗金符石大全.txt <$STR(S188)>
+CHECKCUSTOMITEMPROGRESSBAR boxitem2 0
+EQUAL N$百变符石等级 888
+#act
+GetItemStoneInfo boxitem2 0 0 S$获取转换技能1
+GetItemStoneInfo boxitem2 1 0 S$获取转换技能2
+GetItemStoneInfo boxitem2 2 0 S$获取转换技能3
+GetItemStoneInfo boxitem2 3 0 S$获取转换技能4
+GetItemStoneInfo boxitem2 4 0 S$获取转换技能5
+GetItemStoneInfo boxitem2 5 0 S$获取转换技能6
+DelBoxItem 2 1
+GiveOnItem boxitem2 <$STR(S188)> 1
+SetItemState boxitem2 1
+SetItemState boxitem2 0 1
+SetItemState boxitem2 1 1
+SetItemState boxitem2 4 1
+SetItemState boxitem2 5 1
+LockUpdateItem boxitem2
+SETFLUTECOUNT boxitem2 6
+ItemAddStone boxitem2 <$STR(S$获取转换技能1)> 1
+ItemAddStone boxitem2 <$STR(S$获取转换技能2)> 2
+ItemAddStone boxitem2 <$STR(S$获取转换技能3)> 3
+ItemAddStone boxitem2 <$STR(S$获取转换技能4)> 4
+ItemAddStone boxitem2 <$STR(S$获取转换技能5)> 5
+ItemAddStone boxitem2 <$STR(S$获取转换技能6)> 6
+SetCustomItemProgressbar boxitem2 0 0 1
+SetCustomItemProgressbar boxitem2 0 1 <Img:1190:0>
+SETCUSTOMITEMPROGRESSBARVALUE boxitem2 0 3 = 888
+SetCustomItemText boxitem2 <Img:1191:0>
+ChangeItemName boxitem2 百变·<$BOXITEM[2].NAME>
+UpdateItem boxitem2
+clearLinkItem
+ReturnBoxItem 2
+messagebox 百变符石转换完成，已放入你的包裹！
+break
+
+}

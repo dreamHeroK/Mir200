@@ -1,0 +1,40 @@
+﻿[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:1667:0:50:70:1>
+MOV S$世界DT2 <itemshow:1668:0:50:70:1>
+MOV S$世界DT3 <itemshow:1669:0:50:70:1>
+MOV S$世界DT4 <itemshow:1670:0:50:70:1>
+MOV S$世界DT5 <itemshow:1671:0:50:70:1>
+MOV S$世界DT6 <itemshow:1672:0:50:70:1>
+
+#IF
+#ACT
+#SAY
+<TEXT:二章12幕·痛苦巢穴:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:恶魔的尸油加上沉沦的毒蘑菇，或许还需要一些其它奇怪的炼:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:金道具，会出现什么？:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133|249#直达洞口需费用：{18000银币|251}^215#当然，你也可以跑着去--免费。/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+SMALL <$GAMEGOLD> 18000
+#act
+MessageBox 你的银币不足18000，无法直达该地图，跑着去吧。
+break
+
+#IF
+#act
+GAMEGOLD - 18000
+mapmove 猎魔世界 270 963
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{猎魔世界|7:0:1}】的【{痛苦巢穴|249:0:1}】进行探索！ self

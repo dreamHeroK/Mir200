@@ -1,0 +1,11 @@
+;通用穿戴装备触发
+[@TakeOnEx]
+#if
+#act
+#CALL [\A魂卡系统\魂卡穿戴检测.txt] @穿戴魂卡
+
+;通用取下装备触发
+[@TakeOffEx]
+#if
+#act
+#CALL [\A魂卡系统\魂卡穿戴检测.txt] @穿戴魂卡

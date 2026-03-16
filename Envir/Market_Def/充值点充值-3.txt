@@ -1,0 +1,42 @@
+[@main]
+\ \
+<$USERNAME>您好,欢迎来到<$SERVERNAME>,很高兴为您服务\
+您当前持有:<$GAMEGIRD>交易币\
+①本系统支持网上银行、手机充值卡、各类游戏点卡。\
+②请在充值5分钟后在本NPC处领取\
+③当前充值比例为1:1\
+\
+<领取/@领取>┆<充值/@充值>┆<退出/@exit>\
+[@领取]
+#CALL [\充值交易币\交易币\交易币.txt] @领取交易币
+#CALL [\自定义变量命令\customize.txt] @领取自定义
+
+[@充值]
+
+#IF
+#SAY
+<高速通道一/@高速通道一> ┆ <稳定通道二/@稳定通道二> ┆ <高防通道三/@高防通道三>
+\
+\
+\
+\
+<退出/@exit>
+
+[@高速通道一]
+#IF
+#ACT
+OpenWebSite http://520.0m3.top:689/gws/index.html?pid=2164158
+
+[@稳定通道二]
+#IF
+#ACT
+OpenWebSite https://okpay.263pk.com/gws/index.html?pid=2164158
+
+[@高防通道三]
+#IF
+#ACT
+OpenWebSite http://cdnok.263pk.com/gws/index.html?pid=2164158
+
+
+
+

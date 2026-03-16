@@ -1,0 +1,333 @@
+{
+
+
+[@仲裁者协会]
+
+#IF
+#ACT
+MOV S$排行榜头像显示 　
+MOV S$标识 全职业
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 65
+MOV N$坐标Y 189
+MOV N$操作序号 1
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 狂信徒
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 195
+MOV N$坐标Y 141
+MOV N$操作序号 2
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 惩罚者
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 325
+MOV N$坐标Y 93
+MOV N$操作序号 3
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 光明骑士
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 455
+MOV N$坐标Y 45
+MOV N$操作序号 4
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 暗杀者
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 585
+MOV N$坐标Y -3
+MOV N$操作序号 5
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 游荡者
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 715
+MOV N$坐标Y -51
+MOV N$操作序号 6
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 雷罚使徒
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 65
+MOV N$坐标Y 106
+MOV N$操作序号 7
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 熔岩法师
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 195
+MOV N$坐标Y 58
+MOV N$操作序号 8
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 极寒术士
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 325
+MOV N$坐标Y 10
+MOV N$操作序号 9
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 地狱尊者
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 455
+MOV N$坐标Y -38
+MOV N$操作序号 10
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 苦修士
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 585
+MOV N$坐标Y -86
+MOV N$操作序号 11
+GOTO @仲裁者协会补齐居中处理
+
+MOV S$标识 德鲁伊
+GetListString ..\QuestDiary\蛋蛋专用\仲裁者协会\<$STR(S$标识)>排行榜.txt 0 S$排行榜人名 N$排行榜数值
+MOV N$坐标X 715
+MOV N$坐标Y -134
+MOV N$操作序号 12
+GOTO @仲裁者协会补齐居中处理
+
+
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 111 190 1 4 0 0 1 777 14 1
+#SAY
+<$STR(S$排行榜头像显示)>　\
+
+<$STR(S$排行榜名字显示1)>　\
+<$STR(S$排行榜数值显示1)>　\
+<$STR(S$排行榜职业显示1)>　\
+
+<$STR(S$排行榜名字显示2)>　\
+<$STR(S$排行榜数值显示2)>　\
+<$STR(S$排行榜职业显示2)>　\
+
+<$STR(S$排行榜名字显示3)>　\
+<$STR(S$排行榜数值显示3)>　\
+<$STR(S$排行榜职业显示3)>　\
+
+<$STR(S$排行榜名字显示4)>　\
+<$STR(S$排行榜数值显示4)>　\
+<$STR(S$排行榜职业显示4)>　\
+
+<$STR(S$排行榜名字显示5)>　\
+<$STR(S$排行榜数值显示5)>　\
+<$STR(S$排行榜职业显示5)>　\
+
+<$STR(S$排行榜名字显示6)>　\
+<$STR(S$排行榜数值显示6)>　\
+<$STR(S$排行榜职业显示6)>　\
+
+<$STR(S$排行榜名字显示7)>　\
+<$STR(S$排行榜数值显示7)>　\
+<$STR(S$排行榜职业显示7)>　\
+
+<$STR(S$排行榜名字显示8)>　\
+<$STR(S$排行榜数值显示8)>　\
+<$STR(S$排行榜职业显示8)>　\
+
+<$STR(S$排行榜名字显示9)>　\
+<$STR(S$排行榜数值显示9)>　\
+<$STR(S$排行榜职业显示9)>　\
+
+<$STR(S$排行榜名字显示10)>　\
+<$STR(S$排行榜数值显示10)>　\
+<$STR(S$排行榜职业显示10)>　\
+
+<$STR(S$排行榜名字显示11)>　\
+<$STR(S$排行榜数值显示11)>　\
+<$STR(S$排行榜职业显示11)>　\
+
+<$STR(S$排行榜名字显示12)>　\
+<$STR(S$排行榜数值显示12)>　\
+<$STR(S$排行榜职业显示12)>　\
+
+<TEXT:排行榜每分钟自动刷新，仅对50级以上，有职业的玩家进行排名，排名方式为本职业的主属性评分:20:-120/FCOLOR=94>　\
+<TEXT:全职业榜获得：杀怪爆率+30%、对怪伤害+30%:20:-120/FCOLOR=251>　\
+<TEXT:单职业榜获得：杀怪爆率+10%、对怪伤害+10%:20:-120/FCOLOR=250>　\
+<TEXT:每天早上8点整系统自动重置排行榜:20:-120/FCOLOR=249>　\
+
+
+
+
+[@仲裁者协会补齐居中处理]
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\蛋蛋专用\仲裁者协会\全职业数据配置项.ini [<$STR(S$排行榜人名)>]
+#ACT
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\仲裁者协会\全职业数据配置项.ini <$STR(S$排行榜人名)> 当前人物名字 S$当前名字
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\仲裁者协会\全职业数据配置项.ini <$STR(S$排行榜人名)> 主属性 S$属性标签
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\仲裁者协会\全职业数据配置项.ini <$STR(S$排行榜人名)> 职业 S$职业名字
+ReadConfigFileItem ..\QuestDiary\蛋蛋专用\仲裁者协会\全职业数据配置项.ini <$STR(S$排行榜人名)> 等级 N$玩家等级
+
+#OR
+SMALL <$STR(N$玩家等级)> 50
+EQUAL N$排行榜数值 0
+#ACT
+TextLength 无人上榜 N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜名字显示<$STR(N$操作序号)> <TEXT:无人上榜:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=7>
+
+TextLength 0 N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜数值显示<$STR(N$操作序号)> <TEXT:0:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=7>
+
+INC N$坐标X 0
+INC N$坐标Y -60
+
+TextLength <$STR(S$标识)>榜 N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜职业显示<$STR(N$操作序号)> <TEXT:<$STR(S$标识)>.No1:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=7>
+
+
+BREAK
+
+#IF
+NOT SMALL <$STR(N$玩家等级)> 50
+LARGE N$排行榜数值 0
+#ACT
+TextLength <$STR(S$当前名字)> N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜名字显示<$STR(N$操作序号)> <TEXT:<$STR(S$当前名字)>:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=251>
+
+TextLength <$STR(N$排行榜数值)> N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜数值显示<$STR(N$操作序号)> <TEXT:<$STR(N$排行榜数值)>:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=251>
+
+INC N$坐标X 0
+INC N$坐标Y -60
+
+TextLength <$STR(S$标识)>榜 N$当前字符串长度
+MOV N$基准坐标 <$STR(N$坐标X)>
+MOV N$基准长度 0
+
+DEC N$基准长度 <$STR(N$当前字符串长度)>
+MUL N$基准长度 6
+DIV N$基准长度 2
+MOV N$坐标 <$STR(N$基准坐标)>
+INC N$坐标 <$STR(N$基准长度)>
+
+MOV S$排行榜职业显示<$STR(N$操作序号)> <TEXT:<$STR(S$标识)>.No1:<$STR(N$坐标)>:<$STR(N$坐标Y)>/FCOLOR=250>
+
+GOTO @判定排行榜头像显示
+
+
+
+
+[@判定排行榜头像显示]
+
+#IF
+NOT EQUAL <$STR(N$操作序号)> 1
+#ACT
+BREAK
+
+
+
+#IF
+EQUAL S$职业名字 狂信徒
+#ACT
+MOV N$图片编号 191
+
+
+#IF
+EQUAL S$职业名字 惩罚者
+#ACT
+MOV N$图片编号 192
+
+#IF
+EQUAL S$职业名字 光明骑士
+#ACT
+MOV N$图片编号 193
+
+#IF
+EQUAL S$职业名字 暗杀者
+#ACT
+MOV N$图片编号 194
+
+#IF
+EQUAL S$职业名字 游荡者
+#ACT
+MOV N$图片编号 195
+
+#IF
+EQUAL S$职业名字 雷罚使徒
+#ACT
+MOV N$图片编号 196
+
+#IF
+EQUAL S$职业名字 熔岩法师
+#ACT
+MOV N$图片编号 197
+
+#IF
+EQUAL S$职业名字 极寒术士
+#ACT
+MOV N$图片编号 198
+
+#IF
+EQUAL S$职业名字 地狱尊者
+#ACT
+MOV N$图片编号 199
+
+#IF
+EQUAL S$职业名字 苦修士
+#ACT
+MOV N$图片编号 200
+
+#IF
+EQUAL S$职业名字 德鲁伊
+#ACT
+MOV N$图片编号 201
+
+
+#IF
+#ACT
+MOV S$排行榜头像显示 <IMG:<$STR(N$图片编号)>:111:0:44>
+
+
+}

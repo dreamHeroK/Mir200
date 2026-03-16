@@ -1,0 +1,36 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 415 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:444:0:148:285:1> <ItemShow:446:0:158:285:1> <ItemShow:383:0:170:285:1> <ItemShow:384:0:180:285:1> <ItemShow:385:0:190:285:1> <ItemShow:513:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@地狱秘境>
+
+
+[@地狱秘境]
+#IF
+CHECKGAMEGOLD ? 300
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:元宝不达标!
+break
+
+
+#IF
+CHECKLEVELEX > 67
+#ACT
+#ELSEACT
+messagebox 等级不足68级
+BREAK
+
+
+#IF
+#ACT
+GAMEGOLD - 300
+inc J131 300
+MAP 地狱秘境
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[噩梦秘境]，祝他满载而归！
+BREAK
+

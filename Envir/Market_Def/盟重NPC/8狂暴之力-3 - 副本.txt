@@ -1,0 +1,100 @@
+[@main]
+#if
+#say
+\ \
+
+<Img:74:52:180:-4>\
+
+<Img:210:52:13:22>\
+
+<Text:老酒仙：:19:132{FCOLOR=222}>\
+
+<Text:对酒当歌，人:19:136{FCOLOR=7}>\
+
+<Text:生几何！譬如:19:138{FCOLOR=7}>\
+
+<Text:朝露，去日苦:19:140{FCOLOR=7}>\
+
+<Text:多。慨当以慷:19:142{FCOLOR=7}>\
+
+<Text:忧思难忘。何:19:144{FCOLOR=7}>\
+
+<Text:以解忧？唯有:19:146{FCOLOR=7}>\ 
+
+<Text:杜康。:19:148{FCOLOR=7}>\ 
+
+
+<Text:关于酒仙葫芦:19:157{FCOLOR=146}/@关于酒仙葫芦>\
+
+\  \
+
+
+<Text:年轻人，可否赠予一些银两，让我买些好酒，以解老夫酒瘾。:120:-155{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-155{FCOLOR=10}>\
+
+<Text:为表感谢，老夫会赠予你:120:-154{FCOLOR=7}><Text:[酒仙葫芦]:120:-154{FCOLOR=253}><Text:，此物附带着狂暴之力，:120:-154{FCOLOR=7}>\
+
+<Text:-------------------------------------------------------:114:-154{FCOLOR=10}>\
+
+<Text:会使你的实力大增，但是也有一些弊端。:120:-153{FCOLOR=7}>\
+
+<Text:-------------------------------------------------------:114:-153{FCOLOR=10}>\
+
+<Text:佩戴[酒仙葫芦]时，若被其他玩家杀死，对方获得1000声望。:120:-153{FCOLOR=146}>\
+
+<Text:-------------------------------------------------------:114:-152{FCOLOR=10}>\
+
+<Text:并且自己身上的[酒仙葫芦]消失。:120:-152{FCOLOR=146}>\
+
+<Text:-------------------------------------------------------:114:-151{FCOLOR=10}>\
+
+
+<ItemShow:982:0:255:-115:1>\
+
+
+
+<Text:[获得酒仙葫芦]|250#需要消耗200声望:234:-60{FCOLOR=251}/@获得酒仙葫芦>\
+
+<ITEMBOX:0:-1:1:-100:-100:1:1:*:>
+
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+
+
+
+[@获得酒仙葫芦]
+#IF
+CHECKITEMW 酒仙葫芦
+#ACT
+messagebox 你已经拥有[酒仙葫芦]，无法重复获取
+BREAK
+
+
+#IF
+NOT CHECKITEMW 酒仙葫芦
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+GiveOnItem boxitem0 酒仙葫芦 1
+LockUpdateItem boxitem0
+SETFLUTECOUNT boxitem0 1
+ItemAddStone boxitem0 幸运宝石 1
+UpdateItem boxitem0
+clearLinkItem
+ReturnBoxItem 0
+AutoTakeOnItem 酒仙葫芦 17
+GuildNoticeMsg 255 249 [<$USERNAME>]获得了[酒仙葫芦]，开启狂暴之力，实力大增，各位要小心!
+GuildNoticeMsg 255 249 [<$USERNAME>]获得了[酒仙葫芦]，开启狂暴之力，实力大增，各位要小心!
+GuildNoticeMsg 255 249 [<$USERNAME>]获得了[酒仙葫芦]，开启狂暴之力，实力大增，各位要小心!
+#ELSEACT
+messagebox 你的声望不足200！\<击杀BOSS有几率获得声望，回收神装可以获得声望/SCOLOR=250>\<充值可以获得声望，1元=100元宝+100声望/SCOLOR=7>
+BREAK
+
+
+
+[@关于酒仙葫芦]
+#IF
+#ACT
+messagebox [酒仙葫芦]乃是老夫的宝物，佩戴后实力大增
+BREAK

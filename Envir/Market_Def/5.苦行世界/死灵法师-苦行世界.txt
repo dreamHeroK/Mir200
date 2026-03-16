@@ -1,0 +1,95 @@
+[@main]
+#if
+#act
+OPENMERCHANTBIGDLG 1 1484 1 4 10 -50 1 461 2
+#say
+ \ \ \ \
+
+<>　　　　　　　<ITEMBOX:5:1:70:0:50:45:45:*:250#在此处放入战王指令！>\
+
+
+<>　　　　　　　　　　　　　　　　　　　　<镶嵌诡术守卫魂/@镶嵌诡术守卫魂>      <itemshow:1908:0:0:-40:1>\ \
+<>　　　　　　　　　　　　　　　　　　　　<镶嵌墓地守卫魂/@镶嵌墓地守卫魂>      <itemshow:1908:0:0:-20:1>\ \
+<>　　　　　　　　　　　　　　　　　　　　<镶嵌晨曦猎手魂/@镶嵌晨曦猎手魂>      <itemshow:1908:0:0:0:1>\ \
+<>　　　　　　　　　　　　　　　　　　　　<镶嵌黑暗咒士魂/@镶嵌黑暗咒士魂>      <itemshow:1908:0:0:15:1>\ \ \ \
+<>    <战王指令可以镶嵌 诡术守卫魂 墓地守卫魂 晨曦猎手魂 黑暗咒士魂/fcolor=242>\
+
+<>    <镶嵌一个  攻击+10攻击时可以召唤出镶嵌的怪物作为你的宝宝/fcolor=94>\
+<>    <属性为你人物属性*1 持续10秒  召唤概率较高/fcolor=9>
+
+[@ItemIntoBox5]
+#if
+not equal <$BOXITEM[5].NAME> 战王指令
+#act
+ReturnBoxItem 5
+messagebox 此物品不支持镶嵌
+BREAK
+
+#IF
+#act
+sendmsg 7 放入的物品是<$BOXITEM[5].NAME>
+BREAK
+
+;-------------------------------------------------------------------------------
+[@镶嵌诡术守卫魂]
+#if
+checkitem 诡术守卫魂 1
+#act
+take 诡术守卫魂 1
+SetUpgradeItem 5
+
+UPDATEITEM -1
+ReturnBoxItem 5
+RECLAIMITEM
+#elseact
+ReturnBoxItem 5
+messagebox 材料不足！
+break
+;-------------------------------------------------------------------------------
+[@镶嵌墓地守卫魂]
+#if
+checkitem 墓地守卫魂 1
+#act
+take 墓地守卫魂 1
+SetUpgradeItem 5
+;DRILLHOLE * * -1 * * 2 * 1 * *
+;SOCKETABLEITEM * * * * -1 2 * * 1910 *
+UPDATEITEM -1
+ReturnBoxItem 5
+RECLAIMITEM
+#elseact
+ReturnBoxItem 5
+messagebox 材料不足！
+break
+;-------------------------------------------------------------------------------
+[@镶嵌晨曦猎手魂]
+#if
+checkitem 晨曦猎手魂 1
+#act
+take 晨曦猎手魂 1
+SetUpgradeItem 5
+;DRILLHOLE * * -1 * * 3 * 1 * *
+;SOCKETABLEITEM * * * * -1 3 * * 1911 *
+UPDATEITEM -1
+ReturnBoxItem 5
+RECLAIMITEM
+#elseact
+ReturnBoxItem 5
+messagebox 材料不足！
+break
+;-------------------------------------------------------------------------------
+[@镶嵌黑暗咒士魂]
+#if
+checkitem 黑暗咒士魂 1
+#act
+take 黑暗咒士魂 1
+SetUpgradeItem 5
+;DRILLHOLE * * -1 * * 4 * 1 * *
+;SOCKETABLEITEM * * * * -1 4 * * 1912 *
+UPDATEITEM -1
+ReturnBoxItem 5
+RECLAIMITEM
+#elseact
+ReturnBoxItem 5
+messagebox 材料不足！
+break

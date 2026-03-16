@@ -1,0 +1,38 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 399 1 4 0 0 1 535 4 1
+#say
+<> \
+<ItemShow:440:0:148:285:1> <ItemShow:442:0:158:285:1> <ItemShow:380:0:170:285:1> <ItemShow:381:0:180:285:1> <ItemShow:382:0:190:285:1> <ItemShow:512:0:203:285:1>\
+<> \
+<ImgEx:165:338:339:338:310:206/@失落的封魔谷>
+
+
+
+
+[@失落的封魔谷]
+
+#IF
+CHECKLEVELEX > 55
+#ACT
+#ELSEACT
+messagebox 等级不足56级
+BREAK
+
+
+
+#IF
+checkgold 1000000
+#ACT
+take 金币 1000000
+inc J133 1000000
+MAP 失落的封魔谷
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[失落的封魔谷]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要1000000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

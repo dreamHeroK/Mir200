@@ -1,0 +1,78 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 407 1 4 0 0 1 535 4 1
+#say
+<> \
+<ItemShow:387:0:148:285:1> <ItemShow:450:0:159:285:1> <ItemShow:1745:0:170:285:1> <ItemShow:153:0:180:285:1> <ItemShow:154:0:190:285:1> <ItemShow:155:0:203:285:1>\
+<> \
+<>   <ImgEx:165:408:409:408:205:206/@进入三神殿①><ImgEx:165:410:411:410:215:206/@进入三神殿②><ImgEx:165:412:413:412:225:206/@进入三神殿③>\
+
+[@进入三神殿①]
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+#IF
+checkgold 200000
+#ACT
+take 金币 200000
+inc J133 200000
+MAP 三神殿①
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[三神殿]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要200000金币
+BREAK
+
+
+
+[@进入三神殿②]
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+#IF
+checkgold 200000
+#ACT
+take 金币 200000
+inc J133 200000
+MAP 三神殿②
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[三神殿]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要200000金币
+BREAK
+
+
+
+[@进入三神殿③]
+
+#IF
+CHECKLEVELEX > 49
+#ACT
+#ELSEACT
+messagebox 等级不足50级
+BREAK
+
+#IF
+checkgold 200000
+#ACT
+take 金币 200000
+inc J133 200000
+MAP 三神殿③
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[三神殿]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要200000金币
+BREAK
+
+
+
+
+

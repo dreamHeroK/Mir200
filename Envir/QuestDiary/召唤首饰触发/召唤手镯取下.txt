@@ -1,0 +1,14 @@
+[@召唤手镯取下]
+{
+#OR
+EQUAL <$ARMRING_R> 召唤镯?
+EQUAL <$ARMRING_R> 召唤镯??
+EQUAL <$ARMRING_R> 召唤镯???
+EQUAL <$ARMRING_R> 召唤镯????
+EQUAL <$ARMRING_R> 召唤镯?????
+#ACT
+#ELSEACT
+;KILLCALLMOB <$STR(S$镯怪记录)> 1 1
+MOV S$镯怪记录 无怪物
+
+}

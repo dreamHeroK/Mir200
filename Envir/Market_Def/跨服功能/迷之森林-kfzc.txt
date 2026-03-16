@@ -1,0 +1,90 @@
+[@main]
+#if
+#say
+\ \
+
+<Img:482:113:4:33>  \  \
+
+<ItemShow:773:0:5:163:1> <ItemShow:774:0:5:163:1> <ItemShow:775:0:5:163:1> <ItemShow:778:0:5:163:1> <ItemShow:772:0:5:163:1> <ItemShow:782:0:5:163:1>\ \ 
+
+<>   <Text:公共地图:135:-48{FCOLOR=7}> <Text:[点击进入]:138:-48{FCOLOR=251}/@进入迷之森林>\
+
+<>   <Text:进入要求：3转:135:-43{FCOLOR=250}>\
+
+<>   <Text:收取费用：100W:135:-39{FCOLOR=250}>\
+
+<>  <Text:--------------------------:125:-41{FCOLOR=12}>\
+
+<>   <Text:怪物刷新介绍：:135:-42{FCOLOR=70}>\
+
+<>   <Text:BOSS：60分钟  隐藏：120分钟:135:-37{FCOLOR=254}>\
+
+<>   <Text:王级：360分钟 :135:-32{FCOLOR=254}>\
+
+#ACT
+OPENMERCHANTBIGDLG 113 87 1 4 0 0 1 315 17 1
+
+
+
+
+
+[@进入迷之森林]
+#if
+SMALL U401 3
+#act
+messagebox 当前转生小于3转!!！
+break
+
+#IF
+not CheckGold  1000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足1000000！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 一合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 一合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 二合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 二合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 三合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 三合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 四合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 四合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 五合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 五合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK
+
+#IF
+CheckContainsText <$SERVERNAME> 六合
+#ACT
+take 金币 1000000
+M2SpanRegion 1 六合迷之森林 96 24 1
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[迷之森林]，祝他满载而归！
+BREAK

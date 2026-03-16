@@ -1,0 +1,49 @@
+[Info]
+;反击延时
+CounterattackDelay = 1000
+AutoPickUpItem=1
+AttatckMode=6
+;说话机率(英雄无效)
+SayRate=500;
+
+;装备极品机率
+ItemAddValueRate = 100; 
+
+;装备元素机率
+ItemNewAddValueRate= 100;
+
+DropUseItem=0
+
+;掉身上装备机率
+DropUseItemRate=15
+DropBagItem=1
+RunAttackRate = 0
+
+;职业
+Job=0
+;性别
+Gender=0
+;头发
+Hair=1
+;等级
+Level=1
+NeedMagicItem=1
+UseSkill=
+BagItems=
+
+[UseItems]
+UseItems0=
+UseItems1=
+UseItems2=
+UseItems3=
+UseItems4=
+UseItems5=
+UseItems6=
+UseItems7=
+UseItems8=
+UseItems9=
+UseItems10=
+UseItems11=
+UseItems12=
+;攻击时的说话信息(英雄无效)
+[Say]

@@ -1,0 +1,395 @@
+[@神装杀人触发]
+{
+#if
+LARGE N$势如破竹 1
+CheckNewItemValue 19 0 < <$STR(N$势如破竹)>
+CheckNewItemValue 19 4 < <$STR(N$势如破竹)>
+#ACT
+SetNewItemValue 19 0 + 1
+SetNewItemValue 19 4 + 1
+PLAYEFFECT 77 250 11 1 100 0 0 0 0
+SendCenterMsg 253 0 势如破竹：击杀玩家，提高自身1％暴击几率和破防几率 0 2
+
+
+#if
+EQUAL N$吞金食玉 1
+M.checkgold 100000
+#ACT
+M.take 金币 100000
+give 金币 100000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方10万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你10万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 1
+NOT M.checkgold 100000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+#if
+EQUAL N$吞金食玉 2
+M.checkgold 300000
+#ACT
+M.take 金币 300000
+give 金币 300000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方30万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你30万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 2
+NOT M.checkgold 300000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 3
+M.checkgold 600000
+#ACT
+M.take 金币 600000
+give 金币 600000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方60万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你60万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 3
+NOT M.checkgold 600000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 4
+M.checkgold 1000000
+#ACT
+M.take 金币 1000000
+give 金币 1000000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方100万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你100万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 4
+NOT M.checkgold 1000000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 5
+M.checkgold 1500000
+#ACT
+M.take 金币 1500000
+give 金币 1500000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方150万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你150万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 5
+NOT M.checkgold 1500000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 6
+M.checkgold 3000000
+#ACT
+M.take 金币 3000000
+give 金币 3000000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方300万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你300万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 6
+NOT M.checkgold 3000000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 7
+M.checkgold 5000000
+#ACT
+M.take 金币 5000000
+give 金币 5000000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方500万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你500万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 7
+NOT M.checkgold 5000000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$吞金食玉 8
+M.checkgold 10000000
+#ACT
+M.take 金币 10000000
+give 金币 10000000
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方1000万金币 0 2
+M.SendCenterMsg 249 0 对方偷取你1000万金币 0 10
+break
+
+#if
+EQUAL N$吞金食玉 8
+NOT M.checkgold 10000000
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$GOLDCOUNT> S402
+SetHumVar <$CURRRTARGETNAME> <$STR(S402)> S402
+M.take 金币 <$STR(S402)>
+give 金币 <$STR(S402)>
+SendCenterMsg 253 0 吞金食玉：击杀玩家，偷取对方剩余全部金币<$STR(S402)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S402)>金币 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 1
+M.CHECKEXP > 99999
+#ACT
+M.CHANGEEXP - 100000
+CHANGEEXP + 100000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方10万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你10万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 1
+NOT M.CHECKEXP > 99999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+#if
+EQUAL N$克伐怨欲 2
+M.CHECKEXP > 299999
+#ACT
+M.CHANGEEXP - 300000
+CHANGEEXP + 300000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方30万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你30万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 2
+NOT M.CHECKEXP > 299999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 3
+M.CHECKEXP > 599999
+#ACT
+M.CHANGEEXP - 600000
+CHANGEEXP + 600000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方60万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你60万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 3
+NOT M.CHECKEXP > 599999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 4
+M.CHECKEXP > 999999
+#ACT
+M.CHANGEEXP - 1000000
+CHANGEEXP + 1000000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方100万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你100万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 4
+NOT M.CHECKEXP > 999999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 5
+M.CHECKEXP > 1499999
+#ACT
+M.CHANGEEXP - 1500000
+CHANGEEXP + 1500000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方150万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你150万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 5
+NOT M.CHECKEXP > 1499999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 6
+M.CHECKEXP > 2999999
+#ACT
+M.CHANGEEXP - 3000000
+CHANGEEXP + 3000000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方300万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你300万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 6
+NOT M.CHECKEXP > 2999999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 7
+M.CHECKEXP > 4999999
+#ACT
+M.CHANGEEXP - 5000000
+CHANGEEXP + 5000000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方500万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你500万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 7
+NOT M.CHECKEXP > 4999999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+
+#if
+EQUAL N$克伐怨欲 8
+M.CHECKEXP > 9999999
+#ACT
+M.CHANGEEXP - 10000000
+CHANGEEXP + 10000000
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方1000万经验 0 2
+M.SendCenterMsg 249 0 对方偷取你1000万经验 0 10
+break
+
+#if
+EQUAL N$克伐怨欲 8
+NOT M.CHECKEXP > 9999999
+#ACT
+GetHumVar <$CURRRTARGETNAME> <$EXP> S403
+SetHumVar <$CURRRTARGETNAME> <$STR(S403)> S403
+M.CHANGEEXP - <$STR(S403)>
+CHANGEEXP + <$STR(S403)>
+SendCenterMsg 253 0 克伐怨欲：击杀玩家，偷取对方剩余全部经验<$STR(S403)> 0 2
+M.SendCenterMsg 249 0 对方偷取你<$STR(S403)>经验 0 10
+break
+
+
+}

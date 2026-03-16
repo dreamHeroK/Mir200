@@ -1,0 +1,76 @@
+[@main]
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 624 1 4 0 0 1 775 24 1
+#say
+<>\
+<ItemShow:536:0:70:382:1> <ItemShow:550:0:82:382:1> <ItemShow:551:0:94:382:1> <ItemShow:1285:0:165:382:1> <ItemShow:<$STR(P102)>:0:177:382:1> <ItemShow:<$STR(P104)>:0:189:382:1> <ItemShow:382:0:262:382:1> <ItemShow:1286:0:274:382:1> <ItemShow:100:0:286:382:1>\
+<ItemShow:1284:0:70:419:1> <ItemShow:<$STR(P100)>:0:82:419:1> <ItemShow:<$STR(P101)>:0:94:419:1> <ItemShow:<$STR(P103)>:0:164:419:1> <ItemShow:<$STR(P105)>:0:177:419:1> <ItemShow:<$STR(P100)>:0:189:419:1> <ItemShow:<$STR(P101)>:0:261:420:1> <ItemShow:<$STR(P102)>:0:273:420:1>  <ItemShow:<$STR(P103)>:0:281:420:1>\
+<>\
+<ImgEx:165:637:638:637:56:228/@进入雷炎熔洞><ImgEx:165:620:621:620:94:228/@进入傀儡洞穴><ImgEx:165:627:628:627:132:228/@进入火龙洞穴>\
+
+
+
+
+[@进入雷炎熔洞]
+
+
+#IF
+checkgold 110000
+#ACT
+take 金币 110000
+inc J133 110000
+MAPMOVE leiyan1 370 34
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[雷炎熔洞]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要110000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK
+
+
+
+[@进入傀儡洞穴]
+#IF
+checkgold 120000
+#ACT
+take 金币 120000
+inc J133 120000
+MAPMOVE kuilei1 302 93
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[傀儡洞穴]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要120000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK
+
+
+[@进入火龙洞穴]
+
+#IF
+checkgold 130000
+#ACT
+take 金币 130000
+inc J133 130000
+MAPMOVE huolong1 371 32
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[火龙洞穴]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要130000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

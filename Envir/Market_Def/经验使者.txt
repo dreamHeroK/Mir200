@@ -1,0 +1,85 @@
+[@main]
+\ 
+<><此地图是升级专用地图，可刷新高经验怪物，单人独享地图。/SCOLOR=250> \
+<------------------------------------------------------------/SCOLOR=13>\ 
+<><杀死一只怪物可获得50万经验，拥有多倍经验效果更佳。/SCOLOR=253> \
+<------------------------------------------------------------/SCOLOR=13>\  \
+
+<[免费刷50只怪]/@免费经验怪> <(每日免费一次)/SCOLOR=7>  <[刷新1只怪]/@1只经验怪> <(需要50万金币)/SCOLOR=7>\  \
+
+<[刷新10只怪]/@10只经验怪> <(需要500万金币)/SCOLOR=7>   <[刷新100只怪]/@100只经验怪> <(需要5千万金币)/SCOLOR=7>\  \
+
+\ 
+
+
+
+[@免费经验怪]
+#IF
+EQUAL J66 0
+#ACT
+MOV J66 1
+MONGENEX <$USERNAME>经验 21 22 经验白野猪 5 50 253 0
+SENDMSG 5 你免费刷新了50只经验白野猪
+#ELSEACT
+MESSAGEBOX 今日已经免费刷过了
+BREAK
+
+
+
+[@1只经验怪]
+#IF
+CheckMapMonCount <$USERNAME>经验 > 300 1
+#ACT
+MESSAGEBOX 怪物太多了，请先清理怪物
+BREAK
+
+#if
+checkgold 500000
+#act
+take 金币 500000
+MONGENEX <$USERNAME>经验 21 22 经验白野猪 1 1 253 0
+SENDMSG 5 你刷新了1只经验白野猪
+#ELSEACT
+MESSAGEBOX 你的金币不足
+BREAK
+
+
+[@10只经验怪]
+#IF
+CheckMapMonCount <$USERNAME>经验 > 300 1
+#ACT
+MESSAGEBOX 怪物太多了，请先清理怪物
+BREAK
+
+#if
+checkgold 5000000
+#act
+take 金币 5000000
+MONGENEX <$USERNAME>经验 21 22 经验白野猪 5 10 253 0
+SENDMSG 5 你刷新了10只经验白野猪
+#ELSEACT
+MESSAGEBOX 你的金币不足
+BREAK
+
+
+[@100只经验怪]
+#IF
+CheckMapMonCount <$USERNAME>经验 > 300 1
+#ACT
+MESSAGEBOX 怪物太多了，请先清理怪物
+BREAK
+
+#if
+checkgold 50000000
+#act
+take 金币 50000000
+MONGENEX <$USERNAME>经验 21 22 经验白野猪 10 100 253 0
+SENDMSG 5 你刷新了100只经验白野猪
+#ELSEACT
+MESSAGEBOX 你的金币不足
+BREAK
+
+
+
+
+

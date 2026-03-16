@@ -1,0 +1,35 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 417 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:444:0:148:285:1> <ItemShow:446:0:158:285:1> <ItemShow:383:0:170:285:1> <ItemShow:384:0:180:285:1> <ItemShow:385:0:190:285:1> <ItemShow:513:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@失落的魔龙城>
+
+
+
+
+
+[@失落的魔龙城]
+
+
+#IF
+CHECKLEVELEX > 65
+#ACT
+#ELSEACT
+messagebox 等级不足66级
+BREAK
+
+#IF
+checkgold 2000000
+#Act
+take 金币 2000000
+inc J130 2000000
+MAP 失落的魔龙城
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[失落的魔龙城]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要2000000金币!
+BREAK

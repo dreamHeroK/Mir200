@@ -1,0 +1,72 @@
+[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 164 142 1 4 0 0 1 458 10 0
+#say
+<>
+<>                 <text:年轻的勇士，您能来到这里，说明您已具备一定的实力了.:-15:-35{FCOLOR=168}>\
+<>                          <text:是 时 候 让 您 见 见 世 面 了:-15:-35{FCOLOR=249}>\
+<ItemShow:977:0:-5:-22:1>  <text:锻造：终极圣剑:-5:-10{FCOLOR=254}> <text:需要材料：神器碎片*88+神器晶核*88+神源*88+天外飞石*88:-5:-10{FCOLOR=223}>\ 
+<>                                  <text:+8888元宝+3000W金币，以及以下装备材料:-5:-10{FCOLOR=223}>\
+<>      <text:锻造终极圣剑:-5:20/@锻造圣剑>                  <ItemShow:972:0:-5:2:1><ItemShow:973:0:-5:2:1><ItemShow:974:0:-5:2:1><ItemShow:974:0:-5:2:1>\ \ \ \ \
+
+<ItemShow:978:0:-5:-22:1>  <text:锻造：终极圣甲:-5:-10{FCOLOR=254}> <text:需要材料：神器碎片*50+神器晶核*50+神源*50+天外飞石*50:-5:-10{FCOLOR=223}>\
+<>                                  <text:+6888元宝+2000W金币，以及以下装备材料:-5:-10{FCOLOR=223}>\
+<>      <text:锻造终极圣甲:-5:20/@锻造圣甲>                  <ItemShow:975:0:-5:2:1><ItemShow:976:0:-5:2:1>
+[@锻造圣剑]
+#IF
+CHECKITEM 夫妻同心刃 1
+CHECKITEM 秋枫落叶刃 1
+CHECKITEM 冰雪世界刃 1
+CHECKITEM 北荒邪神霸斩【封印】 1
+CHECKITEM 神器碎片 88
+CHECKITEM 神器晶核 88
+CHECKITEM 神源 88
+CHECKITEM 天外飞石 88
+CHECKGAMEGOLD ? 8888
+checkgold 30000000
+#act
+take 金币 30000000
+TAKE 夫妻同心刃 1
+TAKE 秋枫落叶刃 1
+TAKE 冰雪世界刃 1
+TAKE 北荒邪神霸斩【封印】 1
+TAKE 神器碎片 88
+TAKE 神器晶核 88
+TAKE 神源 88
+TAKE 天外飞石 88
+GameGold - 8888
+GIVE 北荒邪神霸斩 1
+MESSAGEBOX 提示：恭喜你成功合成一件“北荒邪神霸斩”圣剑。
+#ELSEACT
+MESSAGEBOX 错误：条件不足。
+BREAK
+
+
+[@锻造圣甲]
+#IF
+CHECKITEM 冰雪之神甲 1
+CHECKITEM 神圣白虎翼 1
+CHECKITEM 北荒西装恶魔【封印】 1
+CHECKITEM 神器碎片 50
+CHECKITEM 神器晶核 50
+CHECKITEM 神源 50
+CHECKITEM 天外飞石 50
+CHECKGAMEGOLD ? 6888
+checkgold 20000000
+#act
+take 金币 20000000
+TAKE 冰雪之神甲 1
+TAKE 神圣白虎翼 1
+TAKE 北荒西装恶魔【封印】 1
+TAKE 神器碎片 50
+TAKE 神器晶核 50
+TAKE 神源 50
+TAKE 天外飞石 50
+GameGold - 6888
+GIVE 北荒西装恶魔 1
+MESSAGEBOX 提示：恭喜你成功合成一件“北荒西装恶魔”圣甲。
+#ELSEACT
+MESSAGEBOX 错误：条件不足。
+BREAK
+

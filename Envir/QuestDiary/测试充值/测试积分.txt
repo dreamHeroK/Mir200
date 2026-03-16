@@ -1,0 +1,396 @@
+
+;蜗牛单机工具生成，工具交流和建议群：679725579
+[@测试积分]
+{
+#IF
+EQUAL G5 1
+#ACT
+#ELSEACT
+BREAK
+
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1.txt
+#ACT
+GAMEDIAMOND + 1
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\1.txt <$USERID>
+;SENDMSG 6 你的充值累计增加1，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\2.txt
+#ACT
+GAMEDIAMOND + 2
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\2.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\2.txt <$USERID>
+;SENDMSG 6 你的充值累计增加2，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\3.txt
+#ACT
+GAMEDIAMOND + 3
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\3.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\3.txt <$USERID>
+;SENDMSG 6 你的充值累计增加3，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\4.txt
+#ACT
+GAMEDIAMOND + 4
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\4.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\4.txt <$USERID>
+;SENDMSG 6 你的充值累计增加4，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\5.txt
+#ACT
+GAMEDIAMOND + 5
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\5.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\5.txt <$USERID>
+;SENDMSG 6 你的充值累计增加5，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\6.txt
+#ACT
+GAMEDIAMOND + 6
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\6.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\6.txt <$USERID>
+;SENDMSG 6 你的充值累计增加6，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\7.txt
+#ACT
+GAMEDIAMOND + 7
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\7.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\7.txt <$USERID>
+;SENDMSG 6 你的充值累计增加7，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\8.txt
+#ACT
+GAMEDIAMOND + 8
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\8.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\8.txt <$USERID>
+;SENDMSG 6 你的充值累计增加8，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\9.txt
+#ACT
+GAMEDIAMOND + 9
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\9.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\9.txt <$USERID>
+;SENDMSG 6 你的充值累计增加9，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\10.txt
+#ACT
+GAMEDIAMOND + 10
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\10.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\10.txt <$USERID>
+;SENDMSG 6 你的充值累计增加10，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\20.txt
+#ACT
+GAMEDIAMOND + 20
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\20.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\20.txt <$USERID>
+;SENDMSG 6 你的充值累计增加20，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\30.txt
+#ACT
+GAMEDIAMOND + 30
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\30.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\30.txt <$USERID>
+;SENDMSG 6 你的充值累计增加30，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\40.txt
+#ACT
+GAMEDIAMOND + 40
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\40.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\40.txt <$USERID>
+;SENDMSG 6 你的充值累计增加40，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\50.txt
+#ACT
+GAMEDIAMOND + 50
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\50.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\50.txt <$USERID>
+;SENDMSG 6 你的充值累计增加50，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\60.txt
+#ACT
+GAMEDIAMOND + 60
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\60.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\60.txt <$USERID>
+;SENDMSG 6 你的充值累计增加60，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\70.txt
+#ACT
+GAMEDIAMOND + 70
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\70.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\70.txt <$USERID>
+;SENDMSG 6 你的充值累计增加70，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\80.txt
+#ACT
+GAMEDIAMOND + 80
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\80.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\80.txt <$USERID>
+;SENDMSG 6 你的充值累计增加80，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\90.txt
+#ACT
+GAMEDIAMOND + 90
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\90.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\90.txt <$USERID>
+;SENDMSG 6 你的充值累计增加90，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\100.txt
+#ACT
+GAMEDIAMOND + 100
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\100.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\100.txt <$USERID>
+;SENDMSG 6 你的充值累计增加100，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\200.txt
+#ACT
+GAMEDIAMOND + 200
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\200.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\200.txt <$USERID>
+;SENDMSG 6 你的充值累计增加200，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\300.txt
+#ACT
+GAMEDIAMOND + 300
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\300.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\300.txt <$USERID>
+;SENDMSG 6 你的充值累计增加300，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\400.txt
+#ACT
+GAMEDIAMOND + 400
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\400.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\400.txt <$USERID>
+;SENDMSG 6 你的充值累计增加400，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\500.txt
+#ACT
+GAMEDIAMOND + 500
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\500.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\500.txt <$USERID>
+;SENDMSG 6 你的充值累计增加500，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\600.txt
+#ACT
+GAMEDIAMOND + 600
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\600.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\600.txt <$USERID>
+;SENDMSG 6 你的充值累计增加600，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\700.txt
+#ACT
+GAMEDIAMOND + 700
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\700.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\700.txt <$USERID>
+;SENDMSG 6 你的充值累计增加700，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\800.txt
+#ACT
+GAMEDIAMOND + 800
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\800.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\800.txt <$USERID>
+;SENDMSG 6 你的充值累计增加800，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\900.txt
+#ACT
+GAMEDIAMOND + 900
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\900.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\900.txt <$USERID>
+;SENDMSG 6 你的充值累计增加900，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000.txt
+#ACT
+GAMEDIAMOND + 1000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\1000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加1000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\2000.txt
+#ACT
+GAMEDIAMOND + 2000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\2000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\2000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加2000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\3000.txt
+#ACT
+GAMEDIAMOND + 3000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\3000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\3000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加3000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\4000.txt
+#ACT
+GAMEDIAMOND + 4000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\4000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\4000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加4000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\5000.txt
+#ACT
+GAMEDIAMOND + 5000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\5000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\5000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加5000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\6000.txt
+#ACT
+GAMEDIAMOND + 6000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\6000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\6000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加6000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\7000.txt
+#ACT
+GAMEDIAMOND + 7000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\7000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\7000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加7000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\8000.txt
+#ACT
+GAMEDIAMOND + 8000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\8000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\8000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加8000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\9000.txt
+#ACT
+GAMEDIAMOND + 9000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\9000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\9000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加9000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\10000.txt
+#ACT
+GAMEDIAMOND + 10000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\10000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\10000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加10000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\20000.txt
+#ACT
+GAMEDIAMOND + 20000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\20000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\20000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加20000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\30000.txt
+#ACT
+GAMEDIAMOND + 30000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\30000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\30000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加30000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\40000.txt
+#ACT
+GAMEDIAMOND + 40000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\40000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\40000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加40000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\50000.txt
+#ACT
+GAMEDIAMOND + 50000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\50000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\50000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加50000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\60000.txt
+#ACT
+GAMEDIAMOND + 60000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\60000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\60000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加60000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\70000.txt
+#ACT
+GAMEDIAMOND + 70000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\70000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\70000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加70000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\80000.txt
+#ACT
+GAMEDIAMOND + 80000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\80000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\80000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加80000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\90000.txt
+#ACT
+GAMEDIAMOND + 90000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\90000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\90000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加90000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\100000.txt
+#ACT
+GAMEDIAMOND + 100000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\100000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\100000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加100000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\200000.txt
+#ACT
+GAMEDIAMOND + 200000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\200000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\200000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加200000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\300000.txt
+#ACT
+GAMEDIAMOND + 300000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\300000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\300000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加300000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\400000.txt
+#ACT
+GAMEDIAMOND + 400000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\400000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\400000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加400000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\500000.txt
+#ACT
+GAMEDIAMOND + 500000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\500000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\500000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加500000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\600000.txt
+#ACT
+GAMEDIAMOND + 600000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\600000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\600000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加600000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\700000.txt
+#ACT
+GAMEDIAMOND + 700000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\700000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\700000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加700000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\800000.txt
+#ACT
+GAMEDIAMOND + 800000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\800000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\800000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加800000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\900000.txt
+#ACT
+GAMEDIAMOND + 900000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\900000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\900000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加900000，请注意查看
+#IF
+CheckAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000000.txt
+#ACT
+GAMEDIAMOND + 1000000
+DelAccountList ..\QuestDiary\充值元宝\积分\充值累计\1000000.txt
+AddTextListEx ..\QuestDiary\补发数据\补发积分\1000000.txt <$USERID>
+;SENDMSG 6 你的充值累计增加1000000，请注意查看
+}

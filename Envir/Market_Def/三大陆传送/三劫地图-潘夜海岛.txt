@@ -1,0 +1,49 @@
+[@main]
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 420 1 4 0 0 1 535 4 1
+#say
+<>\
+<ItemShow:773:0:148:285:1> <ItemShow:774:0:158:285:1> <ItemShow:775:0:170:285:1> <ItemShow:779:0:180:285:1> <ItemShow:772:0:190:285:1> <ItemShow:783:0:203:285:1>\
+<>\
+<ImgEx:165:338:339:338:310:206/@进入逆天改命三阶>
+
+
+[@进入逆天改命三阶]
+
+
+#IF
+not CheckGold  3000000
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　当前金币不足300W！
+BREAK
+
+
+#IF
+not checkitem 天赋神石 150
+#ACT
+MESSAGEBOX 　　　操作失败：\　\　　　　　　天赋神石不足150个！
+BREAK
+
+#or
+CHECKFENGHAO 逆天改命三阶
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　尚未完成逆天改命三阶!!!
+break
+
+
+#IF
+checkgold 3000000
+#ACT
+take 金币 3000000
+take 天赋神石 150
+inc J130 3000000
+MAPMOVE 三劫地图 184 214
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[三劫地图]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要3000000金币
+BREAK

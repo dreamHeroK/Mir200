@@ -1,0 +1,9 @@
+{
+    "mir.checkWarningFunction": false,
+    "mir.checkInitField": false,
+    "mir.checkFunction": false,
+    "mir.checkConstant": false,
+    "mir.checkFormat": false,
+    "mir.checkFile": false,
+    "mir.functionRemark": false
+}

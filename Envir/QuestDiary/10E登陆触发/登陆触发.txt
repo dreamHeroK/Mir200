@@ -1,0 +1,238 @@
+[@登陆显示]
+{
+
+
+#IF
+CHECKFENGHAO 初学子弟
+#ACT
+SETICON 4 78 195 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 初入江湖
+#ACT
+SETICON 4 78 205 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 蛮战四方
+#ACT
+SETICON 4 78 215 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 锋芒毕露
+#ACT
+SETICON 4 78 225 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 名动江湖
+#ACT
+SETICON 4 78 235 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 武林名宿
+#ACT
+SETICON 4 78 245 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 舞动乾坤
+#ACT
+SETICON 4 78 255 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 叱咤风云
+#ACT
+SETICON 4 78 265 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 开山立派
+#ACT
+SETICON 4 78 275 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 九劫不灭
+#ACT
+SETICON 4 78 285 0 -30 10 0 0 100 
+
+#IF
+CHECKFENGHAO 天地至尊
+#ACT
+SETICON 4 78 295 0 -30 10 0 0 100 
+
+
+;#if
+;CHECKFENGHAO 青铜赞助
+;#ACT
+;SETICON 1 78 1575 -45 20 10 0 0 100 
+;SETICON 1 78 1575 -45 20 10 0 0 100 
+
+
+;#if
+;CHECKFENGHAO 超凡赞助
+;#ACT
+;SETICON 1 78 1585 -45 20 10 0 0 100 
+
+#if
+CHECKFENGHAO 月卡会员
+#ACT
+SETICON 1 113 616 -35 29 10 0 0 100
+
+
+#if
+CHECKFENGHAO 季度会员
+#ACT
+SETICON 1 113 606 -35 29 10 0 0 100
+
+#if
+CHECKFENGHAO 年卡会员
+#ACT
+SETICON 1 113 626 -35 29 10 0 0 100
+
+
+
+
+
+#if
+CHECKFENGHAO 狂暴之力
+#ACT
+SETICON 2 78 1595 -35 59 8 0 0 100 
+
+
+#if
+CHECKFENGHAO 先天境
+#ACT
+SETICON 3 78 1535 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 后天境
+#ACT
+SETICON 3 78 1525 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 万象境
+#ACT
+SETICON 3 78 1545 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 元神境
+#ACT
+SETICON 3 78 1555 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 真仙境
+#ACT
+;SETICON 3 78 1565 33 20 10 0 0 100 
+SETICON 3 78 1565 33 20 10 0 0 100 
+
+#if
+CHECKFENGHAO 造化境
+#ACT
+SETICON 3 78 1698 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 仙帝境
+#ACT
+SETICON 3 78 1708 33 20 10 0 0 100 
+
+
+#if
+CHECKFENGHAO 创世境
+#ACT
+SETICON 3 78 1718 33 20 10 0 0 100 
+
+
+;===========================人物称号
+
+#if
+CHECKRENEWLEVEL = 15
+#act
+mov S04 「十五阶吞噬之力」
+
+
+#if
+CHECKRENEWLEVEL = 14
+#act
+mov S04 「十四阶吞噬之力」
+
+
+#if
+CHECKRENEWLEVEL = 13
+#act
+mov S04 「十三阶吞噬之力」
+
+
+#if
+CHECKRENEWLEVEL = 12
+#act
+mov S04 「十二阶吞噬之力」
+
+
+#if
+CHECKRENEWLEVEL = 11
+#act
+mov S04 「十一阶吞噬之力」
+
+#if
+CHECKRENEWLEVEL = 10
+#act
+mov S04 「十阶吞噬之力」
+
+#if
+CHECKRENEWLEVEL = 9
+#act
+mov S04 「九吞噬之力」
+
+#if
+CHECKRENEWLEVEL = 8
+#act
+mov S04 「吞噬之力八阶弑神」
+
+#if
+CHECKRENEWLEVEL = 7
+#act
+mov S04 「吞噬之力七阶真神」
+
+#if
+CHECKRENEWLEVEL = 6
+#act
+mov S04 「吞噬之力六阶化神」
+
+#IF
+CHECKRENEWLEVEL = 5
+#ACT
+MOV S04 「吞噬之力五阶半神」
+
+#IF
+CHECKRENEWLEVEL = 4
+#ACT
+MOV S04 「吞噬之力四阶鸿蒙」
+
+#IF
+CHECKRENEWLEVEL = 3
+#ACT
+MOV S04 「吞噬之力三阶至强」
+
+
+#IF
+CHECKRENEWLEVEL = 2
+#ACT
+MOV S04 「吞噬之力二阶凝丹」
+
+
+#IF
+CHECKRENEWLEVEL = 1
+#ACT
+MOV S04 「吞噬之力一阶聚气」
+
+
+#IF
+#ACT
+SETRANKLEVELNAME %s\<$STR(T11)>\生涯斩杀[<$STR(U49)>]人-被斩杀[<$STR(U48)>]次\<$STR(S4)>
+
+
+
+
+}

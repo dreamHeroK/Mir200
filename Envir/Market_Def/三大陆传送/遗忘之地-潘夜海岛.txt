@@ -1,0 +1,67 @@
+﻿[@main]
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 165 391 1 4 0 -90 1 590 23 1
+
+goto @遗忘对话框
+
+[@遗忘对话框]
+#if
+#say
+<><ItemShow:977:0:174:328:1>
+<ItemShow:978:0:191:328:1>
+<ItemShow:972:0:209:328:1>
+<ItemShow:973:0:226:328:1>
+<ItemShow:974:0:243:328:1>
+<ItemShow:975:0:260:328:1>
+<ItemShow:976:0:274:328:1>\
+<>          <ImgEx:165:338:339:338:382:255/@进入遗忘>\
+
+
+
+[@进入遗忘]
+#if
+SMALL U401 9
+#act
+messagebox 当前转生小于9转!!！
+break
+
+#or
+CHECKFENGHAO 逆天改命四阶
+CHECKFENGHAO 逆天改命五阶
+CHECKFENGHAO 逆天改命六阶
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　已经完成四重渡劫或者更高才可以!!!
+break
+
+#or
+CHECKDC > 750 > 0
+LARGE <$MAXDC> 750
+#act
+#ELSEACT
+messagebox 当前攻击小于750!!！
+break
+
+#if
+LARGE I666 N$力量冷却
+#ACT
+#ELSEACT
+messagebox 当前存在攻击BUFF,无法进入!
+break
+
+#IF
+CHECKLEVELEX > 69
+#ACT
+#ELSEACT
+messagebox 等级不足70级
+BREAK
+
+
+#if
+#ACT
+MAPMOVE 遗忘之地 116 94
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+BREAK

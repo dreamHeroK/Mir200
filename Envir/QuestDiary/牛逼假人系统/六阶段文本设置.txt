@@ -1,0 +1,29 @@
+[@假人六阶段地图]
+{
+;这里是假人进入地图后系统提示的信息
+#IF
+CHECKTEXTLIST ..\QuestDiary\牛逼假人系统\不提示地图.txt <$MAP>
+#ACT
+BREAK
+
+#IF
+#ACT
+;SENDMSG 1 玩家<$USERNAME>进入了<$MapTitle>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,45 @@
+[@main]
+
+
+
+
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\二大陆.txt P105
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 358 1 4 0 0 1 535 4 1
+#say
+<> \
+<Img:39:113:5:22>  \
+<> \
+<ItemShow:512:0:148:168:1> <ItemShow:475:0:158:168:1> <ItemShow:1289:0:170:168:1> <ItemShow:726:0:180:168:1> <ItemShow:<$STR(P100)>:0:190:168:1> <ItemShow:<$STR(P101)>:0:203:168:1> \
+<> \
+<ImgEx:165:338:339:338:300:87/@进入水上城市>\
+
+
+
+[@进入水上城市]
+
+
+
+#IF
+checkgold 160000
+#ACT
+take 金币 160000
+inc J133 160000
+MAPMOVE 水上城市
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[水上城市]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要160000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

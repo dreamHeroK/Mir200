@@ -1,0 +1,40 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 392 1 4 0 0 1 535 4 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:300:130/@进入锋芒毕露>
+<>\ \
+<ItemShow:377:0:147:142:1>
+<ItemShow:378:0:164:142:1>
+<ItemShow:379:0:181:142:1>
+<ItemShow:436:0:198:142:1>
+<ItemShow:438:0:215:142:1>
+<ItemShow:511:0:233:142:1>\ \ 
+
+
+
+
+[@进入锋芒毕露]
+#or
+CHECKFENGHAO 锋芒毕露
+CHECKFENGHAO 名动江湖
+CHECKFENGHAO 武林名宿
+CHECKFENGHAO 舞动乾坤
+CHECKFENGHAO 叱咤风云
+CHECKFENGHAO 开山立派
+CHECKFENGHAO 九劫不灭
+CHECKFENGHAO 天地至尊
+#ELSEACT
+messagebox 需要获得[锋芒毕露]称号或更高级!
+BREAK
+
+
+
+#if
+#ACT
+MAP 锋芒毕露(暗殿) 
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[锋芒毕露(暗殿)]，祝他满载而归！
+BREAK
+

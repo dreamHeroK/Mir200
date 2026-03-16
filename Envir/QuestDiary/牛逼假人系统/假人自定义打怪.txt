@@ -1,0 +1,88 @@
+[@假人开始自定义打怪]
+{
+;------此段脚本不要动------
+;#IF
+;NOT ISONMAP S$假人活动地图
+;#ACT
+;BREAK
+;------此段脚本不要动------
+;下面是例子，可以设置假人满足什么条件下什么地图,勾选假人自定义下图生效
+;#IF
+;检测假人是否1转进入指定地图，条件或地图代码自己写
+;CHECKRENEWLEVEL > 0
+;#ACT
+;MAP xrdt
+;SENDMSG 1 玩家<$USERNAME>进入了<$MapTitle>
+;自定义下图让假人传送到地图后，需要使用下面的回城脚本，假人活动命令和攻击模式命令
+;SETONTIMER 135 60
+;DUMMYSTART
+;ChangeAttatckMode <$GLOBAL(假人_下图PK模式)>
+
+
+
+#IF
+#ACT
+MOVR N$假人地图分类 0 4
+;分配地图0-3 
+
+
+#IF
+CHECKMAPDUMMYCOUNT 僵尸洞穴一层 < 3
+#ACT
+MAP 僵尸洞穴一层 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+#IF
+CHECKMAPDUMMYCOUNT 蜈蚣洞穴一层 < 3
+#ACT
+MAP 蜈蚣洞穴一层 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+#IF
+CHECKMAPDUMMYCOUNT 黑暗峡谷一层  < 3
+#ACT
+MAP 黑暗峡谷一层 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+#IF
+CHECKMAPDUMMYCOUNT 沃玛寺庙入口 < 3
+#ACT
+MAP 沃玛寺庙入口 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+#IF
+CHECKMAPDUMMYCOUNT 沃玛寺庙一层 < 3
+#ACT
+MAP 沃玛寺庙一层 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+#IF
+CHECKMAPDUMMYCOUNT 沃玛寺庙二层 < 3
+#ACT
+MAP 沃玛寺庙二层 
+SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[<$MapTitle>]，祝他满载而归！
+DUMMYSTART
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+}

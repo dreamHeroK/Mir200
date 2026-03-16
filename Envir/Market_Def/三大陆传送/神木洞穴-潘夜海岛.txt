@@ -1,0 +1,46 @@
+[@main]
+
+#if
+#ACT
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P100
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P101
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P102
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P103
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P104
+GetRandomText ..\QuestDiary\10J图标显示\三大陆.txt P105
+
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 365 1 4 0 0 1 535 4 1
+#say
+<>\
+<Img:75:113:4:33>\ \
+<ImgEx:165:338:339:338:300:120/@进入神木洞窟>
+<>\ \
+<ItemShow:1290:0:147:136:1>
+<ItemShow:127:0:164:136:1>
+<ItemShow:<$STR(P100)>:0:181:136:1>
+<ItemShow:<$STR(P101)>:0:198:135:1>
+<ItemShow:<$STR(P102)>:0:215:135:1>
+<ItemShow:<$STR(P103)>:0:233:135:1>\ \ 
+
+
+[@进入神木洞窟]
+
+#IF
+CHECKLEVELEX > 59
+#ACT
+#ELSEACT
+messagebox 等级不足60级
+BREAK
+
+#IF
+checkgold 170000
+#ACT
+take 金币 170000
+inc J130 170000
+MAPMOVE shenmu1 12 134
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[神木洞窟]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要170000金币
+BREAK

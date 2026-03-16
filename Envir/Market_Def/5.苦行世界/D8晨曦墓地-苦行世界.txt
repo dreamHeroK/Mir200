@@ -1,0 +1,40 @@
+﻿[@main]
+#IF
+#act
+OPENMERCHANTBIGDLG 114 170 1 4 0 0 1 440 14 1
+MOV S$世界DT1 <itemshow:2450:0:50:70:1>
+MOV S$世界DT2 <itemshow:2451:0:50:70:1>
+MOV S$世界DT3 <itemshow:2452:0:50:70:1>
+MOV S$世界DT4 <itemshow:2453:0:50:70:1>
+MOV S$世界DT5 　
+MOV S$世界DT6 　
+
+#IF
+#ACT
+#SAY
+<TEXT:四章八幕·晨曦墓地:126:8/FCOLOR=94:FBOLD:FSIZE=14:FNAME=楷体>\
+　　　　　　<$STR(S$世界DT1)>
+　<$STR(S$世界DT2)>
+　<$STR(S$世界DT3)>
+　<$STR(S$世界DT4)>
+　<$STR(S$世界DT5)>
+　<$STR(S$世界DT6)>\
+<TEXT:不知是否是远古的墓地，已经从地底出现再地表，其中似乎隐:4:110/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<TEXT:藏着不为人知的秘密。:4:113/FCOLOR=7:FBOLD:FSIZE=12:FNAME=宋体>\
+<IMGEX:111:11:12:13:175:133|249#直达洞口需费用：{260000银币|251}^215#当然，你也可以跑着去--免费。/@进入地图><TEXT:进入此地图:98:145/FCOLOR=150>
+
+
+
+
+[@进入地图]
+#IF
+SMALL <$GAMEGOLD> 260000
+#act
+MessageBox 你的银币不足260000，无法直达该地图，跑着去吧。
+break
+
+#IF
+#act
+GAMEGOLD - 260000
+mapmove 苦行世界 424 241
+GuildNoticeMsg 228 0 探险者【{%s|146:0:1}】前往【{苦行世界|7:0:1}】的【{晨曦墓地|249:0:1}】进行探索！ self

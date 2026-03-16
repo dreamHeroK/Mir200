@@ -1,0 +1,44 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 393 1 4 0 0 1 535 4 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:300:130/@进入噩梦秘境>
+<>\ \
+<ItemShow:377:0:147:142:1>
+<ItemShow:378:0:164:142:1>
+<ItemShow:379:0:181:142:1>
+<ItemShow:436:0:198:142:1>
+<ItemShow:438:0:215:142:1>
+<ItemShow:511:0:233:142:1>\ \ 
+
+
+[@进入噩梦秘境]
+#IF
+CHECKGAMEGOLD ? 100
+#ACT
+#ELSEACT
+MessageBox 　\　\　　　条件不足:元宝不达标!
+break
+
+
+#IF
+CHECKLEVELEX > 47
+#ACT
+#ELSEACT
+messagebox 等级不足48级
+BREAK
+
+
+
+#IF
+#ACT
+GAMEGOLD - 100
+MAPMOVE 噩梦秘境 98 101
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[噩梦秘境]，祝他满载而归！
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

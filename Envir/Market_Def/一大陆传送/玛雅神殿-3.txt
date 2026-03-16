@@ -1,0 +1,41 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 428 1 4 0 0 1 535 4 1
+#say
+<>\ \ \ \ \ \ \ \
+<ImgEx:165:338:339:338:300:130/@进入玛雅神殿>
+<>\ \
+<ItemShow:574:0:147:142:1>
+<ItemShow:569:0:164:142:1>
+<ItemShow:570:0:181:142:1>
+<ItemShow:572:0:198:142:1>
+<ItemShow:573:0:215:142:1>
+<ItemShow:580:0:233:142:1>\ \ 
+
+
+
+
+[@进入玛雅神殿]
+
+
+
+
+#IF
+CHECKLEVELEX > 39
+#ACT
+#ELSEACT
+messagebox 等级不足40级
+BREAK
+
+#IF
+#ACT
+MAPMOVE 玛雅神殿一层 81 83
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[玛雅神殿]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要100000金币
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

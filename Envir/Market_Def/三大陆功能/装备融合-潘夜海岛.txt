@@ -1,0 +1,243 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 901 1 4 0 0 1 325 25 1
+MOV N$元素数值 0
+
+goto @装备融合对话框
+
+[@装备融合对话框]
+#if
+#say
+<ITEMBOX:1:52:221:187:160:20:20:*:放入融合装备>\
+<ITEMBOX:2:52:221:123:233:20:20:*:放入被融合装备>\
+
+<ITEMBOX:3:52:222:239:232:20:20:*:放入材料>\
+
+<>     <Img:884:165:200:-50|168#融合说明：^-^103#只能放入^250#治愈石·北荒，传奇斗笠^254#传奇盾牌，命魂护体☆神^251#需要2件相同装备^58#融合条件^金币*5000W^装备精华*1888^随即获得%1-%5特殊元素^最多熔炼三次。/SCOLOR=58>\ \
+
+<ImgEx:165:902:903:902:125:170/@开始装备融合>\
+
+
+
+
+
+[@开始装备融合]
+#IF
+#ACT
+MOVR N$元素数值 1 6
+
+#OR
+EQUAL <$BOXITEM[1].NAME> 
+EQUAL <$BOXITEM[2].NAME> 
+EQUAL <$BOXITEM[3].NAME> 
+#ACT
+MESSAGEBOX 请同时放入装备和被融合装备和融合材料!!！
+BREAK
+
+;#IF
+;CHECKGAMEGOLD < 2888
+;#ACT
+;MessageBox 　\　\　　　条件不足:元宝不达标!
+;break
+
+#IF
+checkgold 50000000
+#ACT
+#ELSEACT
+messagebox 你的金币不足，需要[金币]50000000
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 3 1888
+#ACT
+#ELSEACT
+ReturnBoxItem 1
+ReturnBoxItem 2
+ReturnBoxItem 3
+MESSAGEBOX 装备精华少于1888!！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE 金币 50000000
+;GAMEGOLD - 2888
+DelBoxItem 2
+DelBoxItem 3 1888
+SETCUSTOMITEMPROGRESSBARVALUE boxitem1 0 1 + 1
+SetNewItemValue boxitem1 <$STR(N$元素位置)> + <$STR(N$元素数值)>
+Sendmsg 6 提示：融合成功随即获得%<$STR(N$元素数值)>元素！！
+UpdateItem boxitem1
+ReturnBoxItem 1
+MOV N$元素位置 0
+MOV N$元素数值 0
+BREAK
+
+
+[@ItemIntoBox1]
+#IF
+#ACT
+GetCustomItemProgressbarValue boxitem1 0 0 <$STR(N$特殊装备是否开启进度条)>
+
+#IF
+Equal N$特殊装备是否开启进度条 0
+#ACT
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 0 1
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 1 {融合次数|250}
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 2 251
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 3 2
+SETCUSTOMITEMPROGRESSBAR boxitem1 0 4 2
+SETCUSTOMITEMPROGRESSBARVALUE boxitem1 0 0 = 3
+SETCUSTOMITEMPROGRESSBARVALUE boxitem1 0 1 = 0
+
+#IF
+#ACT
+GetCustomItemProgressbarValue boxitem1 0 0 <$STR(N$融合最大值)>
+GetCustomItemProgressbarValue boxitem1 0 1 <$STR(N$融合当前值)>
+
+
+#IF
+EQUAL <$STR(N$融合当前值)> <$STR(N$融合最大值)>
+#ACT
+#ACT
+ReturnBoxItem 1
+messagebox 此装备融合次数已达上限!!!
+BREAK
+
+;#or
+;CHECKNEWITEMVALUE boxitem1 1 > 0
+;CHECKNEWITEMVALUE boxitem1 2 > 0
+;CHECKNEWITEMVALUE boxitem1 7 > 0
+;CHECKNEWITEMVALUE boxitem1 25 > 0
+;;#ACT
+;ReturnBoxItem 1
+;messagebox 此装备已经融合过,无法被融合!!!
+;BREAK
+
+
+
+#or
+EQUAL <$BOXITEM[1].NAME> 治愈石·北荒
+EQUAL <$BOXITEM[1].NAME> 传奇斗笠
+EQUAL <$BOXITEM[1].NAME> 传奇盾牌
+EQUAL <$BOXITEM[1].NAME> 命魂护体☆神
+#ACT
+#ELSEACT
+ReturnBoxItem 1
+messagebox 此装备无法放入融合,请查看说明!!!
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 传奇斗笠
+#ACT
+mov N$元素位置 25
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 传奇盾牌
+#ACT
+mov N$元素位置 2
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 治愈石·北荒
+#ACT
+mov N$元素位置 7
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 命魂护体☆神
+#ACT
+mov N$元素位置 1
+
+[@ItemIntoBox2]
+#IF
+not CheckBoxItemCount 1
+#ACT
+ReturnBoxItem 2
+messagebox 请先放入融合装备!!!
+BREAK
+
+;#or
+;CHECKNEWITEMVALUE boxitem2 1 > 0
+;CHECKNEWITEMVALUE boxitem2 2 > 0
+;CHECKNEWITEMVALUE boxitem2 7 > 0
+;CHECKNEWITEMVALUE boxitem2 25 > 0
+;#ACT
+;ReturnBoxItem 2
+;messagebox 此装备已经融合过,无法被融合!!!
+;BREAK
+
+
+#or
+EQUAL <$BOXITEM[1].NAME> 治愈石·北荒
+EQUAL <$BOXITEM[1].NAME> 传奇斗笠
+EQUAL <$BOXITEM[1].NAME> 传奇盾牌
+EQUAL <$BOXITEM[1].NAME> 命魂护体☆神
+#ACT
+#ELSEACT
+ReturnBoxItem 2
+messagebox 此装备无法被融合,请查看说明!!!
+BREAK
+
+
+#IF
+not EQUAL <$BOXITEM[1].NAME> <$BOXITEM[2].NAME>
+#ACT
+ReturnBoxItem 2
+messagebox 两件相同的装备才可以融合!!!
+BREAK
+
+
+
+
+
+[@ItemIntoBox3]
+#IF
+EQUAL <$BOXITEM[3].NAME> 装备精华
+#ACT
+#ELSEACT
+ReturnBoxItem 3
+MESSAGEBOX 只可放入“装备精华”！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;-------------------取下触发 
+
+
+[@ItemOutBox1]
+#IF
+#ACT
+ReturnBoxItem 2
+ReturnBoxItem 3
+MOV N$元素位置 0
+MOV N$元素数值 0
+GOTO @装备融合对话框
+BREAK
+
+
+[@ItemOutBox2]
+#IF
+#ACT
+ReturnBoxItem 1
+ReturnBoxItem 3
+MOV N$元素位置 0
+MOV N$元素数值 0
+GOTO @装备融合对话框
+BREAK

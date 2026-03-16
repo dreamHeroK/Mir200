@@ -1,0 +1,161 @@
+[@main]
+#if
+#say
+\ \
+
+<Img:65:52:180:-4>\
+
+<Img:204:52:13:22>\
+
+<Text:星宿老仙：:19:135{FCOLOR=222}>\
+
+<Text:星宿老仙，法:19:139{FCOLOR=7}>\
+
+<Text:驾中原，神通:19:141{FCOLOR=7}>\
+
+<Text:广大，法力无:19:143{FCOLOR=7}>\
+
+<Text:边。星宿老仙:19:145{FCOLOR=7}>\
+
+<Text:法力无边，仙:19:147{FCOLOR=7}>\
+
+<Text:福永享，寿与:19:149{FCOLOR=7}>\
+
+<Text:齐天！:19:151{FCOLOR=7}>\
+
+\  \
+
+
+<Text:在这里可以把神装的强化等级，转移给另一件神装。:117:-140{FCOLOR=250}>\
+
+<Text:-------------------------------------------------------:114:-140{FCOLOR=10}>\
+
+<Text:每次转移需要消耗1个转移石，可以在商城购买转移石。:117:-140{FCOLOR=253}>\
+
+<Text:-------------------------------------------------------:114:-140{FCOLOR=10}>\
+
+<Text:注意：只能把高强化的神装转移给低强化或未强化的神装。:117:-140{FCOLOR=146}>\
+
+<Text:-------------------------------------------------------:114:-140{FCOLOR=10}>\
+
+<ITEMBOX:1:52:221:200:230:20:20:*:250#放入被转移的神装>\
+
+<ITEMBOX:2:52:221:350:230:20:20:*:250#放入接受转移的神装>\
+
+<Img:0:52:242:-98>\
+
+
+<Text:[开始转移强化]|250#点击转移强化:235:-30{FCOLOR=251}/@开始转移强化>\
+
+
+#ACT
+OPENMERCHANTBIGDLG 52 18 1 0 0 0 1 450 25 1
+
+
+
+
+[@ItemIntoBox1]
+#OR
+EQUAL <$BOXITEM[1].STDMODE> 76
+EQUAL <$BOXITEM[1].STDMODE> 89
+EQUAL <$BOXITEM[1].STDMODE> 80
+EQUAL <$BOXITEM[1].STDMODE> 78
+EQUAL <$BOXITEM[1].STDMODE> 83
+EQUAL <$BOXITEM[1].STDMODE> 82
+EQUAL <$BOXITEM[1].STDMODE> 85
+EQUAL <$BOXITEM[1].STDMODE> 87
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX 
+messagebox 只能放入[神装]
+BREAK
+
+
+
+[@ItemIntoBox2]
+#OR
+EQUAL <$BOXITEM[2].STDMODE> 76
+EQUAL <$BOXITEM[2].STDMODE> 89
+EQUAL <$BOXITEM[2].STDMODE> 80
+EQUAL <$BOXITEM[2].STDMODE> 78
+EQUAL <$BOXITEM[2].STDMODE> 83
+EQUAL <$BOXITEM[2].STDMODE> 82
+EQUAL <$BOXITEM[2].STDMODE> 85
+EQUAL <$BOXITEM[2].STDMODE> 87
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX 
+messagebox 只能放入[神装]
+BREAK
+
+
+
+[@开始转移强化]
+#IF
+CheckBoxItemCount 1
+#ACT
+GetCustomItemProgressbarValue boxitem1 0 3 N$获取强化1
+GetCustomItemProgressbar boxitem1 0 1 S$获取强化显示1
+#ELSEACT
+messagebox 请放入神装
+BREAK
+
+#IF
+CheckBoxItemCount 2
+#ACT
+GetCustomItemProgressbarValue boxitem2 0 3 N$获取强化2
+#ELSEACT
+messagebox 请放入接受转移的神装
+BREAK
+
+#IF
+LARGE N$获取强化1 <$STR(N$获取强化2)>
+#ACT
+#ELSEACT
+messagebox 只能把高强化的神装转移给低强化或未强化的神装\比如：+10神装只可以转移给+10以下的神装
+BREAK
+
+#IF
+checkitem 转移石 1
+#ACT
+take 转移石 1
+LockUpdateItem boxitem2
+SETCUSTOMITEMPROGRESSBAR boxitem2 0 0 1
+SETCUSTOMITEMPROGRESSBAR boxitem2 0 1 <$STR(S$获取强化显示1)>
+SetCustomItemProgressbarValue boxitem2 0 3 = <$STR(N$获取强化1)>
+SetCustomItemText boxitem2 [强化属性]
+SetCustomItemTextColor boxitem2 151
+SetCustomItemAbil boxitem2 0 0 146
+SetCustomItemAbil boxitem2 0 1 3
+SetCustomItemAbil boxitem2 0 2 1
+SetCustomItemAbil boxitem2 0 3 0
+SetCustomItemValue boxitem2 0 = <$STR(N$获取强化1)>
+SetCustomItemAbil boxitem2 1 0 146
+SetCustomItemAbil boxitem2 1 1 4
+SetCustomItemAbil boxitem2 1 2 2
+SetCustomItemAbil boxitem2 1 3 0
+SetCustomItemValue boxitem2 1 = <$STR(N$获取强化1)>
+SetCustomItemAbil boxitem2 2 0 146
+SetCustomItemAbil boxitem2 2 1 5
+SetCustomItemAbil boxitem2 2 2 3
+SetCustomItemAbil boxitem2 2 3 0
+SetCustomItemValue boxitem2 2 = <$STR(N$获取强化1)>
+ChangeItemName boxitem2 <$BOXITEM[2].NAME>+<$STR(N$获取强化1)>
+UpdateItem boxitem2
+clearLinkItem
+
+LockUpdateItem boxitem1
+SetCustomItemProgressbarValue boxitem1 0 3 = 0
+SetCustomItemProgressbar boxitem1 0 0 0
+SetCustomItemText boxitem1
+SetCustomItemValue boxitem1 0 = 0
+SetCustomItemValue boxitem1 1 = 0
+SetCustomItemValue boxitem1 2 = 0
+ChangeItemName boxitem1 <$BOXITEM[1].NAME>
+UpdateItem boxitem1
+clearLinkItem
+messagebox 强化转移成功！
+#ELSEACT
+messagebox 你的包裹里没有[转移石]，可以在商城购买
+BREAK
+

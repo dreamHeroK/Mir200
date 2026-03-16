@@ -1,0 +1,155 @@
+[@main]
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MOV S$开区状态 {测试中/SCOLOR=249}
+#ELSEACT
+MOV S$开区状态 {正式开区/SCOLOR=249}
+
+
+
+
+#IF
+#act
+#SAY
+<如果您参与过【<$SERVERNAME>】的测试阶段/FCOLOR=243>\
+<并且在测试阶段等级达到42，43，44,45级，并且开启会员/FCOLOR=254>\
+正式开区后在我这领取到测试奖励！奖励如下：\
+<42级30W金币/FCOLOR=250><43级50W金币/FCOLOR=250><44级70W金币/FCOLOR=250><45级100W金币/FCOLOR=250>\
+<删档不会删除游戏帐号,你只要使用测试时候的角色/FCOLOR=70>\
+即可在我这里领取相应奖励！<每台电脑只能领取1次奖励!><自动领取最高级奖励>\ \
+<领取测试奖励/@领取测试奖励>\ \
+
+<当前开区状态/FCOLOR=250><$STR(S$开区状态)>
+[@领取测试奖励]
+
+
+
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 请正式开区再来领取！
+BREAK
+
+#or
+CHECKFENGHAO 体验会员
+CHECKFENGHAO 月卡会员
+CHECKFENGHAO 季度会员
+CHECKFENGHAO 年卡会员
+#ACT
+#elseact
+MessageBox 　\　\　　　未开启任何会员!!!
+break
+
+
+
+
+#or
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+#ACT
+#elseact
+MESSAGEBOX \　\已经领取,或无记录!！
+BREAK
+
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+#ACT
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+
+
+GIVE 金币 1000000
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达45级,奖励金币100万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达45级,奖励金币100万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达45级,奖励金币100万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达45级,奖励金币100万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达45级,奖励金币100万！
+addTextList ..\QuestDiary\游戏功能\机器码.txt <$MACHINEID>
+BREAK
+
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+#ACT
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+
+
+GIVE 金币 700000
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达44级,奖励金币70万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达44级,奖励金币70万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达44级,奖励金币70万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达44级,奖励金币70万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达44级,奖励金币70万！
+addTextList ..\QuestDiary\游戏功能\机器码.txt <$MACHINEID>
+BREAK
+
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+#ACT
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+
+
+GIVE 金币 500000
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达43级,奖励金币50万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达43级,奖励金币50万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达43级,奖励金币50万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达43级,奖励金币50万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达43级,奖励金币50万！
+addTextList ..\QuestDiary\游戏功能\机器码.txt <$MACHINEID>
+BREAK
+
+
+
+
+
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+#ACT
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试42帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试43帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试44帐号.txt
+DELACCOUNTLIST ..\QuestDiary\游戏功能\测试45帐号.txt
+
+
+GIVE 金币 300000
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达42级,奖励金币30万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达42级,奖励金币30万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达42级,奖励金币30万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达42级,奖励金币30万！
+SENDMSG 1 恭喜<$USERNAME>在测试期间等级到达42级,奖励金币30万！
+addTextList ..\QuestDiary\游戏功能\机器码.txt <$MACHINEID>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+

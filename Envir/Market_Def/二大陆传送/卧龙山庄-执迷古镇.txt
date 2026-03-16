@@ -1,0 +1,37 @@
+[@main]
+#if
+#ACT
+OPENMERCHANTBIGDLG 165 404 1 4 0 0 1 535 4 1
+#say
+<> \
+<ItemShow:440:0:148:285:1> <ItemShow:442:0:158:285:1> <ItemShow:380:0:170:285:1> <ItemShow:381:0:180:285:1> <ItemShow:382:0:190:285:1> <ItemShow:512:0:203:285:1>\
+<> \
+<ImgEx:165:338:339:338:310:212/@进入卧龙山庄>
+
+
+
+[@进入卧龙山庄]
+
+
+#IF
+CHECKLEVELEX > 53
+#ACT
+#ELSEACT
+messagebox 等级不足54级
+BREAK
+
+#IF
+checkgold 1000000
+checkitem 卧龙山庄[通行证]  1
+#Act
+take 卧龙山庄[通行证]  1
+take 金币 1000000
+MAPMOVE 卧龙山庄
+;SENDMSG 0 传送信息：玩家[<$USERNAME>]进入[卧龙山庄]，祝他满载而归！
+#ELSEACT
+messagebox 金币不足，需要1000000金币,或缺少卧龙山庄[通行证]!
+#IF
+CHECKFENGHAO 青铜赞助
+#ACT
+;SendCenterMsg 249 251 青铜赞助限时下图,还剩余%d离开本地图. 0 3600 @回城 1
+BREAK

@@ -1,0 +1,13 @@
+[@main]
+#IF
+#ACT
+OpenMerChantBigDlg 113 715 0 4 -40 -50 1 520 0 0
+#SAY
+<&ItemShow:773:0:26:96:1><&ItemShow:774:0:69:96:1><&ItemShow:775:0:112:96:1><&ItemShow:776:0:155:96:1><&ItemShow:777:0:198:96:1><&ItemShow:778:0:241:96:1><&ItemShow:779:0:284:96:1><&ItemShow:780:0:327:96:1><&ItemShow:781:0:370:96:1><&ItemShow:782:0:413:96:1><&ItemShow:783:0:456:96:1><&ItemShow:160:0:499:96:1>\
+<&ItemShow:172:0:26:170:1><&ItemShow:173:0:69:170:1><&ItemShow:174:0:112:170:1><&ItemShow:175:0:155:170:1><&ItemShow:176:0:198:170:1><&ItemShow:177:0:241:170:1>\
+<&ItemShow:179:0:26:244:1><&ItemShow:180:0:69:244:1><&ItemShow:181:0:112:244:1><&ItemShow:182:0:155:244:1><&ItemShow:183:0:198:244:1><&ItemShow:184:0:241:244:1><&ItemShow:186:0:284:244:1><&ItemShow:187:0:327:244:1><&ItemShow:188:0:370:244:1><&ItemShow:189:0:413:244:1><&ItemShow:190:0:456:244:1><&ItemShow:191:0:499:244:1>\
+<&ItemShow:870:0:26:316:1><&ItemShow:871:0:69:316:1><&ItemShow:872:0:112:316:1><&ItemShow:873:0:155:316:1><&ItemShow:874:0:198:316:1><&ItemShow:875:0:241:316:1><&ItemShow:877:0:284:316:1><&ItemShow:878:0:327:316:1><&ItemShow:879:0:370:316:1><&ItemShow:880:0:413:316:1><&ItemShow:881:0:456:316:1><&ItemShow:882:0:499:316:1>\
+<&Text:跨服装备展示：:35:77{FCOLOR=250}>
+<&Text:背包神器展示：:35:149{FCOLOR=249}>
+<&Text:低攻装备展示：:35:222{FCOLOR=240}>
+<&Text:高攻装备展示：:35:294{FCOLOR=240}>
